@@ -32,6 +32,15 @@ namespace PetStoreManager
                     OrderID = 1
                 };
 
+                var order2 = new Order()
+                {
+                    CustomerID = 1,
+                    EmployeeID = 10,
+                    OrderDate = DateTime.Now,
+                    OrderDetails = null,
+                    OrderID = 2
+                };
+
                 ctx.Orders.Add(order);
                 ctx.SaveChanges();
             }
