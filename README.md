@@ -2,16 +2,16 @@
   <h2 align="center">🐹 Pet Store Manager</h2>
 <p align="center">
   <a href="https://github.com/kiritoroo/AI_Final_Project/issues">
-    <img src="https://img.shields.io/github/issues/kiritoroo/PetStoreManage"/> 
+    <img src="https://img.shields.io/github/issues/kiritoroo/PetStoreManage"> 
   </a>
   <a href="https://github.com/kiritoroo/AI_Final_Project/network/members">
-    <img src="https://img.shields.io/github/forks/kiritoroo/PetStoreManage"/> 
+    <img src="https://img.shields.io/github/forks/kiritoroo/PetStoreManage"> 
   </a>  
   <a href="https://github.com/kiritoroo/AI_Final_Project/stargazers">
-    <img src="https://img.shields.io/github/stars/kiritoroo/PetStoreManage"/> 
+    <img src="https://img.shields.io/github/stars/kiritoroo/PetStoreManage"> 
   </a>
     <a href="https://github.com/kiritoroo/AI_Final_Project/LICENSE">
-    <img src="https://img.shields.io/github/license/kiritoroo/PetStoreManage"/> 
+    <img src="https://img.shields.io/github/license/kiritoroo/PetStoreManage"> 
   </a>
 </p>
 <p align="center">
