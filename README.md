@@ -15,7 +15,7 @@
   </a>
 </p>
 <p align="center">
-  <a href="https://github.com/kiritoroo/AI_Final_Project">
+  <a href="https://github.com/kiritoroo/PetStoreManager">
     <img src="https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=ff69b4"/> 
   </a>
 </p>
