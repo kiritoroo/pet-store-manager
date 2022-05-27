@@ -1,5 +1,5 @@
-<p align="center"
-  <h2 align="center">🐹 Pet Store Manager - 3 Tier Model & Entity Framework</h2>
+<p align="center">
+  <h2 align="center">🐹 Pet Store Manager - 3 Tier Model & Entity Framework </h2>
 <p align="center">
   <a href="https://github.com/kiritoroo/AI_Final_Project/issues">
     <img src="https://img.shields.io/github/issues/kiritoroo/PetStoreManager"> 
