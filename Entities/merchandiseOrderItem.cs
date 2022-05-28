@@ -4,14 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PetStoreManager.Models
+namespace Entities
 {
-    public class OrderDetail
+    class merchandiseOrderItem
     {
-        public int OrderDetailID { get; set; }
         public int OrderID { get; set; }
-        public int ProductID { get; set; }
+        public string ItemID { get; set; }
         public int Quantity { get; set; }
-        public Order Order { get; set; }
+        public float Cost { get; set; }
     }
+
+
 }
