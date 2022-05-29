@@ -14,9 +14,15 @@ namespace Business.Manager
     {
         private DataContext db = new DataContext();
 
-        public IQueryable<animalType> FindAll()
+        public IQueryable<animalType> GetAll()
         {
             return this.db.animalTypes;
+        }
+
+        public List<animalType> GetAllList()
+        {
+            List<animalType> list = this.db.animalTypes.ToList();
+            return list;
         }
 
         public animalType Find(string id)
@@ -24,7 +30,7 @@ namespace Business.Manager
             return this.db.animalTypes.Find(id);
         }
 
-        public void Save(animalType _animalType)
+        public void Add(animalType _animalType)
         {
             this.db.animalTypes.Add(_animalType);
             this.db.SaveChanges();
