@@ -11,5 +11,7 @@ namespace Entities.Models
         public int SaleID { get; set; }
         public string AnimalID { get; set; }
         public float SalePrice { get; set; }
+        public sale Sale { get; set; }
+        public animal Animal { get; set; }
     }
 }

@@ -12,6 +12,8 @@ namespace Data.Maps
     {
         public animalTypeMap()
         {
+            HasKey<string>(at => at.ID);
+
             Property(p => p.ID)
                 .IsRequired()
                 .HasMaxLength(10);

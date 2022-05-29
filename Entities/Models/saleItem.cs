@@ -6,10 +6,13 @@ using System.Threading.Tasks;
 
 namespace Entities.Models
 {
-    class saleItem
+    public class saleItem
     {
         public int SaleID { get; set; }
         public string ItemID { get; set; }
-        public float SalePrice { get; set; }    
+        public int Quantity { get; set; }
+        public float SalePrice { get; set; }
+        public sale Sale { get; set; }
+        public merchandise Merchandise { get; set; }
     }
 }

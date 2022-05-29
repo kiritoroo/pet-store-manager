@@ -59,18 +59,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Maps\animalOrderItemMap.cs" />
+    <Compile Include="Maps\animalOrderMap.cs" />
     <Compile Include="Maps\animalTypeMap.cs" />
     <Compile Include="DataContext.cs" />
     <Compile Include="Maps\animalMap.cs" />
-    <Compile Include="Migrations\202205290138321_Initial.cs" />
-    <Compile Include="Migrations\202205290138321_Initial.designer.cs">
-      <DependentUpon>202205290138321_Initial.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Maps\customerMap.cs" />
+    <Compile Include="Maps\employeeMap.cs" />
+    <Compile Include="Maps\merchandiseMap.cs" />
+    <Compile Include="Maps\merchandiseOrderItemMap.cs" />
+    <Compile Include="Maps\merchandiseOrderMap.cs" />
+    <Compile Include="Maps\saleAnimalMap.cs" />
+    <Compile Include="Maps\saleItemMap.cs" />
+    <Compile Include="Maps\saleMap.cs" />
+    <Compile Include="Maps\supplierMap.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Migrations\202205290138321_Initial.resx">
-      <DependentUpon>202205290138321_Initial.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

@@ -16,6 +16,7 @@ namespace Entities.Models
         public DateTime DataHired { get; set; }
 
         public ICollection<sale> Sales { get; set; }
-
+        public ICollection<animalOrder> AnimalOrders { get; set; }
+        public ICollection<merchandiseOrder> MerchandiseOrders { get; set; }
     }
 }

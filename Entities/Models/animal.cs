@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Entities.Models
 {
@@ -20,5 +19,7 @@ namespace Entities.Models
         public byte[] Photo { get; set; }
 
         public animalType AnimalType { get; set; }
+        public ICollection<saleAnimal> SaleAnimals { get; set; }
+        public ICollection<animalOrderItem> AnimalOrderItems { get; set; }
     }
 }

@@ -125,9 +125,9 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Data\Data.csproj">
-      <Project>{75afe359-01ed-40b1-a161-a3338b92516c}</Project>
-      <Name>Data</Name>
+    <ProjectReference Include="..\Business\Business.csproj">
+      <Project>{9efbe239-2161-44f2-8d4a-e3d5272d5cb8}</Project>
+      <Name>Business</Name>
     </ProjectReference>
     <ProjectReference Include="..\Entities\Entities.csproj">
       <Project>{f225fa6c-ee73-4831-88c3-9be0d0f66460}</Project>

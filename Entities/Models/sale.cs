@@ -19,5 +19,7 @@ namespace Entities.Models
 
         public employee Employee { get; set; }
         public customer Customer { get; set; }
+        public ICollection<saleAnimal> SaleAnimals { get; set; }
+        public ICollection<saleItem> SaleItems { get; set; }
     }
 }
