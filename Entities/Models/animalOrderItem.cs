@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Entities
+namespace Entities.Models
 {
-    public class saleAnimal
+    class animalOrderItem
     {
-        public int SaleID { get; set; }
+        public int OrderID { get; set; }
         public string AnimalID { get; set; }
-        public float SalePrice { get; set; }
+        public float Cost { get; set; }
     }
 }

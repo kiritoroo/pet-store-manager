@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Entity;
-using Entities;
+using Entities.Models;
 using Data;
 
 
@@ -44,8 +44,6 @@ namespace PetStoreManager
                     ListPrice = 15000,
                     Photo = null
                 };
-
-                //animalType pettype2 = new animalType("2", "DOG", new List<animal>());
 
                 pettype1.Animals = new List<animal>();
                 pettype1.Animals.Add(cat1); // Animals = [cat1]

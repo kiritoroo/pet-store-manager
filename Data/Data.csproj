@@ -59,9 +59,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="animalTypeMap.cs" />
+    <Compile Include="Maps\animalTypeMap.cs" />
     <Compile Include="DataContext.cs" />
+    <Compile Include="Maps\animalMap.cs" />
+    <Compile Include="Migrations\202205290138321_Initial.cs" />
+    <Compile Include="Migrations\202205290138321_Initial.designer.cs">
+      <DependentUpon>202205290138321_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Migrations\202205290138321_Initial.resx">
+      <DependentUpon>202205290138321_Initial.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

@@ -5,7 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
-using Entities;
+using Entities.Models;
+using Data.Maps;
 
 
 namespace Data
@@ -16,6 +17,7 @@ namespace Data
             : base("name=PetStoreDB")
         {
             Database.SetInitializer<DataContext>(new DropCreateDatabaseIfModelChanges<DataContext>());
+            //Database.SetInitializer(new MigrateDatabaseToLatestVersion<DataContext, Data.Migrations.Configuration>());
         }
 
         public DbSet<animalType> animalTypes { get; set; }
@@ -25,6 +27,7 @@ namespace Data
         public DbSet<employee> employees { get; set; } 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<animal>()
                         .HasRequired<animalType>(a => a.AnimalType)
                         .WithMany(at => at.Animals)
@@ -40,12 +43,8 @@ namespace Data
                       .WithMany(emp => emp.Sales)
                       .HasForeignKey<string>(s => s.CustomerID);
 
-
             modelBuilder.Configurations.Add(new animalTypeMap());
-
-
+            modelBuilder.Configurations.Add(new animalMap());
         }
-
-
     }
 }

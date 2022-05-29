@@ -4,12 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity.ModelConfiguration;
-using Entities;
+using Entities.Models;
 
-namespace Data
+namespace Data.Maps
 {
-    public class animalTypeMap:
-                    EntityTypeConfiguration<animalType>
+    public class animalTypeMap : EntityTypeConfiguration<animalType>
     {
         public animalTypeMap()
         {
