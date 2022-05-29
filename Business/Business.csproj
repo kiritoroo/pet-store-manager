@@ -60,6 +60,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Manager\animalTypeManager.cs" />
+    <Compile Include="Manager\customerManager.cs" />
+    <Compile Include="Manager\employeeManager.cs" />
+    <Compile Include="Manager\merchandiseManager.cs" />
+    <Compile Include="Manager\supplierManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

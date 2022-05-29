@@ -22,15 +22,15 @@ namespace PetStoreManager
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //Database.SetInitializer<DataContext>(null);
-            animalTypeManager bll = new animalTypeManager();
+            ////Database.SetInitializer<DataContext>(null);
+            //animalTypeManager bll = new animalTypeManager();
 
-            var petType1 = new animalType()
-            {
-                ID = "1",
-                Description = "CAT",
-            };
-            bll.Save(petType1);
-        }
+            //var petType1 = new animalType()
+            //{
+            //    ID = "1",
+            //    Description = "CAT",
+            //};
+            //bll.Save(petType1);
+        }     
     }
 }
