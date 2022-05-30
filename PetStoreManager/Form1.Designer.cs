@@ -29,240 +29,263 @@ namespace PetStoreManager
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox_1 = new System.Windows.Forms.TextBox();
-            this.textBox_7 = new System.Windows.Forms.TextBox();
-            this.textBox_3 = new System.Windows.Forms.TextBox();
-            this.textBox_2 = new System.Windows.Forms.TextBox();
-            this.textBox_6 = new System.Windows.Forms.TextBox();
-            this.textBox_5 = new System.Windows.Forms.TextBox();
-            this.textBox_4 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.txtID = new System.Windows.Forms.TextBox();
+            this.txtAnimalTypeID = new System.Windows.Forms.TextBox();
+            this.lblD = new System.Windows.Forms.Label();
+            this.lblAnimalTypeID = new System.Windows.Forms.Label();
+            this.tableTitle = new System.Windows.Forms.Label();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.lblLabel = new System.Windows.Forms.Label();
+            this.txtLabel = new System.Windows.Forms.TextBox();
+            this.lblAge = new System.Windows.Forms.Label();
+            this.txtAge = new System.Windows.Forms.TextBox();
+            this.lblBreed = new System.Windows.Forms.Label();
+            this.txtBreed = new System.Windows.Forms.TextBox();
+            this.lblGender = new System.Windows.Forms.Label();
+            this.txtGender = new System.Windows.Forms.TextBox();
+            this.lblColor = new System.Windows.Forms.Label();
+            this.txtColor = new System.Windows.Forms.TextBox();
+            this.lblListPrice = new System.Windows.Forms.Label();
+            this.txtListPrice = new System.Windows.Forms.TextBox();
+            this.lblPhoto = new System.Windows.Forms.Label();
+            this.btnPickPhoto = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // txtID
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(28, 64);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(14, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "1";
+            this.txtID.Location = new System.Drawing.Point(155, 115);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(100, 22);
+            this.txtID.TabIndex = 0;
             // 
-            // label2
+            // txtAnimalTypeID
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(28, 131);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(14, 16);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "2";
+            this.txtAnimalTypeID.Location = new System.Drawing.Point(155, 143);
+            this.txtAnimalTypeID.Name = "txtAnimalTypeID";
+            this.txtAnimalTypeID.Size = new System.Drawing.Size(100, 22);
+            this.txtAnimalTypeID.TabIndex = 1;
             // 
-            // label3
+            // lblD
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(541, 284);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(17, 16);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "7\'";
+            this.lblD.AutoSize = true;
+            this.lblD.Location = new System.Drawing.Point(48, 118);
+            this.lblD.Name = "lblD";
+            this.lblD.Size = new System.Drawing.Size(20, 16);
+            this.lblD.TabIndex = 2;
+            this.lblD.Text = "ID";
             // 
-            // label4
+            // lblAnimalTypeID
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(28, 208);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(14, 16);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "3";
+            this.lblAnimalTypeID.AutoSize = true;
+            this.lblAnimalTypeID.Location = new System.Drawing.Point(48, 146);
+            this.lblAnimalTypeID.Name = "lblAnimalTypeID";
+            this.lblAnimalTypeID.Size = new System.Drawing.Size(104, 20);
+            this.lblAnimalTypeID.TabIndex = 3;
+            this.lblAnimalTypeID.Text = "Animal Type";
             // 
-            // label5
+            // tableTitle
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(541, 208);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(14, 16);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "6";
+            this.tableTitle.AutoSize = true;
+            this.tableTitle.Location = new System.Drawing.Point(48, 70);
+            this.tableTitle.Name = "tableTitle";
+            this.tableTitle.Size = new System.Drawing.Size(83, 16);
+            this.tableTitle.TabIndex = 4;
+            this.tableTitle.Text = "Animal Type";
             // 
-            // label6
+            // btnAdd
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(541, 156);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(14, 16);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "5";
+            this.btnAdd.Location = new System.Drawing.Point(225, 381);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(75, 23);
+            this.btnAdd.TabIndex = 5;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // label7
+            // dataGridView1
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(541, 82);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(14, 16);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "4";
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(383, 50);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(403, 369);
+            this.dataGridView1.TabIndex = 6;
             // 
-            // textBox_1
+            // lblLabel
             // 
-            this.textBox_1.Location = new System.Drawing.Point(113, 64);
-            this.textBox_1.Name = "textBox_1";
-            this.textBox_1.Size = new System.Drawing.Size(100, 22);
-            this.textBox_1.TabIndex = 7;
+            this.lblLabel.AutoSize = true;
+            this.lblLabel.Location = new System.Drawing.Point(48, 174);
+            this.lblLabel.Name = "lblLabel";
+            this.lblLabel.Size = new System.Drawing.Size(51, 20);
+            this.lblLabel.TabIndex = 8;
+            this.lblLabel.Text = "Label";
             // 
-            // textBox_7
+            // txtLabel
             // 
-            this.textBox_7.Location = new System.Drawing.Point(615, 278);
-            this.textBox_7.Name = "textBox_7";
-            this.textBox_7.Size = new System.Drawing.Size(100, 22);
-            this.textBox_7.TabIndex = 10;
+            this.txtLabel.Location = new System.Drawing.Point(155, 171);
+            this.txtLabel.Name = "txtLabel";
+            this.txtLabel.Size = new System.Drawing.Size(182, 22);
+            this.txtLabel.TabIndex = 7;
             // 
-            // textBox_3
+            // lblAge
             // 
-            this.textBox_3.Location = new System.Drawing.Point(113, 202);
-            this.textBox_3.Name = "textBox_3";
-            this.textBox_3.Size = new System.Drawing.Size(100, 22);
-            this.textBox_3.TabIndex = 11;
+            this.lblAge.AutoSize = true;
+            this.lblAge.Location = new System.Drawing.Point(48, 202);
+            this.lblAge.Name = "lblAge";
+            this.lblAge.Size = new System.Drawing.Size(40, 20);
+            this.lblAge.TabIndex = 10;
+            this.lblAge.Text = "Age";
             // 
-            // textBox_2
+            // txtAge
             // 
-            this.textBox_2.Location = new System.Drawing.Point(113, 131);
-            this.textBox_2.Name = "textBox_2";
-            this.textBox_2.Size = new System.Drawing.Size(100, 22);
-            this.textBox_2.TabIndex = 12;
+            this.txtAge.Location = new System.Drawing.Point(155, 199);
+            this.txtAge.Name = "txtAge";
+            this.txtAge.Size = new System.Drawing.Size(182, 22);
+            this.txtAge.TabIndex = 9;
             // 
-            // textBox_6
+            // lblBreed
             // 
-            this.textBox_6.Location = new System.Drawing.Point(615, 208);
-            this.textBox_6.Name = "textBox_6";
-            this.textBox_6.Size = new System.Drawing.Size(100, 22);
-            this.textBox_6.TabIndex = 13;
+            this.lblBreed.AutoSize = true;
+            this.lblBreed.Location = new System.Drawing.Point(48, 230);
+            this.lblBreed.Name = "lblBreed";
+            this.lblBreed.Size = new System.Drawing.Size(55, 20);
+            this.lblBreed.TabIndex = 12;
+            this.lblBreed.Text = "Breed";
             // 
-            // textBox_5
+            // txtBreed
             // 
-            this.textBox_5.Location = new System.Drawing.Point(615, 153);
-            this.textBox_5.Name = "textBox_5";
-            this.textBox_5.Size = new System.Drawing.Size(100, 22);
-            this.textBox_5.TabIndex = 14;
+            this.txtBreed.Location = new System.Drawing.Point(155, 227);
+            this.txtBreed.Name = "txtBreed";
+            this.txtBreed.Size = new System.Drawing.Size(182, 22);
+            this.txtBreed.TabIndex = 11;
             // 
-            // textBox_4
+            // lblGender
             // 
-            this.textBox_4.Location = new System.Drawing.Point(615, 76);
-            this.textBox_4.Name = "textBox_4";
-            this.textBox_4.Size = new System.Drawing.Size(100, 22);
-            this.textBox_4.TabIndex = 15;
+            this.lblGender.AutoSize = true;
+            this.lblGender.Location = new System.Drawing.Point(48, 258);
+            this.lblGender.Name = "lblGender";
+            this.lblGender.Size = new System.Drawing.Size(65, 20);
+            this.lblGender.TabIndex = 14;
+            this.lblGender.Text = "Gender";
             // 
-            // button1
+            // txtGender
             // 
-            this.button1.Location = new System.Drawing.Point(31, 332);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "ADD";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.txtGender.Location = new System.Drawing.Point(155, 255);
+            this.txtGender.Name = "txtGender";
+            this.txtGender.Size = new System.Drawing.Size(182, 22);
+            this.txtGender.TabIndex = 13;
             // 
-            // button2
+            // lblColor
             // 
-            this.button2.Location = new System.Drawing.Point(179, 331);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 17;
-            this.button2.Text = "SUA";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.lblColor.AutoSize = true;
+            this.lblColor.Location = new System.Drawing.Point(48, 286);
+            this.lblColor.Name = "lblColor";
+            this.lblColor.Size = new System.Drawing.Size(49, 20);
+            this.lblColor.TabIndex = 16;
+            this.lblColor.Text = "Color";
             // 
-            // button3
+            // txtColor
             // 
-            this.button3.Location = new System.Drawing.Point(299, 331);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 18;
-            this.button3.Text = "XOA";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.txtColor.Location = new System.Drawing.Point(155, 283);
+            this.txtColor.Name = "txtColor";
+            this.txtColor.Size = new System.Drawing.Size(182, 22);
+            this.txtColor.TabIndex = 15;
             // 
-            // dateTimePicker1
+            // lblListPrice
             // 
-            this.dateTimePicker1.CustomFormat = "yyyy-mm-dd";
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(133, 246);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker1.TabIndex = 19;
+            this.lblListPrice.AutoSize = true;
+            this.lblListPrice.Location = new System.Drawing.Point(48, 314);
+            this.lblListPrice.Name = "lblListPrice";
+            this.lblListPrice.Size = new System.Drawing.Size(76, 20);
+            this.lblListPrice.TabIndex = 18;
+            this.lblListPrice.Text = "List Price";
             // 
-            // dateTimePicker2
+            // txtListPrice
             // 
-            this.dateTimePicker2.CustomFormat = "yyyy-mm-dd";
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker2.Location = new System.Drawing.Point(133, 284);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker2.TabIndex = 20;
+            this.txtListPrice.Location = new System.Drawing.Point(155, 311);
+            this.txtListPrice.Name = "txtListPrice";
+            this.txtListPrice.Size = new System.Drawing.Size(182, 22);
+            this.txtListPrice.TabIndex = 17;
+            // 
+            // lblPhoto
+            // 
+            this.lblPhoto.AutoSize = true;
+            this.lblPhoto.Location = new System.Drawing.Point(48, 342);
+            this.lblPhoto.Name = "lblPhoto";
+            this.lblPhoto.Size = new System.Drawing.Size(53, 20);
+            this.lblPhoto.TabIndex = 20;
+            this.lblPhoto.Text = "Photo";
+            // 
+            // btnPickPhoto
+            // 
+            this.btnPickPhoto.Location = new System.Drawing.Point(155, 339);
+            this.btnPickPhoto.Name = "btnPickPhoto";
+            this.btnPickPhoto.Size = new System.Drawing.Size(75, 23);
+            this.btnPickPhoto.TabIndex = 21;
+            this.btnPickPhoto.Text = "Pick";
+            this.btnPickPhoto.UseVisualStyleBackColor = true;
+            this.btnPickPhoto.Click += new System.EventHandler(this.btnPickPhoto_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox_4);
-            this.Controls.Add(this.textBox_5);
-            this.Controls.Add(this.textBox_6);
-            this.Controls.Add(this.textBox_2);
-            this.Controls.Add(this.textBox_3);
-            this.Controls.Add(this.textBox_7);
-            this.Controls.Add(this.textBox_1);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnPickPhoto);
+            this.Controls.Add(this.lblPhoto);
+            this.Controls.Add(this.lblListPrice);
+            this.Controls.Add(this.txtListPrice);
+            this.Controls.Add(this.lblColor);
+            this.Controls.Add(this.txtColor);
+            this.Controls.Add(this.lblGender);
+            this.Controls.Add(this.txtGender);
+            this.Controls.Add(this.lblBreed);
+            this.Controls.Add(this.txtBreed);
+            this.Controls.Add(this.lblAge);
+            this.Controls.Add(this.txtAge);
+            this.Controls.Add(this.lblLabel);
+            this.Controls.Add(this.txtLabel);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.tableTitle);
+            this.Controls.Add(this.lblAnimalTypeID);
+            this.Controls.Add(this.lblD);
+            this.Controls.Add(this.txtAnimalTypeID);
+            this.Controls.Add(this.txtID);
             this.Name = "Form1";
             this.Text = "TEST";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox_1;
-        private System.Windows.Forms.TextBox textBox_7;
-        private System.Windows.Forms.TextBox textBox_3;
-        private System.Windows.Forms.TextBox textBox_2;
-        private System.Windows.Forms.TextBox textBox_6;
-        private System.Windows.Forms.TextBox textBox_5;
-        private System.Windows.Forms.TextBox textBox_4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.TextBox txtID;
+        private System.Windows.Forms.TextBox txtAnimalTypeID;
+        private System.Windows.Forms.Label lblD;
+        private System.Windows.Forms.Label lblAnimalTypeID;
+        private System.Windows.Forms.Label tableTitle;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label lblLabel;
+        private System.Windows.Forms.TextBox txtLabel;
+        private System.Windows.Forms.Label lblAge;
+        private System.Windows.Forms.TextBox txtAge;
+        private System.Windows.Forms.Label lblBreed;
+        private System.Windows.Forms.TextBox txtBreed;
+        private System.Windows.Forms.Label lblGender;
+        private System.Windows.Forms.TextBox txtGender;
+        private System.Windows.Forms.Label lblColor;
+        private System.Windows.Forms.TextBox txtColor;
+        private System.Windows.Forms.Label lblListPrice;
+        private System.Windows.Forms.TextBox txtListPrice;
+        private System.Windows.Forms.Label lblPhoto;
+        private System.Windows.Forms.Button btnPickPhoto;
     }
 }
 

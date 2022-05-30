@@ -64,6 +64,15 @@
     <Compile Include="Manager\animalTypeManager.cs" />
     <Compile Include="Manager\mechandiseOrderItemsManager.cs" />
     <Compile Include="Manager\mechandiseOrderManager.cs" />
+    <Compile Include="Manager\animalManager.cs" />
+    <Compile Include="Manager\animalTypeManager.cs" />
+    <Compile Include="Manager\customerManager.cs" />
+    <Compile Include="Manager\employeeManager.cs" />
+    <Compile Include="Manager\merchandiseManager.cs" />
+    <Compile Include="Manager\supplierManager.cs" />
+    <Compile Include="Manager\saleAnimalManager.cs" />
+    <Compile Include="Manager\saleItemManager.cs" />
+    <Compile Include="Manager\saleManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
