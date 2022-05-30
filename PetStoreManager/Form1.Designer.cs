@@ -256,7 +256,7 @@ namespace PetStoreManager
             this.Controls.Add(this.txtAnimalTypeID);
             this.Controls.Add(this.txtID);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "TEST";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -265,7 +265,6 @@ namespace PetStoreManager
         }
 
         #endregion
-
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.TextBox txtAnimalTypeID;
         private System.Windows.Forms.Label lblD;
