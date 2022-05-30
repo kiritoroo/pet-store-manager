@@ -65,7 +65,6 @@
     <Compile Include="Manager\mechandiseOrderItemsManager.cs" />
     <Compile Include="Manager\mechandiseOrderManager.cs" />
     <Compile Include="Manager\animalManager.cs" />
-    <Compile Include="Manager\animalTypeManager.cs" />
     <Compile Include="Manager\customerManager.cs" />
     <Compile Include="Manager\employeeManager.cs" />
     <Compile Include="Manager\merchandiseManager.cs" />

@@ -7,23 +7,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.Entity;
 using Entities.Models;
 using Business.Manager;
 using PetStoreManager.Utilities;
 
 namespace PetStoreManager
 {
-    public partial class Form1 : Form
+    public partial class frmDashboard : Form
     {
         private Image img;
 
-        public Form1()
+        public frmDashboard()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void frmDashboard_Load(object sender, EventArgs e)
         {
             animalManager bll = new animalManager();
             this.dataGridView1.DataSource = bll.GetAllList();
