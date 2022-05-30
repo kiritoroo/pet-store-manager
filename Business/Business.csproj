@@ -59,7 +59,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Manager\animailOderItemManager.cs" />
+    <Compile Include="Manager\animailOrderManager.cs" />
     <Compile Include="Manager\animalTypeManager.cs" />
+    <Compile Include="Manager\mechandiseOrderItemsManager.cs" />
+    <Compile Include="Manager\mechandiseOrderManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

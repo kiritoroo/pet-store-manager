@@ -22,15 +22,50 @@ namespace PetStoreManager
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //Database.SetInitializer<DataContext>(null);
-            animalTypeManager bll = new animalTypeManager();
-
-            var petType1 = new animalType()
+          
+        }
+      
+        private void button1_Click(object sender, EventArgs e)
+        {
+            animailOderItemManager  bll = new animailOderItemManager  ();
+            var test = new   animalOrderItem()
             {
-                ID = "1",
-                Description = "CAT",
+               OrderID=7,
+               AnimalID="1",
+               Cost =20
+               
+
             };
-            bll.Save(petType1);
+            bll.Save(test);
+            MessageBox.Show("Thanh cong");
+            
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            
+            animailOderItemManager  bll = new animailOderItemManager  ();
+            var test = new   animalOrderItem()
+            {
+                OrderID = 7,
+                AnimalID = "1",
+                Cost = 30
+            };
+            bll.Modify(test);
+            MessageBox.Show("Thanh cong");
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+           animailOderItemManager  bll = new animailOderItemManager  ();
+            var test = new   animalOrderItem()
+            {
+                OrderID = 7,
+                AnimalID = "1",
+                Cost = 20
+            };
+            bll.Delete(test.OrderID,test.AnimalID);
+            MessageBox.Show("Thanh cong");
         }
     }
 }
