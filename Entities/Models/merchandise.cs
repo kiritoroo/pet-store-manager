@@ -13,6 +13,7 @@ namespace Entities.Models
         public string Description { get; set; }
         public int QuantityInStock { get; set; }
         public float ListPrice { get; set; }
+        public byte[] Photo { get; set; }
         public ICollection<saleItem> SaleItems { get; set; }
         public ICollection<merchandiseOrderItem> MerchandiseOrderItems { get; set; }
 

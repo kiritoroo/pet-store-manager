@@ -28,263 +28,282 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnPickPhoto = new System.Windows.Forms.Button();
-            this.lblPhoto = new System.Windows.Forms.Label();
-            this.lblListPrice = new System.Windows.Forms.Label();
-            this.txtListPrice = new System.Windows.Forms.TextBox();
-            this.lblColor = new System.Windows.Forms.Label();
-            this.txtColor = new System.Windows.Forms.TextBox();
-            this.lblGender = new System.Windows.Forms.Label();
-            this.txtGender = new System.Windows.Forms.TextBox();
-            this.lblBreed = new System.Windows.Forms.Label();
-            this.txtBreed = new System.Windows.Forms.TextBox();
-            this.lblAge = new System.Windows.Forms.Label();
-            this.txtAge = new System.Windows.Forms.TextBox();
-            this.lblLabel = new System.Windows.Forms.Label();
-            this.txtLabel = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.tableTitle = new System.Windows.Forms.Label();
-            this.lblAnimalTypeID = new System.Windows.Forms.Label();
-            this.lblD = new System.Windows.Forms.Label();
-            this.txtAnimalTypeID = new System.Windows.Forms.TextBox();
-            this.txtID = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDashboard));
+            Utilities.BunifuPages.BunifuAnimatorNS.Animation animation1 = new Utilities.BunifuPages.BunifuAnimatorNS.Animation();
+            this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.buttonComponent5 = new PetStoreManager.Components.ButtonComponent();
+            this.buttonComponent4 = new PetStoreManager.Components.ButtonComponent();
+            this.btnPets = new PetStoreManager.Components.ButtonComponent();
+            this.buttonComponent1 = new PetStoreManager.Components.ButtonComponent();
+            this.btnDashboard = new PetStoreManager.Components.ButtonComponent();
+            this.pageControl = new Bunifu.UI.WinForms.BunifuPages();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.petsPage = new System.Windows.Forms.TabPage();
+            this.flowPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.bunifuPanel1.SuspendLayout();
+            this.pageControl.SuspendLayout();
+            this.petsPage.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnPickPhoto
+            // bunifuPanel1
             // 
-            this.btnPickPhoto.Location = new System.Drawing.Point(138, 330);
-            this.btnPickPhoto.Name = "btnPickPhoto";
-            this.btnPickPhoto.Size = new System.Drawing.Size(75, 23);
-            this.btnPickPhoto.TabIndex = 42;
-            this.btnPickPhoto.Text = "Pick";
-            this.btnPickPhoto.UseVisualStyleBackColor = true;
-            this.btnPickPhoto.Click += new System.EventHandler(this.btnPickPhoto_Click);
+            this.bunifuPanel1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.bunifuPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel1.BackgroundImage")));
+            this.bunifuPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuPanel1.BorderColor = System.Drawing.Color.Transparent;
+            this.bunifuPanel1.BorderRadius = 0;
+            this.bunifuPanel1.BorderThickness = 0;
+            this.bunifuPanel1.Controls.Add(this.bunifuLabel2);
+            this.bunifuPanel1.Controls.Add(this.bunifuLabel1);
+            this.bunifuPanel1.Controls.Add(this.buttonComponent5);
+            this.bunifuPanel1.Controls.Add(this.buttonComponent4);
+            this.bunifuPanel1.Controls.Add(this.btnPets);
+            this.bunifuPanel1.Controls.Add(this.buttonComponent1);
+            this.bunifuPanel1.Controls.Add(this.btnDashboard);
+            this.bunifuPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.bunifuPanel1.Location = new System.Drawing.Point(0, 0);
+            this.bunifuPanel1.Name = "bunifuPanel1";
+            this.bunifuPanel1.ShowBorders = true;
+            this.bunifuPanel1.Size = new System.Drawing.Size(1264, 110);
+            this.bunifuPanel1.TabIndex = 1;
             // 
-            // lblPhoto
+            // bunifuLabel2
             // 
-            this.lblPhoto.AutoSize = true;
-            this.lblPhoto.Location = new System.Drawing.Point(31, 333);
-            this.lblPhoto.Name = "lblPhoto";
-            this.lblPhoto.Size = new System.Drawing.Size(35, 13);
-            this.lblPhoto.TabIndex = 41;
-            this.lblPhoto.Text = "Photo";
+            this.bunifuLabel2.AllowParentOverrides = false;
+            this.bunifuLabel2.AutoEllipsis = false;
+            this.bunifuLabel2.CursorType = null;
+            this.bunifuLabel2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(62)))));
+            this.bunifuLabel2.Location = new System.Drawing.Point(658, 12);
+            this.bunifuLabel2.Name = "bunifuLabel2";
+            this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel2.Size = new System.Drawing.Size(70, 21);
+            this.bunifuLabel2.TabIndex = 1;
+            this.bunifuLabel2.Text = "PAYMENT";
+            this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // lblListPrice
+            // bunifuLabel1
             // 
-            this.lblListPrice.AutoSize = true;
-            this.lblListPrice.Location = new System.Drawing.Point(31, 305);
-            this.lblListPrice.Name = "lblListPrice";
-            this.lblListPrice.Size = new System.Drawing.Size(50, 13);
-            this.lblListPrice.TabIndex = 40;
-            this.lblListPrice.Text = "List Price";
+            this.bunifuLabel1.AllowParentOverrides = false;
+            this.bunifuLabel1.AutoEllipsis = false;
+            this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(62)))));
+            this.bunifuLabel1.Location = new System.Drawing.Point(30, 12);
+            this.bunifuLabel1.Name = "bunifuLabel1";
+            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel1.Size = new System.Drawing.Size(75, 21);
+            this.bunifuLabel1.TabIndex = 1;
+            this.bunifuLabel1.Text = "MANAGER";
+            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // txtListPrice
+            // buttonComponent5
             // 
-            this.txtListPrice.Location = new System.Drawing.Point(138, 302);
-            this.txtListPrice.Name = "txtListPrice";
-            this.txtListPrice.Size = new System.Drawing.Size(182, 20);
-            this.txtListPrice.TabIndex = 39;
+            this.buttonComponent5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(44)))), ((int)(((byte)(72)))));
+            this.buttonComponent5.ColorBackground = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(44)))), ((int)(((byte)(72)))));
+            this.buttonComponent5.ColorLineSmall = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(136)))), ((int)(((byte)(140)))));
+            this.buttonComponent5.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(87)))), ((int)(((byte)(104)))));
+            this.buttonComponent5.Image = global::PetStoreManager.Properties.Resources.icon_orders;
+            this.buttonComponent5.Location = new System.Drawing.Point(827, 45);
+            this.buttonComponent5.Name = "buttonComponent5";
+            this.buttonComponent5.Size = new System.Drawing.Size(150, 50);
+            this.buttonComponent5.TabIndex = 0;
+            this.buttonComponent5.Title = "Orders";
             // 
-            // lblColor
+            // buttonComponent4
             // 
-            this.lblColor.AutoSize = true;
-            this.lblColor.Location = new System.Drawing.Point(31, 277);
-            this.lblColor.Name = "lblColor";
-            this.lblColor.Size = new System.Drawing.Size(31, 13);
-            this.lblColor.TabIndex = 38;
-            this.lblColor.Text = "Color";
+            this.buttonComponent4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(166)))), ((int)(((byte)(70)))));
+            this.buttonComponent4.ColorBackground = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(166)))), ((int)(((byte)(70)))));
+            this.buttonComponent4.ColorLineSmall = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(194)))), ((int)(((byte)(146)))));
+            this.buttonComponent4.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(188)))), ((int)(((byte)(130)))));
+            this.buttonComponent4.Image = global::PetStoreManager.Properties.Resources.icon_sales;
+            this.buttonComponent4.Location = new System.Drawing.Point(658, 45);
+            this.buttonComponent4.Name = "buttonComponent4";
+            this.buttonComponent4.Size = new System.Drawing.Size(150, 50);
+            this.buttonComponent4.TabIndex = 0;
+            this.buttonComponent4.Title = "Sales";
             // 
-            // txtColor
+            // btnPets
             // 
-            this.txtColor.Location = new System.Drawing.Point(138, 274);
-            this.txtColor.Name = "txtColor";
-            this.txtColor.Size = new System.Drawing.Size(182, 20);
-            this.txtColor.TabIndex = 37;
+            this.btnPets.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
+            this.btnPets.ColorBackground = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
+            this.btnPets.ColorLineSmall = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(193)))), ((int)(((byte)(207)))));
+            this.btnPets.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(182)))), ((int)(((byte)(199)))));
+            this.btnPets.Image = global::PetStoreManager.Properties.Resources.icon_pets;
+            this.btnPets.Location = new System.Drawing.Point(366, 45);
+            this.btnPets.Name = "btnPets";
+            this.btnPets.Size = new System.Drawing.Size(150, 50);
+            this.btnPets.TabIndex = 0;
+            this.btnPets.Title = "Pets";
+            this.btnPets.Click += new System.EventHandler(this.btnPets_Click);
             // 
-            // lblGender
+            // buttonComponent1
             // 
-            this.lblGender.AutoSize = true;
-            this.lblGender.Location = new System.Drawing.Point(31, 249);
-            this.lblGender.Name = "lblGender";
-            this.lblGender.Size = new System.Drawing.Size(42, 13);
-            this.lblGender.TabIndex = 36;
-            this.lblGender.Text = "Gender";
+            this.buttonComponent1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(187)))), ((int)(((byte)(0)))));
+            this.buttonComponent1.ColorBackground = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(187)))), ((int)(((byte)(0)))));
+            this.buttonComponent1.ColorLineSmall = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(79)))));
+            this.buttonComponent1.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(202)))), ((int)(((byte)(46)))));
+            this.buttonComponent1.Image = global::PetStoreManager.Properties.Resources.icon_peoples;
+            this.buttonComponent1.Location = new System.Drawing.Point(198, 45);
+            this.buttonComponent1.Name = "buttonComponent1";
+            this.buttonComponent1.Size = new System.Drawing.Size(150, 50);
+            this.buttonComponent1.TabIndex = 0;
+            this.buttonComponent1.Title = "Peoples";
             // 
-            // txtGender
+            // btnDashboard
             // 
-            this.txtGender.Location = new System.Drawing.Point(138, 246);
-            this.txtGender.Name = "txtGender";
-            this.txtGender.Size = new System.Drawing.Size(182, 20);
-            this.txtGender.TabIndex = 35;
+            this.btnDashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(115)))), ((int)(((byte)(196)))));
+            this.btnDashboard.ColorBackground = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(115)))), ((int)(((byte)(196)))));
+            this.btnDashboard.ColorLineSmall = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(143)))), ((int)(((byte)(206)))));
+            this.btnDashboard.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(132)))), ((int)(((byte)(203)))));
+            this.btnDashboard.Image = global::PetStoreManager.Properties.Resources.icon_dashboard;
+            this.btnDashboard.Location = new System.Drawing.Point(30, 45);
+            this.btnDashboard.Name = "btnDashboard";
+            this.btnDashboard.Size = new System.Drawing.Size(150, 50);
+            this.btnDashboard.TabIndex = 0;
+            this.btnDashboard.Title = "Dashboard";
+            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
             // 
-            // lblBreed
+            // pageControl
             // 
-            this.lblBreed.AutoSize = true;
-            this.lblBreed.Location = new System.Drawing.Point(31, 221);
-            this.lblBreed.Name = "lblBreed";
-            this.lblBreed.Size = new System.Drawing.Size(35, 13);
-            this.lblBreed.TabIndex = 34;
-            this.lblBreed.Text = "Breed";
+            this.pageControl.Alignment = System.Windows.Forms.TabAlignment.Bottom;
+            this.pageControl.AllowTransitions = false;
+            this.pageControl.Controls.Add(this.tabPage1);
+            this.pageControl.Controls.Add(this.tabPage2);
+            this.pageControl.Controls.Add(this.petsPage);
+            this.pageControl.Controls.Add(this.tabPage4);
+            this.pageControl.Controls.Add(this.tabPage5);
+            this.pageControl.Location = new System.Drawing.Point(0, 115);
+            this.pageControl.Multiline = true;
+            this.pageControl.Name = "pageControl";
+            this.pageControl.Page = this.petsPage;
+            this.pageControl.PageIndex = 2;
+            this.pageControl.PageName = "petsPage";
+            this.pageControl.PageTitle = "Pets";
+            this.pageControl.SelectedIndex = 0;
+            this.pageControl.Size = new System.Drawing.Size(1280, 567);
+            this.pageControl.TabIndex = 1;
+            animation1.AnimateOnlyDifferences = false;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.pageControl.Transition = animation1;
+            this.pageControl.TransitionType = Utilities.BunifuPages.BunifuAnimatorNS.AnimationType.Custom;
             // 
-            // txtBreed
+            // tabPage1
             // 
-            this.txtBreed.Location = new System.Drawing.Point(138, 218);
-            this.txtBreed.Name = "txtBreed";
-            this.txtBreed.Size = new System.Drawing.Size(182, 20);
-            this.txtBreed.TabIndex = 33;
+            this.tabPage1.Location = new System.Drawing.Point(4, 4);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(1272, 541);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // lblAge
+            // tabPage2
             // 
-            this.lblAge.AutoSize = true;
-            this.lblAge.Location = new System.Drawing.Point(31, 193);
-            this.lblAge.Name = "lblAge";
-            this.lblAge.Size = new System.Drawing.Size(26, 13);
-            this.lblAge.TabIndex = 32;
-            this.lblAge.Text = "Age";
+            this.tabPage2.Location = new System.Drawing.Point(4, 4);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1272, 541);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // txtAge
+            // petsPage
             // 
-            this.txtAge.Location = new System.Drawing.Point(138, 190);
-            this.txtAge.Name = "txtAge";
-            this.txtAge.Size = new System.Drawing.Size(182, 20);
-            this.txtAge.TabIndex = 31;
+            this.petsPage.BackColor = System.Drawing.Color.White;
+            this.petsPage.Controls.Add(this.flowPanel);
+            this.petsPage.Location = new System.Drawing.Point(4, 4);
+            this.petsPage.Name = "petsPage";
+            this.petsPage.Padding = new System.Windows.Forms.Padding(3);
+            this.petsPage.Size = new System.Drawing.Size(1272, 541);
+            this.petsPage.TabIndex = 2;
+            this.petsPage.Text = "Pets";
             // 
-            // lblLabel
+            // flowPanel
             // 
-            this.lblLabel.AutoSize = true;
-            this.lblLabel.Location = new System.Drawing.Point(31, 165);
-            this.lblLabel.Name = "lblLabel";
-            this.lblLabel.Size = new System.Drawing.Size(33, 13);
-            this.lblLabel.TabIndex = 30;
-            this.lblLabel.Text = "Label";
+            this.flowPanel.AutoScroll = true;
+            this.flowPanel.Location = new System.Drawing.Point(3, 6);
+            this.flowPanel.Name = "flowPanel";
+            this.flowPanel.Size = new System.Drawing.Size(205, 571);
+            this.flowPanel.TabIndex = 0;
             // 
-            // txtLabel
+            // tabPage4
             // 
-            this.txtLabel.Location = new System.Drawing.Point(138, 162);
-            this.txtLabel.Name = "txtLabel";
-            this.txtLabel.Size = new System.Drawing.Size(182, 20);
-            this.txtLabel.TabIndex = 29;
+            this.tabPage4.Location = new System.Drawing.Point(4, 4);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(1272, 541);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "tabPage4";
+            this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // tabPage5
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(366, 41);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(403, 369);
-            this.dataGridView1.TabIndex = 28;
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.Location = new System.Drawing.Point(208, 372);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(75, 23);
-            this.btnAdd.TabIndex = 27;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // tableTitle
-            // 
-            this.tableTitle.AutoSize = true;
-            this.tableTitle.Location = new System.Drawing.Point(31, 61);
-            this.tableTitle.Name = "tableTitle";
-            this.tableTitle.Size = new System.Drawing.Size(65, 13);
-            this.tableTitle.TabIndex = 26;
-            this.tableTitle.Text = "Animal Type";
-            // 
-            // lblAnimalTypeID
-            // 
-            this.lblAnimalTypeID.AutoSize = true;
-            this.lblAnimalTypeID.Location = new System.Drawing.Point(31, 137);
-            this.lblAnimalTypeID.Name = "lblAnimalTypeID";
-            this.lblAnimalTypeID.Size = new System.Drawing.Size(65, 13);
-            this.lblAnimalTypeID.TabIndex = 25;
-            this.lblAnimalTypeID.Text = "Animal Type";
-            // 
-            // lblD
-            // 
-            this.lblD.AutoSize = true;
-            this.lblD.Location = new System.Drawing.Point(31, 109);
-            this.lblD.Name = "lblD";
-            this.lblD.Size = new System.Drawing.Size(18, 13);
-            this.lblD.TabIndex = 24;
-            this.lblD.Text = "ID";
-            // 
-            // txtAnimalTypeID
-            // 
-            this.txtAnimalTypeID.Location = new System.Drawing.Point(138, 134);
-            this.txtAnimalTypeID.Name = "txtAnimalTypeID";
-            this.txtAnimalTypeID.Size = new System.Drawing.Size(100, 20);
-            this.txtAnimalTypeID.TabIndex = 23;
-            // 
-            // txtID
-            // 
-            this.txtID.Location = new System.Drawing.Point(138, 106);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(100, 20);
-            this.txtID.TabIndex = 22;
+            this.tabPage5.BackColor = System.Drawing.Color.White;
+            this.tabPage5.Location = new System.Drawing.Point(4, 4);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(1272, 541);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "tabPage5";
             // 
             // frmDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnPickPhoto);
-            this.Controls.Add(this.lblPhoto);
-            this.Controls.Add(this.lblListPrice);
-            this.Controls.Add(this.txtListPrice);
-            this.Controls.Add(this.lblColor);
-            this.Controls.Add(this.txtColor);
-            this.Controls.Add(this.lblGender);
-            this.Controls.Add(this.txtGender);
-            this.Controls.Add(this.lblBreed);
-            this.Controls.Add(this.txtBreed);
-            this.Controls.Add(this.lblAge);
-            this.Controls.Add(this.txtAge);
-            this.Controls.Add(this.lblLabel);
-            this.Controls.Add(this.txtLabel);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.tableTitle);
-            this.Controls.Add(this.lblAnimalTypeID);
-            this.Controls.Add(this.lblD);
-            this.Controls.Add(this.txtAnimalTypeID);
-            this.Controls.Add(this.txtID);
+            this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.pageControl);
+            this.Controls.Add(this.bunifuPanel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmDashboard";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmDashboard";
             this.Load += new System.EventHandler(this.frmDashboard_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.bunifuPanel1.ResumeLayout(false);
+            this.bunifuPanel1.PerformLayout();
+            this.pageControl.ResumeLayout(false);
+            this.petsPage.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button btnPickPhoto;
-        private System.Windows.Forms.Label lblPhoto;
-        private System.Windows.Forms.Label lblListPrice;
-        private System.Windows.Forms.TextBox txtListPrice;
-        private System.Windows.Forms.Label lblColor;
-        private System.Windows.Forms.TextBox txtColor;
-        private System.Windows.Forms.Label lblGender;
-        private System.Windows.Forms.TextBox txtGender;
-        private System.Windows.Forms.Label lblBreed;
-        private System.Windows.Forms.TextBox txtBreed;
-        private System.Windows.Forms.Label lblAge;
-        private System.Windows.Forms.TextBox txtAge;
-        private System.Windows.Forms.Label lblLabel;
-        private System.Windows.Forms.TextBox txtLabel;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Label tableTitle;
-        private System.Windows.Forms.Label lblAnimalTypeID;
-        private System.Windows.Forms.Label lblD;
-        private System.Windows.Forms.TextBox txtAnimalTypeID;
-        private System.Windows.Forms.TextBox txtID;
+        private Components.ButtonComponent btnDashboard;
+        private Components.ButtonComponent buttonComponent1;
+        private Components.ButtonComponent btnPets;
+        private Components.ButtonComponent buttonComponent4;
+        private Components.ButtonComponent buttonComponent5;
+        private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel2;
+        private Bunifu.UI.WinForms.BunifuPages pageControl;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage petsPage;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.FlowLayoutPanel flowPanel;
     }
 }

@@ -74,6 +74,7 @@
     <Compile Include="Maps\saleMap.cs" />
     <Compile Include="Maps\supplierMap.cs" />
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="DataInitializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

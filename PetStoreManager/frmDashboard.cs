@@ -9,14 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entities.Models;
 using Business.Manager;
-using PetStoreManager.Utilities;
+using System.Data.Entity;
+using PetStoreManager.Components;
+using PetStoreManager.Properties;
 
 namespace PetStoreManager
 {
     public partial class frmDashboard : Form
     {
-        private Image img;
-
         public frmDashboard()
         {
             InitializeComponent();
@@ -24,51 +24,33 @@ namespace PetStoreManager
 
         private void frmDashboard_Load(object sender, EventArgs e)
         {
-            animalManager bll = new animalManager();
-            this.dataGridView1.DataSource = bll.GetAllList();
+
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
+        private void btnPets_Click(object sender, EventArgs e)
         {
-            animalManager bll = new animalManager();
-            animal a = new animal()
+            this.pageControl.Visible = true;
+            this.petsPage.Refresh();
+            this.flowPanel.Controls.Clear();
+            this.pageControl.SetPage(2);
+            animalTypeManager bll = new animalTypeManager();
+            var animalTypes = bll.GetAll();
+            foreach (var at in animalTypes)
             {
-                ID = txtID.Text,
-                AnimalTypeID = "PT1",
-                Label = "GuineaPig Bear Cute",
-                Age = 2,
-                Breed = "American",
-                Gender = "Male",
-                Color = "Orange",
-                ListPrice = 1500000,
-                Photo = ImageService.ImageToBinary(this.img)
-            };
-
-            try
-            {
-                bll.Add(a);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Faild", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            this.dataGridView1.DataSource = bll.GetAllList();
-        }
-
-        private void btnPickPhoto_Click(object sender, EventArgs e)
-        {
-            using (OpenFileDialog open = new OpenFileDialog())
-            {
-                open.Title = "Open Image";
-                open.Filter = "Image (*.png;*.jpg)|*.png;*.jpg";
-                if (open.ShowDialog() == DialogResult.OK)
+                PetTypeButtonComponent newComp = new PetTypeButtonComponent()
                 {
-                    string filepath = open.FileName;
-                    this.img = Image.FromFile(filepath);
-
-                    MessageBox.Show("Success");
-                }
+                    Image = Resources.icon_pets,
+                    Title = at.Label,
+                    IdText = at.ID
+                };
+                this.flowPanel.Controls.Add(newComp);
             }
+        }
+
+        private void btnDashboard_Click(object sender, EventArgs e)
+        {
+            this.pageControl.Visible = true;
+            this.pageControl.SetPage(0);
         }
     }
 }

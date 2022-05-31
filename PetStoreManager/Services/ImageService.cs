@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Drawing;
 
-namespace PetStoreManager.Utilities
+namespace PetStoreManager.Services
 {
     public static class ImageService
     {

@@ -15,8 +15,7 @@ namespace Data
         public DataContext()
             : base("name=PetStoreDB")
         {
-            Database.SetInitializer<DataContext>(new DropCreateDatabaseIfModelChanges<DataContext>());
-            Database.SetInitializer(new MigrateDatabaseToLatestVersion<DataContext, Data.Migrations.Configuration>());
+            Database.SetInitializer(new DataInitializer());
         }
 
         public DbSet<animalType> animalTypes { get; set; }
