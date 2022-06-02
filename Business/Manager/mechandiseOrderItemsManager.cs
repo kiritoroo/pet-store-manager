@@ -3,42 +3,38 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data.Entity;
-using Data;
+using Data.Access;
 using Entities.Models;
+
 namespace Business.Manager
 {
     public class mechandiseOrderItemsManager
     {
-        private DataContext db = new DataContext();
+        private merchandiseOrderItemAccess dal = new merchandiseOrderItemAccess();
 
-        public IQueryable<merchandiseOrderItem> FindAll()
+        public IQueryable<merchandiseOrderItem> GetAll()
         {
-            return this.db.merchandiseOrderItems;
+            return this.dal.GetAll();
         }
 
         public merchandiseOrderItem Find(int OrderID, string ItemID)
         {
-            return this.db.merchandiseOrderItems.Find(OrderID,ItemID);
+            return this.dal.Find(OrderID, ItemID);
         }
 
         public void Save(merchandiseOrderItem _merchandiseOrderItem)
         {
-            this.db.merchandiseOrderItems.Add(_merchandiseOrderItem);
-            this.db.SaveChanges();
+            this.dal.Save(_merchandiseOrderItem);
         }
 
         public void Modify(merchandiseOrderItem _merchandiseOrderItem)
         {
-            db.Entry(_merchandiseOrderItem).State = EntityState.Modified;
-            db.SaveChanges();
+            this.dal.Modify(_merchandiseOrderItem);
         }
 
         public void Delete(int OrderID, string ItemID)
         {
-           merchandiseOrderItem _merchandiseOrderItem = this.Find(OrderID, ItemID);
-            db.merchandiseOrderItems.Remove(_merchandiseOrderItem);
-            db.SaveChanges();
+            this.dal.Delete(OrderID, ItemID);
         }
     }
 }

@@ -21,9 +21,6 @@ namespace Data.Maps
             Property(p => p.ID)
                 .IsRequired()
                 .HasMaxLength(10);
-            Property(p => p.Breed)
-                .IsRequired()
-                .HasMaxLength(100);
         }
     }
 }

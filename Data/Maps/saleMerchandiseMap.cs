@@ -8,9 +8,9 @@ using Entities.Models;
 
 namespace Data.Maps
 {
-    public class saleItemMap : EntityTypeConfiguration<saleItem>
+    public class saleMerchandiseMap : EntityTypeConfiguration<saleMerchandise>
     {
-        public saleItemMap()
+        public saleMerchandiseMap()
         {
             HasKey(si => new { si.SaleID, si.ItemID });
             HasRequired<sale>(sa => sa.Sale)

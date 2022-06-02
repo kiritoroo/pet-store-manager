@@ -9,12 +9,13 @@ namespace Entities.Models
     public class merchandise
     {
         public string ID { get; set; }
+        public string MerchandiseTypeID { get; set; }
         public string Label { get; set; }
-        public string Description { get; set; }
-        public int QuantityInStock { get; set; }
         public float ListPrice { get; set; }
+        public int QuantityInStock { get; set; }
         public byte[] Photo { get; set; }
-        public ICollection<saleItem> SaleItems { get; set; }
+        public merchandiseType MerchandiseType { get; set; }
+        public ICollection<saleMerchandise> SaleItems { get; set; }
         public ICollection<merchandiseOrderItem> MerchandiseOrderItems { get; set; }
 
     }

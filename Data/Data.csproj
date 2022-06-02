@@ -59,6 +59,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Access\animalAccess.cs" />
+    <Compile Include="Access\animalOrderAccess.cs" />
+    <Compile Include="Access\animalOrderItemAccess.cs" />
+    <Compile Include="Access\animalTypeAccess.cs" />
+    <Compile Include="Access\customerAccess.cs" />
+    <Compile Include="Access\employeeAccess.cs" />
+    <Compile Include="Access\merchandiseAccess.cs" />
+    <Compile Include="Access\merchandiseOrderAccess.cs" />
+    <Compile Include="Access\merchandiseOrderItemAccess.cs" />
+    <Compile Include="Access\merchandiseTypeAccess.cs" />
+    <Compile Include="Access\saleAccess.cs" />
+    <Compile Include="Access\saleAnimalAccess.cs" />
+    <Compile Include="Access\saleMerchandiseAccess.cs" />
+    <Compile Include="Access\supplierAccess.cs" />
     <Compile Include="Maps\animalOrderItemMap.cs" />
     <Compile Include="Maps\animalOrderMap.cs" />
     <Compile Include="Maps\animalTypeMap.cs" />
@@ -69,8 +83,9 @@
     <Compile Include="Maps\merchandiseMap.cs" />
     <Compile Include="Maps\merchandiseOrderItemMap.cs" />
     <Compile Include="Maps\merchandiseOrderMap.cs" />
+    <Compile Include="Maps\merchandiseTypeMap.cs" />
     <Compile Include="Maps\saleAnimalMap.cs" />
-    <Compile Include="Maps\saleItemMap.cs" />
+    <Compile Include="Maps\saleMerchandiseMap.cs" />
     <Compile Include="Maps\saleMap.cs" />
     <Compile Include="Maps\supplierMap.cs" />
     <Compile Include="Migrations\Configuration.cs" />

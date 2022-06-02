@@ -3,44 +3,38 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data;
-using System.Data.Entity;
-using Data;
+using Data.Access;
 using Entities.Models;
 
 namespace Business.Manager
 {
     public class supplierManager
     {
-        private DataContext db = new DataContext();
+        private supplierAccess dal = new supplierAccess();
 
-        public IQueryable<supplier> FindAll()
+        public IQueryable<supplier> GetAll()
         {
-            return this.db.suppliers;
+            return this.dal.GetAll();
         }
 
         public supplier Find(string id)
         {
-            return this.db.suppliers.Find(id);
+            return this.dal.Find(id);
         }
 
         public void Save(supplier _supplier)
         {
-            this.db.suppliers.Add(_supplier);
-            this.db.SaveChanges();
+            this.dal.Save(_supplier);
         }
 
         public void Modify(supplier _supplier)
         {
-            db.Entry(_supplier).State = EntityState.Modified;
-            db.SaveChanges();
+            this.dal.Modify(_supplier);
         }
 
         public void Delete(string id)
         {
-            supplier _supplier = this.Find(id);
-            db.suppliers.Remove(_supplier);
-            db.SaveChanges();
+            this.dal.Delete(id);
         }
     }
 }

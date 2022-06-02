@@ -3,43 +3,39 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data.Entity;
-using Data;
+using Data.Access;
 using Entities.Models;
+
 namespace Business.Manager
 {
-   public  class mechandiseOrderManager
-    {
-        private DataContext db = new DataContext();
+   public class mechandiseOrderManager
+   {
+        private merchandiseOrderAccess dal = new merchandiseOrderAccess();  
 
-        public IQueryable<merchandiseOrder> FindAll()
+        public IQueryable<merchandiseOrder> GetAll()
         {
-            return this.db.merchandiseOrders;
+            return this.dal.GetAll();
         }
 
         public merchandiseOrder Find(int id)
         {
-            return this.db.merchandiseOrders.Find(id);
+            return this.dal.Find(id);
         }
 
         public void Save(merchandiseOrder _merchandiseOrder)
         {
-            this.db.merchandiseOrders.Add(_merchandiseOrder);
-            this.db.SaveChanges();
+            this.dal.Save(_merchandiseOrder);
         }
 
         public void Modify(merchandiseOrder _merchandiseOrder)
         {
-            db.Entry(_merchandiseOrder).State = EntityState.Modified;
-            db.SaveChanges();
+            this.dal.Modify(_merchandiseOrder);
         }
 
         public void Delete(int id)
         {
-            merchandiseOrder _merchandiseOrder = this.Find(id);
-            db.merchandiseOrders.Remove(_merchandiseOrder);
-            db.SaveChanges();
+            this.dal.Delete(id);
         }
-    }
+   }
 }
 

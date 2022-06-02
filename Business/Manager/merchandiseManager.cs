@@ -4,43 +4,38 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
-using System.Data.Entity;
-using Data;
 using Entities.Models;
+using Data.Access;
 
 namespace Business.Manager
 {
     public class merchandiseManager
     {
-        private DataContext db = new DataContext();
+        private merchandiseAccess dal = new merchandiseAccess();
 
-        public IQueryable<merchandise> FindAll()
+        public IQueryable<merchandise> GetAll()
         {
-            return this.db.merchandises;
+            return this.dal.GetAll();
         }
 
         public merchandise Find(string id)
         {
-            return this.db.merchandises.Find(id);
+            return this.dal.Find(id);
         }
 
         public void Save(merchandise _merchandise)
         {
-            this.db.merchandises.Add(_merchandise);
-            this.db.SaveChanges();
+            this.dal.Save(_merchandise);
         }
 
         public void Modify(merchandise _merchandise)
         {
-            db.Entry(_merchandise).State = EntityState.Modified;
-            db.SaveChanges();
+            this.dal.Modify(_merchandise);
         }
 
         public void Delete(string id)
         {
-            merchandise _merchandise = this.Find(id);
-            db.merchandises.Remove(_merchandise);
-            db.SaveChanges();
+            this.dal.Delete(id);
         }
     }
 }

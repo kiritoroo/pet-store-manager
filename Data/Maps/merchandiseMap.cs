@@ -13,6 +13,14 @@ namespace Data.Maps
         public merchandiseMap()
         {
             HasKey<string>(m => m.ID);
+            HasRequired<merchandiseType>(m => m.MerchandiseType)
+                .WithMany(mt => mt.Merchandises)
+                .HasForeignKey<string>(m => m.MerchandiseTypeID)
+                .WillCascadeOnDelete(false);
+
+            Property(p => p.ID)
+                .IsRequired()
+                .HasMaxLength(10);
         }
     }
 }

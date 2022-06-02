@@ -68,10 +68,11 @@
     <Compile Include="Models\merchandise.cs" />
     <Compile Include="Models\merchandiseOrder.cs" />
     <Compile Include="Models\merchandiseOrderItem.cs" />
+    <Compile Include="Models\merchandiseType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Models\sale.cs" />
     <Compile Include="Models\saleAnimal.cs" />
-    <Compile Include="Models\saleItem.cs" />
+    <Compile Include="Models\saleMerchandise.cs" />
     <Compile Include="Models\supplier.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

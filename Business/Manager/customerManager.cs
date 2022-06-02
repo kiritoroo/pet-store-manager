@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data;
-using System.Data.Entity;
-using Data;
+using Data.Access;
 using Entities.Models;
     
 
@@ -13,35 +11,31 @@ namespace Business.Manager
 {
     public class customerManager
     {
-        private DataContext db = new DataContext();
+        private customerAccess dal = new customerAccess();
 
-        public IQueryable<customer> FindAll()
+        public IQueryable<customer> GetAll()
         {
-            return this.db.customers;
+            return this.dal.GetAll();
         }
 
         public customer Find(string id)
         {
-            return this.db.customers.Find(id);
+            return this.dal.Find(id);
         }
 
         public void Save(customer _customer)
         {
-            this.db.customers.Add(_customer);
-            this.db.SaveChanges();
+            this.dal.Save(_customer);
         }
 
         public void Modify(customer _customer)
         {
-            db.Entry(_customer).State = EntityState.Modified;
-            db.SaveChanges();
+            this.dal.Modify(_customer);
         }
 
         public void Delete(string id)
         {
-            customer _customer = this.Find(id);
-            db.customers.Remove(_customer);
-            db.SaveChanges();
+            this.dal.Delete(id);
         }
     }
 }

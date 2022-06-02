@@ -3,42 +3,38 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data.Entity;
-using Data;
+using Data.Access;
 using Entities.Models;
+
 namespace Business.Manager
 {
     public class animailOrderManager
     {
-        private DataContext db = new DataContext();
+        private animalOrderAccess dal = new animalOrderAccess();
 
-        public IQueryable<animalOrder> FindAll()
+        public IQueryable<animalOrder> GetAll()
         {
-            return this.db.animalOrders;
+            return this.dal.GetAll();
         }
 
         public animalOrder Find(int id)
         {
-            return this.db.animalOrders.Find(id);
+            return this.dal.Find(id);
         }
 
         public void Save(animalOrder _animalOrder)
         {
-            this.db.animalOrders.Add(_animalOrder);
-            this.db.SaveChanges();
+            this.dal.Save(_animalOrder);
         }
 
         public void Modify(animalOrder _animalOrder)
         {
-            db.Entry(_animalOrder).State = EntityState.Modified;
-            db.SaveChanges();
+            this.dal.Modify(_animalOrder);
         }
 
         public void Delete(int id)
         {
-            animalOrder _animalOrder = this.Find(id);
-            db.animalOrders.Remove(_animalOrder);
-            db.SaveChanges();
+            this.dal.Delete(id);
         }
     }
 }

@@ -3,50 +3,38 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data;
-using System.Data.Entity;
-using Data;
+using Data.Access;
 using Entities.Models;
 
 namespace Business.Manager
 {
     public class animalTypeManager
     {
-        private DataContext db = new DataContext();
+        private animalTypeAccess dal = new animalTypeAccess();
 
         public IQueryable<animalType> GetAll()
         {
-            return this.db.animalTypes;
-        }
-
-        public List<animalType> GetAllList()
-        {
-            List<animalType> list = this.db.animalTypes.ToList();
-            return list;
+            return this.dal.GetAll();
         }
 
         public animalType Find(string id)
         {
-            return this.db.animalTypes.Find(id);
+            return this.dal.Find(id);
         }
 
         public void Add(animalType _animalType)
         {
-            this.db.animalTypes.Add(_animalType);
-            this.db.SaveChanges();
+            this.dal.Add(_animalType);
         }
 
         public void Modify(animalType _animalType)
         {
-            db.Entry(_animalType).State = EntityState.Modified;
-            db.SaveChanges();
+            this.dal.Modify(_animalType);
         }
 
         public void Delete(string id)
         {
-            animalType _animalType = this.Find(id);
-            db.animalTypes.Remove(_animalType);
-            db.SaveChanges();
+           this.dal.Delete(id);
         }
     }
 }

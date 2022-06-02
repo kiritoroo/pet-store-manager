@@ -1,9 +1,11 @@
-Bunifu.UI.WinForms.BunifuLoader, Bunifu.UI.WinForms.BunifuLoader, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9
-Bunifu.UI.WinForms.BunifuPictureBox, Bunifu.UI.WinForms.BunifuPictureBox, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9
-Bunifu.UI.WinForms.BunifuPages, Bunifu.UI.WinForms.BunifuPages, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9
-Bunifu.UI.WinForms.BunifuImageButton, Bunifu.UI.WinForms.BunifuImageButton, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9
-Bunifu.UI.WinForms.BunifuDatePicker, Bunifu.UI.WinForms.BunifuDatePicker, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9
 Bunifu.UI.WinForms.BunifuLabel, Bunifu.UI.WinForms.BunifuLabel, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9
-Bunifu.UI.WinForms.BunifuGroupBox, Bunifu.UI.WinForms.BunifuGroupBox, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9
+Bunifu.UI.WinForms.BunifuShadowPanel, Bunifu.UI.WinForms.BunifuShadowPanel, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9
+Bunifu.UI.WinForms.BunifuImageButton, Bunifu.UI.WinForms.BunifuImageButton, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9
+Bunifu.UI.WinForms.BunifuPages, Bunifu.UI.WinForms.BunifuPages, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9
+Bunifu.UI.WinForms.BunifuLoader, Bunifu.UI.WinForms.BunifuLoader, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9
+Bunifu.UI.WinForms.BunifuDropdown, Bunifu.UI.WinForms.BunifuDropdown, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9
+Bunifu.UI.WinForms.BunifuDatePicker, Bunifu.UI.WinForms.BunifuDatePicker, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9
+Bunifu.UI.WinForms.BunifuPictureBox, Bunifu.UI.WinForms.BunifuPictureBox, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9
 Bunifu.UI.WinForms.BunifuPanel, Bunifu.UI.WinForms.BunifuPanel, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9
 Bunifu.UI.WinForms.BunifuShapes, Bunifu.UI.WinForms.BunifuShapes, Version=5.3.0.0, Culture=neutral, PublicKeyToken=null
+Bunifu.UI.WinForms.BunifuGroupBox, Bunifu.UI.WinForms.BunifuGroupBox, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9

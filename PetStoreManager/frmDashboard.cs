@@ -11,7 +11,7 @@ using Entities.Models;
 using Business.Manager;
 using System.Data.Entity;
 using PetStoreManager.Components;
-using PetStoreManager.Properties;
+using PetStoreManager.Services;
 
 namespace PetStoreManager
 {
@@ -20,6 +20,17 @@ namespace PetStoreManager
         public frmDashboard()
         {
             InitializeComponent();
+            this.DoubleBuffered = true;
+        }
+
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams handleParam = base.CreateParams;
+                handleParam.ExStyle |= 0x02000000;   // WS_EX_COMPOSITED       
+                return handleParam;
+            }
         }
 
         private void frmDashboard_Load(object sender, EventArgs e)
@@ -27,30 +38,11 @@ namespace PetStoreManager
 
         }
 
-        private void btnPets_Click(object sender, EventArgs e)
+        #region Event
+        private void Event_CardTable_Click(object sender, MouseEventArgs e)
         {
-            this.pageControl.Visible = true;
-            this.petsPage.Refresh();
-            this.flowPanel.Controls.Clear();
-            this.pageControl.SetPage(2);
-            animalTypeManager bll = new animalTypeManager();
-            var animalTypes = bll.GetAll();
-            foreach (var at in animalTypes)
-            {
-                PetTypeButtonComponent newComp = new PetTypeButtonComponent()
-                {
-                    Image = Resources.icon_pets,
-                    Title = at.Label,
-                    IdText = at.ID
-                };
-                this.flowPanel.Controls.Add(newComp);
-            }
+            
         }
-
-        private void btnDashboard_Click(object sender, EventArgs e)
-        {
-            this.pageControl.Visible = true;
-            this.pageControl.SetPage(0);
-        }
+        #endregion
     }
 }

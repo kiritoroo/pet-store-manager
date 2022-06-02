@@ -14,6 +14,7 @@ namespace PetStoreManager.Services
         {
             using (MemoryStream ms = new MemoryStream())
             {
+                if (img != null) return null;
                 img.Save(ms, img.RawFormat);
                 return ms.ToArray();
             }
@@ -21,6 +22,7 @@ namespace PetStoreManager.Services
 
         public static Image BinaryToImage(byte[] bytes)
         {
+            if (bytes == null) return null;
             using (MemoryStream ms = new MemoryStream(bytes))
             {
                 Image img = Image.FromStream(ms);
