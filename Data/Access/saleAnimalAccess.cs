@@ -44,7 +44,7 @@ namespace Data.Access
         {
             db.Database.Log = Console.Write;
             int total = 0;
-            // Task Uncomplete
+            // Task Uncomplete - Huy
             // Querry
 
             return total;
@@ -54,7 +54,7 @@ namespace Data.Access
         {
             db.Database.Log = Console.Write;
             int total = 0;
-            // Task Uncomplete
+            // Task Uncomplete - Huy
             // Querry
 
             return total;

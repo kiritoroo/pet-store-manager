@@ -33,11 +33,11 @@
             this.caPrice = new Bunifu.UI.WinForms.BunifuLabel();
             this.caIconGender = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.caPhoto = new Bunifu.UI.WinForms.BunifuPictureBox();
-            this.caAddToCard = new Bunifu.UI.WinForms.BunifuPanel();
+            this.caAddToCardPanel = new Bunifu.UI.WinForms.BunifuPanel();
             this.caAddToCardLabel = new Bunifu.UI.WinForms.BunifuLabel();
             ((System.ComponentModel.ISupportInitialize)(this.caIconGender)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.caPhoto)).BeginInit();
-            this.caAddToCard.SuspendLayout();
+            this.caAddToCardPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // caTitleLabel
@@ -47,12 +47,12 @@
             this.caTitleLabel.AutoSize = false;
             this.caTitleLabel.Cursor = System.Windows.Forms.Cursors.Default;
             this.caTitleLabel.CursorType = System.Windows.Forms.Cursors.Default;
-            this.caTitleLabel.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.caTitleLabel.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.caTitleLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(115)))), ((int)(((byte)(183)))));
-            this.caTitleLabel.Location = new System.Drawing.Point(0, 176);
+            this.caTitleLabel.Location = new System.Drawing.Point(0, 142);
             this.caTitleLabel.Name = "caTitleLabel";
             this.caTitleLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.caTitleLabel.Size = new System.Drawing.Size(250, 72);
+            this.caTitleLabel.Size = new System.Drawing.Size(200, 65);
             this.caTitleLabel.TabIndex = 2;
             this.caTitleLabel.Text = "PET LABEL";
             this.caTitleLabel.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -67,10 +67,10 @@
             this.caPrice.CursorType = System.Windows.Forms.Cursors.Default;
             this.caPrice.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.caPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(75)))), ((int)(((byte)(57)))));
-            this.caPrice.Location = new System.Drawing.Point(0, 254);
+            this.caPrice.Location = new System.Drawing.Point(0, 213);
             this.caPrice.Name = "caPrice";
             this.caPrice.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.caPrice.Size = new System.Drawing.Size(250, 46);
+            this.caPrice.Size = new System.Drawing.Size(200, 37);
             this.caPrice.TabIndex = 2;
             this.caPrice.Text = "1.150,50$";
             this.caPrice.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
@@ -84,9 +84,9 @@
             this.caIconGender.BorderRadius = 0;
             this.caIconGender.Image = global::PetStoreManager.Properties.Resources.icon_male;
             this.caIconGender.IsCircle = true;
-            this.caIconGender.Location = new System.Drawing.Point(10, 20);
+            this.caIconGender.Location = new System.Drawing.Point(5, 5);
             this.caIconGender.Name = "caIconGender";
-            this.caIconGender.Size = new System.Drawing.Size(35, 35);
+            this.caIconGender.Size = new System.Drawing.Size(25, 25);
             this.caIconGender.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.caIconGender.TabIndex = 1;
             this.caIconGender.TabStop = false;
@@ -100,28 +100,29 @@
             this.caPhoto.BorderRadius = 0;
             this.caPhoto.Image = global::PetStoreManager.Properties.Resources.icon_pets_2;
             this.caPhoto.IsCircle = true;
-            this.caPhoto.Location = new System.Drawing.Point(55, 20);
+            this.caPhoto.Location = new System.Drawing.Point(41, 16);
             this.caPhoto.Name = "caPhoto";
-            this.caPhoto.Size = new System.Drawing.Size(150, 150);
+            this.caPhoto.Size = new System.Drawing.Size(120, 120);
             this.caPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.caPhoto.TabIndex = 0;
             this.caPhoto.TabStop = false;
             this.caPhoto.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Square;
             // 
-            // caAddToCard
+            // caAddToCardPanel
             // 
-            this.caAddToCard.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(226)))), ((int)(((byte)(138)))));
-            this.caAddToCard.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("caAddToCard.BackgroundImage")));
-            this.caAddToCard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.caAddToCard.BorderColor = System.Drawing.Color.Transparent;
-            this.caAddToCard.BorderRadius = 3;
-            this.caAddToCard.BorderThickness = 1;
-            this.caAddToCard.Controls.Add(this.caAddToCardLabel);
-            this.caAddToCard.Location = new System.Drawing.Point(0, 245);
-            this.caAddToCard.Name = "caAddToCard";
-            this.caAddToCard.ShowBorders = true;
-            this.caAddToCard.Size = new System.Drawing.Size(250, 0);
-            this.caAddToCard.TabIndex = 3;
+            this.caAddToCardPanel.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(226)))), ((int)(((byte)(138)))));
+            this.caAddToCardPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("caAddToCardPanel.BackgroundImage")));
+            this.caAddToCardPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.caAddToCardPanel.BorderColor = System.Drawing.Color.Transparent;
+            this.caAddToCardPanel.BorderRadius = 3;
+            this.caAddToCardPanel.BorderThickness = 1;
+            this.caAddToCardPanel.Controls.Add(this.caAddToCardLabel);
+            this.caAddToCardPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.caAddToCardPanel.Location = new System.Drawing.Point(0, 250);
+            this.caAddToCardPanel.Name = "caAddToCardPanel";
+            this.caAddToCardPanel.ShowBorders = true;
+            this.caAddToCardPanel.Size = new System.Drawing.Size(200, 0);
+            this.caAddToCardPanel.TabIndex = 3;
             // 
             // caAddToCardLabel
             // 
@@ -131,7 +132,7 @@
             this.caAddToCardLabel.CursorType = System.Windows.Forms.Cursors.Default;
             this.caAddToCardLabel.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.caAddToCardLabel.ForeColor = System.Drawing.Color.White;
-            this.caAddToCardLabel.Location = new System.Drawing.Point(55, 18);
+            this.caAddToCardLabel.Location = new System.Drawing.Point(31, 14);
             this.caAddToCardLabel.Name = "caAddToCardLabel";
             this.caAddToCardLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.caAddToCardLabel.Size = new System.Drawing.Size(136, 23);
@@ -145,18 +146,18 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.Controls.Add(this.caAddToCard);
+            this.Controls.Add(this.caAddToCardPanel);
             this.Controls.Add(this.caPrice);
             this.Controls.Add(this.caTitleLabel);
             this.Controls.Add(this.caIconGender);
             this.Controls.Add(this.caPhoto);
             this.Margin = new System.Windows.Forms.Padding(30, 20, 30, 50);
             this.Name = "CardAnimal";
-            this.Size = new System.Drawing.Size(250, 300);
+            this.Size = new System.Drawing.Size(200, 250);
             ((System.ComponentModel.ISupportInitialize)(this.caIconGender)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.caPhoto)).EndInit();
-            this.caAddToCard.ResumeLayout(false);
-            this.caAddToCard.PerformLayout();
+            this.caAddToCardPanel.ResumeLayout(false);
+            this.caAddToCardPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -167,7 +168,7 @@
         private Bunifu.UI.WinForms.BunifuPictureBox caIconGender;
         private Bunifu.UI.WinForms.BunifuLabel caTitleLabel;
         private Bunifu.UI.WinForms.BunifuLabel caPrice;
-        private Bunifu.UI.WinForms.BunifuPanel caAddToCard;
+        private Bunifu.UI.WinForms.BunifuPanel caAddToCardPanel;
         private Bunifu.UI.WinForms.BunifuLabel caAddToCardLabel;
     }
 }
