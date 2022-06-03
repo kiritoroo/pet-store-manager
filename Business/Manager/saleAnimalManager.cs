@@ -36,5 +36,17 @@ namespace Business.Manager
         {
             this.dal.Delete(saleId, animalId);
         }
+
+        public int GetTotalAnimalSales()
+        {
+            int total = this.dal.GetTotalAnimalSale();
+            return total;
+        }
+
+        public int GetTotalAnimalSalesInMonth(string _month)
+        {
+            int total = this.dal.GetTotalAnimalSalesInMonth(_month);
+            return total;
+        }
     }
 }

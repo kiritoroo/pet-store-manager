@@ -141,10 +141,10 @@
 
         #endregion
 
-        private Bunifu.UI.WinForms.BunifuPictureBox ctIcon;
-        private Bunifu.UI.WinForms.BunifuLabel ctLabel;
-        private Bunifu.UI.WinForms.BunifuShapes ctLineEffect;
-        private Bunifu.UI.WinForms.BunifuPanel ctPanelEffect;
-        private Bunifu.UI.WinForms.BunifuPictureBox ctArrowEffect;
+        public Bunifu.UI.WinForms.BunifuPictureBox ctIcon;
+        public Bunifu.UI.WinForms.BunifuLabel ctLabel;
+        public Bunifu.UI.WinForms.BunifuShapes ctLineEffect;
+        public Bunifu.UI.WinForms.BunifuPanel ctPanelEffect;
+        public Bunifu.UI.WinForms.BunifuPictureBox ctArrowEffect;
     }
 }

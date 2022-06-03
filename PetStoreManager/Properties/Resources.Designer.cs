@@ -153,6 +153,46 @@ namespace PetStoreManager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_totalCustomer {
+            get {
+                object obj = ResourceManager.GetObject("icon_totalCustomer", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_totalIncome {
+            get {
+                object obj = ResourceManager.GetObject("icon_totalIncome", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_totalMerchandiseSale {
+            get {
+                object obj = ResourceManager.GetObject("icon_totalMerchandiseSale", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_totalPetSale {
+            get {
+                object obj = ResourceManager.GetObject("icon_totalPetSale", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_triagle_blue {
             get {
                 object obj = ResourceManager.GetObject("icon_triagle_blue", resourceCulture);

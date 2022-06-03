@@ -37,5 +37,10 @@ namespace Business.Manager
         {
             this.dal.Delete(id);
         }
+
+        public int GetTotalCustomer()
+        {
+            return this.dal.GetTotalCustomer();
+        }
     }
 }

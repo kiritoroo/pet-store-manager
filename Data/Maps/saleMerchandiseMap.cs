@@ -12,14 +12,14 @@ namespace Data.Maps
     {
         public saleMerchandiseMap()
         {
-            HasKey(si => new { si.SaleID, si.ItemID });
+            HasKey(si => new { si.SaleID, si.MerchandiseID });
             HasRequired<sale>(sa => sa.Sale)
                         .WithMany(s => s.SaleItems)
                         .HasForeignKey<int>(sa => sa.SaleID)
                         .WillCascadeOnDelete(false);
             HasRequired<merchandise>(si => si.Merchandise)
                         .WithMany(m => m.SaleItems)
-                        .HasForeignKey<string>(si => si.ItemID)
+                        .HasForeignKey<string>(si => si.MerchandiseID)
                         .WillCascadeOnDelete(false);
         }
     }

@@ -11,11 +11,11 @@ namespace Entities.Models
         public int  ID { get; set; }
         public DateTime saledate { get; set; }
         
-        public float SaleTax { get; set; }
 
         public string EmployeeID { get; set; }
 
         public string CustomerID { get; set; }
+        public float SaleTax { get; set; }
 
         public employee Employee { get; set; }
         public customer Customer { get; set; }

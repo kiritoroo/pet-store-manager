@@ -8,35 +8,56 @@ using Entities.Models;
 
 namespace Data.Access
 {
-    public class saleAnimalAccess : DataContext
+    public class saleAnimalAccess
     {
+        DataContext db = new DataContext();
         public IQueryable<saleAnimal> GetAll()
         {
-            return this.saleAnimals;
+            return this.db.saleAnimals;
         }
 
         public saleAnimal Find(int saleId, string animalId)
         {
-            return this.saleAnimals.Find(saleId, animalId);
+            return this.db.saleAnimals.Find(saleId, animalId);
         }
 
         public void Add(saleAnimal _saleAnimal)
         {
-            this.saleAnimals.Add(_saleAnimal);
-            this.SaveChanges();
+            this.db.saleAnimals.Add(_saleAnimal);
+            this.db.SaveChanges();
         }
 
         public void Modify(saleAnimal _saleAnimal)
         {
-            Entry(_saleAnimal).State = EntityState.Modified;
-            SaveChanges();
+            this.db.Entry(_saleAnimal).State = EntityState.Modified;
+            this.db.SaveChanges();
         }
 
         public void Delete(int saleId, string animalId)
         {
             saleAnimal _saleAnimal = this.Find(saleId, animalId);
-            saleAnimals.Remove(_saleAnimal);
-            SaveChanges();
+            this.db.saleAnimals.Remove(_saleAnimal);
+            this.db.SaveChanges();
+        }
+
+        public int GetTotalAnimalSale()
+        {
+            db.Database.Log = Console.Write;
+            int total = 0;
+            // Task Uncomplete
+            // Querry
+
+            return total;
+        }
+
+        public int GetTotalAnimalSalesInMonth(string _month)
+        {
+            db.Database.Log = Console.Write;
+            int total = 0;
+            // Task Uncomplete
+            // Querry
+
+            return total;
         }
     }
 }

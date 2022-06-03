@@ -12,8 +12,8 @@ namespace Data
     {
         protected override void Seed(DataContext context)
         {
+            context.Database.Log = Console.Write;
             context.Database.ExecuteSqlCommand("ALTER TABLE animals ADD CONSTRAINT chk_id CHECK(animals.ID LIKE animals.AnimalTypeID + '%')");
-            context.Database.Connection.Open();
 
             var animalTypeList = new List<animalType> {
                 new animalType { ID = "GNB", Label = "Bọ Ú", Description = "Cute" },
@@ -71,7 +71,7 @@ namespace Data
                 new merchandise { ID = "TOY004", MerchandiseType = merchandiseTypeList[2], Label = "Carrot sơ mước size lớn", ListPrice = 85000, QuantityInStock = 10 },
                 new merchandise { ID = "TOY005", MerchandiseType = merchandiseTypeList[2], Label = "Cần câu cho Dog Cat", ListPrice = 40000, QuantityInStock = 5 },
                 new merchandise { ID = "CAG001", MerchandiseType = merchandiseTypeList[3], Label = "Lồng khay kéo size 72x60x50", ListPrice = 2500000, QuantityInStock = 5 },
-                new merchandise { ID = "CAG002", MerchandiseType = merchandiseTypeList[3], Label = "Lồng Alice cho Thỏ Bọ Hamster size cực lớn", ListPrice = 15000000, QuantityInStock = 5 },
+                new merchandise { ID = "CAG002", MerchandiseType = merchandiseTypeList[3], Label = "Lồng Alice cho Thỏ Bọ Hamster size cực lớn", ListPrice = 1500000, QuantityInStock = 5 },
                 new merchandise { ID = "LIT001", MerchandiseType = merchandiseTypeList[4], Label = "Giấy lót chuồng Chipsi Carefresh", ListPrice = 850000, QuantityInStock = 20 },
                 new merchandise { ID = "LIT002", MerchandiseType = merchandiseTypeList[4], Label = "Bắp lót chuồng Jonsanty 1KG", ListPrice = 100000, QuantityInStock = 20 },
                 new merchandise { ID = "MED001", MerchandiseType = merchandiseTypeList[5], Label = "Yaua táo kiwwi - bảo vệ tiêu hóa cho Thỏ Bọ", ListPrice = 10000, QuantityInStock = 50 },
@@ -81,6 +81,60 @@ namespace Data
                 new merchandise { ID = "MED005", MerchandiseType = merchandiseTypeList[5], Label = "Gel canxi bucastage hỗ trợ tiêu chảy", ListPrice = 10000, QuantityInStock = 20 },
                 new merchandise { ID = "MED006", MerchandiseType = merchandiseTypeList[5], Label = "Sữa bột cho Thỏ Bọ Hamster", ListPrice = 10000, QuantityInStock = 20 },
             };
+            merchandiseList.ForEach(m => context.merchandises.Add(m));
+            context.SaveChanges();
+
+            var customerList = new List<customer> {
+                new customer { ID = "CUS001", Phone = "030-0074321", ContactName = "Maria Anders", Address = "Obere Str. 57", Country = "Viet Nam"},
+                new customer { ID = "CUS002", Phone = "(5) 555-4729", ContactName = "Hanna Moos", Address = "Hauptstr. 29", Country = "Viet Nam"},
+                new customer { ID = "CUS003", Phone = "0621-08460", ContactName = "Thomas Hardy", Address = "120 Hanover Sq.", Country = "Viet Nam"},
+                new customer { ID = "CUS004", Phone = "(91) 555 22 82", ContactName = "Elizabeth Lincoln", Address = "23 Tsawassen Blvd.", Country = "Viet Nam"},
+                new customer { ID = "CUS005", Phone = "(11) 555-9857", ContactName = "Francisco Chang", Address = "Sierras de Granada 9993", Country = "Viet Nam"}
+            };
+            customerList.ForEach(cus => context.customers.Add(cus));
+            context.SaveChanges();
+
+            var employeeList = new List<employee> {
+                new employee { ID = "EMP001", Phone = "0921-12 34 65", LastName = "Holland", FristName = "Tom", Address = "35 King George", DataHired = Convert.ToDateTime("02/25/2022")},
+            };
+            employeeList.ForEach(emp => context.employees.Add(emp));
+            context.SaveChanges();
+
+            var saleList = new List<sale> {
+                new sale { saledate = Convert.ToDateTime("06/10/2022"), Employee = employeeList[0], Customer = customerList[0], SaleTax = 5000f},
+                new sale { saledate = Convert.ToDateTime("06/10/2022"), Employee = employeeList[0], Customer = customerList[1], SaleTax = 15000f},
+                new sale { saledate = Convert.ToDateTime("06/10/2022"), Employee = employeeList[0], Customer = customerList[2], SaleTax = 20000f}
+            };
+            saleList.ForEach(s => context.sales.Add(s));
+            context.SaveChanges();
+
+            var saleAnimalList = new List<saleAnimal> { 
+                new saleAnimal { Sale = saleList[0], Animal = animalList[0], SalePrice = 1500000f},
+                new saleAnimal { Sale = saleList[0], Animal = animalList[2], SalePrice = 1500000f},
+                new saleAnimal { Sale = saleList[1], Animal = animalList[1], SalePrice = 1500000f},
+                new saleAnimal { Sale = saleList[1], Animal = animalList[3], SalePrice = 1500000f},
+                new saleAnimal { Sale = saleList[2], Animal = animalList[4], SalePrice = 1500000f},
+                new saleAnimal { Sale = saleList[2], Animal = animalList[5], SalePrice = 1500000f}
+            };
+            saleAnimalList.ForEach(sa => context.saleAnimals.Add(sa));
+            context.SaveChanges();
+
+            var saleMerchandiseList = new List<saleMerchandise> { 
+                new saleMerchandise { Sale = saleList[0], Merchandise = merchandiseList[0], Quantity = 1, SalePrice = 220000f},
+                new saleMerchandise { Sale = saleList[0], Merchandise = merchandiseList[1], Quantity = 2, SalePrice = 50000f},
+                new saleMerchandise { Sale = saleList[0], Merchandise = merchandiseList[6], Quantity = 6, SalePrice = 200000f},
+                new saleMerchandise { Sale = saleList[1], Merchandise = merchandiseList[1], Quantity = 1, SalePrice = 25000f},
+                new saleMerchandise { Sale = saleList[1], Merchandise = merchandiseList[5], Quantity = 3, SalePrice = 80000f},
+                new saleMerchandise { Sale = saleList[1], Merchandise = merchandiseList[8], Quantity = 2, SalePrice = 25000f},
+                new saleMerchandise { Sale = saleList[2], Merchandise = merchandiseList[0], Quantity = 1, SalePrice = 35000f},
+                new saleMerchandise { Sale = saleList[2], Merchandise = merchandiseList[2], Quantity = 1, SalePrice = 260000f},
+                new saleMerchandise { Sale = saleList[2], Merchandise = merchandiseList[5], Quantity = 5, SalePrice = 450000f},
+                new saleMerchandise { Sale = saleList[2], Merchandise = merchandiseList[10], Quantity = 1, SalePrice = 120000f}
+            };
+            saleMerchandiseList.ForEach(sm => context.saleMerchandises.Add(sm));
+            context.SaveChanges();
+
+            base.Seed(context);
         }
     }
 }

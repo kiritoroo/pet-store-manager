@@ -8,35 +8,51 @@ using Entities.Models;
 
 namespace Data.Access
 {
-    public class customerAccess : DataContext
+    public class customerAccess
     {
+        DataContext db = new DataContext();
         public IQueryable<customer> GetAll()
         {
-            return this.customers;
+            db.Database.Log = Console.Write;
+            return this.db.customers;
         }
 
         public customer Find(string id)
         {
-            return this.customers.Find(id);
+            db.Database.Log = Console.Write;
+            return this.db.customers.Find(id);
         }
 
         public void Save(customer _customer)
         {
-            this.customers.Add(_customer);
-            this.SaveChanges();
+            db.Database.Log = Console.Write;
+            this.db.customers.Add(_customer);
+            this.db.SaveChanges();
         }
 
         public void Modify(customer _customer)
         {
-            Entry(_customer).State = EntityState.Modified;
-            SaveChanges();
+            db.Database.Log = Console.Write;
+            this.db.Entry(_customer).State = EntityState.Modified;
+            this.db.SaveChanges();
         }
 
         public void Delete(string id)
         {
+            db.Database.Log = Console.Write;
             customer _customer = this.Find(id);
-            customers.Remove(_customer);
-            SaveChanges();
+            this.db.customers.Remove(_customer);
+            this.db.SaveChanges();
+        }
+        
+        public int GetTotalCustomer()
+        {
+            db.Database.Log = Console.Write;
+            int total = 0;
+            // Task Uncomplete
+            // Querry
+
+            return total;
         }
     }
 }

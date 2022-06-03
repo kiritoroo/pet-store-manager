@@ -8,35 +8,36 @@ using Entities.Models;
 
 namespace Data.Access
 {
-    public class animalOrderAccess : DataContext
+    public class animalOrderAccess
     {
+        DataContext db = new DataContext();
         public IQueryable<animalOrder> GetAll()
         {
-            return this.animalOrders;
+            return this.db.animalOrders;
         }
 
         public animalOrder Find(int id)
         {
-            return this.animalOrders.Find(id);
+            return this.db.animalOrders.Find(id);
         }
 
         public void Save(animalOrder _animalOrder)
         {
-            this.animalOrders.Add(_animalOrder);
-            this.SaveChanges();
+            this.db.animalOrders.Add(_animalOrder);
+            this.db.SaveChanges();
         }
 
         public void Modify(animalOrder _animalOrder)
         {
-            Entry(_animalOrder).State = EntityState.Modified;
-            SaveChanges();
+            this.db.Entry(_animalOrder).State = EntityState.Modified;
+            this.db.SaveChanges();
         }
 
         public void Delete(int id)
         {
             animalOrder _animalOrder = this.Find(id);
-            animalOrders.Remove(_animalOrder);
-            SaveChanges();
+            this.db.animalOrders.Remove(_animalOrder);
+            this.db.SaveChanges();
         }
     }
 }

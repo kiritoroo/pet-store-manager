@@ -11,9 +11,9 @@ namespace Entities.Models
     {
         public string ID { get; set; }
         public string Phone { get; set; }
-        public string LastName { get; set; }
-        public string FristName { get; set; }
+        public string ContactName { get; set; }
         public string Address { get; set; }
+        public string Country { get; set; }
 
         public ICollection<sale> Sales {get; set;}
     }

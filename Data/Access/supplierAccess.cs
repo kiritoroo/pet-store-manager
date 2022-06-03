@@ -8,35 +8,36 @@ using Entities.Models;
 
 namespace Data.Access
 {
-    public class supplierAccess : DataContext
+    public class supplierAccess
     {
+        DataContext db = new DataContext();
         public IQueryable<supplier> GetAll()
         {
-            return this.suppliers;
+            return this.db.suppliers;
         }
 
         public supplier Find(string id)
         {
-            return this.suppliers.Find(id);
+            return this.db.suppliers.Find(id);
         }
 
         public void Save(supplier _supplier)
         {
-            this.suppliers.Add(_supplier);
-            this.SaveChanges();
+            this.db.suppliers.Add(_supplier);
+            this.db.SaveChanges();
         }
 
         public void Modify(supplier _supplier)
         {
-            Entry(_supplier).State = EntityState.Modified;
-            SaveChanges();
+            this.db.Entry(_supplier).State = EntityState.Modified;
+            this.db.SaveChanges();
         }
 
         public void Delete(string id)
         {
             supplier _supplier = this.Find(id);
-            suppliers.Remove(_supplier);
-            SaveChanges();
+            this.db.suppliers.Remove(_supplier);
+            this.db.SaveChanges();
         }
     }
 }

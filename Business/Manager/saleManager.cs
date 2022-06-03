@@ -36,5 +36,20 @@ namespace Business.Manager
         {
             this.dal.Delete(id);
         }
+
+        public int GetTotalBill()
+        {
+            return this.dal.GetTotalBill();
+        }
+
+        public float GetTotalIncome()
+        {
+            return this.dal.GetTotalIncome();
+        }
+
+        public float GetTotalIncomeInMonth(string _month)
+        {
+            return this.dal.GetTotalIncomeInMonth(_month);
+        }
     }
 }

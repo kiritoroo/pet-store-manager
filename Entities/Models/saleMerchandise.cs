@@ -9,7 +9,7 @@ namespace Entities.Models
     public class saleMerchandise
     {
         public int SaleID { get; set; }
-        public string ItemID { get; set; }
+        public string MerchandiseID { get; set; }
         public int Quantity { get; set; }
         public float SalePrice { get; set; }
         public sale Sale { get; set; }

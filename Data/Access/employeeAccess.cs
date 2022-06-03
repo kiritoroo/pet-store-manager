@@ -8,35 +8,36 @@ using System.Data.Entity;
 
 namespace Data.Access
 {
-    public  class employeeAccess : DataContext
+    public  class employeeAccess
     {
+        DataContext db = new DataContext();
         public IQueryable<employee> GetAll()
         {
-            return this.employees;
+            return this.db.employees;
         }
 
         public employee Find(string id)
         {
-            return this.employees.Find(id);
+            return this.db.employees.Find(id);
         }
 
         public void Save(employee _employee)
         {
-            this.employees.Add(_employee);
-            this.SaveChanges();
+            this.db.employees.Add(_employee);
+            this.db.SaveChanges();
         }
 
         public void Modify(employee _employee)
         {
-            Entry(_employee).State = EntityState.Modified;
-            SaveChanges();
+            this.db.Entry(_employee).State = EntityState.Modified;
+            this.db.SaveChanges();
         }
 
         public void Delete(string id)
         {
             employee _employee = this.Find(id);
-            employees.Remove(_employee);
-            SaveChanges();
+            this.db.employees.Remove(_employee);
+            this.db.SaveChanges();
         }
     }
 }

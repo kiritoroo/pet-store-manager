@@ -8,35 +8,36 @@ using System.Data.Entity;
 
 namespace Data.Access
 {
-    public class merchandiseAccess : DataContext
+    public class merchandiseAccess
     {
+        DataContext db = new DataContext();
         public IQueryable<merchandise> GetAll()
         {
-            return this.merchandises;
+            return this.db.merchandises;
         }
 
         public merchandise Find(string id)
         {
-            return this.merchandises.Find(id);
+            return this.db.merchandises.Find(id);
         }
 
         public void Save(merchandise _merchandise)
         {
-            this.merchandises.Add(_merchandise);
-            this.SaveChanges();
+            this.db.merchandises.Add(_merchandise);
+            this.db.SaveChanges();
         }
 
         public void Modify(merchandise _merchandise)
         {
-            Entry(_merchandise).State = EntityState.Modified;
-            SaveChanges();
+            this.db.Entry(_merchandise).State = EntityState.Modified;
+            this.db.SaveChanges();
         }
 
         public void Delete(string id)
         {
             merchandise _merchandise = this.Find(id);
-            merchandises.Remove(_merchandise);
-            SaveChanges();
+            this.db.merchandises.Remove(_merchandise);
+            this.db.SaveChanges();
         }
     }
 }

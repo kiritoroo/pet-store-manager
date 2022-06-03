@@ -133,7 +133,7 @@ namespace PetStoreManager.Components
 
         private void Event_Mouse_Click(object sender, MouseEventArgs e)
         {
-            this.FormParent.mainEffectPanel.BackgroundColor = this.default_color_panel;
+            
         }
         #endregion
     }

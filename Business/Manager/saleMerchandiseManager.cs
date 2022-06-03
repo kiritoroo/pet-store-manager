@@ -36,5 +36,15 @@ namespace Business.Manager
         {
             this.dal.Delete(saleId, itemId);
         }
+
+        public int GetTotalMerchandiseSales()
+        {
+            return this.dal.GetTotalMerchandiseSales();
+        }
+
+        public int GetTotalMerchandiseSalesInMonth(string _month)
+        {
+            return this.dal.GetTotalMerchandiseSalesInMonth(_month);
+        }
     }
 }
