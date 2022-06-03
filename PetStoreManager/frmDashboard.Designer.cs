@@ -31,7 +31,12 @@
             Utilities.BunifuPages.BunifuAnimatorNS.Animation animation1 = new Utilities.BunifuPages.BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDashboard));
             this.mainPageDashboard = new System.Windows.Forms.TabPage();
+            this.pDbcStatisIncome = new PetStoreManager.Components.CardStatisticsType1();
+            this.pDbcStatisCustomers = new PetStoreManager.Components.CardStatisticsType1();
+            this.pDbcStatisMerchandiseSales = new PetStoreManager.Components.CardStatisticsType1();
+            this.pDbcStatisPetsSales = new PetStoreManager.Components.CardStatisticsType1();
             this.mainControlPage = new Bunifu.UI.WinForms.BunifuPages();
+            this.mainPagePeople = new System.Windows.Forms.TabPage();
             this.mainEffectPanel = new Bunifu.UI.WinForms.BunifuPanel();
             this.mainTopPanel = new Bunifu.UI.WinForms.BunifuPanel();
             this.maincButtonOrders = new PetStoreManager.Components.CardTable();
@@ -39,11 +44,6 @@
             this.maincButtonPeoples = new PetStoreManager.Components.CardTable();
             this.maincButtonDashboard = new PetStoreManager.Components.CardTable();
             this.maincButtonSales = new PetStoreManager.Components.CardTable();
-            this.mainPagePeople = new System.Windows.Forms.TabPage();
-            this.pDbcStatisIncome = new PetStoreManager.Components.CardStatisticsType1();
-            this.pDbcStatisCustomers = new PetStoreManager.Components.CardStatisticsType1();
-            this.pDbcStatisMerchandiseSales = new PetStoreManager.Components.CardStatisticsType1();
-            this.pDbcStatisPetsSales = new PetStoreManager.Components.CardStatisticsType1();
             this.mainPageDashboard.SuspendLayout();
             this.mainControlPage.SuspendLayout();
             this.mainTopPanel.SuspendLayout();
@@ -62,6 +62,79 @@
             this.mainPageDashboard.Size = new System.Drawing.Size(1272, 597);
             this.mainPageDashboard.TabIndex = 0;
             this.mainPageDashboard.Text = "Page Dashboard";
+            // 
+            // pDbcStatisIncome
+            // 
+            this.pDbcStatisIncome.BackColor = System.Drawing.Color.Transparent;
+            this.pDbcStatisIncome.ColorBackground = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(7)))));
+            this.pDbcStatisIncome.ColorEffect = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(173)))), ((int)(((byte)(6)))));
+            this.pDbcStatisIncome.ColorLight = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(200)))), ((int)(((byte)(89)))));
+            this.pDbcStatisIncome.Cst1BigLabel = "Tổng số doanh thu";
+            this.pDbcStatisIncome.Cst1BigNumber = "1";
+            this.pDbcStatisIncome.Cst1BigNumberSize = 15F;
+            this.pDbcStatisIncome.Cst1Icon = global::PetStoreManager.Properties.Resources.icon_totalIncome;
+            this.pDbcStatisIncome.Cst1SmallLabel = "Tháng này";
+            this.pDbcStatisIncome.Cst1SmallNumber = "1";
+            this.pDbcStatisIncome.FormParent = null;
+            this.pDbcStatisIncome.Location = new System.Drawing.Point(953, 38);
+            this.pDbcStatisIncome.Name = "pDbcStatisIncome";
+            this.pDbcStatisIncome.Size = new System.Drawing.Size(280, 150);
+            this.pDbcStatisIncome.TabIndex = 3;
+            this.pDbcStatisIncome.Load += new System.EventHandler(this.pDbcStatisIncome_Load);
+            // 
+            // pDbcStatisCustomers
+            // 
+            this.pDbcStatisCustomers.BackColor = System.Drawing.Color.Transparent;
+            this.pDbcStatisCustomers.ColorBackground = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(167)))), ((int)(((byte)(69)))));
+            this.pDbcStatisCustomers.ColorEffect = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(150)))), ((int)(((byte)(62)))));
+            this.pDbcStatisCustomers.ColorLight = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(185)))), ((int)(((byte)(126)))));
+            this.pDbcStatisCustomers.Cst1BigLabel = "Tổng số khách hàng";
+            this.pDbcStatisCustomers.Cst1BigNumber = "1";
+            this.pDbcStatisCustomers.Cst1BigNumberSize = 25F;
+            this.pDbcStatisCustomers.Cst1Icon = global::PetStoreManager.Properties.Resources.icon_totalCustomer;
+            this.pDbcStatisCustomers.Cst1SmallLabel = "Tổng số hóa đơn";
+            this.pDbcStatisCustomers.Cst1SmallNumber = "1";
+            this.pDbcStatisCustomers.FormParent = null;
+            this.pDbcStatisCustomers.Location = new System.Drawing.Point(646, 38);
+            this.pDbcStatisCustomers.Name = "pDbcStatisCustomers";
+            this.pDbcStatisCustomers.Size = new System.Drawing.Size(280, 150);
+            this.pDbcStatisCustomers.TabIndex = 4;
+            // 
+            // pDbcStatisMerchandiseSales
+            // 
+            this.pDbcStatisMerchandiseSales.BackColor = System.Drawing.Color.Transparent;
+            this.pDbcStatisMerchandiseSales.ColorBackground = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
+            this.pDbcStatisMerchandiseSales.ColorEffect = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(110)))), ((int)(((byte)(229)))));
+            this.pDbcStatisMerchandiseSales.ColorLight = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(158)))), ((int)(((byte)(237)))));
+            this.pDbcStatisMerchandiseSales.Cst1BigLabel = "Tổng số hàng hóa bán ";
+            this.pDbcStatisMerchandiseSales.Cst1BigNumber = "1";
+            this.pDbcStatisMerchandiseSales.Cst1BigNumberSize = 25F;
+            this.pDbcStatisMerchandiseSales.Cst1Icon = global::PetStoreManager.Properties.Resources.icon_totalMerchandiseSale;
+            this.pDbcStatisMerchandiseSales.Cst1SmallLabel = "Tháng này";
+            this.pDbcStatisMerchandiseSales.Cst1SmallNumber = "1";
+            this.pDbcStatisMerchandiseSales.FormParent = null;
+            this.pDbcStatisMerchandiseSales.Location = new System.Drawing.Point(341, 38);
+            this.pDbcStatisMerchandiseSales.Name = "pDbcStatisMerchandiseSales";
+            this.pDbcStatisMerchandiseSales.Size = new System.Drawing.Size(280, 150);
+            this.pDbcStatisMerchandiseSales.TabIndex = 5;
+            // 
+            // pDbcStatisPetsSales
+            // 
+            this.pDbcStatisPetsSales.BackColor = System.Drawing.Color.Transparent;
+            this.pDbcStatisPetsSales.ColorBackground = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
+            this.pDbcStatisPetsSales.ColorEffect = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(145)))), ((int)(((byte)(165)))));
+            this.pDbcStatisPetsSales.ColorLight = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(181)))), ((int)(((byte)(195)))));
+            this.pDbcStatisPetsSales.Cst1BigLabel = "Tổng số thú cưng bán";
+            this.pDbcStatisPetsSales.Cst1BigNumber = "1";
+            this.pDbcStatisPetsSales.Cst1BigNumberSize = 25F;
+            this.pDbcStatisPetsSales.Cst1Icon = global::PetStoreManager.Properties.Resources.icon_totalPetSale;
+            this.pDbcStatisPetsSales.Cst1SmallLabel = "Tháng này";
+            this.pDbcStatisPetsSales.Cst1SmallNumber = "1";
+            this.pDbcStatisPetsSales.FormParent = null;
+            this.pDbcStatisPetsSales.Location = new System.Drawing.Point(35, 38);
+            this.pDbcStatisPetsSales.Name = "pDbcStatisPetsSales";
+            this.pDbcStatisPetsSales.Size = new System.Drawing.Size(280, 150);
+            this.pDbcStatisPetsSales.TabIndex = 6;
             // 
             // mainControlPage
             // 
@@ -96,6 +169,16 @@
             animation1.TransparencyCoeff = 0F;
             this.mainControlPage.Transition = animation1;
             this.mainControlPage.TransitionType = Utilities.BunifuPages.BunifuAnimatorNS.AnimationType.HorizSlide;
+            // 
+            // mainPagePeople
+            // 
+            this.mainPagePeople.Location = new System.Drawing.Point(4, 4);
+            this.mainPagePeople.Name = "mainPagePeople";
+            this.mainPagePeople.Padding = new System.Windows.Forms.Padding(3);
+            this.mainPagePeople.Size = new System.Drawing.Size(1272, 597);
+            this.mainPagePeople.TabIndex = 1;
+            this.mainPagePeople.Text = "Page People";
+            this.mainPagePeople.UseVisualStyleBackColor = true;
             // 
             // mainEffectPanel
             // 
@@ -201,84 +284,6 @@
             this.maincButtonSales.Name = "maincButtonSales";
             this.maincButtonSales.Size = new System.Drawing.Size(150, 50);
             this.maincButtonSales.TabIndex = 0;
-            // 
-            // mainPagePeople
-            // 
-            this.mainPagePeople.Location = new System.Drawing.Point(4, 4);
-            this.mainPagePeople.Name = "mainPagePeople";
-            this.mainPagePeople.Padding = new System.Windows.Forms.Padding(3);
-            this.mainPagePeople.Size = new System.Drawing.Size(1272, 597);
-            this.mainPagePeople.TabIndex = 1;
-            this.mainPagePeople.Text = "Page People";
-            this.mainPagePeople.UseVisualStyleBackColor = true;
-            // 
-            // pDbcStatisIncome
-            // 
-            this.pDbcStatisIncome.BackColor = System.Drawing.Color.Transparent;
-            this.pDbcStatisIncome.ColorBackground = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(7)))));
-            this.pDbcStatisIncome.ColorEffect = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(173)))), ((int)(((byte)(6)))));
-            this.pDbcStatisIncome.ColorLight = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(200)))), ((int)(((byte)(89)))));
-            this.pDbcStatisIncome.Cst1BigLabel = "Tổng số doanh thu";
-            this.pDbcStatisIncome.Cst1BigNumber = "1";
-            this.pDbcStatisIncome.Cst1Icon = global::PetStoreManager.Properties.Resources.icon_totalIncome;
-            this.pDbcStatisIncome.Cst1SmallLabel = "Tháng này";
-            this.pDbcStatisIncome.Cst1SmallNumber = "1";
-            this.pDbcStatisIncome.FormParent = null;
-            this.pDbcStatisIncome.Location = new System.Drawing.Point(952, 38);
-            this.pDbcStatisIncome.Name = "pDbcStatisIncome";
-            this.pDbcStatisIncome.Size = new System.Drawing.Size(280, 150);
-            this.pDbcStatisIncome.TabIndex = 3;
-            // 
-            // pDbcStatisCustomers
-            // 
-            this.pDbcStatisCustomers.BackColor = System.Drawing.Color.Transparent;
-            this.pDbcStatisCustomers.ColorBackground = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(167)))), ((int)(((byte)(69)))));
-            this.pDbcStatisCustomers.ColorEffect = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(150)))), ((int)(((byte)(62)))));
-            this.pDbcStatisCustomers.ColorLight = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(185)))), ((int)(((byte)(126)))));
-            this.pDbcStatisCustomers.Cst1BigLabel = "Tổng số khách hàng";
-            this.pDbcStatisCustomers.Cst1BigNumber = "1";
-            this.pDbcStatisCustomers.Cst1Icon = global::PetStoreManager.Properties.Resources.icon_totalCustomer;
-            this.pDbcStatisCustomers.Cst1SmallLabel = "Tổng số hóa đơn";
-            this.pDbcStatisCustomers.Cst1SmallNumber = "1";
-            this.pDbcStatisCustomers.FormParent = null;
-            this.pDbcStatisCustomers.Location = new System.Drawing.Point(646, 38);
-            this.pDbcStatisCustomers.Name = "pDbcStatisCustomers";
-            this.pDbcStatisCustomers.Size = new System.Drawing.Size(280, 150);
-            this.pDbcStatisCustomers.TabIndex = 4;
-            // 
-            // pDbcStatisMerchandiseSales
-            // 
-            this.pDbcStatisMerchandiseSales.BackColor = System.Drawing.Color.Transparent;
-            this.pDbcStatisMerchandiseSales.ColorBackground = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
-            this.pDbcStatisMerchandiseSales.ColorEffect = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(110)))), ((int)(((byte)(229)))));
-            this.pDbcStatisMerchandiseSales.ColorLight = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(158)))), ((int)(((byte)(237)))));
-            this.pDbcStatisMerchandiseSales.Cst1BigLabel = "Tổng số hàng hóa bán ";
-            this.pDbcStatisMerchandiseSales.Cst1BigNumber = "1";
-            this.pDbcStatisMerchandiseSales.Cst1Icon = global::PetStoreManager.Properties.Resources.icon_totalMerchandiseSale;
-            this.pDbcStatisMerchandiseSales.Cst1SmallLabel = "Tháng này";
-            this.pDbcStatisMerchandiseSales.Cst1SmallNumber = "1";
-            this.pDbcStatisMerchandiseSales.FormParent = null;
-            this.pDbcStatisMerchandiseSales.Location = new System.Drawing.Point(341, 38);
-            this.pDbcStatisMerchandiseSales.Name = "pDbcStatisMerchandiseSales";
-            this.pDbcStatisMerchandiseSales.Size = new System.Drawing.Size(280, 150);
-            this.pDbcStatisMerchandiseSales.TabIndex = 5;
-            // 
-            // pDbcStatisPetsSales
-            // 
-            this.pDbcStatisPetsSales.BackColor = System.Drawing.Color.Transparent;
-            this.pDbcStatisPetsSales.ColorBackground = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
-            this.pDbcStatisPetsSales.ColorEffect = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(145)))), ((int)(((byte)(165)))));
-            this.pDbcStatisPetsSales.ColorLight = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(181)))), ((int)(((byte)(195)))));
-            this.pDbcStatisPetsSales.Cst1BigLabel = "Tổng số thú cưng bán";
-            this.pDbcStatisPetsSales.Cst1BigNumber = "1";
-            this.pDbcStatisPetsSales.Cst1Icon = global::PetStoreManager.Properties.Resources.icon_totalPetSale;
-            this.pDbcStatisPetsSales.Cst1SmallLabel = "Tháng này";
-            this.pDbcStatisPetsSales.Cst1SmallNumber = "1";
-            this.pDbcStatisPetsSales.FormParent = null;
-            this.pDbcStatisPetsSales.Location = new System.Drawing.Point(35, 38);
-            this.pDbcStatisPetsSales.Name = "pDbcStatisPetsSales";
-            this.pDbcStatisPetsSales.Size = new System.Drawing.Size(280, 150);
-            this.pDbcStatisPetsSales.TabIndex = 6;
             // 
             // frmDashboard
             // 

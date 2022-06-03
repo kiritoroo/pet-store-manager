@@ -98,7 +98,7 @@ namespace PetStoreManager
             this.pDbcStatisCustomers.Cst1SmallNumber = totalBill;
 
             string totalIncome = sBll.GetTotalIncome().ToString();
-            string totalIncome_thisMonthh = sBll.GetTotalIncomeInMonth(DateTime.Now.ToString("MM")).ToString();
+            string totalIncome_thisMonthh = sBll.GetTotalIncomeInMonth(DateTime.Now.Year.ToString(), DateTime.Now.Month.ToString()).ToString();     
             this.pDbcStatisIncome.Cst1BigNumber = totalIncome;
             this.pDbcStatisIncome.Cst1SmallNumber = totalIncome_thisMonthh;
         }
@@ -109,5 +109,10 @@ namespace PetStoreManager
             this.mainControlPage.SetPage(mainPagePeople);
         }
         #endregion
+
+        private void pDbcStatisIncome_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
