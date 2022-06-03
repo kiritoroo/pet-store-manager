@@ -22,9 +22,9 @@ namespace PetStoreManager.Components
 
         #region Properties
         [Category("Custom Properties")]
-        private frmDashboard _formParent;
+        private frmController _formParent;
 
-        public frmDashboard FormParent
+        public frmController FormParent
         {
             get { return _formParent; }
             set { _formParent = value; }

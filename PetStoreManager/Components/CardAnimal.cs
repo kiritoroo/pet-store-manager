@@ -97,7 +97,7 @@ namespace PetStoreManager.Components
             this.Load += new EventHandler(this.Event_Load);
 
             this.MouseMove += new MouseEventHandler(this.Event_Mouse_Move);
-            this.caAddToCard.MouseMove += new MouseEventHandler(this.Event_Mouse_Move);
+            this.caAddToCardPanel.MouseMove += new MouseEventHandler(this.Event_Mouse_Move);
             this.caAddToCardLabel.MouseMove += new MouseEventHandler(this.Event_Mouse_Move);
             this.caIconGender.MouseMove += new MouseEventHandler(this.Event_Mouse_Move);
             this.caPhoto.MouseMove += new MouseEventHandler(this.Event_Mouse_Move);
@@ -105,7 +105,7 @@ namespace PetStoreManager.Components
             this.caTitleLabel.MouseMove += new MouseEventHandler(this.Event_Mouse_Move);
 
             this.MouseLeave += new EventHandler(this.Event_Mouse_Leave);
-            this.caAddToCard.MouseLeave += new EventHandler(this.Event_Mouse_Leave);
+            this.caAddToCardPanel.MouseLeave += new EventHandler(this.Event_Mouse_Leave);
             this.caAddToCardLabel.MouseLeave += new EventHandler(this.Event_Mouse_Leave);
             this.caIconGender.MouseLeave += new EventHandler(this.Event_Mouse_Leave);
             this.caPhoto.MouseLeave += new EventHandler(this.Event_Mouse_Leave);
@@ -120,12 +120,12 @@ namespace PetStoreManager.Components
 
         private void Event_Mouse_Move(object sender, MouseEventArgs e)
         {
-            caAddToCard.Size = new Size(caAddToCard.Width, 55);
+            caAddToCardPanel.Size = new Size(caAddToCardPanel.Width, 50);
         }
 
         private void Event_Mouse_Leave(object sender, EventArgs e)
         {
-            caAddToCard.Size = new Size(caAddToCard.Width, 0);
+            caAddToCardPanel.Size = new Size(caAddToCardPanel.Width, 0);
         }
 
         private void Event_Mouse_Click(object sender, MouseEventArgs e)
