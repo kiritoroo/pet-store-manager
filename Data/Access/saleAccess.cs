@@ -62,10 +62,6 @@ namespace Data.Access
 
             // Task Complete - Hieu
             // Querry
-          
-
-
-
             var querry = from sale in db.sales
                          select new
                          {
@@ -96,6 +92,9 @@ namespace Data.Access
 
         public decimal GetTotalIncomeInMonth(string _year,string _month)
         {
+            // Task Complete - Hieu
+            // Querry
+
             db.Database.Log = Console.Write;
             decimal total = 0;
 

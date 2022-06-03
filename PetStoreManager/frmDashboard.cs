@@ -60,7 +60,7 @@ namespace PetStoreManager
             this.cardStatisCustomers.Cst1SmallNumber = totalBill;
 
             string totalIncome = sBll.GetTotalIncome().ToString();
-            string totalIncome_thisMonthh = sBll.GetTotalIncomeInMonth(DateTime.Now.ToString("MM")).ToString();
+            string totalIncome_thisMonthh = sBll.GetTotalIncomeInMonth(DateTime.Now.Year.ToString(), DateTime.Now.Month.ToString()).ToString();
             this.cardStatisIncome.Cst1BigNumber = totalIncome;
             this.cardStatisIncome.Cst1SmallNumber = totalIncome_thisMonthh;
         }
