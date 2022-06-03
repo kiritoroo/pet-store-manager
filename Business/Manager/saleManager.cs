@@ -42,14 +42,14 @@ namespace Business.Manager
             return this.dal.GetTotalBill();
         }
 
-        public float GetTotalIncome()
+        public decimal GetTotalIncome()
         {
             return this.dal.GetTotalIncome();
         }
 
-        public float GetTotalIncomeInMonth(string _month)
+        public decimal GetTotalIncomeInMonth(string _year, string _month)
         {
-            return this.dal.GetTotalIncomeInMonth(_month);
+            return this.dal.GetTotalIncomeInMonth(_year,_month);
         }
     }
 }

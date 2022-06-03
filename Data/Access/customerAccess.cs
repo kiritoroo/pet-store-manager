@@ -44,14 +44,14 @@ namespace Data.Access
             this.db.customers.Remove(_customer);
             this.db.SaveChanges();
         }
-        
+
         public int GetTotalCustomer()
         {
             db.Database.Log = Console.Write;
             int total = 0;
-            // Task Uncomplete - Hieu
+            // Task Complete - Hieu
             // Querry
-
+            total = db.customers.Count();
             return total;
         }
     }

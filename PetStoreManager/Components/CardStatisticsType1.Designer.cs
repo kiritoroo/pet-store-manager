@@ -68,7 +68,7 @@
             this.cst1BigLabel.CursorType = null;
             this.cst1BigLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cst1BigLabel.ForeColor = System.Drawing.Color.White;
-            this.cst1BigLabel.Location = new System.Drawing.Point(18, 66);
+            this.cst1BigLabel.Location = new System.Drawing.Point(18, 72);
             this.cst1BigLabel.Name = "cst1BigLabel";
             this.cst1BigLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.cst1BigLabel.Size = new System.Drawing.Size(143, 45);
@@ -84,16 +84,17 @@
             this.cst1BigNumber.AutoSize = false;
             this.cst1BigNumber.Cursor = System.Windows.Forms.Cursors.Default;
             this.cst1BigNumber.CursorType = System.Windows.Forms.Cursors.Default;
-            this.cst1BigNumber.Font = new System.Drawing.Font("Segoe UI", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cst1BigNumber.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cst1BigNumber.ForeColor = System.Drawing.Color.White;
-            this.cst1BigNumber.Location = new System.Drawing.Point(15, 15);
+            this.cst1BigNumber.Location = new System.Drawing.Point(16, 21);
             this.cst1BigNumber.Name = "cst1BigNumber";
             this.cst1BigNumber.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cst1BigNumber.Size = new System.Drawing.Size(146, 45);
+            this.cst1BigNumber.Size = new System.Drawing.Size(145, 45);
             this.cst1BigNumber.TabIndex = 2;
             this.cst1BigNumber.Text = "250";
             this.cst1BigNumber.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.cst1BigNumber.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.cst1BigNumber.Click += new System.EventHandler(this.cst1BigNumber_Click);
             // 
             // cst1LowPanel
             // 

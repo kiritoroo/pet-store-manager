@@ -14,7 +14,7 @@ namespace Data.Maps
         {
             HasKey(si => new { si.SaleID, si.MerchandiseID });
             HasRequired<sale>(sa => sa.Sale)
-                        .WithMany(s => s.SaleItems)
+                        .WithMany(s => s.SaleMerchandises)
                         .HasForeignKey<int>(sa => sa.SaleID)
                         .WillCascadeOnDelete(false);
             HasRequired<merchandise>(si => si.Merchandise)

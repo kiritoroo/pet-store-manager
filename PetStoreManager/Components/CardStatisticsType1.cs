@@ -102,6 +102,15 @@ namespace PetStoreManager.Components
             set { _colorLight = value; }
         }
 
+        [Category("Custom Properties")]
+        private float _cst1BigNumberSize;
+
+        public float Cst1BigNumberSize
+        {
+            
+            get { return _cst1BigNumberSize; }
+            set { _cst1BigNumberSize = value; this.cst1BigNumber.Font = new System.Drawing.Font(cst1BigNumber.Font.Name, value,FontStyle.Bold); }
+        }
         #endregion
 
         #region Events
@@ -143,5 +152,10 @@ namespace PetStoreManager.Components
             this.cst1LowPanel.BackgroundColor = this.ColorEffect;
         }
         #endregion
+
+        private void cst1BigNumber_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

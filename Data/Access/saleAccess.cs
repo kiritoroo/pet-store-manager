@@ -49,29 +49,85 @@ namespace Data.Access
         {
             db.Database.Log = Console.Write;
             int total = 0;
-            // Task Uncomplete - Hieu
+            // Task Complete - Hieu
             // Querry
-
+            total = db.sales.Count();
             return total;
         }
 
-        public float GetTotalIncome()
+        public decimal GetTotalIncome()
         {
             db.Database.Log = Console.Write;
-            float total = 0;
-            // Task Uncomplete - Hieu
+            decimal total = 0;
+
+            // Task Complete - Hieu
             // Querry
+          
+
+
+
+            var querry = from sale in db.sales
+                         select new
+                         {
+                             salePrice = sale.SaleAnimals.Select(sa => sa.SalePrice)
+                         }.salePrice.Sum();
+
+            foreach (var x in querry)
+            {
+                total += (decimal)(x);
+            }
+
+            var querry2 = from sale in db.sales
+                             select new
+                             {
+                               salePrice = sale.SaleMerchandises.Select(sa => sa.SalePrice)
+                             }.salePrice.Sum();
+
+            foreach (var x in querry2)
+            {
+                total += (decimal)(x);
+            }
+
+            total = total + (decimal)(db.sales.Sum(sa => sa.SaleTax));
 
             return total;
+
         }
 
-        public float GetTotalIncomeInMonth(string _month)
+        public decimal GetTotalIncomeInMonth(string _year,string _month)
         {
             db.Database.Log = Console.Write;
-            float total = 0;
-            // Task Uncomplete - Hieu
-            // Querry
+            decimal total = 0;
 
+            var tax = from i in db.sales
+                      where (i.saledate.Month.ToString() == _month && i.saledate.Year.ToString() == _year)
+                      select i.SaleTax;
+            foreach (var x in tax)
+            {
+                total += (decimal)(x);
+            }
+
+            var animalmoney = from sale in db.sales
+                         where (sale.saledate.Month.ToString() == _month && sale.saledate.Year.ToString() == _year)
+                         select new
+                         {
+                             salePrice = sale.SaleAnimals.Select(sa => sa.SalePrice)
+                         }.salePrice.Sum();
+            foreach (var x in animalmoney)
+            {
+                total += (decimal)(x);
+            }
+            var merchandisemoney = from sale in db.sales
+                              where (sale.saledate.Month.ToString() == _month && sale.saledate.Year.ToString() == _year)
+                              select new
+                              {
+                                  salePrice = sale.SaleMerchandises.Select(sa => sa.SalePrice)
+                              }.salePrice.Sum();
+
+            foreach (var x in merchandisemoney)
+            {
+                total += (decimal)(x);
+            }
             return total;
         }
     }
