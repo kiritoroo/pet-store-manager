@@ -14,21 +14,14 @@ namespace PetStoreManager
 {
     public partial class frmPeoples : Form
     {
+        customerManager cusBll;
+        List<customer> cusList;
+
         public frmPeoples()
         {
             InitializeComponent();
             this.DelegateEvent();
-            //this.DoubleBuffered = true;
         }
-/*        protected override CreateParams CreateParams
-        {
-            get
-            {
-                CreateParams handleParam = base.CreateParams;
-                handleParam.ExStyle |= 0x02000000;   // WS_EX_COMPOSITED       
-                return handleParam;
-            }
-        }*/
 
         private void DelegateEvent()
         {
@@ -44,8 +37,9 @@ namespace PetStoreManager
 
         private void Load_Data()
         {
-            customerManager cusBll = new customerManager();
-            List<customer> cusList = cusBll.GetAll().ToList();
+            this.cusBll = new customerManager();
+            this.cusList = cusBll.GetAll().ToList();
+
             this.cusDataGridView.DataSource = cusList.Select(cus => new
             {
                 ID = cus.ID,
@@ -54,10 +48,9 @@ namespace PetStoreManager
                 Address = cus.Address,
                 Country = cus.Country
             }).ToList();
-
             this.GetCustomerDetailRecord(0);
 
-            this.cusCountNumberLabel.Text = cusBll.GetTotalCustomer().ToString();
+            this.cusCountNumber.Text = cusBll.GetTotalCustomer().ToString();
         }
 
         private void Event_GetCustomerDetailRecord(object sender, DataGridViewCellMouseEventArgs e)
@@ -84,6 +77,9 @@ namespace PetStoreManager
             cusContactNameTextBox.Text = cusDataGridView.Rows[_row].Cells[2].FormattedValue.ToString();
             cusAddressTextBox.Text = cusDataGridView.Rows[_row].Cells[3].FormattedValue.ToString();
             cusCountryTextBox.Text = cusDataGridView.Rows[_row].Cells[4].FormattedValue.ToString();
+
+            this.cusSaleCountNumber.Text = cusBll.GetTotalSaleEachCustomer(this.cusList[_row]).ToString();
+            this.cusMoneyNumber.Text = cusBll.GetTotalMoneyEachCustomer(this.cusList[_row]).ToString();
         }
     }
 }

@@ -51,5 +51,16 @@ namespace Business.Manager
         {
             return this.dal.GetTotalIncomeInMonth(_year,_month);
         }
+
+        public int GetTotalAnimalSalesInMonth(string _year, string _month)
+        {
+            int total = this.dal.GetTotalAnimalSalesInMonth(_year, _month);
+            return total;
+        }
+
+        public int GetTotalMerchandiseSalesInMonth(string _year, string _month)
+        {
+            return this.dal.GetTotalMerchandiseSalesInMonth(_year, _month);
+        }
     }
 }

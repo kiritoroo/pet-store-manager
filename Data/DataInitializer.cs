@@ -12,7 +12,8 @@ namespace Data
     {
         protected override void Seed(DataContext context)
         {
-            context.Database.Log = Console.Write;
+            //db.Database.Log = Console.Write;
+
             context.Database.ExecuteSqlCommand("ALTER TABLE animals ADD CONSTRAINT chk_id CHECK(animals.ID LIKE animals.AnimalTypeID + '%')");
 
             var animalTypeList = new List<animalType> {
@@ -101,9 +102,9 @@ namespace Data
             context.SaveChanges();
 
             var saleList = new List<sale> {
-                new sale { saledate = Convert.ToDateTime("06/10/2022"), Employee = employeeList[0], Customer = customerList[0], SaleTax = 5000f},
+                new sale { saledate = Convert.ToDateTime("05/10/2022"), Employee = employeeList[0], Customer = customerList[0], SaleTax = 5000f},
                 new sale { saledate = Convert.ToDateTime("06/10/2022"), Employee = employeeList[0], Customer = customerList[1], SaleTax = 15000f},
-                new sale { saledate = Convert.ToDateTime("06/10/2022"), Employee = employeeList[0], Customer = customerList[2], SaleTax = 20000f}
+                new sale { saledate = Convert.ToDateTime("06/12/2022"), Employee = employeeList[0], Customer = customerList[2], SaleTax = 20000f}
             };
             saleList.ForEach(s => context.sales.Add(s));
             context.SaveChanges();

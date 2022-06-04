@@ -18,17 +18,6 @@ namespace PetStoreManager
         {
             InitializeComponent();
             this.DelegateEvent();
-            this.DoubleBuffered = true;
-        }
-
-        protected override CreateParams CreateParams
-        {
-            get
-            {
-                CreateParams handleParam = base.CreateParams;
-                handleParam.ExStyle |= 0x02000000;   // WS_EX_COMPOSITED       
-                return handleParam;
-            }
         }
 
         private void DelegateEvent()
@@ -40,21 +29,21 @@ namespace PetStoreManager
         {
             this.Load -= Event_Load;
 
+            saleManager sBll = new saleManager();
             saleAnimalManager saBll = new saleAnimalManager();
             string totalPetsSale = saBll.GetTotalAnimalSales().ToString();
-            string totalPetsSale_thisMonth = saBll.GetTotalAnimalSalesInMonth(DateTime.Now.ToString("MM")).ToString();
+            string totalPetsSale_thisMonth = sBll.GetTotalAnimalSalesInMonth(DateTime.Now.Year.ToString(), DateTime.Now.Month.ToString()).ToString();
             this.cardStatisPetsSales.Cst1BigNumber = totalPetsSale;
             this.cardStatisPetsSales.Cst1SmallNumber = totalPetsSale_thisMonth;
 
             saleMerchandiseManager smBll = new saleMerchandiseManager();
             string totalMerchandiseSale = smBll.GetTotalMerchandiseSales().ToString();
-            string totalMerchandiseSale_thisMonth = smBll.GetTotalMerchandiseSalesInMonth(DateTime.Now.ToString("MM")).ToString();
+            string totalMerchandiseSale_thisMonth = sBll.GetTotalMerchandiseSalesInMonth(DateTime.Now.Year.ToString(), DateTime.Now.Month.ToString()).ToString();
             this.cardStatisMerchandiseSales.Cst1BigNumber = totalMerchandiseSale;
             this.cardStatisMerchandiseSales.Cst1SmallNumber = totalMerchandiseSale_thisMonth;
 
             customerManager cBll = new customerManager();
             string totalCustomer = cBll.GetTotalCustomer().ToString();
-            saleManager sBll = new saleManager();
             string totalBill = sBll.GetTotalBill().ToString();
             this.cardStatisCustomers.Cst1BigNumber = totalCustomer;
             this.cardStatisCustomers.Cst1SmallNumber = totalBill;

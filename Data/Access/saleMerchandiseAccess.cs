@@ -48,21 +48,14 @@ namespace Data.Access
 
         public int GetTotalMerchandiseSales()
         {
-            db.Database.Log = Console.Write;
-            int total = 0;
             // Task Uncomplete - Huy
             // Querry
 
-            return total;
-        }
-
-        public int GetTotalMerchandiseSalesInMonth(string _month)
-        {
-            db.Database.Log = Console.Write;
             int total = 0;
-            // Task Uncomplete - Huy
-            // Querry
+            var data = from saleMerchandise in db.saleMerchandises
+                       select saleMerchandise;
 
+            total = data.Count();
             return total;
         }
     }

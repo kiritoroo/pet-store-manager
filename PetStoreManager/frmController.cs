@@ -21,9 +21,9 @@ namespace PetStoreManager
         {
             InitializeComponent();
             this.DelegateEvent();
-            this.DoubleBuffered = true;
+            //this.DoubleBuffered = true;
         }
-
+        /*
         protected override CreateParams CreateParams
         {
             get
@@ -33,7 +33,7 @@ namespace PetStoreManager
                 return handleParam;
             }
         }
-
+        */
         private void openChildForm(Form childForm)
         {
             if (activeForm != null)

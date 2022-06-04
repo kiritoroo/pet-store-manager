@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPeoples));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPeoples));
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
@@ -56,12 +56,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cusMainPanel = new Bunifu.UI.WinForms.BunifuShadowPanel();
+            this.cusDataGridView = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.cusTopPanel = new Bunifu.UI.WinForms.BunifuPanel();
             this.cusLabel = new Bunifu.UI.WinForms.BunifuLabel();
             this.cusLowPanel = new Bunifu.UI.WinForms.BunifuPanel();
-            this.cusCountNumberLabel = new Bunifu.UI.WinForms.BunifuLabel();
+            this.cusCountNumber = new Bunifu.UI.WinForms.BunifuLabel();
             this.cusCountLabel = new Bunifu.UI.WinForms.BunifuLabel();
-            this.cusDataGridView = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.cusDetail = new Bunifu.UI.WinForms.BunifuGroupBox();
             this.cusAddressTextBox = new Bunifu.UI.WinForms.BunifuTextBox();
             this.cusCountryTextBox = new Bunifu.UI.WinForms.BunifuTextBox();
@@ -77,18 +77,21 @@
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.bunifuLabel6 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuPanel2 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.bunifuLabel7 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuLabel8 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuDataGridView1 = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.cusMoneyNumber = new Bunifu.UI.WinForms.BunifuLabel();
+            this.cusSaleCountNumber = new Bunifu.UI.WinForms.BunifuLabel();
+            this.cusMoneyLabel = new Bunifu.UI.WinForms.BunifuLabel();
+            this.cusSaleCountLabel = new Bunifu.UI.WinForms.BunifuLabel();
+            this.mainEffectPanel = new Bunifu.UI.WinForms.BunifuPanel();
+            this.cusSaleDataGridView = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.cusMainPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cusDataGridView)).BeginInit();
             this.cusTopPanel.SuspendLayout();
             this.cusLowPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cusDataGridView)).BeginInit();
             this.cusDetail.SuspendLayout();
             this.bunifuShadowPanel1.SuspendLayout();
             this.bunifuPanel1.SuspendLayout();
             this.bunifuPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cusSaleDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // cusMainPanel
@@ -97,9 +100,9 @@
             this.cusMainPanel.BorderColor = System.Drawing.Color.White;
             this.cusMainPanel.BorderRadius = 1;
             this.cusMainPanel.BorderThickness = 1;
+            this.cusMainPanel.Controls.Add(this.cusDataGridView);
             this.cusMainPanel.Controls.Add(this.cusTopPanel);
             this.cusMainPanel.Controls.Add(this.cusLowPanel);
-            this.cusMainPanel.Controls.Add(this.cusDataGridView);
             this.cusMainPanel.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
             this.cusMainPanel.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
             this.cusMainPanel.Location = new System.Drawing.Point(12, 12);
@@ -115,96 +118,9 @@
             this.cusMainPanel.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.cusMainPanel.TabIndex = 0;
             // 
-            // cusTopPanel
-            // 
-            this.cusTopPanel.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.cusTopPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cusTopPanel.BackgroundImage")));
-            this.cusTopPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.cusTopPanel.BorderColor = System.Drawing.Color.Transparent;
-            this.cusTopPanel.BorderRadius = 3;
-            this.cusTopPanel.BorderThickness = 1;
-            this.cusTopPanel.Controls.Add(this.cusLabel);
-            this.cusTopPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.cusTopPanel.Location = new System.Drawing.Point(0, 0);
-            this.cusTopPanel.Name = "cusTopPanel";
-            this.cusTopPanel.ShowBorders = true;
-            this.cusTopPanel.Size = new System.Drawing.Size(838, 35);
-            this.cusTopPanel.TabIndex = 1;
-            // 
-            // cusLabel
-            // 
-            this.cusLabel.AllowParentOverrides = false;
-            this.cusLabel.AutoEllipsis = false;
-            this.cusLabel.AutoSize = false;
-            this.cusLabel.Cursor = System.Windows.Forms.Cursors.Default;
-            this.cusLabel.CursorType = System.Windows.Forms.Cursors.Default;
-            this.cusLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cusLabel.ForeColor = System.Drawing.Color.White;
-            this.cusLabel.Location = new System.Drawing.Point(25, 9);
-            this.cusLabel.Name = "cusLabel";
-            this.cusLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cusLabel.Size = new System.Drawing.Size(65, 17);
-            this.cusLabel.TabIndex = 0;
-            this.cusLabel.Text = "Customers";
-            this.cusLabel.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.cusLabel.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // cusLowPanel
-            // 
-            this.cusLowPanel.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
-            this.cusLowPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cusLowPanel.BackgroundImage")));
-            this.cusLowPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.cusLowPanel.BorderColor = System.Drawing.Color.Transparent;
-            this.cusLowPanel.BorderRadius = 3;
-            this.cusLowPanel.BorderThickness = 1;
-            this.cusLowPanel.Controls.Add(this.cusCountNumberLabel);
-            this.cusLowPanel.Controls.Add(this.cusCountLabel);
-            this.cusLowPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.cusLowPanel.Location = new System.Drawing.Point(0, 562);
-            this.cusLowPanel.Name = "cusLowPanel";
-            this.cusLowPanel.ShowBorders = true;
-            this.cusLowPanel.Size = new System.Drawing.Size(838, 39);
-            this.cusLowPanel.TabIndex = 1;
-            // 
-            // cusCountNumberLabel
-            // 
-            this.cusCountNumberLabel.AllowParentOverrides = false;
-            this.cusCountNumberLabel.AutoEllipsis = false;
-            this.cusCountNumberLabel.Cursor = System.Windows.Forms.Cursors.Default;
-            this.cusCountNumberLabel.CursorType = System.Windows.Forms.Cursors.Default;
-            this.cusCountNumberLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cusCountNumberLabel.ForeColor = System.Drawing.Color.Gray;
-            this.cusCountNumberLabel.Location = new System.Drawing.Point(125, 12);
-            this.cusCountNumberLabel.Name = "cusCountNumberLabel";
-            this.cusCountNumberLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cusCountNumberLabel.Size = new System.Drawing.Size(14, 15);
-            this.cusCountNumberLabel.TabIndex = 0;
-            this.cusCountNumberLabel.Text = "10";
-            this.cusCountNumberLabel.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.cusCountNumberLabel.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // cusCountLabel
-            // 
-            this.cusCountLabel.AllowParentOverrides = false;
-            this.cusCountLabel.AutoEllipsis = false;
-            this.cusCountLabel.Cursor = System.Windows.Forms.Cursors.Default;
-            this.cusCountLabel.CursorType = System.Windows.Forms.Cursors.Default;
-            this.cusCountLabel.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.cusCountLabel.ForeColor = System.Drawing.Color.DarkGray;
-            this.cusCountLabel.Location = new System.Drawing.Point(14, 12);
-            this.cusCountLabel.Name = "cusCountLabel";
-            this.cusCountLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cusCountLabel.Size = new System.Drawing.Size(107, 15);
-            this.cusCountLabel.TabIndex = 0;
-            this.cusCountLabel.Text = "CUSTOMER COUNT: ";
-            this.cusCountLabel.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.cusCountLabel.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
             // cusDataGridView
             // 
             this.cusDataGridView.AllowCustomTheming = false;
-            this.cusDataGridView.AllowUserToAddRows = false;
-            this.cusDataGridView.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             this.cusDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
@@ -251,16 +167,101 @@
             this.cusDataGridView.EnableHeadersVisualStyles = false;
             this.cusDataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.cusDataGridView.HeaderBackColor = System.Drawing.Color.DodgerBlue;
+            this.cusDataGridView.HeaderBgColor = System.Drawing.Color.Empty;
             this.cusDataGridView.HeaderForeColor = System.Drawing.Color.White;
-            this.cusDataGridView.Location = new System.Drawing.Point(14, 41);
+            this.cusDataGridView.Location = new System.Drawing.Point(12, 41);
             this.cusDataGridView.Name = "cusDataGridView";
-            this.cusDataGridView.ReadOnly = true;
             this.cusDataGridView.RowHeadersVisible = false;
             this.cusDataGridView.RowTemplate.Height = 40;
             this.cusDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.cusDataGridView.Size = new System.Drawing.Size(809, 515);
-            this.cusDataGridView.TabIndex = 0;
+            this.cusDataGridView.Size = new System.Drawing.Size(814, 514);
+            this.cusDataGridView.TabIndex = 2;
             this.cusDataGridView.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+            // 
+            // cusTopPanel
+            // 
+            this.cusTopPanel.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.cusTopPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cusTopPanel.BackgroundImage")));
+            this.cusTopPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.cusTopPanel.BorderColor = System.Drawing.Color.Transparent;
+            this.cusTopPanel.BorderRadius = 3;
+            this.cusTopPanel.BorderThickness = 1;
+            this.cusTopPanel.Controls.Add(this.cusLabel);
+            this.cusTopPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.cusTopPanel.Location = new System.Drawing.Point(0, 0);
+            this.cusTopPanel.Name = "cusTopPanel";
+            this.cusTopPanel.ShowBorders = true;
+            this.cusTopPanel.Size = new System.Drawing.Size(838, 35);
+            this.cusTopPanel.TabIndex = 1;
+            // 
+            // cusLabel
+            // 
+            this.cusLabel.AllowParentOverrides = false;
+            this.cusLabel.AutoEllipsis = false;
+            this.cusLabel.AutoSize = false;
+            this.cusLabel.Cursor = System.Windows.Forms.Cursors.Default;
+            this.cusLabel.CursorType = System.Windows.Forms.Cursors.Default;
+            this.cusLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cusLabel.ForeColor = System.Drawing.Color.White;
+            this.cusLabel.Location = new System.Drawing.Point(25, 9);
+            this.cusLabel.Name = "cusLabel";
+            this.cusLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.cusLabel.Size = new System.Drawing.Size(65, 17);
+            this.cusLabel.TabIndex = 0;
+            this.cusLabel.Text = "Customers";
+            this.cusLabel.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.cusLabel.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // cusLowPanel
+            // 
+            this.cusLowPanel.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            this.cusLowPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cusLowPanel.BackgroundImage")));
+            this.cusLowPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.cusLowPanel.BorderColor = System.Drawing.Color.Transparent;
+            this.cusLowPanel.BorderRadius = 3;
+            this.cusLowPanel.BorderThickness = 1;
+            this.cusLowPanel.Controls.Add(this.cusCountNumber);
+            this.cusLowPanel.Controls.Add(this.cusCountLabel);
+            this.cusLowPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.cusLowPanel.Location = new System.Drawing.Point(0, 562);
+            this.cusLowPanel.Name = "cusLowPanel";
+            this.cusLowPanel.ShowBorders = true;
+            this.cusLowPanel.Size = new System.Drawing.Size(838, 39);
+            this.cusLowPanel.TabIndex = 1;
+            // 
+            // cusCountNumber
+            // 
+            this.cusCountNumber.AllowParentOverrides = false;
+            this.cusCountNumber.AutoEllipsis = false;
+            this.cusCountNumber.Cursor = System.Windows.Forms.Cursors.Default;
+            this.cusCountNumber.CursorType = System.Windows.Forms.Cursors.Default;
+            this.cusCountNumber.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cusCountNumber.ForeColor = System.Drawing.Color.Gray;
+            this.cusCountNumber.Location = new System.Drawing.Point(125, 12);
+            this.cusCountNumber.Name = "cusCountNumber";
+            this.cusCountNumber.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.cusCountNumber.Size = new System.Drawing.Size(14, 15);
+            this.cusCountNumber.TabIndex = 0;
+            this.cusCountNumber.Text = "10";
+            this.cusCountNumber.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.cusCountNumber.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // cusCountLabel
+            // 
+            this.cusCountLabel.AllowParentOverrides = false;
+            this.cusCountLabel.AutoEllipsis = false;
+            this.cusCountLabel.Cursor = System.Windows.Forms.Cursors.Default;
+            this.cusCountLabel.CursorType = System.Windows.Forms.Cursors.Default;
+            this.cusCountLabel.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.cusCountLabel.ForeColor = System.Drawing.Color.DarkGray;
+            this.cusCountLabel.Location = new System.Drawing.Point(14, 12);
+            this.cusCountLabel.Name = "cusCountLabel";
+            this.cusCountLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.cusCountLabel.Size = new System.Drawing.Size(107, 15);
+            this.cusCountLabel.TabIndex = 0;
+            this.cusCountLabel.Text = "CUSTOMER COUNT: ";
+            this.cusCountLabel.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.cusCountLabel.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // cusDetail
             // 
@@ -755,9 +756,9 @@
             this.bunifuShadowPanel1.BorderColor = System.Drawing.Color.White;
             this.bunifuShadowPanel1.BorderRadius = 1;
             this.bunifuShadowPanel1.BorderThickness = 1;
+            this.bunifuShadowPanel1.Controls.Add(this.cusSaleDataGridView);
             this.bunifuShadowPanel1.Controls.Add(this.bunifuPanel1);
             this.bunifuShadowPanel1.Controls.Add(this.bunifuPanel2);
-            this.bunifuShadowPanel1.Controls.Add(this.bunifuDataGridView1);
             this.bunifuShadowPanel1.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
             this.bunifuShadowPanel1.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
             this.bunifuShadowPanel1.Location = new System.Drawing.Point(856, 304);
@@ -815,8 +816,10 @@
             this.bunifuPanel2.BorderColor = System.Drawing.Color.Transparent;
             this.bunifuPanel2.BorderRadius = 3;
             this.bunifuPanel2.BorderThickness = 1;
-            this.bunifuPanel2.Controls.Add(this.bunifuLabel7);
-            this.bunifuPanel2.Controls.Add(this.bunifuLabel8);
+            this.bunifuPanel2.Controls.Add(this.cusMoneyNumber);
+            this.bunifuPanel2.Controls.Add(this.cusSaleCountNumber);
+            this.bunifuPanel2.Controls.Add(this.cusMoneyLabel);
+            this.bunifuPanel2.Controls.Add(this.cusSaleCountLabel);
             this.bunifuPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.bunifuPanel2.Location = new System.Drawing.Point(0, 270);
             this.bunifuPanel2.Name = "bunifuPanel2";
@@ -824,53 +827,101 @@
             this.bunifuPanel2.Size = new System.Drawing.Size(412, 39);
             this.bunifuPanel2.TabIndex = 1;
             // 
-            // bunifuLabel7
+            // cusMoneyNumber
             // 
-            this.bunifuLabel7.AllowParentOverrides = false;
-            this.bunifuLabel7.AutoEllipsis = false;
-            this.bunifuLabel7.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel7.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel7.ForeColor = System.Drawing.Color.Gray;
-            this.bunifuLabel7.Location = new System.Drawing.Point(93, 12);
-            this.bunifuLabel7.Name = "bunifuLabel7";
-            this.bunifuLabel7.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel7.Size = new System.Drawing.Size(14, 15);
-            this.bunifuLabel7.TabIndex = 0;
-            this.bunifuLabel7.Text = "10";
-            this.bunifuLabel7.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel7.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.cusMoneyNumber.AllowParentOverrides = false;
+            this.cusMoneyNumber.AutoEllipsis = false;
+            this.cusMoneyNumber.AutoSize = false;
+            this.cusMoneyNumber.Cursor = System.Windows.Forms.Cursors.Default;
+            this.cusMoneyNumber.CursorType = System.Windows.Forms.Cursors.Default;
+            this.cusMoneyNumber.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cusMoneyNumber.ForeColor = System.Drawing.Color.Gray;
+            this.cusMoneyNumber.Location = new System.Drawing.Point(247, 12);
+            this.cusMoneyNumber.Name = "cusMoneyNumber";
+            this.cusMoneyNumber.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.cusMoneyNumber.Size = new System.Drawing.Size(152, 15);
+            this.cusMoneyNumber.TabIndex = 0;
+            this.cusMoneyNumber.Text = "10";
+            this.cusMoneyNumber.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.cusMoneyNumber.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // bunifuLabel8
+            // cusSaleCountNumber
             // 
-            this.bunifuLabel8.AllowParentOverrides = false;
-            this.bunifuLabel8.AutoEllipsis = false;
-            this.bunifuLabel8.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel8.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel8.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bunifuLabel8.ForeColor = System.Drawing.Color.DarkGray;
-            this.bunifuLabel8.Location = new System.Drawing.Point(14, 12);
-            this.bunifuLabel8.Name = "bunifuLabel8";
-            this.bunifuLabel8.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel8.Size = new System.Drawing.Size(73, 15);
-            this.bunifuLabel8.TabIndex = 0;
-            this.bunifuLabel8.Text = "TOTAL SALES:";
-            this.bunifuLabel8.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel8.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.cusSaleCountNumber.AllowParentOverrides = false;
+            this.cusSaleCountNumber.AutoEllipsis = false;
+            this.cusSaleCountNumber.Cursor = System.Windows.Forms.Cursors.Default;
+            this.cusSaleCountNumber.CursorType = System.Windows.Forms.Cursors.Default;
+            this.cusSaleCountNumber.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cusSaleCountNumber.ForeColor = System.Drawing.Color.Gray;
+            this.cusSaleCountNumber.Location = new System.Drawing.Point(93, 12);
+            this.cusSaleCountNumber.Name = "cusSaleCountNumber";
+            this.cusSaleCountNumber.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.cusSaleCountNumber.Size = new System.Drawing.Size(14, 15);
+            this.cusSaleCountNumber.TabIndex = 0;
+            this.cusSaleCountNumber.Text = "10";
+            this.cusSaleCountNumber.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.cusSaleCountNumber.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // bunifuDataGridView1
+            // cusMoneyLabel
             // 
-            this.bunifuDataGridView1.AllowCustomTheming = false;
-            this.bunifuDataGridView1.AllowUserToAddRows = false;
-            this.bunifuDataGridView1.AllowUserToDeleteRows = false;
+            this.cusMoneyLabel.AllowParentOverrides = false;
+            this.cusMoneyLabel.AutoEllipsis = false;
+            this.cusMoneyLabel.Cursor = System.Windows.Forms.Cursors.Default;
+            this.cusMoneyLabel.CursorType = System.Windows.Forms.Cursors.Default;
+            this.cusMoneyLabel.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.cusMoneyLabel.ForeColor = System.Drawing.Color.DarkGray;
+            this.cusMoneyLabel.Location = new System.Drawing.Point(157, 12);
+            this.cusMoneyLabel.Name = "cusMoneyLabel";
+            this.cusMoneyLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.cusMoneyLabel.Size = new System.Drawing.Size(83, 15);
+            this.cusMoneyLabel.TabIndex = 0;
+            this.cusMoneyLabel.Text = "TOTAL MONEY:";
+            this.cusMoneyLabel.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.cusMoneyLabel.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // cusSaleCountLabel
+            // 
+            this.cusSaleCountLabel.AllowParentOverrides = false;
+            this.cusSaleCountLabel.AutoEllipsis = false;
+            this.cusSaleCountLabel.Cursor = System.Windows.Forms.Cursors.Default;
+            this.cusSaleCountLabel.CursorType = System.Windows.Forms.Cursors.Default;
+            this.cusSaleCountLabel.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.cusSaleCountLabel.ForeColor = System.Drawing.Color.DarkGray;
+            this.cusSaleCountLabel.Location = new System.Drawing.Point(14, 12);
+            this.cusSaleCountLabel.Name = "cusSaleCountLabel";
+            this.cusSaleCountLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.cusSaleCountLabel.Size = new System.Drawing.Size(73, 15);
+            this.cusSaleCountLabel.TabIndex = 0;
+            this.cusSaleCountLabel.Text = "TOTAL SALES:";
+            this.cusSaleCountLabel.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.cusSaleCountLabel.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // mainEffectPanel
+            // 
+            this.mainEffectPanel.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.mainEffectPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("mainEffectPanel.BackgroundImage")));
+            this.mainEffectPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.mainEffectPanel.BorderColor = System.Drawing.Color.Transparent;
+            this.mainEffectPanel.BorderRadius = 0;
+            this.mainEffectPanel.BorderThickness = 0;
+            this.mainEffectPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.mainEffectPanel.Location = new System.Drawing.Point(0, 624);
+            this.mainEffectPanel.Name = "mainEffectPanel";
+            this.mainEffectPanel.ShowBorders = true;
+            this.mainEffectPanel.Size = new System.Drawing.Size(1280, 61);
+            this.mainEffectPanel.TabIndex = 3;
+            // 
+            // cusSaleDataGridView
+            // 
+            this.cusSaleDataGridView.AllowCustomTheming = false;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            this.bunifuDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.bunifuDataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.bunifuDataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.bunifuDataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.bunifuDataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.bunifuDataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.cusSaleDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.cusSaleDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.cusSaleDataGridView.BackgroundColor = System.Drawing.Color.White;
+            this.cusSaleDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.cusSaleDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.cusSaleDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.DodgerBlue;
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
@@ -878,26 +929,26 @@
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bunifuDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.bunifuDataGridView1.ColumnHeadersHeight = 40;
-            this.bunifuDataGridView1.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            this.bunifuDataGridView1.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.bunifuDataGridView1.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.bunifuDataGridView1.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.bunifuDataGridView1.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.bunifuDataGridView1.CurrentTheme.BackColor = System.Drawing.Color.White;
-            this.bunifuDataGridView1.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
-            this.bunifuDataGridView1.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuDataGridView1.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            this.bunifuDataGridView1.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.bunifuDataGridView1.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            this.bunifuDataGridView1.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
-            this.bunifuDataGridView1.CurrentTheme.Name = null;
-            this.bunifuDataGridView1.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.bunifuDataGridView1.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.bunifuDataGridView1.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.bunifuDataGridView1.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.bunifuDataGridView1.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.cusSaleDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.cusSaleDataGridView.ColumnHeadersHeight = 40;
+            this.cusSaleDataGridView.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            this.cusSaleDataGridView.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.cusSaleDataGridView.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.cusSaleDataGridView.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.cusSaleDataGridView.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.cusSaleDataGridView.CurrentTheme.BackColor = System.Drawing.Color.White;
+            this.cusSaleDataGridView.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.cusSaleDataGridView.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue;
+            this.cusSaleDataGridView.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            this.cusSaleDataGridView.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.cusSaleDataGridView.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            this.cusSaleDataGridView.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.cusSaleDataGridView.CurrentTheme.Name = null;
+            this.cusSaleDataGridView.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.cusSaleDataGridView.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.cusSaleDataGridView.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.cusSaleDataGridView.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.cusSaleDataGridView.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
@@ -905,27 +956,28 @@
             dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.bunifuDataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
-            this.bunifuDataGridView1.EnableHeadersVisualStyles = false;
-            this.bunifuDataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
-            this.bunifuDataGridView1.HeaderBackColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuDataGridView1.HeaderForeColor = System.Drawing.Color.White;
-            this.bunifuDataGridView1.Location = new System.Drawing.Point(14, 41);
-            this.bunifuDataGridView1.Name = "bunifuDataGridView1";
-            this.bunifuDataGridView1.ReadOnly = true;
-            this.bunifuDataGridView1.RowHeadersVisible = false;
-            this.bunifuDataGridView1.RowTemplate.Height = 40;
-            this.bunifuDataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.bunifuDataGridView1.Size = new System.Drawing.Size(385, 223);
-            this.bunifuDataGridView1.TabIndex = 0;
-            this.bunifuDataGridView1.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+            this.cusSaleDataGridView.DefaultCellStyle = dataGridViewCellStyle6;
+            this.cusSaleDataGridView.EnableHeadersVisualStyles = false;
+            this.cusSaleDataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.cusSaleDataGridView.HeaderBackColor = System.Drawing.Color.DodgerBlue;
+            this.cusSaleDataGridView.HeaderBgColor = System.Drawing.Color.Empty;
+            this.cusSaleDataGridView.HeaderForeColor = System.Drawing.Color.White;
+            this.cusSaleDataGridView.Location = new System.Drawing.Point(14, 41);
+            this.cusSaleDataGridView.Name = "cusSaleDataGridView";
+            this.cusSaleDataGridView.RowHeadersVisible = false;
+            this.cusSaleDataGridView.RowTemplate.Height = 40;
+            this.cusSaleDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.cusSaleDataGridView.Size = new System.Drawing.Size(385, 222);
+            this.cusSaleDataGridView.TabIndex = 3;
+            this.cusSaleDataGridView.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
             // frmPeoples
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(239)))), ((int)(((byte)(246)))));
-            this.ClientSize = new System.Drawing.Size(1280, 625);
+            this.ClientSize = new System.Drawing.Size(1280, 685);
+            this.Controls.Add(this.mainEffectPanel);
             this.Controls.Add(this.bunifuShadowPanel1);
             this.Controls.Add(this.cusDetail);
             this.Controls.Add(this.cusMainPanel);
@@ -933,17 +985,17 @@
             this.Name = "frmPeoples";
             this.Text = "frmPeoples";
             this.cusMainPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.cusDataGridView)).EndInit();
             this.cusTopPanel.ResumeLayout(false);
             this.cusLowPanel.ResumeLayout(false);
             this.cusLowPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cusDataGridView)).EndInit();
             this.cusDetail.ResumeLayout(false);
             this.cusDetail.PerformLayout();
             this.bunifuShadowPanel1.ResumeLayout(false);
             this.bunifuPanel1.ResumeLayout(false);
             this.bunifuPanel2.ResumeLayout(false);
             this.bunifuPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cusSaleDataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -952,11 +1004,9 @@
 
         private Bunifu.UI.WinForms.BunifuShadowPanel cusMainPanel;
         private Bunifu.UI.WinForms.BunifuPanel cusTopPanel;
-        private Bunifu.UI.WinForms.BunifuDataGridView cusDataGridView;
-        private Bunifu.UI.WinForms.BunifuLabel cusLabel;
         private Bunifu.UI.WinForms.BunifuPanel cusLowPanel;
         private Bunifu.UI.WinForms.BunifuLabel cusCountLabel;
-        private Bunifu.UI.WinForms.BunifuLabel cusCountNumberLabel;
+        private Bunifu.UI.WinForms.BunifuLabel cusCountNumber;
         private Bunifu.UI.WinForms.BunifuGroupBox cusDetail;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel2;
@@ -972,8 +1022,13 @@
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel6;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel2;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel7;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel8;
-        private Bunifu.UI.WinForms.BunifuDataGridView bunifuDataGridView1;
+        private Bunifu.UI.WinForms.BunifuLabel cusSaleCountNumber;
+        private Bunifu.UI.WinForms.BunifuLabel cusSaleCountLabel;
+        private Bunifu.UI.WinForms.BunifuLabel cusMoneyNumber;
+        private Bunifu.UI.WinForms.BunifuLabel cusMoneyLabel;
+        private Bunifu.UI.WinForms.BunifuLabel cusLabel;
+        public Bunifu.UI.WinForms.BunifuPanel mainEffectPanel;
+        private Bunifu.UI.WinForms.BunifuDataGridView cusDataGridView;
+        private Bunifu.UI.WinForms.BunifuDataGridView cusSaleDataGridView;
     }
 }

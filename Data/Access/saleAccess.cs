@@ -13,33 +13,28 @@ namespace Data.Access
         DataContext db = new DataContext();
         public IQueryable<sale> GetAll()
         {
-            db.Database.Log = Console.Write;
             return this.db.sales;
         }
 
         public sale Find(int id)
         {
-            db.Database.Log = Console.Write;
             return this.db.sales.Find(id);
         }
 
         public void Add(sale _sale)
         {
-            db.Database.Log = Console.Write;
             this.db.sales.Add(_sale);
             this.db.SaveChanges();
         }
 
         public void Modify(sale _sale)
         {
-            db.Database.Log = Console.Write;
             this.db.Entry(_sale).State = EntityState.Modified;
             this.db.SaveChanges();
         }
 
         public void Delete(int id)
         {
-            db.Database.Log = Console.Write;
             sale _sale = this.Find(id);
             this.db.sales.Remove(_sale);
             this.db.SaveChanges();
@@ -47,21 +42,20 @@ namespace Data.Access
 
         public int GetTotalBill()
         {
-            db.Database.Log = Console.Write;
-            int total = 0;
             // Task Complete - Hieu
             // Querry
+
+            int total = 0;
             total = db.sales.Count();
             return total;
         }
 
         public decimal GetTotalIncome()
         {
-            db.Database.Log = Console.Write;
-            decimal total = 0;
-
             // Task Complete - Hieu
             // Querry
+
+            decimal total = 0;
             var querry = from sale in db.sales
                          select new
                          {
@@ -83,11 +77,9 @@ namespace Data.Access
             {
                 total += (decimal)(x);
             }
-
             total = total + (decimal)(db.sales.Sum(sa => sa.SaleTax));
 
             return total;
-
         }
 
         public decimal GetTotalIncomeInMonth(string _year,string _month)
@@ -95,7 +87,6 @@ namespace Data.Access
             // Task Complete - Hieu
             // Querry
 
-            db.Database.Log = Console.Write;
             decimal total = 0;
 
             var tax = from i in db.sales
@@ -116,17 +107,60 @@ namespace Data.Access
             {
                 total += (decimal)(x);
             }
+
             var merchandisemoney = from sale in db.sales
                               where (sale.saledate.Month.ToString() == _month && sale.saledate.Year.ToString() == _year)
                               select new
                               {
                                   salePrice = sale.SaleMerchandises.Select(sa => sa.SalePrice)
                               }.salePrice.Sum();
-
             foreach (var x in merchandisemoney)
             {
                 total += (decimal)(x);
             }
+
+            return total;
+        }
+
+        public int GetTotalAnimalSalesInMonth(string _year, string _month)
+        {
+            // Task complete - Huy
+            // Querry
+
+            int total = 0;
+            var data = from sale in db.sales
+                       join animal in db.saleAnimals
+                       on sale.ID equals animal.SaleID
+                       where
+                       sale.saledate.Month.ToString() == _month
+                       && sale.saledate.Year.ToString() == _year
+                       select new
+                       {
+                           sale.ID,
+                           animal.SaleID,
+                       };
+            total = data.Count();
+            return total;
+        }
+
+        public int GetTotalMerchandiseSalesInMonth(string _year, string _month)
+        {
+            // Task complete - Huy
+            // Querry
+
+            int total = 0;
+            var data = from sale in db.sales
+                       join mechandise in db.saleMerchandises
+                       on sale.ID equals mechandise.SaleID
+                       where
+                       sale.saledate.Month.ToString() == _month
+                       && sale.saledate.Year.ToString() == _year
+                       select new
+                       {
+                           sale_ID = sale.ID,
+                           mechandise_ID = mechandise.SaleID
+                       };
+            total = data.Count();
             return total;
         }
     }

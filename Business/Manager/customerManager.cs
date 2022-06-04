@@ -42,5 +42,19 @@ namespace Business.Manager
         {
             return this.dal.GetTotalCustomer();
         }
+
+        public int GetTotalSaleEachCustomer(customer _customer)
+        {
+            int total = this.dal.GetTotalSaleEachCustomer(_customer);
+
+            return total;
+        }
+
+        public decimal GetTotalMoneyEachCustomer(customer _customer)
+        {
+            decimal total = this.dal.GetTotalMoneyEachCustomer(_customer);
+
+            return total;
+        }
     }
 }

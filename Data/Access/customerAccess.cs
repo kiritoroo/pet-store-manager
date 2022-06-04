@@ -13,33 +13,28 @@ namespace Data.Access
         DataContext db = new DataContext();
         public IQueryable<customer> GetAll()
         {
-            db.Database.Log = Console.Write;
             return this.db.customers;
         }
 
         public customer Find(string id)
         {
-            db.Database.Log = Console.Write;
             return this.db.customers.Find(id);
         }
 
         public void Save(customer _customer)
         {
-            db.Database.Log = Console.Write;
             this.db.customers.Add(_customer);
             this.db.SaveChanges();
         }
 
         public void Modify(customer _customer)
         {
-            db.Database.Log = Console.Write;
             this.db.Entry(_customer).State = EntityState.Modified;
             this.db.SaveChanges();
         }
 
         public void Delete(string id)
         {
-            db.Database.Log = Console.Write;
             customer _customer = this.Find(id);
             this.db.customers.Remove(_customer);
             this.db.SaveChanges();
@@ -47,11 +42,31 @@ namespace Data.Access
 
         public int GetTotalCustomer()
         {
-            db.Database.Log = Console.Write;
-            int total = 0;
             // Task Complete - Hieu
             // Querry
+
+            int total = 0;
             total = db.customers.Count();
+            return total;
+        }
+
+        public int GetTotalSaleEachCustomer(customer _customer)
+        {
+            // Task Uncomplete
+            // Querry
+
+            int total = 0;
+
+            return total;
+        }
+
+        public decimal GetTotalMoneyEachCustomer(customer _customer)
+        {
+            // Task Uncomplete
+            // Querry
+
+            decimal total = 0;
+
             return total;
         }
     }

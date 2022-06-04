@@ -42,6 +42,7 @@
             this.cardStatisIncome.ColorLight = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(200)))), ((int)(((byte)(89)))));
             this.cardStatisIncome.Cst1BigLabel = "Tổng số doanh thu";
             this.cardStatisIncome.Cst1BigNumber = "1";
+            this.cardStatisIncome.Cst1BigNumberSize = 20F;
             this.cardStatisIncome.Cst1Icon = global::PetStoreManager.Properties.Resources.icon_totalIncome;
             this.cardStatisIncome.Cst1SmallLabel = "Tháng này";
             this.cardStatisIncome.Cst1SmallNumber = "1";
@@ -59,6 +60,7 @@
             this.cardStatisCustomers.ColorLight = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(185)))), ((int)(((byte)(126)))));
             this.cardStatisCustomers.Cst1BigLabel = "Tổng số khách hàng";
             this.cardStatisCustomers.Cst1BigNumber = "1";
+            this.cardStatisCustomers.Cst1BigNumberSize = 25F;
             this.cardStatisCustomers.Cst1Icon = global::PetStoreManager.Properties.Resources.icon_totalCustomer;
             this.cardStatisCustomers.Cst1SmallLabel = "Tổng số hóa đơn";
             this.cardStatisCustomers.Cst1SmallNumber = "1";
@@ -76,6 +78,7 @@
             this.cardStatisMerchandiseSales.ColorLight = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(158)))), ((int)(((byte)(237)))));
             this.cardStatisMerchandiseSales.Cst1BigLabel = "Tổng số hàng hóa bán ";
             this.cardStatisMerchandiseSales.Cst1BigNumber = "1";
+            this.cardStatisMerchandiseSales.Cst1BigNumberSize = 25F;
             this.cardStatisMerchandiseSales.Cst1Icon = global::PetStoreManager.Properties.Resources.icon_totalMerchandiseSale;
             this.cardStatisMerchandiseSales.Cst1SmallLabel = "Tháng này";
             this.cardStatisMerchandiseSales.Cst1SmallNumber = "1";
@@ -93,6 +96,7 @@
             this.cardStatisPetsSales.ColorLight = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(181)))), ((int)(((byte)(195)))));
             this.cardStatisPetsSales.Cst1BigLabel = "Tổng số thú cưng bán";
             this.cardStatisPetsSales.Cst1BigNumber = "1";
+            this.cardStatisPetsSales.Cst1BigNumberSize = 25F;
             this.cardStatisPetsSales.Cst1Icon = global::PetStoreManager.Properties.Resources.icon_totalPetSale;
             this.cardStatisPetsSales.Cst1SmallLabel = "Tháng này";
             this.cardStatisPetsSales.Cst1SmallNumber = "1";
@@ -107,7 +111,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(239)))), ((int)(((byte)(246)))));
-            this.ClientSize = new System.Drawing.Size(1280, 625);
+            this.ClientSize = new System.Drawing.Size(1280, 685);
             this.Controls.Add(this.cardStatisIncome);
             this.Controls.Add(this.cardStatisCustomers);
             this.Controls.Add(this.cardStatisMerchandiseSales);

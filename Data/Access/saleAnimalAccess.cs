@@ -42,23 +42,15 @@ namespace Data.Access
 
         public int GetTotalAnimalSale()
         {
-            db.Database.Log = Console.Write;
-            int total = 0;
-            // Task Uncomplete - Huy
+            // Task Complete - Huy
             // Querry
 
-            return total;
-        }
-
-        public int GetTotalAnimalSalesInMonth(string _month)
-        {
-            db.Database.Log = Console.Write;
             int total = 0;
-            // Task Uncomplete - Huy
-            // Querry
+            var data = from saleAnimal in db.saleAnimals
+                       select saleAnimal;
 
+            total = data.Count();
             return total;
         }
-
     }
 }

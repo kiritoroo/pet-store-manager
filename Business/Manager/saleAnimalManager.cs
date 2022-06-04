@@ -42,11 +42,5 @@ namespace Business.Manager
             int total = this.dal.GetTotalAnimalSale();
             return total;
         }
-
-        public int GetTotalAnimalSalesInMonth(string _month)
-        {
-            int total = this.dal.GetTotalAnimalSalesInMonth(_month);
-            return total;
-        }
     }
 }

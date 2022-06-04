@@ -29,31 +29,15 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmController));
-            this.mainEffectPanel = new Bunifu.UI.WinForms.BunifuPanel();
             this.mainTopPanel = new Bunifu.UI.WinForms.BunifuPanel();
-            this.childFormPanel = new Bunifu.UI.WinForms.BunifuPanel();
             this.maincButtonOrders = new PetStoreManager.Components.CardTable();
             this.maincButtonPets = new PetStoreManager.Components.CardTable();
             this.maincButtonPeoples = new PetStoreManager.Components.CardTable();
             this.maincButtonDashboard = new PetStoreManager.Components.CardTable();
             this.maincButtonSales = new PetStoreManager.Components.CardTable();
+            this.childFormPanel = new Bunifu.UI.WinForms.BunifuPanel();
             this.mainTopPanel.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // mainEffectPanel
-            // 
-            this.mainEffectPanel.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.mainEffectPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("mainEffectPanel.BackgroundImage")));
-            this.mainEffectPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.mainEffectPanel.BorderColor = System.Drawing.Color.Transparent;
-            this.mainEffectPanel.BorderRadius = 0;
-            this.mainEffectPanel.BorderThickness = 0;
-            this.mainEffectPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.mainEffectPanel.Location = new System.Drawing.Point(0, 739);
-            this.mainEffectPanel.Name = "mainEffectPanel";
-            this.mainEffectPanel.ShowBorders = true;
-            this.mainEffectPanel.Size = new System.Drawing.Size(1280, 61);
-            this.mainEffectPanel.TabIndex = 1;
             // 
             // mainTopPanel
             // 
@@ -74,21 +58,6 @@
             this.mainTopPanel.ShowBorders = true;
             this.mainTopPanel.Size = new System.Drawing.Size(1280, 104);
             this.mainTopPanel.TabIndex = 0;
-            // 
-            // childFormPanel
-            // 
-            this.childFormPanel.BackgroundColor = System.Drawing.Color.Transparent;
-            this.childFormPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("childFormPanel.BackgroundImage")));
-            this.childFormPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.childFormPanel.BorderColor = System.Drawing.Color.Transparent;
-            this.childFormPanel.BorderRadius = 3;
-            this.childFormPanel.BorderThickness = 1;
-            this.childFormPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.childFormPanel.Location = new System.Drawing.Point(0, 104);
-            this.childFormPanel.Name = "childFormPanel";
-            this.childFormPanel.ShowBorders = true;
-            this.childFormPanel.Size = new System.Drawing.Size(1280, 635);
-            this.childFormPanel.TabIndex = 2;
             // 
             // maincButtonOrders
             // 
@@ -160,6 +129,21 @@
             this.maincButtonSales.Size = new System.Drawing.Size(150, 50);
             this.maincButtonSales.TabIndex = 0;
             // 
+            // childFormPanel
+            // 
+            this.childFormPanel.BackgroundColor = System.Drawing.Color.Transparent;
+            this.childFormPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("childFormPanel.BackgroundImage")));
+            this.childFormPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.childFormPanel.BorderColor = System.Drawing.Color.Transparent;
+            this.childFormPanel.BorderRadius = 3;
+            this.childFormPanel.BorderThickness = 1;
+            this.childFormPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.childFormPanel.Location = new System.Drawing.Point(0, 104);
+            this.childFormPanel.Name = "childFormPanel";
+            this.childFormPanel.ShowBorders = true;
+            this.childFormPanel.Size = new System.Drawing.Size(1280, 696);
+            this.childFormPanel.TabIndex = 2;
+            // 
             // frmController
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -167,7 +151,6 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1280, 800);
             this.Controls.Add(this.childFormPanel);
-            this.Controls.Add(this.mainEffectPanel);
             this.Controls.Add(this.mainTopPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmController";
@@ -186,7 +169,6 @@
         public Components.CardTable maincButtonPets;
         public Components.CardTable maincButtonPeoples;
         public Components.CardTable maincButtonDashboard;
-        public Bunifu.UI.WinForms.BunifuPanel mainEffectPanel;
         private Bunifu.UI.WinForms.BunifuPanel childFormPanel;
     }
 }

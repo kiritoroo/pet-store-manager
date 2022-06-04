@@ -16,7 +16,6 @@ namespace Data
             : base("name=PetStoreDB")
         {
             Database.SetInitializer(new DataInitializer());
-            Database.Log = Console.Write;
             Database.Initialize(true);
         }
 
