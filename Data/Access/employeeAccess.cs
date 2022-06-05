@@ -39,5 +39,75 @@ namespace Data.Access
             this.db.employees.Remove(_employee);
             this.db.SaveChanges();
         }
+
+        public int GetTotalEmployee()
+        {
+            // Task Complete
+            // Querry
+
+            int total = 0;
+            total = db.employees.Count();
+            return total;
+        }
+
+        public List<sale> GetSaleDetailEachEmployee(employee _employee)
+        {
+            // Task Uncomplete
+            // Querry
+
+            List<sale> list = new List<sale>();
+
+            return list;
+        }
+
+        public List<animalOrder> GetOrderAnimalDetailEachEmployee(employee _employee)
+        {
+            // Task Uncomplete
+            // Querry
+
+            List<animalOrder> list = new List<animalOrder>();
+
+            return list;
+        }
+
+        public List<merchandiseOrder> GetOrderMerchandiseDetailEachEmployee(employee _employee)
+        {
+            // Task Uncomplete
+            // Querry
+
+            List<merchandiseOrder> list = new List<merchandiseOrder>();
+
+            return list;
+        }
+
+        public int GetTotalSaleEachEmployee(employee _employee)
+        {
+            // Task Uncomplete
+            // Querry
+
+            int total = 0;
+
+            return total;
+        }
+
+        public int GetTotalOrderAnimalEachEmployee(employee _employee)
+        {
+            // Task Uncomplete
+            // Querry
+
+            int total = 0;
+
+            return total;
+        }
+
+        public int GetTotalOrderMerchandiseEachEmployee(employee _employee)
+        {
+            // Task Uncomplete
+            // Querry
+
+            int total = 0;
+
+            return total;
+        }
     }
 }

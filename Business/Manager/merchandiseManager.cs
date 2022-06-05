@@ -37,5 +37,10 @@ namespace Business.Manager
         {
             this.dal.Delete(id);
         }
+
+        public List<dynamic> GetStatisticAllMerchandise()
+        {
+            return this.dal.GetStatisticAllMerchandise();
+        }
     }
 }

@@ -36,5 +36,10 @@ namespace Business.Manager
         {
            this.dal.Delete(id);
         }
+
+        public List<dynamic> GetStatisticAllAnimal()
+        {
+            return this.dal.GetStatisticAllAnimal();
+        }
     }
 }

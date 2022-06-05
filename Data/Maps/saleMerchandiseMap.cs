@@ -18,7 +18,7 @@ namespace Data.Maps
                         .HasForeignKey<int>(sa => sa.SaleID)
                         .WillCascadeOnDelete(false);
             HasRequired<merchandise>(si => si.Merchandise)
-                        .WithMany(m => m.SaleItems)
+                        .WithMany(m => m.SaleMerchandise)
                         .HasForeignKey<string>(si => si.MerchandiseID)
                         .WillCascadeOnDelete(false);
         }

@@ -43,18 +43,17 @@
             // 
             // cst1MainPanel
             // 
-            this.cst1MainPanel.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
+            this.cst1MainPanel.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.cst1MainPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cst1MainPanel.BackgroundImage")));
             this.cst1MainPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.cst1MainPanel.BorderColor = System.Drawing.Color.Transparent;
-            this.cst1MainPanel.BorderRadius = 10;
-            this.cst1MainPanel.BorderThickness = 0;
+            this.cst1MainPanel.BorderColor = System.Drawing.Color.DimGray;
+            this.cst1MainPanel.BorderRadius = 0;
+            this.cst1MainPanel.BorderThickness = 1;
             this.cst1MainPanel.Controls.Add(this.cst1BigLabel);
             this.cst1MainPanel.Controls.Add(this.cst1BigNumber);
             this.cst1MainPanel.Controls.Add(this.cst1LowPanel);
             this.cst1MainPanel.Controls.Add(this.cst1Icon);
-            this.cst1MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cst1MainPanel.Location = new System.Drawing.Point(0, 0);
+            this.cst1MainPanel.Location = new System.Drawing.Point(3, 9);
             this.cst1MainPanel.Name = "cst1MainPanel";
             this.cst1MainPanel.ShowBorders = true;
             this.cst1MainPanel.Size = new System.Drawing.Size(280, 150);
@@ -67,11 +66,11 @@
             this.cst1BigLabel.AutoSize = false;
             this.cst1BigLabel.CursorType = null;
             this.cst1BigLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cst1BigLabel.ForeColor = System.Drawing.Color.White;
+            this.cst1BigLabel.ForeColor = System.Drawing.Color.DimGray;
             this.cst1BigLabel.Location = new System.Drawing.Point(18, 72);
             this.cst1BigLabel.Name = "cst1BigLabel";
             this.cst1BigLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cst1BigLabel.Size = new System.Drawing.Size(143, 45);
+            this.cst1BigLabel.Size = new System.Drawing.Size(143, 36);
             this.cst1BigLabel.TabIndex = 2;
             this.cst1BigLabel.Text = "Total Pets";
             this.cst1BigLabel.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -85,7 +84,7 @@
             this.cst1BigNumber.Cursor = System.Windows.Forms.Cursors.Default;
             this.cst1BigNumber.CursorType = System.Windows.Forms.Cursors.Default;
             this.cst1BigNumber.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cst1BigNumber.ForeColor = System.Drawing.Color.White;
+            this.cst1BigNumber.ForeColor = System.Drawing.Color.DimGray;
             this.cst1BigNumber.Location = new System.Drawing.Point(16, 21);
             this.cst1BigNumber.Name = "cst1BigNumber";
             this.cst1BigNumber.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -98,19 +97,18 @@
             // 
             // cst1LowPanel
             // 
-            this.cst1LowPanel.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(110)))), ((int)(((byte)(229)))));
+            this.cst1LowPanel.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(165)))), ((int)(((byte)(165)))));
             this.cst1LowPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cst1LowPanel.BackgroundImage")));
             this.cst1LowPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.cst1LowPanel.BorderColor = System.Drawing.Color.Transparent;
-            this.cst1LowPanel.BorderRadius = 10;
+            this.cst1LowPanel.BorderRadius = 0;
             this.cst1LowPanel.BorderThickness = 0;
             this.cst1LowPanel.Controls.Add(this.cst1SmallNumber);
             this.cst1LowPanel.Controls.Add(this.cst1SmallLabel);
-            this.cst1LowPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.cst1LowPanel.Location = new System.Drawing.Point(0, 117);
+            this.cst1LowPanel.Location = new System.Drawing.Point(0, 114);
             this.cst1LowPanel.Name = "cst1LowPanel";
             this.cst1LowPanel.ShowBorders = true;
-            this.cst1LowPanel.Size = new System.Drawing.Size(280, 33);
+            this.cst1LowPanel.Size = new System.Drawing.Size(280, 36);
             this.cst1LowPanel.TabIndex = 1;
             // 
             // cst1SmallNumber
@@ -170,7 +168,7 @@
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.cst1MainPanel);
             this.Name = "CardStatisticsType1";
-            this.Size = new System.Drawing.Size(280, 150);
+            this.Size = new System.Drawing.Size(299, 162);
             this.cst1MainPanel.ResumeLayout(false);
             this.cst1LowPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.cst1Icon)).EndInit();

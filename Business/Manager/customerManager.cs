@@ -43,17 +43,42 @@ namespace Business.Manager
             return this.dal.GetTotalCustomer();
         }
 
-        public int GetTotalSaleEachCustomer(customer _customer)
+        public int GetTotalCustomerInMonth(string _year, string _month)
         {
-            int total = this.dal.GetTotalSaleEachCustomer(_customer);
+            return this.dal.GetTotalCustomerInMonth(_year, _month);
+        }
 
+        public List<dynamic> GetSaleAnimalDetailEachCustomer(customer _customer)
+        {
+            return this.dal.GetSaleAnimalDetailEachCustomer(_customer);
+        }
+
+        public List<dynamic> GetSaleMerchandiseDetailEachCustomer(customer _customer)
+        {
+            return this.dal.GetSaleMerchandiseDetailEachCustomer(_customer);
+        }
+
+        public int GetTotalSaleAnimalEachCustomer(customer _customer)
+        {
+            int total = this.dal.GetTotalSaleAnimalEachCustomer(_customer);
             return total;
         }
 
-        public decimal GetTotalMoneyEachCustomer(customer _customer)
+        public decimal GetTotalMoneyAnimalEachCustomer(customer _customer)
         {
-            decimal total = this.dal.GetTotalMoneyEachCustomer(_customer);
+            decimal total = this.dal.GetTotalMoneyAnimalEachCustomer(_customer);
+            return total;
+        }
 
+        public int GetTotalSaleMerchandiseEachCustomer(customer _customer)
+        {
+            int total = this.dal.GetTotalSaleMerchandiseEachCustomer(_customer);
+            return total;
+        }
+
+        public decimal GetTotalMoneyMerchandiseEachCustomer(customer _customer)
+        {
+            decimal total = this.dal.GetTotalMoneyMerchandiseEachCustomer(_customer);
             return total;
         }
     }

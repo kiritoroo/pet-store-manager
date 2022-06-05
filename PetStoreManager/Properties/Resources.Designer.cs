@@ -63,6 +63,16 @@ namespace PetStoreManager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_customer {
+            get {
+                object obj = ResourceManager.GetObject("icon_customer", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_dashboard {
             get {
                 object obj = ResourceManager.GetObject("icon_dashboard", resourceCulture);
@@ -73,9 +83,39 @@ namespace PetStoreManager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_descrease {
+            get {
+                object obj = ResourceManager.GetObject("icon_descrease", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_employee {
+            get {
+                object obj = ResourceManager.GetObject("icon_employee", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_female {
             get {
                 object obj = ResourceManager.GetObject("icon_female", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_increase {
+            get {
+                object obj = ResourceManager.GetObject("icon_increase", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -146,6 +186,16 @@ namespace PetStoreManager.Properties {
         internal static System.Drawing.Bitmap icon_sales {
             get {
                 object obj = ResourceManager.GetObject("icon_sales", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_supplier {
+            get {
+                object obj = ResourceManager.GetObject("icon_supplier", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

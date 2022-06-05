@@ -40,5 +40,20 @@ namespace Data.Access
             this.db.animalTypes.Remove(_animalType);
             this.db.SaveChanges();
         }
+
+        public List<dynamic> GetStatisticAllAnimal()
+        {
+            // Task Uncomplete
+            //Querry
+
+            List<dynamic> list = new List<dynamic>();
+            var querry = default(dynamic);
+
+            if (querry != null)
+            {
+                list = querry.ToList<dynamic>();
+            }
+            return list;
+        }
     }
 }

@@ -254,6 +254,9 @@
     <EmbeddedResource Include="Components\CardStatisticsType1.resx">
       <DependentUpon>CardStatisticsType1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Components\CardStatisticsType2.resx">
+      <DependentUpon>CardStatisticsType2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Components\CardTable.resx">
       <DependentUpon>CardTable.cs</DependentUpon>
     </EmbeddedResource>
@@ -371,6 +374,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icon_totalIncome.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_employee.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_customer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_supplier.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_increase.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_descrease.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

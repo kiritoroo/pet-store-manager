@@ -49,8 +49,7 @@ namespace Data.Access
             total = db.customers.Count();
             return total;
         }
-
-        public int GetTotalSaleEachCustomer(customer _customer)
+        public int GetTotalCustomerInMonth(string _year, string _month)
         {
             // Task Uncomplete
             // Querry
@@ -60,7 +59,66 @@ namespace Data.Access
             return total;
         }
 
-        public decimal GetTotalMoneyEachCustomer(customer _customer)
+        public List<dynamic> GetSaleAnimalDetailEachCustomer(customer _customer)
+        {
+            // Task Uncomplete
+            // Querry
+
+            List<dynamic> list = new List<dynamic>();
+            var querry = default(dynamic);
+
+            if (querry != null)
+            {
+                list = querry.ToList<dynamic>();
+            }
+            return list;
+        }
+
+        public List<dynamic> GetSaleMerchandiseDetailEachCustomer(customer _customer)
+        {
+            // Task Uncomplete
+            // Querry
+
+            List<dynamic> list = new List<dynamic>();
+            var querry = default(dynamic);
+
+            if (querry != null)
+            {
+                list = querry.ToList<dynamic>();
+            }
+            return list;
+        }
+
+        public int GetTotalSaleAnimalEachCustomer(customer _customer)
+        {
+            // Task Uncomplete
+            // Querry
+            int total = 0;
+
+            return total;
+        }
+
+        public decimal GetTotalMoneyAnimalEachCustomer(customer _customer)
+        {
+            // Task Uncomplete
+            // Querry
+
+            decimal total = 0;
+
+            return total;
+        }
+
+        public int GetTotalSaleMerchandiseEachCustomer(customer _customer)
+        {
+            // Task Uncomplete
+            // Querry
+
+            int total = 0;
+
+            return total;
+        }
+
+        public decimal GetTotalMoneyMerchandiseEachCustomer(customer _customer)
         {
             // Task Uncomplete
             // Querry

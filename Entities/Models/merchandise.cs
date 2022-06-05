@@ -15,7 +15,7 @@ namespace Entities.Models
         public int QuantityInStock { get; set; }
         public byte[] Photo { get; set; }
         public merchandiseType MerchandiseType { get; set; }
-        public ICollection<saleMerchandise> SaleItems { get; set; }
+        public ICollection<saleMerchandise> SaleMerchandise { get; set; }
         public ICollection<merchandiseOrderItem> MerchandiseOrderItems { get; set; }
 
     }

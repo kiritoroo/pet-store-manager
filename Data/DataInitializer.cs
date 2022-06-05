@@ -86,11 +86,11 @@ namespace Data
             context.SaveChanges();
 
             var customerList = new List<customer> {
-                new customer { ID = "CUS001", Phone = "030-0074321", ContactName = "Maria Anders", Address = "Obere Str. 57", Country = "Viet Nam"},
-                new customer { ID = "CUS002", Phone = "(5) 555-4729", ContactName = "Hanna Moos", Address = "Hauptstr. 29", Country = "Viet Nam"},
-                new customer { ID = "CUS003", Phone = "0621-08460", ContactName = "Thomas Hardy", Address = "120 Hanover Sq.", Country = "Viet Nam"},
-                new customer { ID = "CUS004", Phone = "(91) 555 22 82", ContactName = "Elizabeth Lincoln", Address = "23 Tsawassen Blvd.", Country = "Viet Nam"},
-                new customer { ID = "CUS005", Phone = "(11) 555-9857", ContactName = "Francisco Chang", Address = "Sierras de Granada 9993", Country = "Viet Nam"}
+                new customer { ID = "CUS001", Phone = "030-0074321", ContactName = "Maria Anders", Address = "Obere Str. 57", Country = "Viet Nam", DateAdd = Convert.ToDateTime("05/10/2022")},
+                new customer { ID = "CUS002", Phone = "(5) 555-4729", ContactName = "Hanna Moos", Address = "Hauptstr. 29", Country = "Viet Nam", DateAdd = Convert.ToDateTime("05/10/2022") },
+                new customer { ID = "CUS003", Phone = "0621-08460", ContactName = "Thomas Hardy", Address = "120 Hanover Sq.", Country = "Viet Nam", DateAdd = Convert.ToDateTime("06/10/2022")},
+                new customer { ID = "CUS004", Phone = "(91) 555 22 82", ContactName = "Elizabeth Lincoln", Address = "23 Tsawassen Blvd.", Country = "Viet Nam", DateAdd = Convert.ToDateTime("06/10/2022") },
+                new customer { ID = "CUS005", Phone = "(11) 555-9857", ContactName = "Francisco Chang", Address = "Sierras de Granada 9993", Country = "Viet Nam", DateAdd = Convert.ToDateTime("06/10/2022")}
             };
             customerList.ForEach(cus => context.customers.Add(cus));
             context.SaveChanges();
@@ -102,9 +102,10 @@ namespace Data
             context.SaveChanges();
 
             var saleList = new List<sale> {
-                new sale { saledate = Convert.ToDateTime("05/10/2022"), Employee = employeeList[0], Customer = customerList[0], SaleTax = 5000f},
-                new sale { saledate = Convert.ToDateTime("06/10/2022"), Employee = employeeList[0], Customer = customerList[1], SaleTax = 15000f},
-                new sale { saledate = Convert.ToDateTime("06/12/2022"), Employee = employeeList[0], Customer = customerList[2], SaleTax = 20000f}
+                new sale { saledate = Convert.ToDateTime("05/10/2022"), Employee = employeeList[0], Customer = customerList[0], SaleTax = 5000f },
+                new sale { saledate = Convert.ToDateTime("06/10/2022"), Employee = employeeList[0], Customer = customerList[1], SaleTax = 15000f },
+                new sale { saledate = Convert.ToDateTime("06/12/2022"), Employee = employeeList[0], Customer = customerList[2], SaleTax = 20000f },
+                new sale { saledate = Convert.ToDateTime("06/14/2022"), Employee = employeeList[0], Customer = customerList[2], SaleTax = 14000f}
             };
             saleList.ForEach(s => context.sales.Add(s));
             context.SaveChanges();
@@ -115,7 +116,8 @@ namespace Data
                 new saleAnimal { Sale = saleList[1], Animal = animalList[1], SalePrice = 1500000f},
                 new saleAnimal { Sale = saleList[1], Animal = animalList[3], SalePrice = 1500000f},
                 new saleAnimal { Sale = saleList[2], Animal = animalList[4], SalePrice = 1500000f},
-                new saleAnimal { Sale = saleList[2], Animal = animalList[5], SalePrice = 1500000f}
+                new saleAnimal { Sale = saleList[2], Animal = animalList[5], SalePrice = 1500000f},
+                new saleAnimal { Sale = saleList[3], Animal = animalList[2], SalePrice = 1500000f}
             };
             saleAnimalList.ForEach(sa => context.saleAnimals.Add(sa));
             context.SaveChanges();
@@ -130,9 +132,66 @@ namespace Data
                 new saleMerchandise { Sale = saleList[2], Merchandise = merchandiseList[0], Quantity = 1, SalePrice = 35000f},
                 new saleMerchandise { Sale = saleList[2], Merchandise = merchandiseList[2], Quantity = 1, SalePrice = 260000f},
                 new saleMerchandise { Sale = saleList[2], Merchandise = merchandiseList[5], Quantity = 5, SalePrice = 450000f},
-                new saleMerchandise { Sale = saleList[2], Merchandise = merchandiseList[10], Quantity = 1, SalePrice = 120000f}
+                new saleMerchandise { Sale = saleList[2], Merchandise = merchandiseList[10], Quantity = 1, SalePrice = 120000f},
+                new saleMerchandise { Sale = saleList[3], Merchandise = merchandiseList[2], Quantity = 1, SalePrice = 20000f},
+                new saleMerchandise { Sale = saleList[3], Merchandise = merchandiseList[1], Quantity = 1, SalePrice = 25000f}
             };
             saleMerchandiseList.ForEach(sm => context.saleMerchandises.Add(sm));
+            context.SaveChanges();
+
+            var supplierList = new List<supplier>
+            {
+                new supplier { ID = "SUP001", Phone = "(100) 555-4822", Name = "Alice Ltd.", Address = "9-8 Sekimai Musashino-shi, Japan", Country = "Japan" },
+                new supplier { ID = "SUP002", Phone = "(0)2-953010", Name = "Chipsi .Co", Address = "707 Oxford Rd., Berlin", Country = "Germany" },
+                new supplier { ID = "SUP003", Phone = "08-123 45 67", Name = "Healty Pet Ltd.", Address = "22, rue H. Voiron, Boston", Country = "USA" }
+            };
+            supplierList.ForEach(sup => context.suppliers.Add(sup));
+            context.SaveChanges();
+
+            var animalOrderList = new List<animalOrder>
+            {
+                new animalOrder { OrderDate = Convert.ToDateTime("01/10/2022"), ReceiveDate = Convert.ToDateTime("01/11/2022"), Employee = employeeList[0], Supplier = supplierList[0], ShippingCost = 10000f},
+                new animalOrder { OrderDate = Convert.ToDateTime("03/10/2022"), ReceiveDate = Convert.ToDateTime("03/12/2022"), Employee = employeeList[0], Supplier = supplierList[2], ShippingCost = 15000f},
+                new animalOrder { OrderDate = Convert.ToDateTime("03/15/2022"), ReceiveDate = Convert.ToDateTime("03/16/2022"), Employee = employeeList[0], Supplier = supplierList[0], ShippingCost = 12000f}
+            };
+            animalOrderList.ForEach(ao => context.animalOrders.Add(ao));
+            context.SaveChanges();
+
+            var animalOrderItemList = new List<animalOrderItem>
+            {
+                new animalOrderItem { AnimalOrder = animalOrderList[0], Animal = animalList[0], Cost = 500000f },
+                new animalOrderItem { AnimalOrder = animalOrderList[0], Animal = animalList[1], Cost = 250000f },
+                new animalOrderItem { AnimalOrder = animalOrderList[1], Animal = animalList[2], Cost = 300000f },
+                new animalOrderItem { AnimalOrder = animalOrderList[1], Animal = animalList[3], Cost = 10000f },
+                new animalOrderItem { AnimalOrder = animalOrderList[1], Animal = animalList[4], Cost = 55000f },
+                new animalOrderItem { AnimalOrder = animalOrderList[2], Animal = animalList[5], Cost = 520000f }
+            };
+            animalOrderItemList.ForEach(aoi => context.animalOrderItems.Add(aoi));
+            context.SaveChanges();
+
+            var merchandiseOrderList = new List<merchandiseOrder>
+            {
+                new merchandiseOrder { OrderDate = Convert.ToDateTime("01/10/2022"), ReceiveDate = Convert.ToDateTime("01/20/2022"), Employee = employeeList[0], Supplier = supplierList[0], ShippingCost = 10000f},
+                new merchandiseOrder { OrderDate = Convert.ToDateTime("02/10/2022"), ReceiveDate = Convert.ToDateTime("02/20/2022"), Employee = employeeList[0], Supplier = supplierList[1], ShippingCost = 12000f},
+                new merchandiseOrder { OrderDate = Convert.ToDateTime("02/25/2022"), ReceiveDate = Convert.ToDateTime("01/29/2022"), Employee = employeeList[0], Supplier = supplierList[1], ShippingCost = 15000f}
+            };
+            merchandiseOrderList.ForEach(mo => context.merchandiseOrders.Add(mo));
+            context.SaveChanges();
+
+            var merchandiseOrderItemList = new List<merchandiseOrderItem>
+            {
+                new merchandiseOrderItem { MerchandiseOrder = merchandiseOrderList[0], Merchandise = merchandiseList[0], Quantity = 20, Cost = 15000f },
+                new merchandiseOrderItem { MerchandiseOrder = merchandiseOrderList[0], Merchandise = merchandiseList[1], Quantity = 50, Cost = 15000f },
+                new merchandiseOrderItem { MerchandiseOrder = merchandiseOrderList[0], Merchandise = merchandiseList[2], Quantity = 100, Cost = 15000f },
+                new merchandiseOrderItem { MerchandiseOrder = merchandiseOrderList[0], Merchandise = merchandiseList[3], Quantity = 20, Cost = 15000f },
+                new merchandiseOrderItem { MerchandiseOrder = merchandiseOrderList[1], Merchandise = merchandiseList[4], Quantity = 80, Cost = 15000f },
+                new merchandiseOrderItem { MerchandiseOrder = merchandiseOrderList[1], Merchandise = merchandiseList[5], Quantity = 20, Cost = 15000f },
+                new merchandiseOrderItem { MerchandiseOrder = merchandiseOrderList[1], Merchandise = merchandiseList[6], Quantity = 20, Cost = 15000f },
+                new merchandiseOrderItem { MerchandiseOrder = merchandiseOrderList[2], Merchandise = merchandiseList[7], Quantity = 10, Cost = 15000f },
+                new merchandiseOrderItem { MerchandiseOrder = merchandiseOrderList[2], Merchandise = merchandiseList[8], Quantity = 25, Cost = 15000f },
+                new merchandiseOrderItem { MerchandiseOrder = merchandiseOrderList[2], Merchandise = merchandiseList[9], Quantity = 20, Cost = 15000f }
+            };
+            merchandiseOrderItemList.ForEach(moi => context.merchandiseOrderItems.Add(moi));
             context.SaveChanges();
 
             base.Seed(context);
