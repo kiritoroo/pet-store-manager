@@ -488,10 +488,10 @@
             this.pageController.Location = new System.Drawing.Point(59, 0);
             this.pageController.Multiline = true;
             this.pageController.Name = "pageController";
-            this.pageController.Page = this.pageSupplier;
-            this.pageController.PageIndex = 2;
-            this.pageController.PageName = "pageSupplier";
-            this.pageController.PageTitle = "Page Supplier";
+            this.pageController.Page = this.pageCustomer;
+            this.pageController.PageIndex = 0;
+            this.pageController.PageName = "pageCustomer";
+            this.pageController.PageTitle = "Pag Customer";
             this.pageController.SelectedIndex = 0;
             this.pageController.Size = new System.Drawing.Size(1222, 685);
             this.pageController.TabIndex = 5;
@@ -1324,9 +1324,9 @@
             this.bunifuLabel31.Location = new System.Drawing.Point(14, 12);
             this.bunifuLabel31.Name = "bunifuLabel31";
             this.bunifuLabel31.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel31.Size = new System.Drawing.Size(73, 15);
+            this.bunifuLabel31.Size = new System.Drawing.Size(60, 15);
             this.bunifuLabel31.TabIndex = 0;
-            this.bunifuLabel31.Text = "TOTAL SALES:";
+            this.bunifuLabel31.Text = "TOTAL PET:";
             this.bunifuLabel31.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel31.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -1530,9 +1530,9 @@
             this.cusSaleCountLabel.Location = new System.Drawing.Point(14, 12);
             this.cusSaleCountLabel.Name = "cusSaleCountLabel";
             this.cusSaleCountLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cusSaleCountLabel.Size = new System.Drawing.Size(73, 15);
+            this.cusSaleCountLabel.Size = new System.Drawing.Size(67, 15);
             this.cusSaleCountLabel.TabIndex = 0;
-            this.cusSaleCountLabel.Text = "TOTAL SALES:";
+            this.cusSaleCountLabel.Text = "TOTAL ITEM:";
             this.cusSaleCountLabel.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.cusSaleCountLabel.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 

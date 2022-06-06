@@ -51,11 +51,15 @@ namespace Data.Access
         }
         public int GetTotalCustomerInMonth(string _year, string _month)
         {
-            // Task Uncomplete
+            // Task Complete - Trung
             // Querry
 
             int total = 0;
-
+            var querry = (from customer in db.customers
+                          where customer.DateAdd.Month.ToString() == _month
+                          && customer.DateAdd.Year.ToString() == _year
+                          select customer);
+            total = querry.Count();
             return total;
         }
 

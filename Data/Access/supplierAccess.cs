@@ -58,6 +58,7 @@ namespace Data.Access
             List<dynamic> list = new List<dynamic>();
             var querry = default(dynamic);
 
+
             if (querry != null)
             {
                 list = querry.ToList<dynamic>();

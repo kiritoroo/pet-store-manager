@@ -60,6 +60,16 @@ namespace PetStoreManager
                 this.supDGV.Columns[i].HeaderCell.Style.Font = fontStype1;
             }
             this.supDGV.DefaultCellStyle.Font = fontStype2;
+
+            this.empSaleDetailDGV.DefaultCellStyle.Font = fontStype2;
+            this.empPetOrderDGV.DefaultCellStyle.Font = fontStype2;
+            this.empMerchandiseOrderDGV.DefaultCellStyle.Font = fontStype2;
+
+            this.cusSalePetDetailDGV.DefaultCellStyle.Font = fontStype2;
+            this.cusSaleMerchandiseDetailDGV.DefaultCellStyle.Font = fontStype2;
+
+            this.supPetOrderDGV.DefaultCellStyle.Font = fontStype2;
+            this.supMerchandiseOrderDGV.DefaultCellStyle.Font = fontStype2;
         }
 
         private void Load_Data_Customer()
@@ -165,21 +175,44 @@ namespace PetStoreManager
             var rsList1 = empBll.GetSaleDetailEachEmployee(this.empList[_row]);
             if (rsList1.Any())
             {
-                empSaleDetailDGV.DataSource = rsList1;
+                empSaleDetailDGV.DataSource = rsList1.Select(rs => new
+                {
+                    SaleID = rs.ID,
+                    Date = rs.saledate,
+                    CustomerID = rs.CustomerID,
+                    EmployeeID = rs.EmployeeID,
+                    Tax = rs.SaleTax
+                }).ToList();
             }
             this.empTotalSale.Text = empBll.GetTotalSaleEachEmployee(this.empList[_row]).ToString();
 
             var rsList2 = empBll.GetOrderAnimalDetailEachEmployee(this.empList[_row]);
             if (rsList2.Any())
             {
-                empPetOrderDGV.DataSource = rsList2;
+                empPetOrderDGV.DataSource = rsList2.Select(rs => new
+                {
+                    OrderID = rs.ID,
+                    OrderDate = rs.OrderDate,
+                    ReceiveDate = rs.ReceiveDate,
+                    SupplierID = rs.SupplierID,
+                    ShippingCost = rs.ShippingCost
+
+                }).ToList();
             }
             this.empTotalPetOrder.Text = empBll.GetTotalOrderAnimalEachEmployee(this.empList[_row]).ToString();
 
             var rsList3 = empBll.GetOrderMerchandiseDetailEachEmployee(this.empList[_row]);
             if (rsList3.Any())
             {
-                empMerchandiseOrderDGV.DataSource = rsList3;
+                empMerchandiseOrderDGV.DataSource = rsList3.Select(rs => new
+                {
+                    OrderID = rs.ID,
+                    OrderDate = rs.OrderDate,
+                    ReceiveDate = rs.ReceiveDate,
+                    SupplierID = rs.SupplierID,
+                    ShippingCost = rs.ShippingCost
+
+                }).ToList();
             }
             this.empTotalMerchandiseOrder.Text = empBll.GetTotalOrderMerchandiseEachEmployee(this.empList[_row]).ToString();
 
