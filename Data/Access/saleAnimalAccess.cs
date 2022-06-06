@@ -42,7 +42,7 @@ namespace Data.Access
 
         public int GetTotalAnimalSale()
         {
-            // Task Complete - Huy
+            // Task Complete
             // Querry
 
             int total = 0;

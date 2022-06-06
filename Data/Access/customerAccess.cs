@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
 using Entities.Models;
-
 namespace Data.Access
 {
     public class customerAccess
@@ -42,7 +41,7 @@ namespace Data.Access
 
         public int GetTotalCustomer()
         {
-            // Task Complete - Hieu
+            // Task Complete 
             // Querry
 
             int total = 0;
@@ -53,7 +52,6 @@ namespace Data.Access
         {
             // Task Uncomplete
             // Querry
-
             int total = 0;
 
             return total;
@@ -61,11 +59,36 @@ namespace Data.Access
 
         public List<dynamic> GetSaleAnimalDetailEachCustomer(customer _customer)
         {
-            // Task Uncomplete
+            // Task complete
             // Querry
 
             List<dynamic> list = new List<dynamic>();
-            var querry = default(dynamic);
+            var data = from c in db.customers
+                       join s in db.sales on c.ID equals s.CustomerID
+                       join sa in db.saleAnimals on s.ID equals sa.SaleID
+                       where c.ID == _customer.ID
+
+                       select new
+                       {
+                           s.CustomerID,
+                           s.saledate,
+                           s.ID,
+                           sa.AnimalID,
+                           sa.SalePrice
+                       };
+
+            var querry = from q in data
+                         group q by new { q.ID, q.CustomerID, q.saledate }
+                         into gr
+                         where gr.Count() > 0
+                         select new
+                         {
+                            SaleID=gr.Key.ID,
+                            Date= gr.Key.saledate,
+                            TotalAnimals=gr.Count(),
+                            TotalMoney = gr.Sum(x => x.SalePrice)
+                         };
+
 
             if (querry != null)
             {
@@ -76,11 +99,36 @@ namespace Data.Access
 
         public List<dynamic> GetSaleMerchandiseDetailEachCustomer(customer _customer)
         {
-            // Task Uncomplete
+            // Task Complete
             // Querry
 
             List<dynamic> list = new List<dynamic>();
-            var querry = default(dynamic);
+
+            var data = from c in db.customers
+                       join s in db.sales on c.ID equals s.CustomerID
+                       join sa in db.saleMerchandises on s.ID equals sa.SaleID
+                       where c.ID == _customer.ID
+
+                       select new
+                       {
+                           s.CustomerID,
+                           s.saledate,
+                           s.ID,
+                           sa.Quantity,
+                           sa.SalePrice
+                       };
+
+            var querry = from q in data
+                         group q by new { q.ID, q.CustomerID, q.saledate }
+                         into gr
+                         select new
+                         {
+                             SaleID = gr.Key.ID,
+                             Date = gr.Key.saledate,
+                             TotalItems = gr.Sum(z=>z.Quantity),
+                             TotalMoney = gr.Sum(x => x.SalePrice)
+                         };
+            
 
             if (querry != null)
             {
@@ -91,39 +139,56 @@ namespace Data.Access
 
         public int GetTotalSaleAnimalEachCustomer(customer _customer)
         {
-            // Task Uncomplete
+            // Task complete
             // Querry
             int total = 0;
-
+            var data = from c in db.customers
+                       join s in db.sales on c.ID equals s.CustomerID
+                       join sa in db.saleAnimals on s.ID equals sa.SaleID
+                       where c.ID == _customer.ID
+                       select sa.AnimalID;
+            total = data.Count();
             return total;
         }
-
+        
         public decimal GetTotalMoneyAnimalEachCustomer(customer _customer)
         {
-            // Task Uncomplete
+            // Task complete
             // Querry
-
-            decimal total = 0;
-
+            var data = from c in db.customers
+                       join s in db.sales on c.ID equals s.CustomerID
+                       join sa in db.saleAnimals on s.ID equals sa.SaleID
+                       where c.ID == _customer.ID
+                       select sa.SalePrice;
+            decimal total = (decimal)data.Sum();
             return total;
         }
 
         public int GetTotalSaleMerchandiseEachCustomer(customer _customer)
         {
-            // Task Uncomplete
+            // Task complete
             // Querry
-
             int total = 0;
-
+            var data = from c in db.customers
+                       join s in db.sales on c.ID equals s.CustomerID
+                       join sa in db.saleMerchandises on s.ID equals sa.SaleID
+                       where c.ID == _customer.ID
+                       select sa.Quantity;
+             total = data.Sum();
             return total;
         }
 
         public decimal GetTotalMoneyMerchandiseEachCustomer(customer _customer)
         {
-            // Task Uncomplete
+            // Task complete
             // Querry
-
             decimal total = 0;
+            var data = from c in db.customers
+                       join s in db.sales on c.ID equals s.CustomerID
+                       join sa in db.saleMerchandises on s.ID equals sa.SaleID
+                       where c.ID == _customer.ID
+                       select sa.SalePrice;
+            total = (decimal)data.Sum();
 
             return total;
         }

@@ -85,32 +85,37 @@ namespace PetStoreManager
 
             // Get Detail Work
             //------------------------------------------------- - Huy
-            /*// - Thông tin khách hàng từng hóa đơn
-            //Task Uncomplete
+            // - Thông tin khách hàng từng hóa đơn
+            //Task Complete
             (string ID, string Phone, string ContactName) cusInfo = sBll.GetInfoCusEachSale(sList[_row]);
             salCusID.Text = cusInfo.ID;
             salCusPhone.Text = cusInfo.Phone;
             salCusName.Text = cusInfo.ContactName;
-            */
 
-            /*// - Danh sách saleAnimal của từng hóa đơn
-            //Task Uncomplete
+
+            // - Danh sách saleAnimal của từng hóa đơn
+            //Task Complete
             var resultList1 = sBll.GetSalePetDetailEachSale(sList[_row]);
             if (resultList1.Any())
             {
-                salPetDetailDGV.DataSource = resultList1;
+                salPetDetailDGV.DataSource = resultList1.Select(rs => new
+                {
+                    ID = rs.SaleID,
+                    AnimalID = rs.AnimalID,
+                    SalePrice = rs.SalePrice
+                }).ToList();
             }
-            */
+            
 
-            /*// - Tổng saleAnimal của từng hóa đơn
-            //Task Uncomplete
-            this.salSalePetTotal.Text = sBll.GetTotalSalePetEachSale(sList[_row]);
-            */
+            // - Tổng saleAnimal của từng hóa đơn
+            // Task Complete
+            this.salSalePetTotal.Text = sBll.GetTotalSalePetEachSale(sList[_row]).ToString();
+            
 
-            /*// - Tổng Animal của từng hóa đơn
-            //Task Uncomplete
-            this.salPetTotal.Text = sBll.GetTotalPetEachSale(sList[_row]);
-            */
+            // - Tổng Animal của từng hóa đơn
+            //Task Complete 
+            this.salPetTotal.Text = sBll.GetTotalPetEachSale(sList[_row]).ToString();
+            
 
             //------------------------------------------------- - Hieu
             // - Thông tin nhân viên từng hóa đơn
@@ -170,6 +175,11 @@ namespace PetStoreManager
                 Console.WriteLine(ex);
                 return;
             }
+        }
+
+        private void bunifuPanel10_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

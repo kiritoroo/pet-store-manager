@@ -42,7 +42,7 @@ namespace Data.Access
 
         public int GetTotalBill()
         {
-            // Task Complete - Hieu
+            // Task Complete
             // Querry
 
             int total = 0;
@@ -52,7 +52,7 @@ namespace Data.Access
 
         public decimal GetTotalIncome()
         {
-            // Task Complete - Hieu
+            // Task Complete
             // Querry
 
             decimal total = 0;
@@ -84,7 +84,7 @@ namespace Data.Access
 
         public decimal GetTotalIncomeInMonth(string _year,string _month)
         {
-            // Task Complete - Hieu
+            // Task Complete
             // Querry
 
             decimal total = 0;
@@ -124,7 +124,7 @@ namespace Data.Access
 
         public int GetTotalAnimalSalesInMonth(string _year, string _month)
         {
-            // Task complete - Huy
+            // Task complete
             // Querry
 
             int total = 0;
@@ -145,7 +145,7 @@ namespace Data.Access
 
         public int GetTotalMerchandiseSalesInMonth(string _year, string _month)
         {
-            // Task complete - Huy
+            // Task Complete
             // Querry
 
             int total = 0;
@@ -243,6 +243,55 @@ namespace Data.Access
 
             int TotalMerchandise = querry.Count();
             return TotalMerchandise.ToString();
+=======
+        public (string ID, string Phone, string ContactName) GetInfoCusEachSale(sale _sale)
+        {
+            (string ID, string Phone, string ContactName) data;
+
+            data.ID ="";
+            data.Phone = "";
+            data.ContactName = "";
+            var querry = from s in db.sales
+                         join c in db.customers
+                         on s.CustomerID equals c.ID
+                         where s.ID == _sale.ID
+                         select new
+                         {
+                             ID = c.ID,
+                             Phone = c.Phone,
+                             ContactName = c.ContactName
+                         };
+            data.ID = querry.Select(q => q.ID).FirstOrDefault();
+            data.Phone = querry.Select(q => q.Phone).FirstOrDefault();
+            data.ContactName=querry.Select(q => q.ContactName).FirstOrDefault();
+            return data;
+        }
+        public List<saleAnimal> GetSalePetDetailEachSale (sale _sale)
+        {
+            List <saleAnimal> list = new List<saleAnimal>();
+            var querry = from s in db.sales
+                       join sa in db.saleAnimals
+                       on s.ID equals sa.SaleID
+                       where s.ID == _sale.ID
+                       select sa;
+            if (querry != null)
+            {
+                list = querry.ToList<saleAnimal>();
+            }
+            return list;
+        }
+        public int GetTotalSalePetEachSale (sale _sale)
+        {
+            int total = 0;
+            total= this.GetSalePetDetailEachSale(_sale).Select(s => s.SaleID).Count();
+            return total;
+        }
+        
+        public int GetTotalPetEachSale(sale _sale)
+        {
+            int total = 0;
+            total = this.GetSalePetDetailEachSale(_sale).Select(s => s.AnimalID).Count();
+            return total;
         }
     }
 }

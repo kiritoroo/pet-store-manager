@@ -52,61 +52,79 @@ namespace Data.Access
 
         public List<sale> GetSaleDetailEachEmployee(employee _employee)
         {
-            // Task Uncomplete
+            // Task Complete
             // Querry
 
             List<sale> list = new List<sale>();
+            var querry = from emp in db.employees
+                         join s in db.sales
+                         on emp.ID equals s.EmployeeID
+                         where emp.ID == _employee.ID
+                         select s;
+            list = querry.ToList();
 
             return list;
         }
 
         public List<animalOrder> GetOrderAnimalDetailEachEmployee(employee _employee)
         {
-            // Task Uncomplete
+            // Task Complete
             // Querry
-
+            
             List<animalOrder> list = new List<animalOrder>();
+            var querry = from emp in db.employees
+                         join ao in db.animalOrders
+                         on emp.ID equals ao.EmployeeID
+                         where emp.ID == _employee.ID
+                         select ao;
+            list = querry.ToList();
 
             return list;
         }
 
         public List<merchandiseOrder> GetOrderMerchandiseDetailEachEmployee(employee _employee)
         {
-            // Task Uncomplete
+            // Task Complete
             // Querry
 
             List<merchandiseOrder> list = new List<merchandiseOrder>();
+            var querry = from emp in db.employees
+                         join mo in db.merchandiseOrders
+                         on emp.ID equals mo.EmployeeID
+                         where emp.ID == _employee.ID
+                         select mo;
+            list = querry.ToList();
 
             return list;
         }
 
         public int GetTotalSaleEachEmployee(employee _employee)
         {
-            // Task Uncomplete
+            // Task Complete
             // Querry
 
             int total = 0;
-
+            total = this.GetSaleDetailEachEmployee(_employee).Count();
             return total;
         }
 
         public int GetTotalOrderAnimalEachEmployee(employee _employee)
         {
-            // Task Uncomplete
+            // Task Complete
             // Querry
 
             int total = 0;
-
+            total = this.GetOrderAnimalDetailEachEmployee(_employee).Count();
             return total;
         }
 
         public int GetTotalOrderMerchandiseEachEmployee(employee _employee)
         {
-            // Task Uncomplete
+            // Task Complete
             // Querry
 
             int total = 0;
-
+            total = this.GetOrderMerchandiseDetailEachEmployee(_employee).Count();
             return total;
         }
     }

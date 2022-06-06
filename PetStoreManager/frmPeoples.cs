@@ -60,6 +60,16 @@ namespace PetStoreManager
                 this.supDGV.Columns[i].HeaderCell.Style.Font = fontStype1;
             }
             this.supDGV.DefaultCellStyle.Font = fontStype2;
+
+            this.empSaleDetailDGV.DefaultCellStyle.Font = fontStype2;
+            this.empPetOrderDGV.DefaultCellStyle.Font = fontStype2;
+            this.empMerchandiseOrderDGV.DefaultCellStyle.Font = fontStype2;
+
+            this.cusSalePetDetailDGV.DefaultCellStyle.Font = fontStype2;
+            this.cusSaleMerchandiseDetailDGV.DefaultCellStyle.Font = fontStype2;
+
+            this.supPetOrderDGV.DefaultCellStyle.Font = fontStype2;
+            this.supMerchandiseOrderDGV.DefaultCellStyle.Font = fontStype2;
         }
 
         private void Load_Data_Customer()
@@ -134,17 +144,27 @@ namespace PetStoreManager
 
             // Get Detail Work
             var rsList1 = cusBll.GetSaleAnimalDetailEachCustomer(this.cusList[_row]);
-            if (rsList1.Any())
+            if (rsList1!=null)
             {
                 cusSalePetDetailDGV.DataSource = rsList1;
+            }
+            else
+            {
+                cusSalePetDetailDGV.Rows.Clear();
+                cusSalePetDetailDGV.Refresh();
             }
             this.cusSalePetCount.Text = cusBll.GetTotalSaleAnimalEachCustomer(this.cusList[_row]).ToString();
             this.cusTotalPetSaleMoney.Text = cusBll.GetTotalMoneyAnimalEachCustomer(this.cusList[_row]).ToString(sFormat) + " ₫";
 
             var rsList2 = cusBll.GetSaleMerchandiseDetailEachCustomer(this.cusList[_row]);
-            if (rsList2.Any())
+            if (rsList2!=null)
             {
                 cusSaleMerchandiseDetailDGV.DataSource = rsList2;
+            }
+            else
+            {
+                cusSaleMerchandiseDetailDGV.Rows.Clear();
+                cusSaleMerchandiseDetailDGV.Refresh();
             }
             this.cusSaleMerchandiseCount.Text = cusBll.GetTotalSaleMerchandiseEachCustomer(this.cusList[_row]).ToString();
             this.cusTotalSaleMerchandiseMoney.Text = cusBll.GetTotalMoneyMerchandiseEachCustomer(this.cusList[_row]).ToString(sFormat) + " ₫"; ;
@@ -163,23 +183,61 @@ namespace PetStoreManager
 
             // Get Detail Work
             var rsList1 = empBll.GetSaleDetailEachEmployee(this.empList[_row]);
-            if (rsList1.Any())
+            if (rsList1!=null)
             {
-                empSaleDetailDGV.DataSource = rsList1;
+                empSaleDetailDGV.DataSource = rsList1.Select(rs => new
+                {
+                    SaleID = rs.ID,
+                    Date = rs.saledate,
+                    CustomerID = rs.CustomerID,
+                    EmployeeID = rs.EmployeeID,
+                    Tax = rs.SaleTax
+                }).ToList();
+            }
+            else
+            {
+                empSaleDetailDGV.Rows.Clear();
+                empSaleDetailDGV.Refresh();
             }
             this.empTotalSale.Text = empBll.GetTotalSaleEachEmployee(this.empList[_row]).ToString();
 
             var rsList2 = empBll.GetOrderAnimalDetailEachEmployee(this.empList[_row]);
-            if (rsList2.Any())
+            if (rsList2!=null)
             {
-                empPetOrderDGV.DataSource = rsList2;
+                empPetOrderDGV.DataSource = rsList2.Select(rs => new
+                {
+                    OrderID = rs.ID,
+                    OrderDate = rs.OrderDate,
+                    ReceiveDate = rs.ReceiveDate,
+                    SupplierID = rs.SupplierID,
+                    ShippingCost = rs.ShippingCost
+
+                }).ToList();
+            }
+            else
+            {
+                empPetOrderDGV.Rows.Clear();
+                empPetOrderDGV.Refresh();
             }
             this.empTotalPetOrder.Text = empBll.GetTotalOrderAnimalEachEmployee(this.empList[_row]).ToString();
 
             var rsList3 = empBll.GetOrderMerchandiseDetailEachEmployee(this.empList[_row]);
-            if (rsList3.Any())
+            if (rsList3!=null)
             {
-                empMerchandiseOrderDGV.DataSource = rsList3;
+                empMerchandiseOrderDGV.DataSource = rsList3.Select(rs => new
+                {
+                    OrderID = rs.ID,
+                    OrderDate = rs.OrderDate,
+                    ReceiveDate = rs.ReceiveDate,
+                    SupplierID = rs.SupplierID,
+                    ShippingCost = rs.ShippingCost
+
+                }).ToList();
+            }
+            else
+            {
+                empMerchandiseOrderDGV.Rows.Clear();
+                empMerchandiseOrderDGV.Refresh();
             }
             this.empTotalMerchandiseOrder.Text = empBll.GetTotalOrderMerchandiseEachEmployee(this.empList[_row]).ToString();
 
@@ -201,6 +259,11 @@ namespace PetStoreManager
             {
                 supPetOrderDGV.DataSource = rsList1;
             }
+            else
+            {
+                supPetOrderDGV.Rows.Clear();
+                supPetOrderDGV.Refresh();
+            }
             this.supTotalPetOrder.Text = supBll.GetTotalOrderAnimalEachSupplier(this.supList[_row]).ToString();
             this.supTotalPetOrderMoney.Text = supBll.GetTotalCostAnimalEachSupplier(this.supList[_row]).ToString(sFormat) + " ₫";
 
@@ -208,6 +271,11 @@ namespace PetStoreManager
             if (rsList2!=null)
             {
                 supMerchandiseOrderDGV.DataSource = rsList2;
+            }
+            else
+            {
+                supMerchandiseOrderDGV.Rows.Clear();
+                supMerchandiseOrderDGV.Refresh();
             }
             this.supTotalMerchandiseOrder.Text = supBll.GetTotalOrderMerchandiseEachSupplier(this.supList[_row]).ToString();
             this.supTotalMerchandiseOrderMoney.Text = supBll.GetTotalCostMerchandiseEachSupplier(this.supList[_row]).ToString(sFormat) + " ₫";
@@ -300,6 +368,8 @@ namespace PetStoreManager
             }
             catch (Exception ex)
             {
+                cusSalePetDetailDGV.DataSource = null;
+                cusSaleMerchandiseDetailDGV.DataSource = null;
                 Console.WriteLine(ex);
                 return;
             }
