@@ -3990,6 +3990,7 @@
             this.bunifuLabel46.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuLabel46.Name = "bunifuLabel46";
             this.bunifuLabel46.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel46.Size = new System.Drawing.Size(67, 15);
             this.bunifuLabel46.Size = new System.Drawing.Size(84, 20);
             this.bunifuLabel46.TabIndex = 0;
             this.bunifuLabel46.Text = "TOTAL ITEM:";

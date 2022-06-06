@@ -42,5 +42,7 @@ namespace Business.Manager
         {
             return this.dal.GetStatisticAllMerchandise();
         }
+
+            
     }
 }
