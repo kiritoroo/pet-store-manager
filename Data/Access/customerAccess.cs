@@ -80,6 +80,7 @@ namespace Data.Access
             var querry = from q in data
                          group q by new { q.ID, q.CustomerID, q.saledate }
                          into gr
+                         where gr.Count() > 0
                          select new
                          {
                             SaleID=gr.Key.ID,
@@ -113,7 +114,7 @@ namespace Data.Access
                            s.CustomerID,
                            s.saledate,
                            s.ID,
-                           sa.MerchandiseID,
+                           sa.Quantity,
                            sa.SalePrice
                        };
 
@@ -124,10 +125,10 @@ namespace Data.Access
                          {
                              SaleID = gr.Key.ID,
                              Date = gr.Key.saledate,
-                             TotalItems = gr.Count(),
+                             TotalItems = gr.Sum(z=>z.Quantity),
                              TotalMoney = gr.Sum(x => x.SalePrice)
                          };
-
+            
 
             if (querry != null)
             {
@@ -167,13 +168,13 @@ namespace Data.Access
         {
             // Task complete
             // Querry
-
+            int total = 0;
             var data = from c in db.customers
                        join s in db.sales on c.ID equals s.CustomerID
                        join sa in db.saleMerchandises on s.ID equals sa.SaleID
                        where c.ID == _customer.ID
-                       select sa.MerchandiseID;
-            int total = data.Count();
+                       select sa.Quantity;
+             total = data.Sum();
             return total;
         }
 
