@@ -158,9 +158,10 @@
             this.pageSale.Controls.Add(this.bunifuShadowPanel8);
             this.pageSale.Controls.Add(this.bunifuShadowPanel5);
             this.pageSale.Location = new System.Drawing.Point(4, 4);
+            this.pageSale.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pageSale.Name = "pageSale";
-            this.pageSale.Padding = new System.Windows.Forms.Padding(3);
-            this.pageSale.Size = new System.Drawing.Size(1276, 660);
+            this.pageSale.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pageSale.Size = new System.Drawing.Size(1704, 815);
             this.pageSale.TabIndex = 2;
             this.pageSale.Text = "Page Sales";
             this.pageSale.UseVisualStyleBackColor = true;
@@ -182,9 +183,11 @@
             this.bunifuGroupBox4.LabelAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.bunifuGroupBox4.LabelIndent = 10;
             this.bunifuGroupBox4.LineStyle = Bunifu.UI.WinForms.BunifuGroupBox.LineStyles.Solid;
-            this.bunifuGroupBox4.Location = new System.Drawing.Point(855, 407);
+            this.bunifuGroupBox4.Location = new System.Drawing.Point(1140, 501);
+            this.bunifuGroupBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuGroupBox4.Name = "bunifuGroupBox4";
-            this.bunifuGroupBox4.Size = new System.Drawing.Size(412, 185);
+            this.bunifuGroupBox4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuGroupBox4.Size = new System.Drawing.Size(549, 228);
             this.bunifuGroupBox4.TabIndex = 12;
             this.bunifuGroupBox4.TabStop = false;
             this.bunifuGroupBox4.Text = "Detail Customer";
@@ -217,7 +220,8 @@
             this.salCusID.IconRight = null;
             this.salCusID.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.salCusID.Lines = new string[0];
-            this.salCusID.Location = new System.Drawing.Point(148, 25);
+            this.salCusID.Location = new System.Drawing.Point(197, 31);
+            this.salCusID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.salCusID.MaxLength = 32767;
             this.salCusID.MinimumSize = new System.Drawing.Size(1, 1);
             this.salCusID.Modified = false;
@@ -243,7 +247,7 @@
             stateProperties4.ForeColor = System.Drawing.Color.Empty;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.salCusID.OnIdleState = stateProperties4;
-            this.salCusID.Padding = new System.Windows.Forms.Padding(3);
+            this.salCusID.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.salCusID.PasswordChar = '\0';
             this.salCusID.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.salCusID.PlaceholderText = "Enter text";
@@ -253,7 +257,7 @@
             this.salCusID.SelectionLength = 0;
             this.salCusID.SelectionStart = 0;
             this.salCusID.ShortcutsEnabled = true;
-            this.salCusID.Size = new System.Drawing.Size(200, 39);
+            this.salCusID.Size = new System.Drawing.Size(267, 53);
             this.salCusID.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.salCusID.TabIndex = 3;
             this.salCusID.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -272,10 +276,11 @@
             this.bunifuLabel26.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel26.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuLabel26.ForeColor = System.Drawing.Color.DimGray;
-            this.bunifuLabel26.Location = new System.Drawing.Point(21, 35);
+            this.bunifuLabel26.Location = new System.Drawing.Point(28, 43);
+            this.bunifuLabel26.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuLabel26.Name = "bunifuLabel26";
             this.bunifuLabel26.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel26.Size = new System.Drawing.Size(13, 17);
+            this.bunifuLabel26.Size = new System.Drawing.Size(16, 21);
             this.bunifuLabel26.TabIndex = 2;
             this.bunifuLabel26.Text = "ID";
             this.bunifuLabel26.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -309,7 +314,8 @@
             this.salCusName.IconRight = null;
             this.salCusName.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.salCusName.Lines = new string[0];
-            this.salCusName.Location = new System.Drawing.Point(148, 115);
+            this.salCusName.Location = new System.Drawing.Point(197, 142);
+            this.salCusName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.salCusName.MaxLength = 32767;
             this.salCusName.MinimumSize = new System.Drawing.Size(1, 1);
             this.salCusName.Modified = false;
@@ -335,7 +341,7 @@
             stateProperties8.ForeColor = System.Drawing.Color.Empty;
             stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.salCusName.OnIdleState = stateProperties8;
-            this.salCusName.Padding = new System.Windows.Forms.Padding(3);
+            this.salCusName.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.salCusName.PasswordChar = '\0';
             this.salCusName.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.salCusName.PlaceholderText = "Enter text";
@@ -345,7 +351,7 @@
             this.salCusName.SelectionLength = 0;
             this.salCusName.SelectionStart = 0;
             this.salCusName.ShortcutsEnabled = true;
-            this.salCusName.Size = new System.Drawing.Size(200, 39);
+            this.salCusName.Size = new System.Drawing.Size(267, 53);
             this.salCusName.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.salCusName.TabIndex = 1;
             this.salCusName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -384,7 +390,8 @@
             this.salCusPhone.IconRight = null;
             this.salCusPhone.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.salCusPhone.Lines = new string[0];
-            this.salCusPhone.Location = new System.Drawing.Point(148, 70);
+            this.salCusPhone.Location = new System.Drawing.Point(197, 86);
+            this.salCusPhone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.salCusPhone.MaxLength = 32767;
             this.salCusPhone.MinimumSize = new System.Drawing.Size(1, 1);
             this.salCusPhone.Modified = false;
@@ -410,7 +417,7 @@
             stateProperties12.ForeColor = System.Drawing.Color.Empty;
             stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.salCusPhone.OnIdleState = stateProperties12;
-            this.salCusPhone.Padding = new System.Windows.Forms.Padding(3);
+            this.salCusPhone.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.salCusPhone.PasswordChar = '\0';
             this.salCusPhone.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.salCusPhone.PlaceholderText = "Enter text";
@@ -420,7 +427,7 @@
             this.salCusPhone.SelectionLength = 0;
             this.salCusPhone.SelectionStart = 0;
             this.salCusPhone.ShortcutsEnabled = true;
-            this.salCusPhone.Size = new System.Drawing.Size(200, 39);
+            this.salCusPhone.Size = new System.Drawing.Size(267, 53);
             this.salCusPhone.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.salCusPhone.TabIndex = 1;
             this.salCusPhone.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -439,10 +446,11 @@
             this.bunifuLabel37.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel37.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuLabel37.ForeColor = System.Drawing.Color.DimGray;
-            this.bunifuLabel37.Location = new System.Drawing.Point(22, 129);
+            this.bunifuLabel37.Location = new System.Drawing.Point(29, 159);
+            this.bunifuLabel37.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuLabel37.Name = "bunifuLabel37";
             this.bunifuLabel37.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel37.Size = new System.Drawing.Size(87, 17);
+            this.bunifuLabel37.Size = new System.Drawing.Size(104, 21);
             this.bunifuLabel37.TabIndex = 0;
             this.bunifuLabel37.Text = "Contact Name";
             this.bunifuLabel37.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -456,10 +464,11 @@
             this.bunifuLabel38.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel38.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuLabel38.ForeColor = System.Drawing.Color.DimGray;
-            this.bunifuLabel38.Location = new System.Drawing.Point(21, 83);
+            this.bunifuLabel38.Location = new System.Drawing.Point(28, 102);
+            this.bunifuLabel38.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuLabel38.Name = "bunifuLabel38";
             this.bunifuLabel38.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel38.Size = new System.Drawing.Size(39, 17);
+            this.bunifuLabel38.Size = new System.Drawing.Size(46, 21);
             this.bunifuLabel38.TabIndex = 0;
             this.bunifuLabel38.Text = "Phone";
             this.bunifuLabel38.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -474,10 +483,11 @@
             this.bunifuPanel9.BorderRadius = 0;
             this.bunifuPanel9.BorderThickness = 0;
             this.bunifuPanel9.Controls.Add(this.bunifuImageButton1);
-            this.bunifuPanel9.Location = new System.Drawing.Point(-4, 605);
+            this.bunifuPanel9.Location = new System.Drawing.Point(-5, 745);
+            this.bunifuPanel9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuPanel9.Name = "bunifuPanel9";
             this.bunifuPanel9.ShowBorders = true;
-            this.bunifuPanel9.Size = new System.Drawing.Size(1284, 77);
+            this.bunifuPanel9.Size = new System.Drawing.Size(1712, 95);
             this.bunifuPanel9.TabIndex = 11;
             // 
             // bunifuImageButton1
@@ -497,17 +507,18 @@
             this.bunifuImageButton1.ImageActive = null;
             this.bunifuImageButton1.ImageLocation = null;
             this.bunifuImageButton1.ImageMargin = 20;
-            this.bunifuImageButton1.ImageSize = new System.Drawing.Size(35, 35);
-            this.bunifuImageButton1.ImageZoomSize = new System.Drawing.Size(55, 55);
+            this.bunifuImageButton1.ImageSize = new System.Drawing.Size(53, 48);
+            this.bunifuImageButton1.ImageZoomSize = new System.Drawing.Size(73, 68);
             this.bunifuImageButton1.InitialImage = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.InitialImage")));
-            this.bunifuImageButton1.Location = new System.Drawing.Point(496, 9);
+            this.bunifuImageButton1.Location = new System.Drawing.Point(661, 11);
+            this.bunifuImageButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuImageButton1.Name = "bunifuImageButton1";
             this.bunifuImageButton1.Rotation = 0;
             this.bunifuImageButton1.ShowActiveImage = true;
             this.bunifuImageButton1.ShowCursorChanges = true;
             this.bunifuImageButton1.ShowImageBorders = true;
             this.bunifuImageButton1.ShowSizeMarkers = false;
-            this.bunifuImageButton1.Size = new System.Drawing.Size(55, 55);
+            this.bunifuImageButton1.Size = new System.Drawing.Size(73, 68);
             this.bunifuImageButton1.TabIndex = 0;
             this.bunifuImageButton1.ToolTipText = "";
             this.bunifuImageButton1.WaitOnLoad = false;
@@ -531,9 +542,11 @@
             this.bunifuGroupBox3.LabelAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.bunifuGroupBox3.LabelIndent = 10;
             this.bunifuGroupBox3.LineStyle = Bunifu.UI.WinForms.BunifuGroupBox.LineStyles.Solid;
-            this.bunifuGroupBox3.Location = new System.Drawing.Point(855, 200);
+            this.bunifuGroupBox3.Location = new System.Drawing.Point(1140, 246);
+            this.bunifuGroupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuGroupBox3.Name = "bunifuGroupBox3";
-            this.bunifuGroupBox3.Size = new System.Drawing.Size(412, 183);
+            this.bunifuGroupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuGroupBox3.Size = new System.Drawing.Size(549, 225);
             this.bunifuGroupBox3.TabIndex = 9;
             this.bunifuGroupBox3.TabStop = false;
             this.bunifuGroupBox3.Text = "Detail Employee";
@@ -566,7 +579,8 @@
             this.salEmpID.IconRight = null;
             this.salEmpID.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.salEmpID.Lines = new string[0];
-            this.salEmpID.Location = new System.Drawing.Point(148, 25);
+            this.salEmpID.Location = new System.Drawing.Point(197, 31);
+            this.salEmpID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.salEmpID.MaxLength = 32767;
             this.salEmpID.MinimumSize = new System.Drawing.Size(1, 1);
             this.salEmpID.Modified = false;
@@ -592,7 +606,7 @@
             stateProperties16.ForeColor = System.Drawing.Color.Empty;
             stateProperties16.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.salEmpID.OnIdleState = stateProperties16;
-            this.salEmpID.Padding = new System.Windows.Forms.Padding(3);
+            this.salEmpID.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.salEmpID.PasswordChar = '\0';
             this.salEmpID.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.salEmpID.PlaceholderText = "Enter text";
@@ -602,7 +616,7 @@
             this.salEmpID.SelectionLength = 0;
             this.salEmpID.SelectionStart = 0;
             this.salEmpID.ShortcutsEnabled = true;
-            this.salEmpID.Size = new System.Drawing.Size(200, 39);
+            this.salEmpID.Size = new System.Drawing.Size(267, 53);
             this.salEmpID.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.salEmpID.TabIndex = 3;
             this.salEmpID.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -621,10 +635,11 @@
             this.bunifuLabel18.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel18.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuLabel18.ForeColor = System.Drawing.Color.DimGray;
-            this.bunifuLabel18.Location = new System.Drawing.Point(21, 35);
+            this.bunifuLabel18.Location = new System.Drawing.Point(28, 43);
+            this.bunifuLabel18.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuLabel18.Name = "bunifuLabel18";
             this.bunifuLabel18.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel18.Size = new System.Drawing.Size(13, 17);
+            this.bunifuLabel18.Size = new System.Drawing.Size(16, 21);
             this.bunifuLabel18.TabIndex = 2;
             this.bunifuLabel18.Text = "ID";
             this.bunifuLabel18.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -658,7 +673,8 @@
             this.salEmpName.IconRight = null;
             this.salEmpName.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.salEmpName.Lines = new string[0];
-            this.salEmpName.Location = new System.Drawing.Point(148, 115);
+            this.salEmpName.Location = new System.Drawing.Point(197, 142);
+            this.salEmpName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.salEmpName.MaxLength = 32767;
             this.salEmpName.MinimumSize = new System.Drawing.Size(1, 1);
             this.salEmpName.Modified = false;
@@ -684,7 +700,7 @@
             stateProperties20.ForeColor = System.Drawing.Color.Empty;
             stateProperties20.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.salEmpName.OnIdleState = stateProperties20;
-            this.salEmpName.Padding = new System.Windows.Forms.Padding(3);
+            this.salEmpName.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.salEmpName.PasswordChar = '\0';
             this.salEmpName.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.salEmpName.PlaceholderText = "Enter text";
@@ -694,7 +710,7 @@
             this.salEmpName.SelectionLength = 0;
             this.salEmpName.SelectionStart = 0;
             this.salEmpName.ShortcutsEnabled = true;
-            this.salEmpName.Size = new System.Drawing.Size(200, 39);
+            this.salEmpName.Size = new System.Drawing.Size(267, 53);
             this.salEmpName.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.salEmpName.TabIndex = 1;
             this.salEmpName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -733,7 +749,8 @@
             this.salEmpPhone.IconRight = null;
             this.salEmpPhone.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.salEmpPhone.Lines = new string[0];
-            this.salEmpPhone.Location = new System.Drawing.Point(148, 70);
+            this.salEmpPhone.Location = new System.Drawing.Point(197, 86);
+            this.salEmpPhone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.salEmpPhone.MaxLength = 32767;
             this.salEmpPhone.MinimumSize = new System.Drawing.Size(1, 1);
             this.salEmpPhone.Modified = false;
@@ -759,7 +776,7 @@
             stateProperties24.ForeColor = System.Drawing.Color.Empty;
             stateProperties24.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.salEmpPhone.OnIdleState = stateProperties24;
-            this.salEmpPhone.Padding = new System.Windows.Forms.Padding(3);
+            this.salEmpPhone.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.salEmpPhone.PasswordChar = '\0';
             this.salEmpPhone.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.salEmpPhone.PlaceholderText = "Enter text";
@@ -769,7 +786,7 @@
             this.salEmpPhone.SelectionLength = 0;
             this.salEmpPhone.SelectionStart = 0;
             this.salEmpPhone.ShortcutsEnabled = true;
-            this.salEmpPhone.Size = new System.Drawing.Size(200, 39);
+            this.salEmpPhone.Size = new System.Drawing.Size(267, 53);
             this.salEmpPhone.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.salEmpPhone.TabIndex = 1;
             this.salEmpPhone.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -788,10 +805,11 @@
             this.bunifuLabel33.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel33.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuLabel33.ForeColor = System.Drawing.Color.DimGray;
-            this.bunifuLabel33.Location = new System.Drawing.Point(22, 129);
+            this.bunifuLabel33.Location = new System.Drawing.Point(29, 159);
+            this.bunifuLabel33.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuLabel33.Name = "bunifuLabel33";
             this.bunifuLabel33.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel33.Size = new System.Drawing.Size(61, 17);
+            this.bunifuLabel33.Size = new System.Drawing.Size(72, 21);
             this.bunifuLabel33.TabIndex = 0;
             this.bunifuLabel33.Text = "Full Name";
             this.bunifuLabel33.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -805,10 +823,11 @@
             this.bunifuLabel36.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel36.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuLabel36.ForeColor = System.Drawing.Color.DimGray;
-            this.bunifuLabel36.Location = new System.Drawing.Point(21, 83);
+            this.bunifuLabel36.Location = new System.Drawing.Point(28, 102);
+            this.bunifuLabel36.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuLabel36.Name = "bunifuLabel36";
             this.bunifuLabel36.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel36.Size = new System.Drawing.Size(39, 17);
+            this.bunifuLabel36.Size = new System.Drawing.Size(46, 21);
             this.bunifuLabel36.TabIndex = 0;
             this.bunifuLabel36.Text = "Phone";
             this.bunifuLabel36.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -831,9 +850,11 @@
             this.bunifuGroupBox2.LabelAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.bunifuGroupBox2.LabelIndent = 10;
             this.bunifuGroupBox2.LineStyle = Bunifu.UI.WinForms.BunifuGroupBox.LineStyles.Solid;
-            this.bunifuGroupBox2.Location = new System.Drawing.Point(855, 2);
+            this.bunifuGroupBox2.Location = new System.Drawing.Point(1140, 2);
+            this.bunifuGroupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuGroupBox2.Name = "bunifuGroupBox2";
-            this.bunifuGroupBox2.Size = new System.Drawing.Size(412, 177);
+            this.bunifuGroupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuGroupBox2.Size = new System.Drawing.Size(549, 218);
             this.bunifuGroupBox2.TabIndex = 9;
             this.bunifuGroupBox2.TabStop = false;
             this.bunifuGroupBox2.Text = "Detail";
@@ -866,7 +887,8 @@
             this.salTax.IconRight = null;
             this.salTax.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.salTax.Lines = new string[0];
-            this.salTax.Location = new System.Drawing.Point(148, 112);
+            this.salTax.Location = new System.Drawing.Point(197, 138);
+            this.salTax.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.salTax.MaxLength = 32767;
             this.salTax.MinimumSize = new System.Drawing.Size(1, 1);
             this.salTax.Modified = false;
@@ -892,7 +914,7 @@
             stateProperties28.ForeColor = System.Drawing.Color.Empty;
             stateProperties28.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.salTax.OnIdleState = stateProperties28;
-            this.salTax.Padding = new System.Windows.Forms.Padding(3);
+            this.salTax.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.salTax.PasswordChar = '\0';
             this.salTax.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.salTax.PlaceholderText = "Enter text";
@@ -902,7 +924,7 @@
             this.salTax.SelectionLength = 0;
             this.salTax.SelectionStart = 0;
             this.salTax.ShortcutsEnabled = true;
-            this.salTax.Size = new System.Drawing.Size(200, 39);
+            this.salTax.Size = new System.Drawing.Size(267, 53);
             this.salTax.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.salTax.TabIndex = 1;
             this.salTax.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -941,7 +963,8 @@
             this.salDate.IconRight = null;
             this.salDate.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.salDate.Lines = new string[0];
-            this.salDate.Location = new System.Drawing.Point(148, 67);
+            this.salDate.Location = new System.Drawing.Point(197, 82);
+            this.salDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.salDate.MaxLength = 32767;
             this.salDate.MinimumSize = new System.Drawing.Size(1, 1);
             this.salDate.Modified = false;
@@ -967,7 +990,7 @@
             stateProperties32.ForeColor = System.Drawing.Color.Empty;
             stateProperties32.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.salDate.OnIdleState = stateProperties32;
-            this.salDate.Padding = new System.Windows.Forms.Padding(3);
+            this.salDate.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.salDate.PasswordChar = '\0';
             this.salDate.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.salDate.PlaceholderText = "Enter text";
@@ -977,7 +1000,7 @@
             this.salDate.SelectionLength = 0;
             this.salDate.SelectionStart = 0;
             this.salDate.ShortcutsEnabled = true;
-            this.salDate.Size = new System.Drawing.Size(200, 39);
+            this.salDate.Size = new System.Drawing.Size(267, 53);
             this.salDate.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.salDate.TabIndex = 1;
             this.salDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -996,10 +1019,11 @@
             this.bunifuLabel15.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel15.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuLabel15.ForeColor = System.Drawing.Color.DimGray;
-            this.bunifuLabel15.Location = new System.Drawing.Point(22, 122);
+            this.bunifuLabel15.Location = new System.Drawing.Point(29, 150);
+            this.bunifuLabel15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuLabel15.Name = "bunifuLabel15";
             this.bunifuLabel15.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel15.Size = new System.Drawing.Size(49, 17);
+            this.bunifuLabel15.Size = new System.Drawing.Size(59, 21);
             this.bunifuLabel15.TabIndex = 0;
             this.bunifuLabel15.Text = "Sale Tax";
             this.bunifuLabel15.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
@@ -1033,7 +1057,8 @@
             this.salID.IconRight = null;
             this.salID.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.salID.Lines = new string[0];
-            this.salID.Location = new System.Drawing.Point(148, 22);
+            this.salID.Location = new System.Drawing.Point(197, 27);
+            this.salID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.salID.MaxLength = 32767;
             this.salID.MinimumSize = new System.Drawing.Size(1, 1);
             this.salID.Modified = false;
@@ -1059,7 +1084,7 @@
             stateProperties36.ForeColor = System.Drawing.Color.Empty;
             stateProperties36.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.salID.OnIdleState = stateProperties36;
-            this.salID.Padding = new System.Windows.Forms.Padding(3);
+            this.salID.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.salID.PasswordChar = '\0';
             this.salID.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.salID.PlaceholderText = "Enter text";
@@ -1069,7 +1094,7 @@
             this.salID.SelectionLength = 0;
             this.salID.SelectionStart = 0;
             this.salID.ShortcutsEnabled = true;
-            this.salID.Size = new System.Drawing.Size(200, 39);
+            this.salID.Size = new System.Drawing.Size(267, 53);
             this.salID.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.salID.TabIndex = 1;
             this.salID.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -1088,10 +1113,11 @@
             this.bunifuLabel21.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel21.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuLabel21.ForeColor = System.Drawing.Color.DimGray;
-            this.bunifuLabel21.Location = new System.Drawing.Point(22, 77);
+            this.bunifuLabel21.Location = new System.Drawing.Point(29, 95);
+            this.bunifuLabel21.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuLabel21.Name = "bunifuLabel21";
             this.bunifuLabel21.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel21.Size = new System.Drawing.Size(56, 17);
+            this.bunifuLabel21.Size = new System.Drawing.Size(68, 21);
             this.bunifuLabel21.TabIndex = 0;
             this.bunifuLabel21.Text = "Sale Date";
             this.bunifuLabel21.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -1105,10 +1131,11 @@
             this.bunifuLabel24.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel24.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuLabel24.ForeColor = System.Drawing.Color.DimGray;
-            this.bunifuLabel24.Location = new System.Drawing.Point(21, 32);
+            this.bunifuLabel24.Location = new System.Drawing.Point(28, 39);
+            this.bunifuLabel24.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuLabel24.Name = "bunifuLabel24";
             this.bunifuLabel24.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel24.Size = new System.Drawing.Size(13, 17);
+            this.bunifuLabel24.Size = new System.Drawing.Size(16, 21);
             this.bunifuLabel24.TabIndex = 0;
             this.bunifuLabel24.Text = "ID";
             this.bunifuLabel24.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -1125,7 +1152,8 @@
             this.bunifuShadowPanel4.Controls.Add(this.bunifuPanel11);
             this.bunifuShadowPanel4.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
             this.bunifuShadowPanel4.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
-            this.bunifuShadowPanel4.Location = new System.Drawing.Point(5, 0);
+            this.bunifuShadowPanel4.Location = new System.Drawing.Point(7, 0);
+            this.bunifuShadowPanel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuShadowPanel4.Name = "bunifuShadowPanel4";
             this.bunifuShadowPanel4.PanelColor = System.Drawing.Color.White;
             this.bunifuShadowPanel4.PanelColor2 = System.Drawing.Color.White;
@@ -1134,7 +1162,7 @@
             this.bunifuShadowPanel4.ShadowDepth = 5;
             this.bunifuShadowPanel4.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
             this.bunifuShadowPanel4.ShadowTopLeftVisible = false;
-            this.bunifuShadowPanel4.Size = new System.Drawing.Size(844, 300);
+            this.bunifuShadowPanel4.Size = new System.Drawing.Size(1125, 369);
             this.bunifuShadowPanel4.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel4.TabIndex = 10;
             // 
@@ -1189,12 +1217,14 @@
             this.salDGV.HeaderBackColor = System.Drawing.Color.DodgerBlue;
             this.salDGV.HeaderBgColor = System.Drawing.Color.Empty;
             this.salDGV.HeaderForeColor = System.Drawing.Color.White;
-            this.salDGV.Location = new System.Drawing.Point(14, 41);
+            this.salDGV.Location = new System.Drawing.Point(19, 50);
+            this.salDGV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.salDGV.Name = "salDGV";
             this.salDGV.RowHeadersVisible = false;
+            this.salDGV.RowHeadersWidth = 51;
             this.salDGV.RowTemplate.Height = 40;
             this.salDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.salDGV.Size = new System.Drawing.Size(817, 214);
+            this.salDGV.Size = new System.Drawing.Size(1089, 263);
             this.salDGV.TabIndex = 3;
             this.salDGV.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
@@ -1209,10 +1239,12 @@
             this.bunifuPanel10.Controls.Add(this.bunifuLabel25);
             this.bunifuPanel10.Dock = System.Windows.Forms.DockStyle.Top;
             this.bunifuPanel10.Location = new System.Drawing.Point(0, 0);
+            this.bunifuPanel10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuPanel10.Name = "bunifuPanel10";
             this.bunifuPanel10.ShowBorders = true;
-            this.bunifuPanel10.Size = new System.Drawing.Size(844, 35);
+            this.bunifuPanel10.Size = new System.Drawing.Size(1125, 43);
             this.bunifuPanel10.TabIndex = 1;
+            this.bunifuPanel10.Click += new System.EventHandler(this.bunifuPanel10_Click);
             // 
             // bunifuLabel25
             // 
@@ -1223,10 +1255,11 @@
             this.bunifuLabel25.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel25.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuLabel25.ForeColor = System.Drawing.Color.White;
-            this.bunifuLabel25.Location = new System.Drawing.Point(25, 9);
+            this.bunifuLabel25.Location = new System.Drawing.Point(33, 11);
+            this.bunifuLabel25.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuLabel25.Name = "bunifuLabel25";
             this.bunifuLabel25.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel25.Size = new System.Drawing.Size(65, 17);
+            this.bunifuLabel25.Size = new System.Drawing.Size(87, 21);
             this.bunifuLabel25.TabIndex = 0;
             this.bunifuLabel25.Text = "Sales";
             this.bunifuLabel25.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -1245,10 +1278,11 @@
             this.bunifuPanel11.Controls.Add(this.bunifuLabel29);
             this.bunifuPanel11.Controls.Add(this.bunifuLabel47);
             this.bunifuPanel11.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.bunifuPanel11.Location = new System.Drawing.Point(0, 261);
+            this.bunifuPanel11.Location = new System.Drawing.Point(0, 321);
+            this.bunifuPanel11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuPanel11.Name = "bunifuPanel11";
             this.bunifuPanel11.ShowBorders = true;
-            this.bunifuPanel11.Size = new System.Drawing.Size(844, 39);
+            this.bunifuPanel11.Size = new System.Drawing.Size(1125, 48);
             this.bunifuPanel11.TabIndex = 1;
             // 
             // salTotalMoney
@@ -1260,10 +1294,11 @@
             this.salTotalMoney.CursorType = System.Windows.Forms.Cursors.Default;
             this.salTotalMoney.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.salTotalMoney.ForeColor = System.Drawing.Color.Gray;
-            this.salTotalMoney.Location = new System.Drawing.Point(257, 12);
+            this.salTotalMoney.Location = new System.Drawing.Point(343, 15);
+            this.salTotalMoney.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.salTotalMoney.Name = "salTotalMoney";
             this.salTotalMoney.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.salTotalMoney.Size = new System.Drawing.Size(152, 15);
+            this.salTotalMoney.Size = new System.Drawing.Size(203, 18);
             this.salTotalMoney.TabIndex = 0;
             this.salTotalMoney.Text = "10";
             this.salTotalMoney.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -1277,10 +1312,11 @@
             this.salSaleCount.CursorType = System.Windows.Forms.Cursors.Default;
             this.salSaleCount.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.salSaleCount.ForeColor = System.Drawing.Color.Gray;
-            this.salSaleCount.Location = new System.Drawing.Point(94, 12);
+            this.salSaleCount.Location = new System.Drawing.Point(125, 15);
+            this.salSaleCount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.salSaleCount.Name = "salSaleCount";
             this.salSaleCount.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.salSaleCount.Size = new System.Drawing.Size(14, 15);
+            this.salSaleCount.Size = new System.Drawing.Size(18, 20);
             this.salSaleCount.TabIndex = 0;
             this.salSaleCount.Text = "10";
             this.salSaleCount.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -1294,10 +1330,11 @@
             this.bunifuLabel29.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel29.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bunifuLabel29.ForeColor = System.Drawing.Color.DarkGray;
-            this.bunifuLabel29.Location = new System.Drawing.Point(14, 12);
+            this.bunifuLabel29.Location = new System.Drawing.Point(19, 15);
+            this.bunifuLabel29.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuLabel29.Name = "bunifuLabel29";
             this.bunifuLabel29.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel29.Size = new System.Drawing.Size(72, 15);
+            this.bunifuLabel29.Size = new System.Drawing.Size(89, 20);
             this.bunifuLabel29.TabIndex = 0;
             this.bunifuLabel29.Text = "SALE COUNT:";
             this.bunifuLabel29.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -1311,10 +1348,11 @@
             this.bunifuLabel47.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel47.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bunifuLabel47.ForeColor = System.Drawing.Color.DarkGray;
-            this.bunifuLabel47.Location = new System.Drawing.Point(168, 12);
+            this.bunifuLabel47.Location = new System.Drawing.Point(224, 15);
+            this.bunifuLabel47.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuLabel47.Name = "bunifuLabel47";
             this.bunifuLabel47.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel47.Size = new System.Drawing.Size(83, 15);
+            this.bunifuLabel47.Size = new System.Drawing.Size(102, 20);
             this.bunifuLabel47.TabIndex = 0;
             this.bunifuLabel47.Text = "TOTAL MONEY:";
             this.bunifuLabel47.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -1331,7 +1369,8 @@
             this.bunifuShadowPanel8.Controls.Add(this.bunifuPanel19);
             this.bunifuShadowPanel8.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
             this.bunifuShadowPanel8.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
-            this.bunifuShadowPanel8.Location = new System.Drawing.Point(6, 308);
+            this.bunifuShadowPanel8.Location = new System.Drawing.Point(8, 379);
+            this.bunifuShadowPanel8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuShadowPanel8.Name = "bunifuShadowPanel8";
             this.bunifuShadowPanel8.PanelColor = System.Drawing.Color.White;
             this.bunifuShadowPanel8.PanelColor2 = System.Drawing.Color.White;
@@ -1340,7 +1379,7 @@
             this.bunifuShadowPanel8.ShadowDepth = 5;
             this.bunifuShadowPanel8.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
             this.bunifuShadowPanel8.ShadowTopLeftVisible = false;
-            this.bunifuShadowPanel8.Size = new System.Drawing.Size(422, 286);
+            this.bunifuShadowPanel8.Size = new System.Drawing.Size(563, 352);
             this.bunifuShadowPanel8.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel8.TabIndex = 8;
             // 
@@ -1395,12 +1434,14 @@
             this.salPetDetailDGV.HeaderBackColor = System.Drawing.Color.DodgerBlue;
             this.salPetDetailDGV.HeaderBgColor = System.Drawing.Color.Empty;
             this.salPetDetailDGV.HeaderForeColor = System.Drawing.Color.White;
-            this.salPetDetailDGV.Location = new System.Drawing.Point(14, 42);
+            this.salPetDetailDGV.Location = new System.Drawing.Point(19, 52);
+            this.salPetDetailDGV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.salPetDetailDGV.Name = "salPetDetailDGV";
             this.salPetDetailDGV.RowHeadersVisible = false;
+            this.salPetDetailDGV.RowHeadersWidth = 51;
             this.salPetDetailDGV.RowTemplate.Height = 40;
             this.salPetDetailDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.salPetDetailDGV.Size = new System.Drawing.Size(394, 203);
+            this.salPetDetailDGV.Size = new System.Drawing.Size(525, 250);
             this.salPetDetailDGV.TabIndex = 2;
             this.salPetDetailDGV.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
@@ -1415,9 +1456,10 @@
             this.bunifuPanel18.Controls.Add(this.bunifuLabel20);
             this.bunifuPanel18.Dock = System.Windows.Forms.DockStyle.Top;
             this.bunifuPanel18.Location = new System.Drawing.Point(0, 0);
+            this.bunifuPanel18.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuPanel18.Name = "bunifuPanel18";
             this.bunifuPanel18.ShowBorders = true;
-            this.bunifuPanel18.Size = new System.Drawing.Size(422, 35);
+            this.bunifuPanel18.Size = new System.Drawing.Size(563, 43);
             this.bunifuPanel18.TabIndex = 1;
             // 
             // bunifuLabel20
@@ -1429,10 +1471,11 @@
             this.bunifuLabel20.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel20.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuLabel20.ForeColor = System.Drawing.Color.White;
-            this.bunifuLabel20.Location = new System.Drawing.Point(25, 9);
+            this.bunifuLabel20.Location = new System.Drawing.Point(33, 11);
+            this.bunifuLabel20.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuLabel20.Name = "bunifuLabel20";
             this.bunifuLabel20.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel20.Size = new System.Drawing.Size(181, 17);
+            this.bunifuLabel20.Size = new System.Drawing.Size(241, 21);
             this.bunifuLabel20.TabIndex = 0;
             this.bunifuLabel20.Text = "Sale Pet Detail";
             this.bunifuLabel20.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -1451,10 +1494,11 @@
             this.bunifuPanel19.Controls.Add(this.bunifuLabel22);
             this.bunifuPanel19.Controls.Add(this.bunifuLabel46);
             this.bunifuPanel19.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.bunifuPanel19.Location = new System.Drawing.Point(0, 247);
+            this.bunifuPanel19.Location = new System.Drawing.Point(0, 304);
+            this.bunifuPanel19.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuPanel19.Name = "bunifuPanel19";
             this.bunifuPanel19.ShowBorders = true;
-            this.bunifuPanel19.Size = new System.Drawing.Size(422, 39);
+            this.bunifuPanel19.Size = new System.Drawing.Size(563, 48);
             this.bunifuPanel19.TabIndex = 1;
             // 
             // salPetTotal
@@ -1465,10 +1509,11 @@
             this.salPetTotal.CursorType = System.Windows.Forms.Cursors.Default;
             this.salPetTotal.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.salPetTotal.ForeColor = System.Drawing.Color.Gray;
-            this.salPetTotal.Location = new System.Drawing.Point(175, 12);
+            this.salPetTotal.Location = new System.Drawing.Point(233, 15);
+            this.salPetTotal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.salPetTotal.Name = "salPetTotal";
             this.salPetTotal.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.salPetTotal.Size = new System.Drawing.Size(14, 15);
+            this.salPetTotal.Size = new System.Drawing.Size(18, 20);
             this.salPetTotal.TabIndex = 0;
             this.salPetTotal.Text = "10";
             this.salPetTotal.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -1482,10 +1527,11 @@
             this.salSalePetTotal.CursorType = System.Windows.Forms.Cursors.Default;
             this.salSalePetTotal.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.salSalePetTotal.ForeColor = System.Drawing.Color.Gray;
-            this.salSalePetTotal.Location = new System.Drawing.Point(58, 12);
+            this.salSalePetTotal.Location = new System.Drawing.Point(77, 15);
+            this.salSalePetTotal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.salSalePetTotal.Name = "salSalePetTotal";
             this.salSalePetTotal.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.salSalePetTotal.Size = new System.Drawing.Size(14, 15);
+            this.salSalePetTotal.Size = new System.Drawing.Size(18, 20);
             this.salSalePetTotal.TabIndex = 0;
             this.salSalePetTotal.Text = "10";
             this.salSalePetTotal.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -1499,10 +1545,11 @@
             this.bunifuLabel22.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel22.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bunifuLabel22.ForeColor = System.Drawing.Color.DarkGray;
-            this.bunifuLabel22.Location = new System.Drawing.Point(109, 12);
+            this.bunifuLabel22.Location = new System.Drawing.Point(145, 15);
+            this.bunifuLabel22.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuLabel22.Name = "bunifuLabel22";
             this.bunifuLabel22.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel22.Size = new System.Drawing.Size(60, 15);
+            this.bunifuLabel22.Size = new System.Drawing.Size(75, 20);
             this.bunifuLabel22.TabIndex = 0;
             this.bunifuLabel22.Text = "TOTAL PET:";
             this.bunifuLabel22.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -1516,10 +1563,11 @@
             this.bunifuLabel46.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel46.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bunifuLabel46.ForeColor = System.Drawing.Color.DarkGray;
-            this.bunifuLabel46.Location = new System.Drawing.Point(14, 12);
+            this.bunifuLabel46.Location = new System.Drawing.Point(19, 15);
+            this.bunifuLabel46.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuLabel46.Name = "bunifuLabel46";
             this.bunifuLabel46.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel46.Size = new System.Drawing.Size(38, 15);
+            this.bunifuLabel46.Size = new System.Drawing.Size(47, 20);
             this.bunifuLabel46.TabIndex = 0;
             this.bunifuLabel46.Text = "TOTAL:";
             this.bunifuLabel46.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -1536,7 +1584,8 @@
             this.bunifuShadowPanel5.Controls.Add(this.bunifuPanel13);
             this.bunifuShadowPanel5.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
             this.bunifuShadowPanel5.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
-            this.bunifuShadowPanel5.Location = new System.Drawing.Point(434, 308);
+            this.bunifuShadowPanel5.Location = new System.Drawing.Point(579, 379);
+            this.bunifuShadowPanel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuShadowPanel5.Name = "bunifuShadowPanel5";
             this.bunifuShadowPanel5.PanelColor = System.Drawing.Color.White;
             this.bunifuShadowPanel5.PanelColor2 = System.Drawing.Color.White;
@@ -1545,7 +1594,7 @@
             this.bunifuShadowPanel5.ShadowDepth = 5;
             this.bunifuShadowPanel5.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
             this.bunifuShadowPanel5.ShadowTopLeftVisible = false;
-            this.bunifuShadowPanel5.Size = new System.Drawing.Size(415, 286);
+            this.bunifuShadowPanel5.Size = new System.Drawing.Size(553, 352);
             this.bunifuShadowPanel5.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel5.TabIndex = 8;
             // 
@@ -1600,12 +1649,14 @@
             this.salMerchandseDetailDGV.HeaderBackColor = System.Drawing.Color.DodgerBlue;
             this.salMerchandseDetailDGV.HeaderBgColor = System.Drawing.Color.Empty;
             this.salMerchandseDetailDGV.HeaderForeColor = System.Drawing.Color.White;
-            this.salMerchandseDetailDGV.Location = new System.Drawing.Point(14, 42);
+            this.salMerchandseDetailDGV.Location = new System.Drawing.Point(19, 52);
+            this.salMerchandseDetailDGV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.salMerchandseDetailDGV.Name = "salMerchandseDetailDGV";
             this.salMerchandseDetailDGV.RowHeadersVisible = false;
+            this.salMerchandseDetailDGV.RowHeadersWidth = 51;
             this.salMerchandseDetailDGV.RowTemplate.Height = 40;
             this.salMerchandseDetailDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.salMerchandseDetailDGV.Size = new System.Drawing.Size(388, 197);
+            this.salMerchandseDetailDGV.Size = new System.Drawing.Size(517, 242);
             this.salMerchandseDetailDGV.TabIndex = 2;
             this.salMerchandseDetailDGV.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
@@ -1620,9 +1671,10 @@
             this.bunifuPanel12.Controls.Add(this.bunifuLabel30);
             this.bunifuPanel12.Dock = System.Windows.Forms.DockStyle.Top;
             this.bunifuPanel12.Location = new System.Drawing.Point(0, 0);
+            this.bunifuPanel12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuPanel12.Name = "bunifuPanel12";
             this.bunifuPanel12.ShowBorders = true;
-            this.bunifuPanel12.Size = new System.Drawing.Size(415, 35);
+            this.bunifuPanel12.Size = new System.Drawing.Size(553, 43);
             this.bunifuPanel12.TabIndex = 1;
             // 
             // bunifuLabel30
@@ -1634,10 +1686,11 @@
             this.bunifuLabel30.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel30.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuLabel30.ForeColor = System.Drawing.Color.White;
-            this.bunifuLabel30.Location = new System.Drawing.Point(25, 9);
+            this.bunifuLabel30.Location = new System.Drawing.Point(33, 11);
+            this.bunifuLabel30.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuLabel30.Name = "bunifuLabel30";
             this.bunifuLabel30.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel30.Size = new System.Drawing.Size(148, 17);
+            this.bunifuLabel30.Size = new System.Drawing.Size(197, 21);
             this.bunifuLabel30.TabIndex = 0;
             this.bunifuLabel30.Text = "Sale Merchandise Detail";
             this.bunifuLabel30.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -1656,10 +1709,11 @@
             this.bunifuPanel13.Controls.Add(this.bunifuLabel32);
             this.bunifuPanel13.Controls.Add(this.bunifuLabel28);
             this.bunifuPanel13.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.bunifuPanel13.Location = new System.Drawing.Point(0, 247);
+            this.bunifuPanel13.Location = new System.Drawing.Point(0, 304);
+            this.bunifuPanel13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuPanel13.Name = "bunifuPanel13";
             this.bunifuPanel13.ShowBorders = true;
-            this.bunifuPanel13.Size = new System.Drawing.Size(415, 39);
+            this.bunifuPanel13.Size = new System.Drawing.Size(553, 48);
             this.bunifuPanel13.TabIndex = 1;
             // 
             // salMerchandiseTotal
@@ -1670,10 +1724,11 @@
             this.salMerchandiseTotal.CursorType = System.Windows.Forms.Cursors.Default;
             this.salMerchandiseTotal.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.salMerchandiseTotal.ForeColor = System.Drawing.Color.Gray;
-            this.salMerchandiseTotal.Location = new System.Drawing.Point(191, 14);
+            this.salMerchandiseTotal.Location = new System.Drawing.Point(255, 17);
+            this.salMerchandiseTotal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.salMerchandiseTotal.Name = "salMerchandiseTotal";
             this.salMerchandiseTotal.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.salMerchandiseTotal.Size = new System.Drawing.Size(14, 15);
+            this.salMerchandiseTotal.Size = new System.Drawing.Size(18, 20);
             this.salMerchandiseTotal.TabIndex = 0;
             this.salMerchandiseTotal.Text = "10";
             this.salMerchandiseTotal.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -1687,10 +1742,11 @@
             this.salSaleMerchandiseTotal.CursorType = System.Windows.Forms.Cursors.Default;
             this.salSaleMerchandiseTotal.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.salSaleMerchandiseTotal.ForeColor = System.Drawing.Color.Gray;
-            this.salSaleMerchandiseTotal.Location = new System.Drawing.Point(58, 12);
+            this.salSaleMerchandiseTotal.Location = new System.Drawing.Point(77, 15);
+            this.salSaleMerchandiseTotal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.salSaleMerchandiseTotal.Name = "salSaleMerchandiseTotal";
             this.salSaleMerchandiseTotal.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.salSaleMerchandiseTotal.Size = new System.Drawing.Size(14, 15);
+            this.salSaleMerchandiseTotal.Size = new System.Drawing.Size(18, 20);
             this.salSaleMerchandiseTotal.TabIndex = 0;
             this.salSaleMerchandiseTotal.Text = "10";
             this.salSaleMerchandiseTotal.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -1704,10 +1760,11 @@
             this.bunifuLabel32.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel32.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bunifuLabel32.ForeColor = System.Drawing.Color.DarkGray;
-            this.bunifuLabel32.Location = new System.Drawing.Point(14, 12);
+            this.bunifuLabel32.Location = new System.Drawing.Point(19, 15);
+            this.bunifuLabel32.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuLabel32.Name = "bunifuLabel32";
             this.bunifuLabel32.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel32.Size = new System.Drawing.Size(38, 15);
+            this.bunifuLabel32.Size = new System.Drawing.Size(47, 20);
             this.bunifuLabel32.TabIndex = 0;
             this.bunifuLabel32.Text = "TOTAL:";
             this.bunifuLabel32.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -1721,10 +1778,11 @@
             this.bunifuLabel28.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel28.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bunifuLabel28.ForeColor = System.Drawing.Color.DarkGray;
-            this.bunifuLabel28.Location = new System.Drawing.Point(118, 14);
+            this.bunifuLabel28.Location = new System.Drawing.Point(157, 17);
+            this.bunifuLabel28.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuLabel28.Name = "bunifuLabel28";
             this.bunifuLabel28.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel28.Size = new System.Drawing.Size(67, 15);
+            this.bunifuLabel28.Size = new System.Drawing.Size(84, 20);
             this.bunifuLabel28.TabIndex = 0;
             this.bunifuLabel28.Text = "TOTAL ITEM:";
             this.bunifuLabel28.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -1736,7 +1794,8 @@
             this.pageController.AllowTransitions = false;
             this.pageController.Controls.Add(this.pageSale);
             this.pageController.Controls.Add(this.pageNewSale);
-            this.pageController.Location = new System.Drawing.Point(-3, 0);
+            this.pageController.Location = new System.Drawing.Point(-4, 0);
+            this.pageController.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pageController.Multiline = true;
             this.pageController.Name = "pageController";
             this.pageController.Page = this.pageSale;
@@ -1744,7 +1803,7 @@
             this.pageController.PageName = "pageSale";
             this.pageController.PageTitle = "Page Sales";
             this.pageController.SelectedIndex = 0;
-            this.pageController.Size = new System.Drawing.Size(1284, 686);
+            this.pageController.Size = new System.Drawing.Size(1712, 844);
             this.pageController.TabIndex = 7;
             animation1.AnimateOnlyDifferences = true;
             animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
@@ -1767,20 +1826,22 @@
             // pageNewSale
             // 
             this.pageNewSale.Location = new System.Drawing.Point(4, 4);
+            this.pageNewSale.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pageNewSale.Name = "pageNewSale";
-            this.pageNewSale.Padding = new System.Windows.Forms.Padding(3);
-            this.pageNewSale.Size = new System.Drawing.Size(1276, 660);
+            this.pageNewSale.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pageNewSale.Size = new System.Drawing.Size(1704, 815);
             this.pageNewSale.TabIndex = 3;
             this.pageNewSale.Text = "Page New Sale";
             this.pageNewSale.UseVisualStyleBackColor = true;
             // 
             // frmSales
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1280, 685);
+            this.ClientSize = new System.Drawing.Size(1707, 843);
             this.Controls.Add(this.pageController);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmSales";
             this.Text = "frmSales";
             this.pageSale.ResumeLayout(false);
