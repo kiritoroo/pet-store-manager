@@ -108,7 +108,7 @@ namespace PetStoreManager
             */
 
             /*// - Tổng Animal của từng hóa đơn
-            //Task Uncomplete
+            //Task Uncomplete 
             this.salPetTotal.Text = sBll.GetTotalPetEachSale(sList[_row]);
             */
 
