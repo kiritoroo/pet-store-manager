@@ -113,32 +113,34 @@ namespace PetStoreManager
             */
 
             //------------------------------------------------- - Hieu
-            /*// - Thông tin nhân viên từng hóa đơn
-            //Task Uncomplete
+            // - Thông tin nhân viên từng hóa đơn
+            //Task Complete
+
             (string ID, string Phone, string FullName) empInfo = sBll.GetInfoEmpEachSale(sList[_row]);
             salEmpID.Text = empInfo.ID;
             salEmpPhone.Text = empInfo.Phone;
             salEmpName.Text = empInfo.FullName;
-            */
 
-            /*// - Danh sách saleMerchandise của từng hóa đơn
-            //Task Uncomplete
+
+            // - Danh sách saleMerchandise của từng hóa đơn
+            //Task Complete
             var resultList2 = sBll.GetSaleMerchandiseDetailEachSale(sList[_row]);
-            if (resultList2.Any())
+
+            if (resultList2!=null)
             {
                 this.salMerchandseDetailDGV.DataSource = resultList2;
             }
-            */
 
-            /*// - Tổng saleMerchandise của từng hóa đơn
+
+            // - Tổng saleMerchandise của từng hóa đơn
             //Task Uncomplete
-            this.salSaleMerchandiseTotal.Text = sBll.GetTotalSaleMerchandiseEachSale(sList[_row]);
-            */
+           this.salSaleMerchandiseTotal.Text = sBll.GetTotalSaleMerchandiseEachSale(sList[_row]);
 
-            /*// - Tổng Merchandise của từng hóa đơn
+
+            // - Tổng Merchandise của từng hóa đơn
             //Task Uncomplete
             this.salMerchandiseTotal.Text = sBll.GetTotalMerchandiseEachSale(sList[_row]);
-            */
+            
         }
 
         private void DelegateEvent()

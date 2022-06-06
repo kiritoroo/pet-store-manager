@@ -3842,7 +3842,7 @@
             this.supTotalMerchandiseOrder.CursorType = System.Windows.Forms.Cursors.Default;
             this.supTotalMerchandiseOrder.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.supTotalMerchandiseOrder.ForeColor = System.Drawing.Color.Gray;
-            this.supTotalMerchandiseOrder.Location = new System.Drawing.Point(98, 12);
+            this.supTotalMerchandiseOrder.Location = new System.Drawing.Point(87, 12);
             this.supTotalMerchandiseOrder.Name = "supTotalMerchandiseOrder";
             this.supTotalMerchandiseOrder.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.supTotalMerchandiseOrder.Size = new System.Drawing.Size(14, 15);
@@ -3862,9 +3862,9 @@
             this.bunifuLabel46.Location = new System.Drawing.Point(14, 12);
             this.bunifuLabel46.Name = "bunifuLabel46";
             this.bunifuLabel46.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel46.Size = new System.Drawing.Size(78, 15);
+            this.bunifuLabel46.Size = new System.Drawing.Size(67, 15);
             this.bunifuLabel46.TabIndex = 0;
-            this.bunifuLabel46.Text = "TOTAL ORDER:";
+            this.bunifuLabel46.Text = "TOTAL ITEM:";
             this.bunifuLabel46.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel46.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -4048,7 +4048,7 @@
             this.supTotalPetOrder.CursorType = System.Windows.Forms.Cursors.Default;
             this.supTotalPetOrder.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.supTotalPetOrder.ForeColor = System.Drawing.Color.Gray;
-            this.supTotalPetOrder.Location = new System.Drawing.Point(98, 12);
+            this.supTotalPetOrder.Location = new System.Drawing.Point(81, 12);
             this.supTotalPetOrder.Name = "supTotalPetOrder";
             this.supTotalPetOrder.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.supTotalPetOrder.Size = new System.Drawing.Size(14, 15);
@@ -4068,9 +4068,9 @@
             this.bunifuLabel32.Location = new System.Drawing.Point(14, 12);
             this.bunifuLabel32.Name = "bunifuLabel32";
             this.bunifuLabel32.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel32.Size = new System.Drawing.Size(78, 15);
+            this.bunifuLabel32.Size = new System.Drawing.Size(60, 15);
             this.bunifuLabel32.TabIndex = 0;
-            this.bunifuLabel32.Text = "TOTAL ORDER:";
+            this.bunifuLabel32.Text = "TOTAL PET:";
             this.bunifuLabel32.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel32.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 

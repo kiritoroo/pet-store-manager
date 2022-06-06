@@ -62,5 +62,25 @@ namespace Business.Manager
         {
             return this.dal.GetTotalMerchandiseSalesInMonth(_year, _month);
         }
+
+        public (string ID, string Phone, string FullName) GetInfoEmpEachSale(sale _sale)
+        {
+            return this.dal.GetInfoEmpEachSale( _sale); 
+        }
+
+        public List<dynamic> GetSaleMerchandiseDetailEachSale(sale _sale)
+        {
+            return this.dal.GetSaleMerchandiseDetailEachSale(_sale);
+        }
+
+        public string GetTotalSaleMerchandiseEachSale(sale _sale)
+        {
+            return this.dal.GetTotalSaleMerchandiseEachSale(_sale);
+        }
+
+        public string GetTotalMerchandiseEachSale(sale _sale)
+        {
+            return this.dal.GetTotalMerchandiseEachSale(_sale);
+        }
     }
 }

@@ -197,7 +197,7 @@ namespace PetStoreManager
 
             // Get Detail Work
             var rsList1 = supBll.GetOrderAnimalDetailEachSupplier(this.supList[_row]);
-            if (rsList1.Any())
+            if (rsList1!=null)
             {
                 supPetOrderDGV.DataSource = rsList1;
             }
@@ -205,7 +205,7 @@ namespace PetStoreManager
             this.supTotalPetOrderMoney.Text = supBll.GetTotalCostAnimalEachSupplier(this.supList[_row]).ToString(sFormat) + " ₫";
 
             var rsList2 = supBll.GetOrderMerchandiseDetailEachSupplier(this.supList[_row]);
-            if (rsList2.Any())
+            if (rsList2!=null)
             {
                 supMerchandiseOrderDGV.DataSource = rsList2;
             }

@@ -52,70 +52,132 @@ namespace Data.Access
 
         public List<dynamic> GetOrderAnimalDetailEachSupplier(supplier _supplier)
         {
-            // Task Uncomplete
+            // Task Complete - Hieu 
             // Querry
 
             List<dynamic> list = new List<dynamic>();
-            var querry = default(dynamic);
+            var querry = (from sup in db.suppliers
+                          join ao in db.animalOrders on sup.ID equals ao.SupplierID
+                          join aoi in db.animalOrderItems on ao.ID equals aoi.OrderID
+                          into resultTable
+                          where sup.ID == _supplier.ID
+                          from rsTable in resultTable.DefaultIfEmpty()
+                          group rsTable by ao into gr
+                          select new
+                          {
+                              ID = gr.Key.ID,
+                              ReceiveDate = gr.Key.ReceiveDate,
+                              TotalAnimal = (int?)gr.Where(g => g != null).Select(g => g.AnimalID).Count() ?? 0,
+                              TotalCost = (int?)gr.Where(g => g != null).Select(g => g.Cost).Sum() ?? 0
+                          }).OrderByDescending(rs => rs.ID);
 
-            if (querry != null)
-            {
-                list = querry.ToList<dynamic>();
-            }
+            list = querry.ToList<dynamic>();
+            
             return list;
         }
 
         public List<dynamic> GetOrderMerchandiseDetailEachSupplier(supplier _supplier)
         {
-            // Task Uncomplete
+            // Task Complete - Hieu
             // Querry
 
-            List<dynamic> list = new List<dynamic>();
-            var querry = default(dynamic);
+            List<dynamic> list = new List<dynamic>();           
+            var querry = (from sup in db.suppliers
+                          join mo in db.merchandiseOrders on sup.ID equals mo.SupplierID
+                          join moi in db.merchandiseOrderItems on mo.ID equals moi.OrderID
+                          into resultTable
+                          where sup.ID == _supplier.ID
+                          from rsTable in resultTable.DefaultIfEmpty()
+                          group rsTable by mo into gr
+                          select new
+                          {
+                              ID = gr.Key.ID,
+                              ReceiveDate = gr.Key.ReceiveDate,
+                              TotalQuanity = (int?)gr.Where(g => g != null).Select(g => g.Quantity).Sum() ?? 0,
+                              TotalCost = (int?)gr.Where(g => g != null).Select(g => g.Cost).Sum() ?? 0
+                          }).OrderByDescending(s => s.ID);
+            list = querry.ToList<dynamic>();
 
-            if (querry != null)
-            {
-                list = querry.ToList<dynamic>();
-            }
             return list;
         }
 
         public int GetTotalOrderAnimalEachSupplier(supplier _supplier)
         {
-            // Task Uncomplete
+            // Task Complete - Hieu
             // Querry
             int total = 0;
 
+            var querry = from sup in db.suppliers
+                         join ao in db.animalOrders on sup.ID equals ao.SupplierID
+                         join aoi in db.animalOrderItems on ao.ID equals aoi.OrderID
+                         where sup.ID == _supplier.ID
+                         select aoi.AnimalID;
+            total = querry.Count();
             return total;
         }
 
         public decimal GetTotalCostAnimalEachSupplier(supplier _supplier)
         {
-            // Task Uncomplete
+            // Task Complete - Hieu
             // Querry
 
             decimal total = 0;
-
+            try
+            {
+                var querry = (from sup in db.suppliers
+                              join ao in db.animalOrders on sup.ID equals ao.SupplierID
+                              join aoi in db.animalOrderItems on ao.ID equals aoi.OrderID
+                              where sup.ID == _supplier.ID
+                              select new
+                              {
+                                  Money = (int?)aoi.Cost ?? 0
+                              }).Sum(sa => sa.Money);
+                total = (decimal)querry;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+                total = 0;
+            }
             return total;
         }
 
         public int GetTotalOrderMerchandiseEachSupplier(supplier _supplier)
         {
-            // Task Uncomplete
+            // Task Complete - Hieu
             // Querry
-
             int total = 0;
-
+            var querry = from sup in db.suppliers
+                         join mo in db.merchandiseOrders on sup.ID equals mo.SupplierID
+                         join moi in db.merchandiseOrderItems on mo.ID equals moi.OrderID
+                         where sup.ID == _supplier.ID
+                         select moi.ItemID;
+            total = querry.Count();
             return total;
         }
 
         public decimal GetTotalCostMerchandiseEachSupplier(supplier _supplier)
         {
-            // Task Uncomplete
+            // Task Complete - Hieu
             // Querry
 
             decimal total = 0;
-
+            try
+            {
+                var querry = (from sup in db.suppliers
+                              join mo in db.merchandiseOrders on sup.ID equals mo.SupplierID
+                              join moi in db.merchandiseOrderItems on mo.ID equals moi.OrderID
+                              where sup.ID == _supplier.ID
+                              select new
+                              {
+                                  Money = moi.Cost
+                              }).Sum(sa => sa.Money);
+                total = (decimal)querry;
+            } catch(Exception ex)
+            {
+                Console.WriteLine(ex);
+                total = 0;
+            }
             return total;
         }
     }

@@ -163,5 +163,86 @@ namespace Data.Access
             total = data.Count();
             return total;
         }
+
+        public (string ID, string Phone, string FullName) GetInfoEmpEachSale(sale _sale)
+        {
+            (string ID, string Phone, string FullName) data;
+
+            data.ID = "";
+            data.Phone = "";
+            data.FullName = "";
+            var querry = from s in db.sales
+                         join e in db.employees
+                         on s.EmployeeID equals e.ID
+                         where s.ID == _sale.ID
+                         select new
+                         {
+                             ID = e.ID,
+                             Phone = e.Phone,
+                             FullName = e.FristName + e.LastName,
+                         };
+            data.ID = querry.Select(q => q.ID).FirstOrDefault();
+            data.Phone = querry.Select(q => q.Phone).FirstOrDefault();
+            data.FullName = querry.Select(q => q.FullName).FirstOrDefault();
+            return data;       
+        }
+
+        public List<dynamic> GetSaleMerchandiseDetailEachSale(sale _sale)
+        {
+            List<dynamic> list = new List<dynamic>();
+            var querry = (from s in db.sales
+                          join sm in db.saleMerchandises
+                          on s.ID equals sm.SaleID
+                          where s.ID == _sale.ID
+                          group sm by sm into gr
+                          select new
+                          {
+                              SaleID = gr.Key.SaleID,
+                              MerchandiseID = gr.Key.MerchandiseID,
+                              Quanity = gr.Key.Quantity,
+                              SalePrice = gr.Key.SalePrice
+                          }).OrderByDescending(s => s.MerchandiseID);
+            list = querry.ToList<dynamic>();
+            return list;             
+        }
+
+        public string GetTotalSaleMerchandiseEachSale(sale _sale)
+        {    
+            var querry = (from s in db.sales
+                          join sm in db.saleMerchandises
+                          on s.ID equals sm.SaleID
+                          where s.ID == _sale.ID
+                          group sm by sm into gr
+                          select new
+                          {
+                              SaleID = gr.Key.SaleID,
+                              MerchandiseID = gr.Key.MerchandiseID,
+                              Quanity = gr.Key.Quantity,
+                              SalePrice = gr.Key.SalePrice
+                          }).OrderByDescending(s => s.MerchandiseID).Sum(sa => sa.SalePrice);
+
+            decimal TotalSaleMerchandise = (decimal)querry;
+
+            return TotalSaleMerchandise.ToString();
+        }
+
+        public string GetTotalMerchandiseEachSale(sale _sale)
+        {
+            var querry = (from s in db.sales
+                          join sm in db.saleMerchandises
+                          on s.ID equals sm.SaleID
+                          where s.ID == _sale.ID
+                          group sm by sm into gr
+                          select new
+                          {
+                              SaleID = gr.Key.SaleID,
+                              MerchandiseID = gr.Key.MerchandiseID,
+                              Quanity = gr.Key.Quantity,
+                              SalePrice = gr.Key.SalePrice
+                          });
+
+            int TotalMerchandise = querry.Count();
+            return TotalMerchandise.ToString();
+        }
     }
 }
