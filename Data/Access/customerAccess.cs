@@ -50,15 +50,10 @@ namespace Data.Access
         }
         public int GetTotalCustomerInMonth(string _year, string _month)
         {
-            // Task complete
-
+            // Task Uncomplete
+            // Querry
             int total = 0;
-            var toal_cus_inmoth =from c in db.customers 
-                  join  s in db.sales on  c.ID equals s.CustomerID
-                  where s.saledate.Year.ToString()== _year  
-                  && s.saledate.Month.ToString()== _month
-                  select c.ID;
-             total = toal_cus_inmoth.Count();
+
             return total;
         }
 

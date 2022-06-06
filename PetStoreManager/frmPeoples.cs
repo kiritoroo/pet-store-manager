@@ -144,17 +144,27 @@ namespace PetStoreManager
 
             // Get Detail Work
             var rsList1 = cusBll.GetSaleAnimalDetailEachCustomer(this.cusList[_row]);
-            if (rsList1.Any())
+            if (rsList1!=null)
             {
                 cusSalePetDetailDGV.DataSource = rsList1;
+            }
+            else
+            {
+                cusSalePetDetailDGV.Rows.Clear();
+                cusSalePetDetailDGV.Refresh();
             }
             this.cusSalePetCount.Text = cusBll.GetTotalSaleAnimalEachCustomer(this.cusList[_row]).ToString();
             this.cusTotalPetSaleMoney.Text = cusBll.GetTotalMoneyAnimalEachCustomer(this.cusList[_row]).ToString(sFormat) + " ₫";
 
             var rsList2 = cusBll.GetSaleMerchandiseDetailEachCustomer(this.cusList[_row]);
-            if (rsList2.Any())
+            if (rsList2!=null)
             {
                 cusSaleMerchandiseDetailDGV.DataSource = rsList2;
+            }
+            else
+            {
+                cusSaleMerchandiseDetailDGV.Rows.Clear();
+                cusSaleMerchandiseDetailDGV.Refresh();
             }
             this.cusSaleMerchandiseCount.Text = cusBll.GetTotalSaleMerchandiseEachCustomer(this.cusList[_row]).ToString();
             this.cusTotalSaleMerchandiseMoney.Text = cusBll.GetTotalMoneyMerchandiseEachCustomer(this.cusList[_row]).ToString(sFormat) + " ₫"; ;
@@ -173,7 +183,7 @@ namespace PetStoreManager
 
             // Get Detail Work
             var rsList1 = empBll.GetSaleDetailEachEmployee(this.empList[_row]);
-            if (rsList1.Any())
+            if (rsList1!=null)
             {
                 empSaleDetailDGV.DataSource = rsList1.Select(rs => new
                 {
@@ -184,10 +194,15 @@ namespace PetStoreManager
                     Tax = rs.SaleTax
                 }).ToList();
             }
+            else
+            {
+                empSaleDetailDGV.Rows.Clear();
+                empSaleDetailDGV.Refresh();
+            }
             this.empTotalSale.Text = empBll.GetTotalSaleEachEmployee(this.empList[_row]).ToString();
 
             var rsList2 = empBll.GetOrderAnimalDetailEachEmployee(this.empList[_row]);
-            if (rsList2.Any())
+            if (rsList2!=null)
             {
                 empPetOrderDGV.DataSource = rsList2.Select(rs => new
                 {
@@ -199,10 +214,15 @@ namespace PetStoreManager
 
                 }).ToList();
             }
+            else
+            {
+                empPetOrderDGV.Rows.Clear();
+                empPetOrderDGV.Refresh();
+            }
             this.empTotalPetOrder.Text = empBll.GetTotalOrderAnimalEachEmployee(this.empList[_row]).ToString();
 
             var rsList3 = empBll.GetOrderMerchandiseDetailEachEmployee(this.empList[_row]);
-            if (rsList3.Any())
+            if (rsList3!=null)
             {
                 empMerchandiseOrderDGV.DataSource = rsList3.Select(rs => new
                 {
@@ -213,6 +233,11 @@ namespace PetStoreManager
                     ShippingCost = rs.ShippingCost
 
                 }).ToList();
+            }
+            else
+            {
+                empMerchandiseOrderDGV.Rows.Clear();
+                empMerchandiseOrderDGV.Refresh();
             }
             this.empTotalMerchandiseOrder.Text = empBll.GetTotalOrderMerchandiseEachEmployee(this.empList[_row]).ToString();
 
@@ -230,17 +255,27 @@ namespace PetStoreManager
 
             // Get Detail Work
             var rsList1 = supBll.GetOrderAnimalDetailEachSupplier(this.supList[_row]);
-            if (rsList1.Any())
+            if (rsList1!=null)
             {
                 supPetOrderDGV.DataSource = rsList1;
+            }
+            else
+            {
+                supPetOrderDGV.Rows.Clear();
+                supPetOrderDGV.Refresh();
             }
             this.supTotalPetOrder.Text = supBll.GetTotalOrderAnimalEachSupplier(this.supList[_row]).ToString();
             this.supTotalPetOrderMoney.Text = supBll.GetTotalCostAnimalEachSupplier(this.supList[_row]).ToString(sFormat) + " ₫";
 
             var rsList2 = supBll.GetOrderMerchandiseDetailEachSupplier(this.supList[_row]);
-            if (rsList2.Any())
+            if (rsList2!=null)
             {
                 supMerchandiseOrderDGV.DataSource = rsList2;
+            }
+            else
+            {
+                supMerchandiseOrderDGV.Rows.Clear();
+                supMerchandiseOrderDGV.Refresh();
             }
             this.supTotalMerchandiseOrder.Text = supBll.GetTotalOrderMerchandiseEachSupplier(this.supList[_row]).ToString();
             this.supTotalMerchandiseOrderMoney.Text = supBll.GetTotalCostMerchandiseEachSupplier(this.supList[_row]).ToString(sFormat) + " ₫";
@@ -333,6 +368,8 @@ namespace PetStoreManager
             }
             catch (Exception ex)
             {
+                cusSalePetDetailDGV.DataSource = null;
+                cusSaleMerchandiseDetailDGV.DataSource = null;
                 Console.WriteLine(ex);
                 return;
             }
