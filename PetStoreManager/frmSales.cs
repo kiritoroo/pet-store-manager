@@ -86,7 +86,7 @@ namespace PetStoreManager
             // Get Detail Work
             //------------------------------------------------- - Huy
             // - Thông tin khách hàng từng hóa đơn
-            //Task complete
+            //Task Complete
             (string ID, string Phone, string ContactName) cusInfo = sBll.GetInfoCusEachSale(sList[_row]);
             salCusID.Text = cusInfo.ID;
             salCusPhone.Text = cusInfo.Phone;
@@ -94,7 +94,7 @@ namespace PetStoreManager
 
 
             // - Danh sách saleAnimal của từng hóa đơn
-            //Task complete
+            //Task Complete
             var resultList1 = sBll.GetSalePetDetailEachSale(sList[_row]);
             if (resultList1.Any())
             {
@@ -108,12 +108,12 @@ namespace PetStoreManager
             
 
             // - Tổng saleAnimal của từng hóa đơn
-            // Task complete
+            // Task Complete
             this.salSalePetTotal.Text = sBll.GetTotalSalePetEachSale(sList[_row]).ToString();
             
 
             // - Tổng Animal của từng hóa đơn
-            //Task Uncomplete 
+            //Task Complete 
             this.salPetTotal.Text = sBll.GetTotalPetEachSale(sList[_row]).ToString();
             
 

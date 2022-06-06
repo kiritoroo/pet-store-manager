@@ -48,7 +48,7 @@ namespace Data.Access
 
         public int GetTotalMerchandiseSales()
         {
-            // Task Complete - Huy
+            // Task Complete
             // Querry
 
             int total = 0;

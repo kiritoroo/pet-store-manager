@@ -99,7 +99,7 @@ namespace Data.Access
 
         public List<dynamic> GetSaleMerchandiseDetailEachCustomer(customer _customer)
         {
-            // Task Uncomplete
+            // Task Complete
             // Querry
 
             List<dynamic> list = new List<dynamic>();
