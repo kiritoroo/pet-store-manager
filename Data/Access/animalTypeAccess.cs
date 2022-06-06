@@ -43,16 +43,25 @@ namespace Data.Access
 
         public List<dynamic> GetStatisticAllAnimal()
         {
-            // Task Uncomplete
+            // Task Complete advance- Trung
             //Querry
 
             List<dynamic> list = new List<dynamic>();
-            var querry = default(dynamic);
-
-            if (querry != null)
-            {
-                list = querry.ToList<dynamic>();
-            }
+            var querry = (from at in db.animalTypes
+                          join animal in db.animals on at.ID equals animal.AnimalTypeID into result1
+                          from rs1 in result1.DefaultIfEmpty()
+                          join saleAnimal in db.saleAnimals on rs1.ID equals saleAnimal.AnimalID into result2
+                          from rs2 in result2.DefaultIfEmpty()
+                          group rs2 by at into gr
+                          select new
+                          {
+                              ID = gr.Key.ID,
+                              Label = gr.Key.Label,
+                              Description = gr.Key.Description,
+                              TotalSale = (int?)gr.Where(g => g != null).Select(g => g.SaleID).Count() ?? 0,
+                              TotalRevenue = (int?)gr.Where(g => g != null).Select(g => g.SalePrice).Sum() ?? 0
+                          }).OrderByDescending(rs => rs.TotalSale);
+            list = querry.ToList<dynamic>();
             return list;
         }
     }

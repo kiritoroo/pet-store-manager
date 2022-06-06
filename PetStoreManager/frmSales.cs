@@ -86,7 +86,7 @@ namespace PetStoreManager
             // Get Detail Work
             //------------------------------------------------- - Huy
             // - Thông tin khách hàng từng hóa đơn
-            //Task Complete
+            //Task Complete - Huy
             (string ID, string Phone, string ContactName) cusInfo = sBll.GetInfoCusEachSale(sList[_row]);
             salCusID.Text = cusInfo.ID;
             salCusPhone.Text = cusInfo.Phone;
@@ -94,7 +94,7 @@ namespace PetStoreManager
 
 
             // - Danh sách saleAnimal của từng hóa đơn
-            //Task Complete
+            //Task Complete - Huy
             var resultList1 = sBll.GetSalePetDetailEachSale(sList[_row]);
             if (resultList1.Any())
             {
@@ -108,18 +108,18 @@ namespace PetStoreManager
             
 
             // - Tổng saleAnimal của từng hóa đơn
-            // Task Complete
+            // Task Complete - Huy
             this.salSalePetTotal.Text = sBll.GetTotalSalePetEachSale(sList[_row]).ToString();
             
 
             // - Tổng Animal của từng hóa đơn
-            //Task Complete 
+            //Task Complete - Huy
             this.salPetTotal.Text = sBll.GetTotalPetEachSale(sList[_row]).ToString();
             
 
             //------------------------------------------------- - Hieu
             // - Thông tin nhân viên từng hóa đơn
-            //Task Complete
+            //Task Complete - Hieu
 
             (string ID, string Phone, string FullName) empInfo = sBll.GetInfoEmpEachSale(sList[_row]);
             salEmpID.Text = empInfo.ID;
@@ -128,7 +128,7 @@ namespace PetStoreManager
 
 
             // - Danh sách saleMerchandise của từng hóa đơn
-            //Task Complete
+            //Task Complete - Hieu
             var resultList2 = sBll.GetSaleMerchandiseDetailEachSale(sList[_row]);
 
             if (resultList2!=null)
@@ -138,12 +138,12 @@ namespace PetStoreManager
 
 
             // - Tổng saleMerchandise của từng hóa đơn
-            //Task Uncomplete
+            //Task Complete - Hieu
            this.salSaleMerchandiseTotal.Text = sBll.GetTotalSaleMerchandiseEachSale(sList[_row]);
 
 
             // - Tổng Merchandise của từng hóa đơn
-            //Task Uncomplete
+            //Task Complete - Hieu
             this.salMerchandiseTotal.Text = sBll.GetTotalMerchandiseEachSale(sList[_row]);
             
         }

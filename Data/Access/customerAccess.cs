@@ -41,7 +41,7 @@ namespace Data.Access
 
         public int GetTotalCustomer()
         {
-            // Task Complete 
+            // Task Complete  - Hieu
             // Querry
 
             int total = 0;
@@ -50,16 +50,20 @@ namespace Data.Access
         }
         public int GetTotalCustomerInMonth(string _year, string _month)
         {
-            // Task Uncomplete
+            // Task Complete - Trung
             // Querry
             int total = 0;
-
+            var querry = (from customer in db.customers
+                          where customer.DateAdd.Month.ToString() == _month
+                          && customer.DateAdd.Year.ToString() == _year
+                          select customer);
+            total = querry.Count();
             return total;
         }
 
         public List<dynamic> GetSaleAnimalDetailEachCustomer(customer _customer)
         {
-            // Task complete
+            // Task Complete advance - Huy
             // Querry
 
             List<dynamic> list = new List<dynamic>();
@@ -99,7 +103,7 @@ namespace Data.Access
 
         public List<dynamic> GetSaleMerchandiseDetailEachCustomer(customer _customer)
         {
-            // Task Complete
+            // Task Complete advance - Huy
             // Querry
 
             List<dynamic> list = new List<dynamic>();
@@ -139,7 +143,7 @@ namespace Data.Access
 
         public int GetTotalSaleAnimalEachCustomer(customer _customer)
         {
-            // Task complete
+            // Task Complete - Huy
             // Querry
             int total = 0;
             var data = from c in db.customers
@@ -153,7 +157,7 @@ namespace Data.Access
         
         public decimal GetTotalMoneyAnimalEachCustomer(customer _customer)
         {
-            // Task complete
+            // Task Complete - Huy
             // Querry
             var data = from c in db.customers
                        join s in db.sales on c.ID equals s.CustomerID
@@ -166,7 +170,7 @@ namespace Data.Access
 
         public int GetTotalSaleMerchandiseEachCustomer(customer _customer)
         {
-            // Task complete
+            // Task Complete - Huy
             // Querry
             int total = 0;
             var data = from c in db.customers
@@ -180,7 +184,7 @@ namespace Data.Access
 
         public decimal GetTotalMoneyMerchandiseEachCustomer(customer _customer)
         {
-            // Task complete
+            // Task Complete - Huy
             // Querry
             decimal total = 0;
             var data = from c in db.customers

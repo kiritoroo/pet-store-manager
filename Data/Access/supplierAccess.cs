@@ -42,7 +42,7 @@ namespace Data.Access
 
         public int GetTotalSupplier()
         {
-            // Task Complete
+            // Task Complete - Trung
             // Querry
 
             int total = 0;
@@ -52,7 +52,7 @@ namespace Data.Access
 
         public List<dynamic> GetOrderAnimalDetailEachSupplier(supplier _supplier)
         {
-            // Task Complete - Hieu 
+            // Task Complete advance - Hieu 
             // Querry
 
             List<dynamic> list = new List<dynamic>();
@@ -78,7 +78,7 @@ namespace Data.Access
 
         public List<dynamic> GetOrderMerchandiseDetailEachSupplier(supplier _supplier)
         {
-            // Task Complete - Hieu
+            // Task Complete advance - Hieu
             // Querry
 
             List<dynamic> list = new List<dynamic>();           

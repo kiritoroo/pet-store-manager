@@ -42,7 +42,7 @@ namespace Data.Access
 
         public int GetTotalEmployee()
         {
-            // Task Complete
+            // Task Complete - Trung
             // Querry
 
             int total = 0;
@@ -52,7 +52,7 @@ namespace Data.Access
 
         public List<sale> GetSaleDetailEachEmployee(employee _employee)
         {
-            // Task Complete
+            // Task Complete - Trung
             // Querry
 
             List<sale> list = new List<sale>();
@@ -68,7 +68,7 @@ namespace Data.Access
 
         public List<animalOrder> GetOrderAnimalDetailEachEmployee(employee _employee)
         {
-            // Task Complete
+            // Task Complete - Trung
             // Querry
             
             List<animalOrder> list = new List<animalOrder>();
@@ -84,7 +84,7 @@ namespace Data.Access
 
         public List<merchandiseOrder> GetOrderMerchandiseDetailEachEmployee(employee _employee)
         {
-            // Task Complete
+            // Task Complete - Trung
             // Querry
 
             List<merchandiseOrder> list = new List<merchandiseOrder>();
@@ -100,7 +100,7 @@ namespace Data.Access
 
         public int GetTotalSaleEachEmployee(employee _employee)
         {
-            // Task Complete
+            // Task Complete - Trung
             // Querry
 
             int total = 0;
@@ -110,7 +110,7 @@ namespace Data.Access
 
         public int GetTotalOrderAnimalEachEmployee(employee _employee)
         {
-            // Task Complete
+            // Task Complete - Trung
             // Querry
 
             int total = 0;
@@ -120,7 +120,7 @@ namespace Data.Access
 
         public int GetTotalOrderMerchandiseEachEmployee(employee _employee)
         {
-            // Task Complete
+            // Task Complete - Trung
             // Querry
 
             int total = 0;

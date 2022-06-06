@@ -42,7 +42,7 @@ namespace Data.Access
 
         public List<dynamic> GetStatisticAllMerchandise()
         {
-            // Task Complete
+            // Task Complete advance - Trung
             //Querry
 
             List<dynamic> list = new List<dynamic>();

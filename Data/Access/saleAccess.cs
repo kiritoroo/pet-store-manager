@@ -42,7 +42,7 @@ namespace Data.Access
 
         public int GetTotalBill()
         {
-            // Task Complete
+            // Task Complete - Hieu
             // Querry
 
             int total = 0;
@@ -52,7 +52,7 @@ namespace Data.Access
 
         public decimal GetTotalIncome()
         {
-            // Task Complete
+            // Task Complete - Hieu
             // Querry
 
             decimal total = 0;
@@ -84,7 +84,7 @@ namespace Data.Access
 
         public decimal GetTotalIncomeInMonth(string _year,string _month)
         {
-            // Task Complete
+            // Task Complete - Hieu
             // Querry
 
             decimal total = 0;
@@ -124,7 +124,7 @@ namespace Data.Access
 
         public int GetTotalAnimalSalesInMonth(string _year, string _month)
         {
-            // Task complete
+            // Task complete - Huy
             // Querry
 
             int total = 0;
@@ -145,7 +145,7 @@ namespace Data.Access
 
         public int GetTotalMerchandiseSalesInMonth(string _year, string _month)
         {
-            // Task Complete
+            // Task Complete - Huy
             // Querry
 
             int total = 0;
@@ -243,7 +243,7 @@ namespace Data.Access
 
             int TotalMerchandise = querry.Count();
             return TotalMerchandise.ToString();
-=======
+        }
         public (string ID, string Phone, string ContactName) GetInfoCusEachSale(sale _sale)
         {
             (string ID, string Phone, string ContactName) data;
