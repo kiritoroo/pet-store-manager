@@ -78,6 +78,20 @@ namespace PetStoreManager
             maincButtonPeoples.ctLabel.Click += Event_maincButtonPeoples_Click;
             maincButtonPeoples.ctLineEffect.Click += Event_maincButtonPeoples_Click;
             maincButtonPeoples.ctPanelEffect.Click += Event_maincButtonPeoples_Click;
+
+            maincButtonPets.Click += Event_maincButtonPets_Click;
+            maincButtonPets.ctArrowEffect.Click += Event_maincButtonPets_Click;
+            maincButtonPets.ctIcon.Click += Event_maincButtonPets_Click;
+            maincButtonPets.ctLabel.Click += Event_maincButtonPets_Click;
+            maincButtonPets.ctLineEffect.Click += Event_maincButtonPets_Click;
+            maincButtonPets.ctPanelEffect.Click += Event_maincButtonPets_Click;
+
+            maincButtonSales.Click += Event_maincButtonSales_Click;
+            maincButtonSales.ctArrowEffect.Click += Event_maincButtonSales_Click;
+            maincButtonSales.ctIcon.Click += Event_maincButtonSales_Click;
+            maincButtonSales.ctLabel.Click += Event_maincButtonSales_Click;
+            maincButtonSales.ctLineEffect.Click += Event_maincButtonSales_Click;
+            maincButtonSales.ctPanelEffect.Click += Event_maincButtonSales_Click;
         }
         private void Event_Load(object sender, EventArgs e)
         {
@@ -110,6 +124,22 @@ namespace PetStoreManager
             Console.WriteLine("Current Page: People Manager");
             frmPeoples frmPeoples = new frmPeoples();
             openChildForm(frmPeoples);
+        }
+
+        private void Event_maincButtonPets_Click(object sender, EventArgs e)
+        {
+            // Load Page Pets
+            Console.WriteLine("Current Page: Pets Manager");
+            frmPets frmPets = new frmPets();
+            openChildForm(frmPets);
+        }
+
+        private void Event_maincButtonSales_Click(object sender, EventArgs e)
+        {
+            // Load Page Sales
+            Console.WriteLine("Current Page: Sales Manager");
+            frmSales frmSales = new frmSales();
+            openChildForm(frmSales);
         }
         #endregion
     }

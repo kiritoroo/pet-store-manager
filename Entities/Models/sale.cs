@@ -10,7 +10,6 @@ namespace Entities.Models
     {
         public int  ID { get; set; }
         public DateTime saledate { get; set; }
-        
 
         public string EmployeeID { get; set; }
 
