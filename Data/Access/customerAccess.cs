@@ -42,7 +42,7 @@ namespace Data.Access
 
         public int GetTotalCustomer()
         {
-            // Task Complete - Hieu
+            // Task Complete 
             // Querry
 
             int total = 0;
@@ -51,11 +51,14 @@ namespace Data.Access
         }
         public int GetTotalCustomerInMonth(string _year, string _month)
         {
-            // Task Uncomplete
+            // Task complete
             // Querry
-
-            int total = 0;
-
+            var toal_cus_inmoth =from c in db.customers 
+                  join  s in db.sales on  c.ID equals s.CustomerID
+                  where s.saledate.Year.ToString()== _year  
+                  && s.saledate.Month.ToString()== _month
+                  select c.ID;
+            int total = toal_cus_inmoth.Count();
             return total;
         }
 
@@ -89,32 +92,43 @@ namespace Data.Access
             return list;
         }
 
-        public int GetTotalSaleAnimalEachCustomer(customer _customer)
+        public  int GetTotalSaleAnimalEachCustomer(customer _customer)
         {
-            // Task Uncomplete
+            // Task complete
             // Querry
-            int total = 0;
-
+            var data = from c in db.customers
+                       join s in db.sales on c.ID equals s.CustomerID
+                       join sa in db.saleAnimals on s.ID equals sa.SaleID
+                       where c.ID == _customer.ID
+                       select sa.AnimalID;
+            int  total = data.Count();
             return total;
         }
 
         public decimal GetTotalMoneyAnimalEachCustomer(customer _customer)
         {
-            // Task Uncomplete
+            // Task complete
             // Querry
-
-            decimal total = 0;
-
+            var data = from c in db.customers
+                       join s in db.sales on c.ID equals s.CustomerID
+                       join sa in db.saleAnimals on s.ID equals sa.SaleID
+                       where c.ID == _customer.ID
+                       select sa.SalePrice;
+            decimal total = (decimal)data.Sum();
             return total;
         }
 
         public int GetTotalSaleMerchandiseEachCustomer(customer _customer)
         {
-            // Task Uncomplete
+            // Task complete
             // Querry
 
-            int total = 0;
-
+            var data = from c in db.customers
+                       join s in db.sales on c.ID equals s.CustomerID
+                       join sa in db.saleMerchandises on s.ID equals sa.SaleID
+                       where c.ID == _customer.ID
+                       select sa.MerchandiseID;
+            int total = data.Count();
             return total;
         }
 
@@ -123,7 +137,12 @@ namespace Data.Access
             // Task Uncomplete
             // Querry
 
-            decimal total = 0;
+            var data = from c in db.customers
+                       join s in db.sales on c.ID equals s.CustomerID
+                       join sa in db.saleMerchandises on s.ID equals sa.SaleID
+                       where c.ID == _customer.ID
+                       select sa.SalePrice;
+            decimal total = (decimal)data.Sum();
 
             return total;
         }
