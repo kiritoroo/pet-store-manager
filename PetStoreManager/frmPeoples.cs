@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Business.Manager;
 using Entities.Models;
+using PetStoreManager.Properties;
 
 namespace PetStoreManager
 {
@@ -31,12 +32,11 @@ namespace PetStoreManager
         public frmPeoples()
         {
             InitializeComponent();
-
             cul = CultureInfo.CurrentCulture;
             groupSep = cul.NumberFormat.CurrencyGroupSeparator;//groupSep=','
             sFormat = string.Format("#{0}###", groupSep);
-
             this.DelegateEvent();
+            this.Load_Data_Customer();
         }
 
         private void SettingDataGridView()
@@ -77,6 +77,9 @@ namespace PetStoreManager
             this.cusBll = new customerManager();
             this.cusList = cusBll.GetAll().ToList();
 
+            cusDGV.Columns.Clear();
+            cusDGV.DataSource = null;
+            cusDGV.Refresh();
             this.cusDGV.DataSource = cusList.Select(cus => new
             {
                 ID = cus.ID,
@@ -97,6 +100,10 @@ namespace PetStoreManager
             this.empBll = new employeeManager();
             this.empList = empBll.GetAll().ToList();
 
+            empDGV.Columns.Clear();
+            empDGV.DataSource = null;
+            empDGV.Refresh();
+            empDGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
             this.empDGV.DataSource = empList.Select(emp => new
             {
                 ID = emp.ID,
@@ -294,6 +301,87 @@ namespace PetStoreManager
             this.empDGV.CellMouseClick += Event_GetEmployeeDetailRecord;
             this.supDGV.CellMouseClick += Event_GetSupplierDetailRecord;
 
+
+            // Format Tabel
+            cusDGV.DataBindingComplete += (obj, args) =>
+            {
+                if (cusDGV.Columns.Count < 7 && cusDGV.Columns.Count > 5)
+                {
+                    DataGridViewButtonColumn btnEdit = new DataGridViewButtonColumn();
+                    {
+                        btnEdit.Name = "Edit";
+                        btnEdit.HeaderText = "Edit";
+                        btnEdit.Text = "Edit";
+                        btnEdit.FlatStyle = FlatStyle.Popup;
+                        btnEdit.DefaultCellStyle.BackColor = Color.FromArgb(248, 251, 255);
+                        btnEdit.UseColumnTextForButtonValue = true;
+                        this.cusDGV.Columns.Add(btnEdit);
+                    }
+                    DataGridViewButtonColumn btnDelete = new DataGridViewButtonColumn();
+                    {
+                        btnDelete.Name = "Delete";
+                        btnDelete.HeaderText = "Delete";
+                        btnDelete.Text = "Delete";
+                        btnDelete.FlatStyle = FlatStyle.Popup;
+                        btnDelete.DefaultCellStyle.BackColor = Color.FromArgb(248, 251, 255);
+                        btnDelete.UseColumnTextForButtonValue = true;
+                        this.cusDGV.Columns.Add(btnDelete);
+                    }
+                }
+                cusDGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
+                for (int i = 0; i < this.cusDGV.Rows.Count; i++)
+                {
+                    cusDGV.Rows[i].Height = 50;
+                }
+                cusDGV.Columns[0].Width = 100;
+                cusDGV.Columns[1].Width = 150;
+                cusDGV.Columns[2].Width = 200;
+                cusDGV.Columns[3].Width = 200;
+                cusDGV.Columns[4].Width = 150;
+                cusDGV.Columns[5].Width = 150;
+                cusDGV.Columns[6].Width = 80;
+                cusDGV.Columns[7].Width = 80;
+            };
+
+            empDGV.DataBindingComplete += (obj, args) =>
+            {
+                if (empDGV.Columns.Count < 7 && cusDGV.Columns.Count > 5)
+                {
+                    DataGridViewButtonColumn btnEdit = new DataGridViewButtonColumn();
+                    {
+                        btnEdit.Name = "Edit";
+                        btnEdit.HeaderText = "Edit";
+                        btnEdit.Text = "Edit";
+                        btnEdit.FlatStyle = FlatStyle.Popup;
+                        btnEdit.DefaultCellStyle.BackColor = Color.FromArgb(248, 251, 255);
+                        btnEdit.UseColumnTextForButtonValue = true;
+                        this.empDGV.Columns.Add(btnEdit);
+                    }
+                    DataGridViewButtonColumn btnDelete = new DataGridViewButtonColumn();
+                    {
+                        btnDelete.Name = "Delete";
+                        btnDelete.HeaderText = "Delete";
+                        btnDelete.Text = "Delete";
+                        btnDelete.FlatStyle = FlatStyle.Popup;
+                        btnDelete.DefaultCellStyle.BackColor = Color.FromArgb(248, 251, 255);
+                        btnDelete.UseColumnTextForButtonValue = true;
+                        this.empDGV.Columns.Add(btnDelete);
+                    }
+                }
+                for (int i = 0; i < this.empDGV.Rows.Count; i++)
+                {
+                    empDGV.Rows[i].Height = 50;
+                }
+                empDGV.Columns[0].Width = 100;
+                empDGV.Columns[1].Width = 150;
+                empDGV.Columns[2].Width = 200;
+                empDGV.Columns[3].Width = 200;
+                empDGV.Columns[4].Width = 200;
+                empDGV.Columns[5].Width = 200;
+                empDGV.Columns[6].Width = 80;
+                empDGV.Columns[7].Width = 80;
+                empDGV.Refresh();
+            };
             // Format Money
             cusSalePetDetailDGV.CellFormatting += (obj, args) =>
             {
@@ -335,8 +423,7 @@ namespace PetStoreManager
 
         private void Event_Load(object sender, EventArgs e)
         {
-            this.Load -= Event_Load;
-            this.Load_Data_Customer();
+            this.Event_ChoosePageCustomer(sender, e);
         }
 
         private void Event_ChoosePageCustomer(object sender, EventArgs e)
@@ -363,7 +450,17 @@ namespace PetStoreManager
             {
                 if (cusDGV.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
                 {
-                    this.GetCustomerDetailRecord(e.RowIndex);
+                    if (cusDGV.Columns[e.ColumnIndex] is DataGridViewButtonColumn && e.RowIndex >= 0)
+                    {
+                        if (e.ColumnIndex == cusDGV.Columns["Edit"].Index)
+                            Console.WriteLine("Edit Customer ID = " + cusDGV.Rows[e.RowIndex].Cells[0].FormattedValue.ToString());
+                        if (e.ColumnIndex == cusDGV.Columns["Delete"].Index)
+                            Console.WriteLine("Delete Customer ID = " + cusDGV.Rows[e.RowIndex].Cells[0].FormattedValue.ToString());
+                    }
+                    else
+                    {
+                        this.GetCustomerDetailRecord(e.RowIndex);
+                    }
                 }
             }
             catch (Exception ex)

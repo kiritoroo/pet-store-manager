@@ -47,10 +47,10 @@
             this.childFormPanel.BorderColor = System.Drawing.Color.Transparent;
             this.childFormPanel.BorderRadius = 3;
             this.childFormPanel.BorderThickness = 1;
-            this.childFormPanel.Location = new System.Drawing.Point(0, 110);
+            this.childFormPanel.Location = new System.Drawing.Point(0, 87);
             this.childFormPanel.Name = "childFormPanel";
             this.childFormPanel.ShowBorders = true;
-            this.childFormPanel.Size = new System.Drawing.Size(1280, 690);
+            this.childFormPanel.Size = new System.Drawing.Size(1800, 815);
             this.childFormPanel.TabIndex = 2;
             // 
             // mainTopPanel
@@ -69,7 +69,7 @@
             this.mainTopPanel.Location = new System.Drawing.Point(-6, -8);
             this.mainTopPanel.Name = "mainTopPanel";
             this.mainTopPanel.ShowBorders = true;
-            this.mainTopPanel.Size = new System.Drawing.Size(1303, 112);
+            this.mainTopPanel.Size = new System.Drawing.Size(1303, 89);
             this.mainTopPanel.TabIndex = 0;
             // 
             // maincButtonOrders
@@ -147,7 +147,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1280, 800);
+            this.ClientSize = new System.Drawing.Size(1800, 900);
             this.Controls.Add(this.childFormPanel);
             this.Controls.Add(this.mainTopPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

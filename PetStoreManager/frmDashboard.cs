@@ -103,10 +103,19 @@ namespace PetStoreManager
             merchandiseManager mBll = new merchandiseManager();
             var rsList1 = mBll.GetStatisticAllMerchandise();
             statisMerchandiseDGV.DataSource = rsList1;
+            statisMerchandiseDGV.Columns[0].HeaderText = "Sản phẩm";
+            statisMerchandiseDGV.Columns[1].HeaderText = "Doanh số";
+            statisMerchandiseDGV.Columns[2].HeaderText = "Doanh thu";
+            statisMerchandiseDGV.Columns[3].HeaderText = "Tồn kho";
 
             animalTypeManager atBll = new animalTypeManager();
             var rsList2 = atBll.GetStatisticAllAnimal();
             statisPetDGV.DataSource = rsList2;
+            statisPetDGV.Columns[0].HeaderText = "ID";
+            statisPetDGV.Columns[1].HeaderText = "Thú cưng";
+            statisPetDGV.Columns[2].HeaderText = "Mô tả";
+            statisPetDGV.Columns[3].HeaderText = "Doanh số";
+            statisPetDGV.Columns[3].HeaderText = "Doanh thu";
 
             this.SettingDataGridView();
         }
