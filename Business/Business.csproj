@@ -5,7 +5,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9EFBE239-2161-44F2-8D4A-E3D5272D5CB8}</ProjectGuid>
+    <ProjectGuid>{717AE829-A686-4660-BC2A-34549C803219}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>Business</RootNamespace>
     <AssemblyName>Business</AssemblyName>
@@ -39,6 +39,9 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevExpress.Data.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -48,6 +51,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -59,20 +63,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Manager\animailOderItemManager.cs" />
-    <Compile Include="Manager\animailOrderManager.cs" />
-    <Compile Include="Manager\animalTypeManager.cs" />
-    <Compile Include="Manager\mechandiseOrderItemsManager.cs" />
-    <Compile Include="Manager\mechandiseOrderManager.cs" />
-    <Compile Include="Manager\animalManager.cs" />
-    <Compile Include="Manager\customerManager.cs" />
-    <Compile Include="Manager\employeeManager.cs" />
-    <Compile Include="Manager\merchandiseManager.cs" />
-    <Compile Include="Manager\merchandiseTypeManager.cs" />
-    <Compile Include="Manager\supplierManager.cs" />
-    <Compile Include="Manager\saleAnimalManager.cs" />
-    <Compile Include="Manager\saleMerchandiseManager.cs" />
-    <Compile Include="Manager\saleManager.cs" />
+    <Compile Include="Manager\bllCustomer.cs" />
+    <Compile Include="Manager\bllDelivery.cs" />
+    <Compile Include="Manager\bllVoucher.cs" />
+    <Compile Include="Manager\bllEmployee.cs" />
+    <Compile Include="Manager\bllLogin.cs" />
+    <Compile Include="Manager\bllOrder.cs" />
+    <Compile Include="Manager\bllOrderPet.cs" />
+    <Compile Include="Manager\bllOrderProduct.cs" />
+    <Compile Include="Manager\bllPet.cs" />
+    <Compile Include="Manager\bllPetCategory.cs" />
+    <Compile Include="Manager\bllProduct.cs" />
+    <Compile Include="Manager\bllProductCategory.cs" />
+    <Compile Include="Manager\bllSales.cs" />
+    <Compile Include="Manager\bllSalesPet.cs" />
+    <Compile Include="Manager\bllSalesProduct.cs" />
+    <Compile Include="Manager\bllSupplier.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -98,12 +104,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Data\Data.csproj">
-      <Project>{75afe359-01ed-40b1-a161-a3338b92516c}</Project>
-      <Name>Data</Name>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+      <Project>{42057d59-125f-4d1a-8aee-b6e5e95cac6f}</Project>
+      <Name>DataAccess</Name>
     </ProjectReference>
     <ProjectReference Include="..\Entities\Entities.csproj">
-      <Project>{f225fa6c-ee73-4831-88c3-9be0d0f66460}</Project>
+      <Project>{c2bf8d7e-09f6-4215-ad50-5388a8258a5b}</Project>
       <Name>Entities</Name>
     </ProjectReference>
   </ItemGroup>

@@ -6,17 +6,26 @@ using System.Threading.Tasks;
 
 namespace Entities.Models
 {
-    public class employee
+    public class Employee
     {
-        public string ID { get; set; }
-        public string Phone { get; set; }
-        public string LastName { get; set; }
-        public string FristName { get; set; }
-        public string Address { get; set; }
-        public DateTime DataHired { get; set; }
+        public Employee()
+        {
+            this.Sales = new HashSet<Sale>();
+            this.Orders = new HashSet<Order>();
+        }
 
-        public ICollection<sale> Sales { get; set; }
-        public ICollection<animalOrder> AnimalOrders { get; set; }
-        public ICollection<merchandiseOrder> MerchandiseOrders { get; set; }
+        public int ID { get; set; }
+        public string LastName { get; set; }
+        public string FirstName { get; set; }
+        public string Title { get; set; }
+        public DateTime BirthDate { get; set; }
+        public DateTime HireDate { get; set; }
+        public string Address { get; set; }
+        public string City { get; set; }
+        public string Country { get; set; }
+        public string Phone { get; set; }
+        public byte[] Photo { get; set; }
+        public virtual ICollection<Sale> Sales { get; set; }
+        public virtual ICollection<Order> Orders { get; set; }
     }
 }

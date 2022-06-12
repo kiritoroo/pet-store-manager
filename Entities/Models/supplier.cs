@@ -1,19 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace Entities.Models
 {
-    public  class supplier
+    public class Supplier
     {
-        public string ID { get; set; }
-        public string Phone { get; set; }
-        public string Name { get; set; }
+        public Supplier()
+        {
+            this.Orders = new HashSet<Order>();
+        }
+
+        public int ID { get; set; }
+        public string CompanyName { get; set; }
+        public string ContactName { get; set; }
         public string Address { get; set; }
+        public string City { get; set; }
         public string Country { get; set; }
-        public ICollection<animalOrder> AnimalOrders { get; set; }
-        public ICollection<merchandiseOrder> MerchandiseOrders { get; set; }
+        public string Phone { get; set; }
+        public string Website { get; set; }
+        public virtual ICollection<Order> Orders { get; set; }
     }
 }

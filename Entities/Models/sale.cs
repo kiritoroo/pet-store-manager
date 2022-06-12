@@ -3,22 +3,30 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
 
 namespace Entities.Models
 {
-    public class sale
+    public class Sale
     {
-        public int  ID { get; set; }
-        public DateTime saledate { get; set; }
+        public Sale()
+        {
+            SalesPets = new HashSet<SalesPet>();
+            SalesProducts = new HashSet<SalesProduct>();
+        }
 
-        public string EmployeeID { get; set; }
-
-        public string CustomerID { get; set; }
+        public int ID { get; set; }
+        public int CustomerID { get; set; }
+        public int EmployeeID { get; set; }
+        public DateTime SaleDate { get; set; }
         public float SaleTax { get; set; }
-
-        public employee Employee { get; set; }
-        public customer Customer { get; set; }
-        public ICollection<saleAnimal> SaleAnimals { get; set; }
-        public ICollection<saleMerchandise> SaleMerchandises { get; set; }
+        public string VoucherCode { get; set; }
+        public string Status { get; set; }
+        public virtual Customer Customer { get; set; }
+        public virtual Employee Employee { get; set; }
+        public virtual Voucher Voucher { get; set; }
+        public virtual Delivery Delivery { get; set; }
+        public virtual ICollection<SalesPet> SalesPets { get; set; }
+        public virtual ICollection<SalesProduct> SalesProducts { get; set; }
     }
 }
