@@ -65,12 +65,12 @@ namespace Application.UserControls
         #region Events
         private void DelegateEvent()
         {
-            this.MouseMove += new MouseEventHandler(this.Event_Mouse_Move);
-            this.pictureBox1.MouseMove += new MouseEventHandler(this.Event_Mouse_Move);
-            this.label1.MouseMove += new MouseEventHandler(this.Event_Mouse_Move);
-            this.label2.MouseMove += new MouseEventHandler(this.Event_Mouse_Move);
-            this.label3.MouseMove += new MouseEventHandler(this.Event_Mouse_Move);
-            this.panel1.MouseMove += new MouseEventHandler(this.Event_Mouse_Move);
+            this.MouseEnter += new EventHandler(this.Evemt_Mouse_Enter);
+            this.pictureBox1.MouseEnter += new EventHandler(this.Evemt_Mouse_Enter);
+            this.label1.MouseEnter += new EventHandler(this.Evemt_Mouse_Enter);
+            this.label2.MouseEnter += new EventHandler(this.Evemt_Mouse_Enter);
+            this.label3.MouseEnter += new EventHandler(this.Evemt_Mouse_Enter);
+            this.panel1.MouseEnter += new EventHandler(this.Evemt_Mouse_Enter);
 
             this.MouseLeave += new EventHandler(this.Event_Mouse_Leave);
             this.pictureBox1.MouseLeave += new EventHandler(this.Event_Mouse_Leave);
@@ -80,7 +80,7 @@ namespace Application.UserControls
             this.panel1.MouseLeave += new EventHandler(this.Event_Mouse_Leave);
         }
 
-        private void Event_Mouse_Move(object sender, MouseEventArgs e)
+        private void Evemt_Mouse_Enter(object sender, EventArgs e)
         {
             panel1.Size = new Size(panel1.Width, 50);
         }

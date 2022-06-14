@@ -89,29 +89,30 @@ namespace DataAccess.Access
         {
             // Task Complete - Hieu
             // Querry
-
             decimal total = 0;
-            var querry = from sale in db.Sales
-                         select new
-                         {
-                             salePrice = sale.SalesPets.Select(sa => sa.Price)
-                         }.salePrice.DefaultIfEmpty(0f).Sum();
-            foreach (var x in querry)
+            using (var db = new PetStoreDBContext())
             {
-                total += (decimal)(x);
-            }
+                var querry = from sale in db.Sales
+                             select new
+                             {
+                                 salePrice = sale.SalesPets.Select(sa => sa.Price)
+                             }.salePrice.DefaultIfEmpty(0f).Sum();
+                foreach (var x in querry)
+                {
+                    total += (decimal)(x);
+                }
 
-            var querry2 = from sale in db.Sales
-                          select new
-                          {
-                              salePrice = sale.SalesProducts.Select(sp => sp.UnitPrice * sp.Quantity)
-                          }.salePrice.DefaultIfEmpty(0f).Sum();
-            foreach (var x in querry2)
-            {
-                total += (decimal)(x);
+                var querry2 = from sale in db.Sales
+                              select new
+                              {
+                                  salePrice = sale.SalesProducts.Select(sp => sp.UnitPrice * sp.Quantity)
+                              }.salePrice.DefaultIfEmpty(0f).Sum();
+                foreach (var x in querry2)
+                {
+                    total += (decimal)(x);
+                }
+                total = total + (decimal)(db.Sales.Sum(sa => sa.SaleTax));
             }
-            total = total + (decimal)(db.Sales.Sum(sa => sa.SaleTax));
-
             return total;
         }
 
@@ -119,39 +120,40 @@ namespace DataAccess.Access
         {
             // Task Complete - Hieu
             // Querry
-
             decimal total = 0;
-
-            var tax = from i in db.Sales
-                      where (i.SaleDate.Month.ToString() == _month && i.SaleDate.Year.ToString() == _year)
-                      select i.SaleTax;
-            foreach (var x in tax)
+            using (var db = new PetStoreDBContext())
             {
-                total += (decimal)(x);
-            }
 
-            var animalmoney = from sale in db.Sales
-                              where (sale.SaleDate.Month.ToString() == _month && sale.SaleDate.Year.ToString() == _year)
-                              select new
-                              {
-                                  Price = sale.SalesPets.Select(sa => sa.Price) 
-                                }.Price.DefaultIfEmpty(0f).Sum();
-            foreach (var x in animalmoney)
-            {
-                total += (decimal)(x);
-            }
+                var tax = from i in db.Sales
+                          where (i.SaleDate.Month.ToString() == _month && i.SaleDate.Year.ToString() == _year)
+                          select i.SaleTax;
+                foreach (var x in tax)
+                {
+                    total += (decimal)(x);
+                }
 
-            var merchandisemoney = from sale in db.Sales
-                                   where (sale.SaleDate.Month.ToString() == _month && sale.SaleDate.Year.ToString() == _year)
-                                   select new
-                                   {
-                                       salePrice = sale.SalesProducts.Select(sp => sp.UnitPrice * sp.Quantity)
-                                   }.salePrice.DefaultIfEmpty(0f).Sum();
-            foreach (var x in merchandisemoney)
-            {
-                total += (decimal)(x);
-            }
+                var animalmoney = from sale in db.Sales
+                                  where (sale.SaleDate.Month.ToString() == _month && sale.SaleDate.Year.ToString() == _year)
+                                  select new
+                                  {
+                                      Price = sale.SalesPets.Select(sa => sa.Price)
+                                  }.Price.DefaultIfEmpty(0f).Sum();
+                foreach (var x in animalmoney)
+                {
+                    total += (decimal)(x);
+                }
 
+                var merchandisemoney = from sale in db.Sales
+                                       where (sale.SaleDate.Month.ToString() == _month && sale.SaleDate.Year.ToString() == _year)
+                                       select new
+                                       {
+                                           salePrice = sale.SalesProducts.Select(sp => sp.UnitPrice * sp.Quantity)
+                                       }.salePrice.DefaultIfEmpty(0f).Sum();
+                foreach (var x in merchandisemoney)
+                {
+                    total += (decimal)(x);
+                }
+            }
             return total;
         }
 
@@ -159,20 +161,22 @@ namespace DataAccess.Access
         {
             // Task complete - Huy
             // Querry
-
             int total = 0;
-            var data = from sale in db.Sales
-                       join petSale in db.SalesPets
-                       on sale.ID equals petSale.SalesID
-                       where
-                       sale.SaleDate.Month.ToString() == _month
-                       && sale.SaleDate.Year.ToString() == _year
-                       select new
-                       {
-                           sale.ID,
-                           petSale.PetID
-                       };
-            total = data.Count();
+            using (var db = new PetStoreDBContext())
+            {
+                var data = from sale in db.Sales
+                           join petSale in db.SalesPets
+                           on sale.ID equals petSale.SalesID
+                           where
+                           sale.SaleDate.Month.ToString() == _month
+                           && sale.SaleDate.Year.ToString() == _year
+                           select new
+                           {
+                               sale.ID,
+                               petSale.PetID
+                           };
+                total = data.Count();
+            }
             return total;
         }
 
@@ -180,45 +184,187 @@ namespace DataAccess.Access
         {
             // Task Complete - Huy
             // Querry
-
             int total = 0;
-            var data = from sale in db.Sales
-                       join productSale in db.SalesProducts
-                       on sale.ID equals productSale.SalesID
-                       where
-                       sale.SaleDate.Month.ToString() == _month
-                       && sale.SaleDate.Year.ToString() == _year
-                       select new
-                       {
-                           sale_ID = sale.ID,
-                           mechandise_ID = productSale.ProductID
-                       };
-            total = data.Count();
+            using (var db = new PetStoreDBContext())
+            {
+                var data = from sale in db.Sales
+                           join productSale in db.SalesProducts
+                           on sale.ID equals productSale.SalesID
+                           where
+                           sale.SaleDate.Month.ToString() == _month
+                           && sale.SaleDate.Year.ToString() == _year
+                           select new
+                           {
+                               sale_ID = sale.ID,
+                               mechandise_ID = productSale.ProductID
+                           };
+                total = data.Count();
+            }
             return total;
         }
 
         public List<SalesPet> GetSalePeteEachSale(Sale sale)
         {
             List<SalesPet> list = new List<SalesPet>();
-            var querry = from s in db.Sales
-                          join sp in db.SalesPets
-                          on s.ID equals sp.SalesID
-                          where s.ID == sale.ID
-                          select sp;
-            list = querry.ToList();
+            using (var db = new PetStoreDBContext())
+            {
+                var querry = from s in db.Sales
+                             join sp in db.SalesPets
+                             on s.ID equals sp.SalesID
+                             where s.ID == sale.ID
+                             select sp;
+                list = querry.ToList();
+            }
             return list;
         }
 
         public List<SalesProduct> GetSaleProductEachSale(Sale sale)
         {
             List<SalesProduct> list = new List<SalesProduct>();
-            var querry = from s in db.Sales
-                          join sp in db.SalesProducts
-                          on s.ID equals sp.SalesID
-                          where s.ID == sale.ID
-                          select sp;
-            list = querry.ToList();
+            using (var db = new PetStoreDBContext())
+            {
+                var querry = from s in db.Sales
+                             join sp in db.SalesProducts
+                             on s.ID equals sp.SalesID
+                             where s.ID == sale.ID
+                             select sp;
+                list = querry.ToList();
+            }
             return list;
+        }
+
+        public (string ContactName, string Phone, string Address) GetInfoCustomerEachSale(Sale sale)
+        {
+            (string ContactName, string Phone, string Address) data;
+            using (var db = new PetStoreDBContext())
+            {
+                var querry = from s in db.Sales
+                             join c in db.Customers
+                             on s.CustomerID equals c.ID
+                             where s.ID == sale.ID
+                             select new
+                             { 
+                                 ContactName = c.ContactName,
+                                 Phone = c.Phone,
+                                 Address = c.Address
+                             };
+                data.ContactName = querry.Select(q => q.ContactName).FirstOrDefault();
+                data.Phone = querry.Select(q => q.Phone).FirstOrDefault();
+                data.Address = querry.Select(q => q.Address).FirstOrDefault();
+            }
+            return data;
+        }
+
+        public (string FullName, string Phone) GetInfoEmployeeEachSale(Sale sale)
+        {
+            (string FullName, string Phone) data;
+            using (var db = new PetStoreDBContext())
+            {
+                var querry = from s in db.Sales
+                             join c in db.Employees
+                             on s.EmployeeID equals c.ID
+                             where s.ID == sale.ID
+                             select new
+                             {
+                                 FullName = c.LastName + " " + c.FirstName,
+                                 Phone = c.Phone,
+                             };
+                data.FullName = querry.Select(q => q.FullName).FirstOrDefault();
+                data.Phone = querry.Select(q => q.Phone).FirstOrDefault();
+            }
+            return data;
+        }
+
+        public int GetTotalPetEachSale(Sale sale)
+        {
+            int data = 0;
+            using (var db = new PetStoreDBContext())
+            {
+                var querry = (from s in db.Sales
+                              join sp in db.SalesPets
+                              on s.ID equals sp.SalesID
+                              where s.ID == sale.ID
+                              group sp by sp into gr
+                              select new
+                              {
+                                  SalePet = gr.Key
+                              });
+                data = querry.Count();
+            }
+            return data;
+        }
+
+        public decimal GetTotalMoneyPetEachSale(Sale sale)
+        {
+            decimal data = 0;
+            using (var db = new PetStoreDBContext())
+            {
+                var querry = (from s in db.Sales
+                              join sp in db.SalesPets
+                              on s.ID equals sp.SalesID
+                              where s.ID == sale.ID
+                              group sp by sp into gr
+                              select new
+                              {
+                                  SalePrice = (int?)gr.Key.Price
+                              }).Sum(sa => sa.SalePrice) ?? 0;
+                data = (decimal)querry;
+            }
+            return data;
+        }
+
+        public int GetTotalProductEachSale(Sale sale)
+        {
+            int data = 0;
+            using (var db = new PetStoreDBContext())
+            {
+                var querry = (from s in db.Sales
+                              join sp in db.SalesProducts
+                              on s.ID equals sp.SalesID
+                              where s.ID == sale.ID
+                              group sp by sp into gr
+                              select new
+                              {
+                                  SaleProduct = gr.Key.Quantity
+                              });
+                data = querry.Sum(q => q.SaleProduct);
+            }
+            return data;
+        }
+
+        public decimal GetTotalMoneyProductEachSale(Sale sale)
+        {
+            decimal data = 0;
+            using (var db = new PetStoreDBContext())
+            {
+                var querry = (from s in db.Sales
+                              join sp in db.SalesProducts
+                              on s.ID equals sp.SalesID
+                              where s.ID == sale.ID
+                              group sp by sp into gr
+                              select new
+                              {
+                                  Quanity = (int?)gr.Key.Quantity,
+                                  SalePrice = (int?)gr.Key.UnitPrice
+                              }).Sum(sa => sa.SalePrice * sa.Quanity) ?? 0;
+                data = (decimal)querry;
+            }
+            return data;
+        }
+
+        public Voucher GetInfoVoucherEachSale(Sale sale)
+        {
+            Voucher data = null;
+            using (var db = new PetStoreDBContext())
+            {
+                var querry = from s in db.Sales
+                             join v in db.Vouchers
+                             on s.VoucherCode equals v.Code
+                             where s.ID == sale.ID
+                             select v;
+                data = querry.FirstOrDefault();
+            }
+            return data;
         }
     }
 }

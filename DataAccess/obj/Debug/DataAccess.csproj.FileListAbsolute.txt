@@ -15,3 +15,20 @@ C:\Users\trung\Desktop\FINAL WIN\PetStoreManager\DataAccess\obj\Debug\DataAccess
 C:\Users\trung\Desktop\FINAL WIN\PetStoreManager\DataAccess\obj\Debug\DataAccess.csproj.CopyComplete
 C:\Users\trung\Desktop\FINAL WIN\PetStoreManager\DataAccess\obj\Debug\DataAccess.dll
 C:\Users\trung\Desktop\FINAL WIN\PetStoreManager\DataAccess\obj\Debug\DataAccess.pdb
+C:\Users\trung\Documents\GitHub\Pet-Store-Manager\DataAccess\bin\Debug\DataAccess.dll.config
+C:\Users\trung\Documents\GitHub\Pet-Store-Manager\DataAccess\bin\Debug\DataAccess.dll
+C:\Users\trung\Documents\GitHub\Pet-Store-Manager\DataAccess\bin\Debug\DataAccess.pdb
+C:\Users\trung\Documents\GitHub\Pet-Store-Manager\DataAccess\bin\Debug\Entities.dll
+C:\Users\trung\Documents\GitHub\Pet-Store-Manager\DataAccess\bin\Debug\EntityFramework.dll
+C:\Users\trung\Documents\GitHub\Pet-Store-Manager\DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\trung\Documents\GitHub\Pet-Store-Manager\DataAccess\bin\Debug\Entities.pdb
+C:\Users\trung\Documents\GitHub\Pet-Store-Manager\DataAccess\bin\Debug\Entities.dll.config
+C:\Users\trung\Documents\GitHub\Pet-Store-Manager\DataAccess\bin\Debug\EntityFramework.xml
+C:\Users\trung\Documents\GitHub\Pet-Store-Manager\DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\trung\Documents\GitHub\Pet-Store-Manager\DataAccess\obj\Debug\DataAccess.csproj.AssemblyReference.cache
+C:\Users\trung\Documents\GitHub\Pet-Store-Manager\DataAccess\obj\Debug\DataAccess.Properties.Resources.resources
+C:\Users\trung\Documents\GitHub\Pet-Store-Manager\DataAccess\obj\Debug\DataAccess.csproj.GenerateResource.cache
+C:\Users\trung\Documents\GitHub\Pet-Store-Manager\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\trung\Documents\GitHub\Pet-Store-Manager\DataAccess\obj\Debug\DataAccess.csproj.CopyComplete
+C:\Users\trung\Documents\GitHub\Pet-Store-Manager\DataAccess\obj\Debug\DataAccess.dll
+C:\Users\trung\Documents\GitHub\Pet-Store-Manager\DataAccess\obj\Debug\DataAccess.pdb

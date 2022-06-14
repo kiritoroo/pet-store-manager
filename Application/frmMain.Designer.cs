@@ -112,7 +112,7 @@ namespace Application
             this.ribbonPage5});
             this.ribbonControl1.QuickToolbarItemLinks.Add(this.barHeaderItem1);
             this.ribbonControl1.QuickToolbarItemLinks.Add(this.skinRibbonGalleryBarItem1);
-            this.ribbonControl1.Size = new System.Drawing.Size(1486, 150);
+            this.ribbonControl1.Size = new System.Drawing.Size(1486, 142);
             // 
             // barButtonItem1
             // 
@@ -206,8 +206,8 @@ namespace Application
             // 
             this.btnSale.Caption = "Hóa đơn bán hàng";
             this.btnSale.Id = 16;
-            this.btnSale.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem13.ImageOptions.Image")));
-            this.btnSale.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem13.ImageOptions.LargeImage")));
+            this.btnSale.ImageOptions.Image = global::Application.Properties.Resources.report_16x16;
+            this.btnSale.ImageOptions.LargeImage = global::Application.Properties.Resources.report_32x32;
             this.btnSale.LargeWidth = 100;
             this.btnSale.Name = "btnSale";
             this.btnSale.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSale_ItemClick);

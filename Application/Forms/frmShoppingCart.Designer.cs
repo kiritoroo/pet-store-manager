@@ -61,6 +61,7 @@ namespace Application.Forms
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelControl5 = new DevExpress.XtraEditors.PanelControl();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -77,6 +78,7 @@ namespace Application.Forms
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.tabPane1)).BeginInit();
             this.tabPane1.SuspendLayout();
             this.tabNavigationPage1.SuspendLayout();
@@ -97,6 +99,7 @@ namespace Application.Forms
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).BeginInit();
             this.panelControl5.SuspendLayout();
             this.SuspendLayout();
@@ -111,9 +114,9 @@ namespace Application.Forms
             this.tabPane1.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
             this.tabNavigationPage1,
             this.tabNavigationPage2});
-            this.tabPane1.RegularSize = new System.Drawing.Size(1486, 668);
+            this.tabPane1.RegularSize = new System.Drawing.Size(1480, 672);
             this.tabPane1.SelectedPage = this.tabNavigationPage2;
-            this.tabPane1.Size = new System.Drawing.Size(1486, 668);
+            this.tabPane1.Size = new System.Drawing.Size(1480, 672);
             this.tabPane1.TabIndex = 0;
             this.tabPane1.Text = "s";
             // 
@@ -207,7 +210,7 @@ namespace Application.Forms
             this.tabNavigationPage2.Controls.Add(this.label3);
             this.tabNavigationPage2.Controls.Add(this.label8);
             this.tabNavigationPage2.Name = "tabNavigationPage2";
-            this.tabNavigationPage2.Size = new System.Drawing.Size(1486, 639);
+            this.tabNavigationPage2.Size = new System.Drawing.Size(1480, 651);
             // 
             // panelControl2
             // 
@@ -398,17 +401,27 @@ namespace Application.Forms
             // 
             // panelControl1
             // 
+            this.panelControl1.Controls.Add(this.pictureBox1);
             this.panelControl1.Controls.Add(this.panelControl5);
             this.panelControl1.Controls.Add(this.label15);
             this.panelControl1.Controls.Add(this.label17);
             this.panelControl1.Controls.Add(this.label19);
             this.panelControl1.Controls.Add(this.label16);
+            this.panelControl1.Controls.Add(this.label21);
             this.panelControl1.Controls.Add(this.label18);
             this.panelControl1.Controls.Add(this.label14);
             this.panelControl1.Location = new System.Drawing.Point(876, 370);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(408, 266);
             this.panelControl1.TabIndex = 16;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(83, 9);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(80, 80);
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // panelControl5
             // 
@@ -577,11 +590,22 @@ namespace Application.Forms
             this.label8.TabIndex = 12;
             this.label8.Text = "Total";
             // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.Color.DimGray;
+            this.label21.Location = new System.Drawing.Point(221, 36);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(106, 21);
+            this.label21.TabIndex = 0;
+            this.label21.Text = "BILL QRCODE";
+            // 
             // frmShoppingCart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1486, 668);
+            this.ClientSize = new System.Drawing.Size(1480, 672);
             this.Controls.Add(this.tabPane1);
             this.Name = "frmShoppingCart";
             this.Text = "Shopping";
@@ -610,6 +634,7 @@ namespace Application.Forms
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).EndInit();
             this.panelControl5.ResumeLayout(false);
             this.panelControl5.PerformLayout();
@@ -666,5 +691,7 @@ namespace Application.Forms
         private DevExpress.XtraGrid.Views.Layout.LayoutViewCard layoutViewCard1;
         private System.Windows.Forms.Label label20;
         private DevExpress.XtraEditors.ComboBoxEdit comboBox1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label21;
     }
 }

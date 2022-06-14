@@ -118,49 +118,61 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="icon_descrease" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_descrease.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="formatnumbercurrency_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\formatnumbercurrency_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="icon_totalIncome" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_totalIncome.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon_totalMerchandiseSale" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_totalMerchandiseSale.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="find_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\find_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="formatnumbercurrency_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\formatnumbercurrency_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ico_product" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ico_product.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon_totalCustomer" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_totalCustomer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ico_lock" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ico_lock.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon_increase" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_increase.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon_totalPetSale" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_totalPetSale.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ico_pet" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ico_pet.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="paste_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\paste_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="find_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\find_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon_pet_all" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_pet_all.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="find_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\find_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon_product_all" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_product_all.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_totalCustomer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_totalCustomer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_pet_all" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_pet_all.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_increase" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_increase.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ico_product" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ico_product.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="formatnumbercurrency_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\formatnumbercurrency_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="report_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\report_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_totalPetSale" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_totalPetSale.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="paste_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\paste_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ico_lock" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ico_lock.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_descrease" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_descrease.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ico_pet" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ico_pet.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_totalMerchandiseSale" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_totalMerchandiseSale.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="report_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\report_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

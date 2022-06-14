@@ -84,20 +84,20 @@ namespace Application.Forms
             this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.billempPhone = new System.Windows.Forms.Label();
+            this.billcusAddress = new System.Windows.Forms.Label();
+            this.billempName = new System.Windows.Forms.Label();
+            this.billcusPhone = new System.Windows.Forms.Label();
+            this.billcusName = new System.Windows.Forms.Label();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl5 = new DevExpress.XtraEditors.PanelControl();
-            this.label13 = new System.Windows.Forms.Label();
+            this.billgrandTotal = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
+            this.billtax = new System.Windows.Forms.Label();
+            this.billsubItem = new System.Windows.Forms.Label();
+            this.billsubTotal = new System.Windows.Forms.Label();
+            this.billdiscount = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -632,11 +632,11 @@ namespace Application.Forms
             // 
             this.panelControl4.Controls.Add(this.label5);
             this.panelControl4.Controls.Add(this.label2);
-            this.panelControl4.Controls.Add(this.label3);
-            this.panelControl4.Controls.Add(this.label11);
-            this.panelControl4.Controls.Add(this.label1);
-            this.panelControl4.Controls.Add(this.label10);
-            this.panelControl4.Controls.Add(this.label9);
+            this.panelControl4.Controls.Add(this.billempPhone);
+            this.panelControl4.Controls.Add(this.billcusAddress);
+            this.panelControl4.Controls.Add(this.billempName);
+            this.panelControl4.Controls.Add(this.billcusPhone);
+            this.panelControl4.Controls.Add(this.billcusName);
             this.panelControl4.Location = new System.Drawing.Point(824, 342);
             this.panelControl4.Name = "panelControl4";
             this.panelControl4.Size = new System.Drawing.Size(650, 131);
@@ -664,69 +664,69 @@ namespace Application.Forms
             this.label2.TabIndex = 0;
             this.label2.Text = "KHÁCH HÀNG";
             // 
-            // label3
+            // billempPhone
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(361, 76);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 17);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Phone:";
+            this.billempPhone.AutoSize = true;
+            this.billempPhone.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.billempPhone.ForeColor = System.Drawing.Color.DimGray;
+            this.billempPhone.Location = new System.Drawing.Point(361, 76);
+            this.billempPhone.Name = "billempPhone";
+            this.billempPhone.Size = new System.Drawing.Size(47, 17);
+            this.billempPhone.TabIndex = 0;
+            this.billempPhone.Text = "Phone:";
             // 
-            // label11
+            // billcusAddress
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.DimGray;
-            this.label11.Location = new System.Drawing.Point(21, 103);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(59, 17);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "Address:";
+            this.billcusAddress.AutoSize = true;
+            this.billcusAddress.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.billcusAddress.ForeColor = System.Drawing.Color.DimGray;
+            this.billcusAddress.Location = new System.Drawing.Point(21, 103);
+            this.billcusAddress.Name = "billcusAddress";
+            this.billcusAddress.Size = new System.Drawing.Size(59, 17);
+            this.billcusAddress.TabIndex = 0;
+            this.billcusAddress.Text = "Address:";
             // 
-            // label1
+            // billempName
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(361, 49);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 17);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Contact Name:";
+            this.billempName.AutoSize = true;
+            this.billempName.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.billempName.ForeColor = System.Drawing.Color.DimGray;
+            this.billempName.Location = new System.Drawing.Point(361, 49);
+            this.billempName.Name = "billempName";
+            this.billempName.Size = new System.Drawing.Size(94, 17);
+            this.billempName.TabIndex = 0;
+            this.billempName.Text = "Contact Name:";
             // 
-            // label10
+            // billcusPhone
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.DimGray;
-            this.label10.Location = new System.Drawing.Point(21, 76);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(47, 17);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "Phone:";
+            this.billcusPhone.AutoSize = true;
+            this.billcusPhone.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.billcusPhone.ForeColor = System.Drawing.Color.DimGray;
+            this.billcusPhone.Location = new System.Drawing.Point(21, 76);
+            this.billcusPhone.Name = "billcusPhone";
+            this.billcusPhone.Size = new System.Drawing.Size(47, 17);
+            this.billcusPhone.TabIndex = 0;
+            this.billcusPhone.Text = "Phone:";
             // 
-            // label9
+            // billcusName
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.DimGray;
-            this.label9.Location = new System.Drawing.Point(21, 49);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(94, 17);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Contact Name:";
+            this.billcusName.AutoSize = true;
+            this.billcusName.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.billcusName.ForeColor = System.Drawing.Color.DimGray;
+            this.billcusName.Location = new System.Drawing.Point(21, 49);
+            this.billcusName.Name = "billcusName";
+            this.billcusName.Size = new System.Drawing.Size(94, 17);
+            this.billcusName.TabIndex = 0;
+            this.billcusName.Text = "Contact Name:";
             // 
             // panelControl1
             // 
             this.panelControl1.Controls.Add(this.panelControl5);
             this.panelControl1.Controls.Add(this.label15);
-            this.panelControl1.Controls.Add(this.label17);
-            this.panelControl1.Controls.Add(this.label6);
-            this.panelControl1.Controls.Add(this.label19);
-            this.panelControl1.Controls.Add(this.label16);
+            this.panelControl1.Controls.Add(this.billtax);
+            this.panelControl1.Controls.Add(this.billsubItem);
+            this.panelControl1.Controls.Add(this.billsubTotal);
+            this.panelControl1.Controls.Add(this.billdiscount);
             this.panelControl1.Controls.Add(this.label4);
             this.panelControl1.Controls.Add(this.label18);
             this.panelControl1.Controls.Add(this.label14);
@@ -737,23 +737,23 @@ namespace Application.Forms
             // 
             // panelControl5
             // 
-            this.panelControl5.Controls.Add(this.label13);
+            this.panelControl5.Controls.Add(this.billgrandTotal);
             this.panelControl5.Controls.Add(this.label12);
             this.panelControl5.Location = new System.Drawing.Point(0, 121);
             this.panelControl5.Name = "panelControl5";
             this.panelControl5.Size = new System.Drawing.Size(378, 52);
             this.panelControl5.TabIndex = 1;
             // 
-            // label13
+            // billgrandTotal
             // 
-            this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.DimGray;
-            this.label13.Location = new System.Drawing.Point(214, 14);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(132, 28);
-            this.label13.TabIndex = 0;
-            this.label13.Text = "2,000,000 ₫";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.billgrandTotal.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.billgrandTotal.ForeColor = System.Drawing.Color.DimGray;
+            this.billgrandTotal.Location = new System.Drawing.Point(214, 14);
+            this.billgrandTotal.Name = "billgrandTotal";
+            this.billgrandTotal.Size = new System.Drawing.Size(132, 28);
+            this.billgrandTotal.TabIndex = 0;
+            this.billgrandTotal.Text = "2,000,000 ₫";
+            this.billgrandTotal.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label12
             // 
@@ -777,49 +777,49 @@ namespace Application.Forms
             this.label15.Text = "TAX";
             this.label15.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // label17
+            // billtax
             // 
-            this.label17.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.DimGray;
-            this.label17.Location = new System.Drawing.Point(216, 93);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(113, 17);
-            this.label17.TabIndex = 0;
-            this.label17.Text = "25,000 ₫";
-            this.label17.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.billtax.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.billtax.ForeColor = System.Drawing.Color.DimGray;
+            this.billtax.Location = new System.Drawing.Point(216, 93);
+            this.billtax.Name = "billtax";
+            this.billtax.Size = new System.Drawing.Size(113, 17);
+            this.billtax.TabIndex = 0;
+            this.billtax.Text = "25,000 ₫";
+            this.billtax.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // label6
+            // billsubItem
             // 
-            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.DimGray;
-            this.label6.Location = new System.Drawing.Point(194, 13);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(136, 26);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "10";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.billsubItem.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.billsubItem.ForeColor = System.Drawing.Color.DimGray;
+            this.billsubItem.Location = new System.Drawing.Point(194, 13);
+            this.billsubItem.Name = "billsubItem";
+            this.billsubItem.Size = new System.Drawing.Size(136, 26);
+            this.billsubItem.TabIndex = 0;
+            this.billsubItem.Text = "10";
+            this.billsubItem.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // label19
+            // billsubTotal
             // 
-            this.label19.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.DimGray;
-            this.label19.Location = new System.Drawing.Point(195, 39);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(136, 26);
-            this.label19.TabIndex = 0;
-            this.label19.Text = "1,825,000 ₫";
-            this.label19.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.billsubTotal.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.billsubTotal.ForeColor = System.Drawing.Color.DimGray;
+            this.billsubTotal.Location = new System.Drawing.Point(195, 39);
+            this.billsubTotal.Name = "billsubTotal";
+            this.billsubTotal.Size = new System.Drawing.Size(136, 26);
+            this.billsubTotal.TabIndex = 0;
+            this.billsubTotal.Text = "1,825,000 ₫";
+            this.billsubTotal.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // label16
+            // billdiscount
             // 
-            this.label16.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.DimGray;
-            this.label16.Location = new System.Drawing.Point(213, 71);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(116, 17);
-            this.label16.TabIndex = 0;
-            this.label16.Text = "150,000 ₫";
-            this.label16.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.billdiscount.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.billdiscount.ForeColor = System.Drawing.Color.DimGray;
+            this.billdiscount.Location = new System.Drawing.Point(213, 71);
+            this.billdiscount.Name = "billdiscount";
+            this.billdiscount.Size = new System.Drawing.Size(116, 17);
+            this.billdiscount.TabIndex = 0;
+            this.billdiscount.Text = "150,000 ₫";
+            this.billdiscount.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label4
             // 
@@ -1015,24 +1015,24 @@ namespace Application.Forms
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private DevExpress.XtraEditors.PanelControl panelControl4;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label billcusAddress;
+        private System.Windows.Forms.Label billcusPhone;
+        private System.Windows.Forms.Label billcusName;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label billempPhone;
+        private System.Windows.Forms.Label billempName;
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraEditors.PanelControl panelControl5;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label billgrandTotal;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label billtax;
+        private System.Windows.Forms.Label billsubTotal;
+        private System.Windows.Forms.Label billdiscount;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label billsubItem;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label20;

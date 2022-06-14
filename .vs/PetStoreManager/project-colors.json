@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "bdf81d03-bd26-422e-8a3d-6ca82e71418f": {
+      "ProjectGuid": "bdf81d03-bd26-422e-8a3d-6ca82e71418f",
+      "DisplayName": "Application",
+      "ColorIndex": 0
+    },
+    "42057d59-125f-4d1a-8aee-b6e5e95cac6f": {
+      "ProjectGuid": "42057d59-125f-4d1a-8aee-b6e5e95cac6f",
+      "DisplayName": "DataAccess",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}

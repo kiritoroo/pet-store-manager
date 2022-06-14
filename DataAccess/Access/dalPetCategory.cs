@@ -103,25 +103,27 @@ namespace DataAccess.Access
         {
             // Task Complete advance- Trung
             //Querry
+            using (var db = new PetStoreDBContext())
+            {
+                List<dynamic> list = new List<dynamic>();
+                var querry = (from at in db.PetCategorys
+                              join animal in db.Pets on at.ID equals animal.PetCategoryID into result1
+                              from rs1 in result1.DefaultIfEmpty()
+                              join saleAnimal in db.SalesPets on rs1.ID equals saleAnimal.PetID into result2
+                              from rs2 in result2.DefaultIfEmpty()
+                              group rs2 by at into gr
+                              select new
+                              {
+                                  ID = gr.Key.ID,
+                                  Label = gr.Key.Label,
+                                  Icon = gr.Key.Icon,
+                                  TotalSale = (int?)gr.Where(g => g != null).Select(g => g.SalesID).Count() ?? 0,
+                                  TotalRevenue = (int?)gr.Where(g => g != null).Select(g => g.Price).Sum() ?? 0
+                              }).OrderByDescending(rs => rs.TotalSale);
 
-            List<dynamic> list = new List<dynamic>();
-            var querry = (from at in db.PetCategorys
-                          join animal in db.Pets on at.ID equals animal.PetCategoryID into result1
-                          from rs1 in result1.DefaultIfEmpty()
-                          join saleAnimal in db.SalesPets on rs1.ID equals saleAnimal.PetID into result2
-                          from rs2 in result2.DefaultIfEmpty()
-                          group rs2 by at into gr
-                          select new
-                          {
-                              ID = gr.Key.ID,
-                              Label = gr.Key.Label,
-                              Icon = gr.Key.Icon,
-                              TotalSale = (int?)gr.Where(g => g != null).Select(g => g.SalesID).Count() ?? 0,
-                              TotalRevenue = (int?)gr.Where(g => g != null).Select(g => g.Price).Sum() ?? 0
-                          }).OrderByDescending(rs => rs.TotalSale);
-
-            list = querry.ToList<dynamic>();
-            return list;
+                list = querry.ToList<dynamic>();
+                return list;
+            }
         }
     }
 }

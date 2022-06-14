@@ -77,6 +77,40 @@ namespace Application.Forms
                 this.flowLayoutPanel1.Controls.Add(uc);            
             }
 
+            var cusData = bllSale.GetInfoCustomerEachSale(currentSale);
+            this.billcusName.Text = cusData.ContactName;
+            this.billcusPhone.Text = cusData.Phone;
+            this.billcusAddress.Text = cusData.Address;
+
+            var empData = bllSale.GetInfoEmployeeEachSale(currentSale);
+            this.billempName.Text = empData.FullName;
+            this.billempPhone.Text = empData.Phone;
+
+            string subItem1 = bllSale.GetTotalPetEachSale(currentSale).ToString() + " Pet";
+            string subItem2 = bllSale.GetTotalProductEachSale(currentSale).ToString() + " Product";
+            this.billsubItem.Text = subItem1 + ", " + subItem2;
+
+            decimal subTotal = bllSale.GetTotalMoneyPetEachSale(currentSale) + bllSale.GetTotalMoneyProductEachSale(currentSale);
+            this.billsubTotal.Text = subTotal.ToString(sFormat);
+
+            Voucher infoV = bllSale.GetInfoVoucherEachSale(currentSale);
+            decimal discount = 0;
+            if (infoV != null)
+            {
+                discount = (subTotal * infoV.Percent) / 100;
+                this.billdiscount.Text = discount.ToString(sFormat) + " (" + infoV.Percent.ToString() + "%" + ")";
+            }
+            else
+            {
+                discount = 0;
+                this.billdiscount.Text = "No Discount";
+            }
+            decimal tax = (decimal)currentSale.SaleTax;
+            this.billtax.Text = tax.ToString(sFormat);
+            
+            decimal grandTotal = subTotal - discount + tax;
+            this.billgrandTotal.Text = grandTotal.ToString(sFormat);
+
             if (this.IsActive)
             {
                 SplashScreenManager.CloseForm();

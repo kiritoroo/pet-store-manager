@@ -20,3 +20,25 @@ C:\Users\trung\Desktop\FINAL WIN\PetStoreManager\Entities\obj\Debug\Entities.csp
 C:\Users\trung\Desktop\FINAL WIN\PetStoreManager\Entities\obj\Debug\Entities.dll
 C:\Users\trung\Desktop\FINAL WIN\PetStoreManager\Entities\obj\Debug\Entities.pdb
 C:\Users\trung\Desktop\FINAL WIN\PetStoreManager\Entities\obj\Debug\Entities.csproj.AssemblyReference.cache
+C:\Users\trung\Documents\GitHub\Pet-Store-Manager\Entities\bin\Debug\Entities.dll.config
+C:\Users\trung\Documents\GitHub\Pet-Store-Manager\Entities\bin\Debug\Entities.dll
+C:\Users\trung\Documents\GitHub\Pet-Store-Manager\Entities\bin\Debug\Entities.pdb
+C:\Users\trung\Documents\GitHub\Pet-Store-Manager\Entities\bin\Debug\DevExpress.Data.v19.2.dll
+C:\Users\trung\Documents\GitHub\Pet-Store-Manager\Entities\bin\Debug\DevExpress.Xpo.v19.2.dll
+C:\Users\trung\Documents\GitHub\Pet-Store-Manager\Entities\bin\Debug\DevExpress.Data.v19.2.xml
+C:\Users\trung\Documents\GitHub\Pet-Store-Manager\Entities\bin\Debug\DevExpress.Xpo.v19.2.xml
+C:\Users\trung\Documents\GitHub\Pet-Store-Manager\Entities\bin\Debug\de\DevExpress.Data.v19.2.resources.dll
+C:\Users\trung\Documents\GitHub\Pet-Store-Manager\Entities\bin\Debug\es\DevExpress.Data.v19.2.resources.dll
+C:\Users\trung\Documents\GitHub\Pet-Store-Manager\Entities\bin\Debug\ja\DevExpress.Data.v19.2.resources.dll
+C:\Users\trung\Documents\GitHub\Pet-Store-Manager\Entities\bin\Debug\ru\DevExpress.Data.v19.2.resources.dll
+C:\Users\trung\Documents\GitHub\Pet-Store-Manager\Entities\bin\Debug\de\DevExpress.Xpo.v19.2.resources.dll
+C:\Users\trung\Documents\GitHub\Pet-Store-Manager\Entities\bin\Debug\es\DevExpress.Xpo.v19.2.resources.dll
+C:\Users\trung\Documents\GitHub\Pet-Store-Manager\Entities\bin\Debug\ja\DevExpress.Xpo.v19.2.resources.dll
+C:\Users\trung\Documents\GitHub\Pet-Store-Manager\Entities\bin\Debug\ru\DevExpress.Xpo.v19.2.resources.dll
+C:\Users\trung\Documents\GitHub\Pet-Store-Manager\Entities\obj\Debug\Entities.csproj.AssemblyReference.cache
+C:\Users\trung\Documents\GitHub\Pet-Store-Manager\Entities\obj\Debug\Entities.Properties.Resources.resources
+C:\Users\trung\Documents\GitHub\Pet-Store-Manager\Entities\obj\Debug\Entities.csproj.GenerateResource.cache
+C:\Users\trung\Documents\GitHub\Pet-Store-Manager\Entities\obj\Debug\Entities.csproj.CoreCompileInputs.cache
+C:\Users\trung\Documents\GitHub\Pet-Store-Manager\Entities\obj\Debug\Entities.csproj.CopyComplete
+C:\Users\trung\Documents\GitHub\Pet-Store-Manager\Entities\obj\Debug\Entities.dll
+C:\Users\trung\Documents\GitHub\Pet-Store-Manager\Entities\obj\Debug\Entities.pdb

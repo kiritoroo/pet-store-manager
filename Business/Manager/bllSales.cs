@@ -107,5 +107,40 @@ namespace Business.Manager
         {
             return this.dal.GetSaleProductEachSale(sale);
         }
+
+        public (string ContactName, string Phone, string Address) GetInfoCustomerEachSale(Sale sale)
+        {
+            return this.dal.GetInfoCustomerEachSale(sale);
+        }
+
+        public (string FullName, string Phone) GetInfoEmployeeEachSale(Sale sale)
+        {
+            return this.dal.GetInfoEmployeeEachSale(sale);
+        }
+
+        public int GetTotalPetEachSale(Sale sale)
+        {
+            return this.dal.GetTotalPetEachSale(sale);
+        }
+
+        public decimal GetTotalMoneyPetEachSale(Sale sale)
+        {
+            return this.dal.GetTotalMoneyPetEachSale(sale);
+        }
+
+        public int GetTotalProductEachSale(Sale sale)
+        {
+            return this.dal.GetTotalProductEachSale(sale);
+        }
+
+        public decimal GetTotalMoneyProductEachSale(Sale sale)
+        {
+            return this.dal.GetTotalMoneyProductEachSale(sale);
+        }
+
+        public Voucher GetInfoVoucherEachSale(Sale sale)
+        {
+            return this.dal.GetInfoVoucherEachSale(sale);
+        }
     }
 }
