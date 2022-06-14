@@ -213,7 +213,7 @@ namespace Application.Forms
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(1486, 24);
+            this.barDockControlTop.Size = new System.Drawing.Size(1486, 28);
             // 
             // barDockControlBottom
             // 
@@ -227,17 +227,17 @@ namespace Application.Forms
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 24);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 28);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 644);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 640);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1486, 24);
+            this.barDockControlRight.Location = new System.Drawing.Point(1486, 28);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 644);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 640);
             // 
             // dataLayoutControl1
             // 
@@ -769,7 +769,7 @@ namespace Application.Forms
             // label15
             // 
             this.label15.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.DimGray;
+            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(94)))), ((int)(((byte)(79)))));
             this.label15.Location = new System.Drawing.Point(134, 93);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(30, 17);
@@ -780,7 +780,7 @@ namespace Application.Forms
             // billtax
             // 
             this.billtax.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.billtax.ForeColor = System.Drawing.Color.DimGray;
+            this.billtax.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(94)))), ((int)(((byte)(79)))));
             this.billtax.Location = new System.Drawing.Point(216, 93);
             this.billtax.Name = "billtax";
             this.billtax.Size = new System.Drawing.Size(113, 17);
@@ -813,7 +813,7 @@ namespace Application.Forms
             // billdiscount
             // 
             this.billdiscount.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.billdiscount.ForeColor = System.Drawing.Color.DimGray;
+            this.billdiscount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(94)))), ((int)(((byte)(79)))));
             this.billdiscount.Location = new System.Drawing.Point(213, 71);
             this.billdiscount.Name = "billdiscount";
             this.billdiscount.Size = new System.Drawing.Size(116, 17);
@@ -846,7 +846,7 @@ namespace Application.Forms
             // label14
             // 
             this.label14.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.DimGray;
+            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(94)))), ((int)(((byte)(79)))));
             this.label14.Location = new System.Drawing.Point(93, 71);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(71, 17);

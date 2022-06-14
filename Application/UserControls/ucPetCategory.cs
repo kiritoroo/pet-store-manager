@@ -95,6 +95,8 @@ namespace Application.UserControls
             {
                 ucPet uc = new ucPet()
                 {
+                    FormParent = this._formParent,
+                    FormMain = (frmMain)this._formParent.MdiParent,
                     Pet = item
                 };
                 this._formParent.flowItem.Controls.Add(uc);

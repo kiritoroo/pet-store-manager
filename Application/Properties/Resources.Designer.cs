@@ -133,6 +133,16 @@ namespace Application.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_bidv {
+            get {
+                object obj = ResourceManager.GetObject("icon_bidv", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_descrease {
             get {
                 object obj = ResourceManager.GetObject("icon_descrease", resourceCulture);
@@ -146,6 +156,26 @@ namespace Application.Properties {
         internal static System.Drawing.Bitmap icon_increase {
             get {
                 object obj = ResourceManager.GetObject("icon_increase", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_momo {
+            get {
+                object obj = ResourceManager.GetObject("icon_momo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_paypal {
+            get {
+                object obj = ResourceManager.GetObject("icon_paypal", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

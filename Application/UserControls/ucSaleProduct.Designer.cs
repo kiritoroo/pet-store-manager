@@ -91,6 +91,8 @@ namespace Application.UserControls
             this.textEdit1.Name = "textEdit1";
             this.textEdit1.Size = new System.Drawing.Size(43, 20);
             this.textEdit1.TabIndex = 2;
+            this.textEdit1.EditValueChanged += new System.EventHandler(this.textEdit1_EditValueChanged);
+            this.textEdit1.EditValueChanging += new DevExpress.XtraEditors.Controls.ChangingEventHandler(this.textEdit1_EditValueChanging);
             // 
             // hyperlinkLabelControl1
             // 
@@ -103,6 +105,7 @@ namespace Application.UserControls
             this.hyperlinkLabelControl1.Size = new System.Drawing.Size(48, 21);
             this.hyperlinkLabelControl1.TabIndex = 1;
             this.hyperlinkLabelControl1.Text = "Delete";
+            this.hyperlinkLabelControl1.Click += new System.EventHandler(this.hyperlinkLabelControl1_Click);
             // 
             // label1
             // 

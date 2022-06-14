@@ -14,6 +14,8 @@ using Application.Services;
 using System.Globalization;
 using Business.Manager;
 using Application.Properties;
+using DevExpress.XtraSplashScreen;
+using System.Threading;
 
 namespace Application.UserControls
 {
@@ -30,7 +32,7 @@ namespace Application.UserControls
             InitializeComponent();
             groupSep = cul.NumberFormat.CurrencyGroupSeparator;//groupSep=','
             sFormat = string.Format("#{0}###", groupSep);
-
+            this.textEdit1.Text = "1";
             this.DelegateEvent();
         }
 
@@ -42,6 +44,24 @@ namespace Application.UserControls
         {
             get { return _formParent; }
             set { _formParent = value; }
+        }
+
+        [Category("Custom Properties")]
+        private frmMain _formMain;
+
+        public frmMain FormMain
+        {
+            get { return _formMain; }
+            set { _formMain = value; }
+        }
+
+        [Category("Custom Properties")]
+        private frmShoppingCart _formMom;
+
+        public frmShoppingCart FormMom
+        {
+            get { return _formMom; }
+            set { _formMom = value; }
         }
 
         [Category("Custom Properties")]
@@ -71,6 +91,62 @@ namespace Application.UserControls
         {
 
         }
+        private void hyperlinkLabelControl1_Click(object sender, EventArgs e)
+        {
+            SplashScreenManager.ShowForm(this, typeof(frmWaitForm), true, false);
+            SplashScreenManager.Default.SetWaitFormCaption("Cập nhật giỏ hàng");
+            SplashScreenManager.Default.SetWaitFormDescription("Xóa thành công");
+
+            this._formMom.txListSaleProduct.Remove(this._salesProduct);
+            this._formMom.UpdateCart();
+            int cartTotal = (this._formMom.txListSaleProduct.Count + this._formMom.txListSaleProduct.Count);
+            if (cartTotal > 0)
+            {
+                this._formMain.badge1.Properties.Text = cartTotal.ToString();
+                this._formMain.badge1.Visible = true;
+            }
+            else
+            {
+                this._formMain.badge1.Properties.Text = "0";
+                this._formMain.badge1.Visible = false;
+            }
+
+            for (int i = 0; i < 20; i++)
+            {
+                Thread.Sleep(10);
+            }
+            SplashScreenManager.CloseForm();
+        }
+
+        private void textEdit1_EditValueChanged(object sender, EventArgs e)
+        {
+
+            /*            int temp;
+                        bool successfullyParsed = int.TryParse(textEdit1.Text, out temp);
+                        if (successfullyParsed)
+                        {
+                            this._salesProduct.Quantity = int.Parse(this.textEdit1.Text);
+                            var querry = from saleProduct in this._formMom.txListSaleProduct
+                                         where saleProduct.ProductID == this._salesProduct.ProductID
+                                         select saleProduct;
+                            querry.FirstOrDefault().Quantity = int.Parse(this.textEdit1.Text);
+                        }
+                        else
+                        {
+                            this._salesProduct.Quantity = 1;
+                            var querry = from saleProduct in this._formMom.txListSaleProduct
+                                         where saleProduct.ProductID == this._salesProduct.ProductID
+                                         select saleProduct;
+                            querry.FirstOrDefault().Quantity = 1;
+                        }
+                        this._formMom.UpdateCart();*/
+
+        }
         #endregion
+
+        private void textEdit1_EditValueChanging(object sender, DevExpress.XtraEditors.Controls.ChangingEventArgs e)
+        {
+
+        }
     }
 }

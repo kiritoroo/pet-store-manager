@@ -20,9 +20,12 @@ namespace Application
         public frmMain()
         {
             InitializeComponent();
+            badge1.Visible = false;
         }
         void Form1_Load(object sender, EventArgs e)
         {
+            badge1.Visible = false;
+            badge1.Properties.Text = "0";
             SplashScreenManager.ShowForm(this, typeof(frmWaitForm), true, false);
             SplashScreenManager.Default.SetWaitFormCaption("Đang tải dữ liệu...");
             SplashScreenManager.Default.SetWaitFormDescription("Chờ xíu");
@@ -37,6 +40,18 @@ namespace Application
 
         private void btnEmployee_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            if (this.MdiChildren != null)
+            {
+                foreach (var form in this.MdiChildren)
+                {
+                    if (form is frmEmployee)
+                    {
+                        form.Select();
+                        return;
+                    }
+                }
+            }
+
             SplashScreenManager.ShowForm(this, typeof(frmWaitForm), true, false);
             SplashScreenManager.Default.SetWaitFormCaption("Đang tải dữ liệu...");
             SplashScreenManager.Default.SetWaitFormDescription("Chờ xíu");
@@ -49,6 +64,18 @@ namespace Application
 
         private void btnPet_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            if (this.MdiChildren != null)
+            {
+                foreach (var form in this.MdiChildren)
+                {
+                    if (form is frmPet)
+                    {
+                        form.Select();
+                        return;
+                    }
+                }
+            }
+
             SplashScreenManager.ShowForm(this, typeof(frmWaitForm), true, false);
             SplashScreenManager.Default.SetWaitFormCaption("Đang tải dữ liệu...");
             SplashScreenManager.Default.SetWaitFormDescription("Chờ xíu");
@@ -62,6 +89,18 @@ namespace Application
 
         private void btnProduct_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            if (this.MdiChildren != null)
+            {
+                foreach (var form in this.MdiChildren)
+                {
+                    if (form is frmProduct)
+                    {
+                        form.Select();
+                        return;
+                    }
+                }
+            }
+
             SplashScreenManager.ShowForm(this, typeof(frmWaitForm), true, false);
             SplashScreenManager.Default.SetWaitFormCaption("Đang tải dữ liệu...");
             SplashScreenManager.Default.SetWaitFormDescription("Chờ xíu");
@@ -75,6 +114,18 @@ namespace Application
 
         private void btnCustomer_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            if (this.MdiChildren != null)
+            {
+                foreach (var form in this.MdiChildren)
+                {
+                    if (form is frmCustomer)
+                    {
+                        form.Select();
+                        return;
+                    }
+                }
+            }
+
             SplashScreenManager.ShowForm(this, typeof(frmWaitForm), true, false);
             SplashScreenManager.Default.SetWaitFormCaption("Đang tải dữ liệu...");
             SplashScreenManager.Default.SetWaitFormDescription("Chờ xíu");
@@ -87,6 +138,18 @@ namespace Application
 
         private void btnSupplier_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            if (this.MdiChildren != null)
+            {
+                foreach (var form in this.MdiChildren)
+                {
+                    if (form is frmSupplier)
+                    {
+                        form.Select();
+                        return;
+                    }
+                }
+            }
+
             SplashScreenManager.ShowForm(this, typeof(frmWaitForm), true, false);
             SplashScreenManager.Default.SetWaitFormCaption("Đang tải dữ liệu...");
             SplashScreenManager.Default.SetWaitFormDescription("Chờ xíu");
@@ -103,6 +166,18 @@ namespace Application
 
         private void btnDashboard_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            if (this.MdiChildren != null)
+            {
+                foreach (var form in this.MdiChildren)
+                {
+                    if (form is frmDashboard)
+                    {
+                        form.Select();
+                        return;
+                    }
+                }
+            }
+
             SplashScreenManager.ShowForm(this, typeof(frmWaitForm), true, false);
             SplashScreenManager.Default.SetWaitFormCaption("Đang tải dữ liệu...");
             SplashScreenManager.Default.SetWaitFormDescription("Chờ xíu");
@@ -115,6 +190,26 @@ namespace Application
 
         private void btnCart_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            if (this.MdiChildren != null)
+            {
+                try
+                {
+                    foreach (frmShoppingCart form in this.MdiChildren)
+                    {
+                        if (form is frmShoppingCart)
+                        {
+                            form.Select();
+                            form.tabPane1.SelectedPageIndex = 1;
+                            return;
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+            }
+
             SplashScreenManager.ShowForm(this, typeof(frmWaitForm), true, false);
             SplashScreenManager.Default.SetWaitFormCaption("Đang tải dữ liệu...");
             SplashScreenManager.Default.SetWaitFormDescription("Chờ xíu");
@@ -128,6 +223,27 @@ namespace Application
 
         private void btnShopping_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            if (this.MdiChildren != null)
+            {
+                try
+                {
+                    foreach (frmShoppingCart form in this.MdiChildren)
+                    {
+                        if (form is frmShoppingCart)
+                        {
+                            form.Select();
+                            form.tabPane1.SelectedPageIndex = 0;
+                            return;
+                        }
+                    }
+                }
+                catch(Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+
+            }
+
             SplashScreenManager.ShowForm(this, typeof(frmWaitForm), true, false);
             SplashScreenManager.Default.SetWaitFormCaption("Đang tải dữ liệu...");
             SplashScreenManager.Default.SetWaitFormDescription("Chờ xíu");
@@ -141,6 +257,18 @@ namespace Application
 
         private void btnSale_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            if (this.MdiChildren != null)
+            {
+                foreach (var form in this.MdiChildren)
+                {
+                    if (form is frmSale)
+                    {
+                        form.Select();
+                        return;
+                    }
+                }
+            }
+
             SplashScreenManager.ShowForm(this, typeof(frmWaitForm), true, false);
             SplashScreenManager.Default.SetWaitFormCaption("Đang tải dữ liệu...");
             SplashScreenManager.Default.SetWaitFormDescription("Chờ xíu");

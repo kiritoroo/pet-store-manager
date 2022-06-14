@@ -95,6 +95,8 @@ namespace Application.UserControls
             {
                 ucProduct uc = new ucProduct()
                 {
+                    FormMain = (frmMain)this._formParent.MdiParent,
+                    FormParent = this._formParent,
                     Product = item
                 };
                 this._formParent.flowItem.Controls.Add(uc);

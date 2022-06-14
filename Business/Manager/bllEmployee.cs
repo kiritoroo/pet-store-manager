@@ -102,5 +102,10 @@ namespace Business.Manager
         {
             return this.dal.GetTotalOrderEachEmployee(employee);
         }
+
+        public Employee FindEmployeeByFullName(string fullName)
+        {
+            return this.dal.FindEmployeeByFullName(fullName);
+        }
     }
 }

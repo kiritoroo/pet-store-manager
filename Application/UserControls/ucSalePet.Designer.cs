@@ -103,6 +103,7 @@ namespace Application.UserControls
             this.hyperlinkLabelControl1.Size = new System.Drawing.Size(48, 21);
             this.hyperlinkLabelControl1.TabIndex = 1;
             this.hyperlinkLabelControl1.Text = "Delete";
+            this.hyperlinkLabelControl1.Click += new System.EventHandler(this.hyperlinkLabelControl1_Click);
             // 
             // label1
             // 
