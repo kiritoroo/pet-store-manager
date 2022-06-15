@@ -42,3 +42,13 @@ C:\Users\trung\Documents\GitHub\Pet-Store-Manager\Entities\obj\Debug\Entities.cs
 C:\Users\trung\Documents\GitHub\Pet-Store-Manager\Entities\obj\Debug\Entities.csproj.CopyComplete
 C:\Users\trung\Documents\GitHub\Pet-Store-Manager\Entities\obj\Debug\Entities.dll
 C:\Users\trung\Documents\GitHub\Pet-Store-Manager\Entities\obj\Debug\Entities.pdb
+C:\Users\Admin\Desktop\ProjectWin\PetStoreManager\Entities\bin\Debug\Entities.dll.config
+C:\Users\Admin\Desktop\ProjectWin\PetStoreManager\Entities\bin\Debug\Entities.dll
+C:\Users\Admin\Desktop\ProjectWin\PetStoreManager\Entities\bin\Debug\Entities.pdb
+C:\Users\Admin\Desktop\ProjectWin\PetStoreManager\Entities\obj\Debug\Entities.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\ProjectWin\PetStoreManager\Entities\obj\Debug\Entities.Properties.Resources.resources
+C:\Users\Admin\Desktop\ProjectWin\PetStoreManager\Entities\obj\Debug\Entities.csproj.GenerateResource.cache
+C:\Users\Admin\Desktop\ProjectWin\PetStoreManager\Entities\obj\Debug\Entities.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\ProjectWin\PetStoreManager\Entities\obj\Debug\Entities.csproj.CopyComplete
+C:\Users\Admin\Desktop\ProjectWin\PetStoreManager\Entities\obj\Debug\Entities.dll
+C:\Users\Admin\Desktop\ProjectWin\PetStoreManager\Entities\obj\Debug\Entities.pdb

@@ -134,7 +134,7 @@ namespace Application.UserControls
             SplashScreenManager.Default.SetWaitFormCaption("Cập nhật giỏ hàng");
             SplashScreenManager.Default.SetWaitFormDescription("Thêm thú cưng thành công");
 
-            this._formParent.txListSalePet.Add(new SalesPet { Pet = this._pet, Price = this._pet.Price, Sale = this._formParent.txSale, PetID = this._pet.ID });
+            this._formParent.txListSalePet.Add(new SalesPet { Price = this._pet.Price, PetID = this._pet.ID });
             int cartTotal = (this._formParent.txListSalePet.Count + this._formParent.txListSaleProduct.Count);
             if (cartTotal > 0)
             {

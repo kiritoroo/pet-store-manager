@@ -12,56 +12,82 @@ namespace DataAccess.Access
 {
     public class dalSales
     {
-        PetStoreDBContext db = new PetStoreDBContext();
 
         public void Load()
         {
-            this.db.Sales.Load();
+            using (var db = new PetStoreDBContext())
+            {
+                db.Sales.Load();
+            }
         }
 
         public ObservableCollection<Sale> GetLocal()
         {
-            return this.db.Sales.Local;
+            using (var db = new PetStoreDBContext())
+            {
+                return db.Sales.Local;
+            }
         }
 
         public void SaveLocal()
         {
-            this.db.SaveChanges();
+            using (var db = new PetStoreDBContext())
+            {
+                db.SaveChanges();
+            }
         }
 
         public List<DbEntityEntry> GetChangeTracker()
         {
-            var changed = db.ChangeTracker.Entries().Where(x => x.State != System.Data.Entity.EntityState.Unchanged).ToList();
-            return changed;
+            using (var db = new PetStoreDBContext())
+            {
+                var changed = db.ChangeTracker.Entries().Where(x => x.State != System.Data.Entity.EntityState.Unchanged).ToList();
+                return changed;
+            }
         }
 
         public IQueryable<Sale> GetAll()
         {
-            return this.db.Sales;
+            using (var db = new PetStoreDBContext())
+            {
+                return db.Sales;
+            }
         }
 
         public Sale Find(int id)
         {
-            return this.db.Sales.Find(id);
+            using (var db = new PetStoreDBContext())
+            {
+                return db.Sales.Find(id);
+            }
         }
 
         public void Save(Sale sale)
         {
-            this.db.Sales.Add(sale);
-            this.db.SaveChanges();
+            using (var db = new PetStoreDBContext())
+            {
+                db.Sales.Add(sale);
+                db.SaveChanges();
+            }
         }
 
         public void Modify(Sale sale)
         {
-            this.db.Entry(sale).State = EntityState.Modified;
-            this.db.SaveChanges();
+            using (var db = new PetStoreDBContext())
+            {
+                db.Entry(sale).State = EntityState.Modified;
+                db.SaveChanges();
+            }
         }
 
         public void Delete(int id)
         {
-            Sale sale = this.Find(id);
-            this.db.Sales.Remove(sale);
-            this.db.SaveChanges();
+            using (var db = new PetStoreDBContext())
+            {
+                Sale sale = this.Find(id);
+                db.Sales.Remove(sale);
+                db.SaveChanges();
+            }
         }
 
         public void CancelChanged()
@@ -156,6 +182,7 @@ namespace DataAccess.Access
             }
             return total;
         }
+
 
         public int GetTotalPetSalesInMonth(string _year, string _month)
         {
@@ -365,6 +392,78 @@ namespace DataAccess.Access
                 data = querry.FirstOrDefault();
             }
             return data;
+        }
+
+        public (bool success, String message, Pet petOut, Product proOut) CreateBill(Sale sale)
+        {
+            using (var context = new PetStoreDBContext())
+            {
+                using (DbContextTransaction transaction = context.Database.BeginTransaction())
+                {
+                    (bool success, String message, Pet petOut, Product proOut) rs = (true, "Mess", null, null);
+                    try
+                    {
+                        context.Sales.Add(sale);
+                        context.SaveChanges();
+
+                        var querry1 = from s in sale.SalesPets
+                                      select s;
+                        foreach (SalesPet sp in querry1)
+                        {
+                            Pet petChoose = (from p in context.Pets
+                                      where p.ID == sp.PetID
+                                      select p).FirstOrDefault();
+                            if (petChoose.Status != "Stocking")
+                            {
+                                rs.petOut = petChoose;
+                                throw new Exception();
+                            }
+                            else
+                            {
+                                petChoose.Status = "Out of Stock";
+                                context.Entry(petChoose).State = EntityState.Modified;
+                                context.SaveChanges();
+                            }
+                        }
+                        
+                        var querry2 = from p in sale.SalesProducts select p;
+                        foreach(SalesProduct spro in querry2)
+                        {
+                            Product pro = (from pr in context.Products
+                                           where pr.ID == spro.ProductID
+                                           select pr).FirstOrDefault();
+                            if(pro.UnitsInStock < 1 || spro.Quantity > pro.UnitsInStock)
+                            {
+                                rs.proOut = pro;
+                                throw new Exception();
+                            }
+                            else
+                            {
+                                pro.UnitsInStock = pro.UnitsInStock - spro.Quantity;
+                                context.Entry(pro).State = EntityState.Modified;
+                                context.SaveChanges();
+                            }
+                        }    
+                        transaction.Commit();
+                        rs.success = true;
+                        rs.message = "Success";
+                        return rs;
+                    }
+
+                    catch (Exception ex)
+                    {
+                        transaction.Rollback();
+                        Console.WriteLine(ex.Message);
+                        rs.success = false;
+                        rs.message = "False";
+                        return rs;
+                    }
+                    finally
+                    {
+                        transaction.Dispose();
+                    }
+                }
+            }
         }
     }
 }
