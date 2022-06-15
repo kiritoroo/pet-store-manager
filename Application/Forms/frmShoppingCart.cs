@@ -35,7 +35,7 @@ namespace Application.Forms
         public Employee txEmployee = new Employee();
         public Customer txCustomer = new Customer();
         public Voucher txVoucher = new Voucher();
-        public Sale txSale = new Sale();
+        public Sale txSale;
         
         public List<SalesPet> txListSalePet = new List<SalesPet>();
         public List<SalesProduct> txListSaleProduct = new List<SalesProduct>();
@@ -80,12 +80,40 @@ namespace Application.Forms
 
             //Task Uncomplete LAST LAST LAST LAST LAST
             bllSales bll = new bllSales();
-            
+            // đưa danh sách thú cưng đã chọn vào Sale
 
-            QRCodeData data = qr.CreateQrCode(this.cusContactName.Text + "\n" + this.empFullName.Text, QRCodeGenerator.ECCLevel.Q);
-            QRCode code = new QRCode(data);
-            picQrCode.Image = code.GetGraphic(5);
-            XtraMessageBox.Show("Tạo hóa đơn, thanh toán thành công!", "Complete Transaction", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.txSale = new Sale()
+            {
+                Customer = this.txCustomer,
+                Employee = this.txEmployee,
+                SaleDate = DateTime.Now,
+                SalesPets = this.txListSalePet,
+                SalesProducts = this.txListSaleProduct,
+                SaleTax = (float)this.tax
+            };
+
+            (bool success, String message, Pet petOut, Product proOut) rs = bll.CreateBill(txSale);
+            if (rs.success == false)
+            {
+                string messageOut = "Lỗi nè, Không thể thanh toán!" + rs.message;
+                if (rs.petOut != null)
+                {
+                    messageOut += " " + rs.petOut.Label + " ";
+                }
+                if (rs.proOut != null)
+                {
+                    messageOut += " " + rs.proOut.Label + " ";
+                }
+                XtraMessageBox.Show(messageOut, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                QRCodeData data = qr.CreateQrCode(this.cusContactName.Text + "\n" + this.empFullName.Text, QRCodeGenerator.ECCLevel.Q);
+                QRCode code = new QRCode(data);
+                picQrCode.Image = code.GetGraphic(5);
+                XtraMessageBox.Show("Tạo hóa đơn, thanh toán thành công!", "Complete Transaction", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }    
+
         }
 
         public void UpdateCart()

@@ -142,5 +142,10 @@ namespace Business.Manager
         {
             return this.dal.GetInfoVoucherEachSale(sale);
         }
+
+        public (bool success, String message, Pet petOut, Product proOut) CreateBill(Sale sale)
+        {
+            return this.dal.CreateBill(sale);
+        }
     }
 }
