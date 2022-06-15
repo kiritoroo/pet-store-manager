@@ -55,7 +55,7 @@ namespace Application.Forms
             this.flowLayoutPanel1.Controls.Clear();
 
             Sale currentSale = (Sale)saleBindingSource.Current;
-            List<SalesPet> listSalePet = bllSale.GetSalePeteEachSale(currentSale);
+            List<SalesPet> listSalePet = bllSale.GetSalePetEachSale(currentSale);
             foreach (SalesPet item in listSalePet)
             {
                 ucSalePet uc = new ucSalePet()
@@ -74,7 +74,7 @@ namespace Application.Forms
                     SalesProduct = item
                 };
                 uc.hyperlinkLabelControl1.Visible = false;
-                this.flowLayoutPanel1.Controls.Add(uc);            
+                this.flowLayoutPanel1.Controls.Add(uc);
             }
 
             var cusData = bllSale.GetInfoCustomerEachSale(currentSale);
@@ -107,7 +107,7 @@ namespace Application.Forms
             }
             decimal tax = (decimal)currentSale.SaleTax;
             this.billtax.Text = tax.ToString(sFormat);
-            
+
             decimal grandTotal = subTotal - discount + tax;
             this.billgrandTotal.Text = grandTotal.ToString(sFormat);
 

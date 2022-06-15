@@ -12,6 +12,7 @@ namespace DataAccess.Access
 {
     public class dalSales
     {
+
         PetStoreDBContext db = new PetStoreDBContext();
 
         public void Load()
@@ -157,6 +158,7 @@ namespace DataAccess.Access
             return total;
         }
 
+
         public int GetTotalPetSalesInMonth(string _year, string _month)
         {
             // Task complete - Huy
@@ -203,7 +205,7 @@ namespace DataAccess.Access
             return total;
         }
 
-        public List<SalesPet> GetSalePeteEachSale(Sale sale)
+        public List<SalesPet> GetSalePetEachSale(Sale sale)
         {
             List<SalesPet> list = new List<SalesPet>();
             using (var db = new PetStoreDBContext())
@@ -243,7 +245,7 @@ namespace DataAccess.Access
                              on s.CustomerID equals c.ID
                              where s.ID == sale.ID
                              select new
-                             { 
+                             {
                                  ContactName = c.ContactName,
                                  Phone = c.Phone,
                                  Address = c.Address
@@ -325,9 +327,9 @@ namespace DataAccess.Access
                               group sp by sp into gr
                               select new
                               {
-                                  SaleProduct = gr.Key.Quantity
+                                  SaleProduct = (int?)gr.Key.Quantity
                               });
-                data = querry.Sum(q => q.SaleProduct);
+                data = querry.Sum(q => q.SaleProduct) ?? 0;
             }
             return data;
         }
@@ -365,6 +367,76 @@ namespace DataAccess.Access
                 data = querry.FirstOrDefault();
             }
             return data;
+        }
+
+        public (bool result, String message) CreateBill(Sale sale)
+        {
+            using (var context = new PetStoreDBContext())
+            {
+                using (DbContextTransaction transaction = context.Database.BeginTransaction())
+                {
+                    (bool result, String message) rs = (true, "");
+                    try
+                    {
+                        context.Sales.Add(sale);
+                        context.SaveChanges();
+
+                        var querry1 = from s in sale.SalesPets
+                                      select s;
+                        foreach (SalesPet sp in querry1)
+                        {
+                            Pet petChoose = (from p in context.Pets
+                                             where p.ID == sp.PetID
+                                             select p).FirstOrDefault();
+                            if (petChoose.Status != "Stocking")
+                            {
+                                rs.message = petChoose.Label + " " + petChoose.Status;
+                                throw new Exception();
+                            }
+                            else
+                            {
+                                petChoose.Status = "Out of Stock";
+                                context.Entry(petChoose).State = EntityState.Modified;
+                                context.SaveChanges();
+                            }
+                        }
+
+                        var querry2 = from p in sale.SalesProducts select p;
+                        foreach (SalesProduct spro in querry2)
+                        {
+                            Product pro = (from pr in context.Products
+                                           where pr.ID == spro.ProductID
+                                           select pr).FirstOrDefault();
+                            if (pro.UnitsInStock < 1 || spro.Quantity > pro.UnitsInStock)
+                            {
+                                rs.message = pro.Label + " " + " Out of Stock";
+                                throw new Exception();
+                            }
+                            else
+                            {
+                                pro.UnitsInStock = pro.UnitsInStock - spro.Quantity;
+                                context.Entry(pro).State = EntityState.Modified;
+                                context.SaveChanges();
+                            }
+                        }
+                        transaction.Commit();
+                        rs.result = true;
+                        return rs;
+                    }
+
+                    catch (Exception ex)
+                    {
+                        transaction.Rollback();
+                        Console.WriteLine(ex.Message);
+                        rs.result = false;
+                        return rs;
+                    }
+                    finally
+                    {
+                        transaction.Dispose();
+                    }
+                }
+            }
         }
     }
 }

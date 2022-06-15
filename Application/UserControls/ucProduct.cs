@@ -133,7 +133,7 @@ namespace Application.UserControls
             SplashScreenManager.Default.SetWaitFormCaption("Cập nhật giỏ hàng");
             SplashScreenManager.Default.SetWaitFormDescription("Thêm sản phẩm thành công");
 
-            this._formParent.txListSaleProduct.Add(new SalesProduct { Product = this._product, UnitPrice = this._product.UnitPrice, Quantity = 1, Sale = this._formParent.txSale, ProductID = this._product.ID });
+            this._formParent.txListSaleProduct.Add(new SalesProduct { UnitPrice = this._product.UnitPrice, Quantity = 1, ProductID = this._product.ID });
             int cartTotal = (this._formParent.txListSalePet.Count + this._formParent.txListSaleProduct.Count);
             if (cartTotal > 0)
             {

@@ -98,9 +98,9 @@ namespace Business.Manager
             return this.dal.GetTotalProductSalesInMonth(_year, _month);
         }
 
-        public List<SalesPet> GetSalePeteEachSale(Sale sale)
+        public List<SalesPet> GetSalePetEachSale(Sale sale)
         {
-            return this.dal.GetSalePeteEachSale(sale);
+            return this.dal.GetSalePetEachSale(sale);
         }
 
         public List<SalesProduct> GetSaleProductEachSale(Sale sale)
@@ -141,6 +141,11 @@ namespace Business.Manager
         public Voucher GetInfoVoucherEachSale(Sale sale)
         {
             return this.dal.GetInfoVoucherEachSale(sale);
+        }
+
+        public (bool result, String message) CreateBill(Sale sale)
+        {
+            return this.dal.CreateBill(sale);
         }
     }
 }

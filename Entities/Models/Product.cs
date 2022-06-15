@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Entities.Models
 {
@@ -14,6 +15,7 @@ namespace Entities.Models
             this.OrderProducts = new HashSet<OrderProduct>();
         }
 
+        [Column(Order = 0)]
         public int ID { get; set; }
         public string ProductCategoryID { get; set; }
         public string Label { get; set; }

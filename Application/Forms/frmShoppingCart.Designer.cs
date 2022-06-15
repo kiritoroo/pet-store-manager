@@ -63,7 +63,7 @@ namespace Application.Forms
             this.btnApplyCustomer = new DevExpress.XtraEditors.SimpleButton();
             this.label2 = new System.Windows.Forms.Label();
             this.linkCancelCustomer = new DevExpress.XtraEditors.HyperlinkLabelControl();
-            this.hyperlinkLabelControl4 = new DevExpress.XtraEditors.HyperlinkLabelControl();
+            this.linkNewCustomer = new DevExpress.XtraEditors.HyperlinkLabelControl();
             this.cbcCustomer = new DevExpress.XtraEditors.ComboBoxEdit();
             this.cusAddress = new System.Windows.Forms.Label();
             this.cusPhone = new System.Windows.Forms.Label();
@@ -320,6 +320,7 @@ namespace Application.Forms
             this.hyperlinkLabelControl2.Size = new System.Drawing.Size(106, 17);
             this.hyperlinkLabelControl2.TabIndex = 19;
             this.hyperlinkLabelControl2.Text = "Làm mới giỏ hàng";
+            this.hyperlinkLabelControl2.Click += new System.EventHandler(this.hyperlinkLabelControl2_Click);
             // 
             // panelControl3
             // 
@@ -421,7 +422,7 @@ namespace Application.Forms
             this.panelControl4.Controls.Add(this.btnApplyCustomer);
             this.panelControl4.Controls.Add(this.label2);
             this.panelControl4.Controls.Add(this.linkCancelCustomer);
-            this.panelControl4.Controls.Add(this.hyperlinkLabelControl4);
+            this.panelControl4.Controls.Add(this.linkNewCustomer);
             this.panelControl4.Controls.Add(this.cbcCustomer);
             this.panelControl4.Controls.Add(this.cusAddress);
             this.panelControl4.Controls.Add(this.cusPhone);
@@ -462,15 +463,16 @@ namespace Application.Forms
             this.linkCancelCustomer.Text = "Hủy bỏ";
             this.linkCancelCustomer.Click += new System.EventHandler(this.linkCancelCustomer_Click);
             // 
-            // hyperlinkLabelControl4
+            // linkNewCustomer
             // 
-            this.hyperlinkLabelControl4.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hyperlinkLabelControl4.Appearance.Options.UseFont = true;
-            this.hyperlinkLabelControl4.Location = new System.Drawing.Point(24, 65);
-            this.hyperlinkLabelControl4.Name = "hyperlinkLabelControl4";
-            this.hyperlinkLabelControl4.Size = new System.Drawing.Size(58, 17);
-            this.hyperlinkLabelControl4.TabIndex = 5;
-            this.hyperlinkLabelControl4.Text = "Thêm mới";
+            this.linkNewCustomer.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkNewCustomer.Appearance.Options.UseFont = true;
+            this.linkNewCustomer.Location = new System.Drawing.Point(24, 65);
+            this.linkNewCustomer.Name = "linkNewCustomer";
+            this.linkNewCustomer.Size = new System.Drawing.Size(58, 17);
+            this.linkNewCustomer.TabIndex = 5;
+            this.linkNewCustomer.Text = "Thêm mới";
+            this.linkNewCustomer.Click += new System.EventHandler(this.linkNewCustomer_Click);
             // 
             // cbcCustomer
             // 
@@ -828,8 +830,8 @@ namespace Application.Forms
         private DevExpress.XtraEditors.PanelControl panelControl4;
         private DevExpress.XtraEditors.SimpleButton btnApplyCustomer;
         private System.Windows.Forms.Label label2;
-        private DevExpress.XtraEditors.HyperlinkLabelControl hyperlinkLabelControl4;
-        private DevExpress.XtraEditors.ComboBoxEdit cbcCustomer;
+        private DevExpress.XtraEditors.HyperlinkLabelControl linkNewCustomer;
+        public DevExpress.XtraEditors.ComboBoxEdit cbcCustomer;
         private System.Windows.Forms.Label cusAddress;
         private System.Windows.Forms.Label cusPhone;
         private System.Windows.Forms.Label cusContactName;

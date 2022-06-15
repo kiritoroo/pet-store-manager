@@ -120,8 +120,8 @@ namespace Application.UserControls
 
         private void textEdit1_EditValueChanged(object sender, EventArgs e)
         {
-
-            /*            int temp;
+            /*
+                        int temp;
                         bool successfullyParsed = int.TryParse(textEdit1.Text, out temp);
                         if (successfullyParsed)
                         {
@@ -140,11 +140,33 @@ namespace Application.UserControls
                             querry.FirstOrDefault().Quantity = 1;
                         }
                         this._formMom.UpdateCart();*/
+            if (this._formMom == null)
+                return;
+            if (this.textEdit1.Text == "0")
+            {
+                return;
+            }
 
+            int temp;
+            bool successfullyParsed = int.TryParse(textEdit1.Text, out temp);
+            if (successfullyParsed)
+            {
+                var querry = from saleProduct in this._formMom.txListSaleProduct
+                             where saleProduct.ProductID == this._salesProduct.ProductID
+                             select saleProduct;
+                querry.FirstOrDefault().Quantity = int.Parse(this.textEdit1.Text);
+                this.label3.Text = (this._salesProduct.UnitPrice * this._salesProduct.Quantity).ToString(sFormat) + " ₫";
+                this._formMom.UpdateBill();
+            }
         }
         #endregion
 
         private void textEdit1_EditValueChanging(object sender, DevExpress.XtraEditors.Controls.ChangingEventArgs e)
+        {
+
+        }
+
+        private void textEdit1_CustomDisplayText(object sender, DevExpress.XtraEditors.Controls.CustomDisplayTextEventArgs e)
         {
 
         }

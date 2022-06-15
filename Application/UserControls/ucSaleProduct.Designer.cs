@@ -33,9 +33,9 @@ namespace Application.UserControls
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this.hyperlinkLabelControl1 = new DevExpress.XtraEditors.HyperlinkLabelControl();
             this.label1 = new System.Windows.Forms.Label();
+            this.textEdit1 = new DevExpress.XtraEditors.CalcEdit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -47,9 +47,9 @@ namespace Application.UserControls
             this.panelControl1.Controls.Add(this.label3);
             this.panelControl1.Controls.Add(this.label2);
             this.panelControl1.Controls.Add(this.pictureBox1);
-            this.panelControl1.Controls.Add(this.textEdit1);
             this.panelControl1.Controls.Add(this.hyperlinkLabelControl1);
             this.panelControl1.Controls.Add(this.label1);
+            this.panelControl1.Controls.Add(this.textEdit1);
             this.panelControl1.Location = new System.Drawing.Point(-11, 3);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(648, 91);
@@ -85,15 +85,6 @@ namespace Application.UserControls
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
-            // textEdit1
-            // 
-            this.textEdit1.Location = new System.Drawing.Point(461, 19);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(43, 20);
-            this.textEdit1.TabIndex = 2;
-            this.textEdit1.EditValueChanged += new System.EventHandler(this.textEdit1_EditValueChanged);
-            this.textEdit1.EditValueChanging += new DevExpress.XtraEditors.Controls.ChangingEventHandler(this.textEdit1_EditValueChanging);
-            // 
             // hyperlinkLabelControl1
             // 
             this.hyperlinkLabelControl1.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -117,6 +108,19 @@ namespace Application.UserControls
             this.label1.TabIndex = 0;
             this.label1.Text = "PRODUCT LABEL";
             // 
+            // textEdit1
+            // 
+            this.textEdit1.Location = new System.Drawing.Point(461, 19);
+            this.textEdit1.Name = "textEdit1";
+            this.textEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.textEdit1.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
+            this.textEdit1.Size = new System.Drawing.Size(43, 20);
+            this.textEdit1.TabIndex = 2;
+            this.textEdit1.EditValueChanged += new System.EventHandler(this.textEdit1_EditValueChanged);
+            this.textEdit1.EditValueChanging += new DevExpress.XtraEditors.Controls.ChangingEventHandler(this.textEdit1_EditValueChanging);
+            this.textEdit1.CustomDisplayText += new DevExpress.XtraEditors.Controls.CustomDisplayTextEventHandler(this.textEdit1_CustomDisplayText);
+            // 
             // ucSaleProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -139,8 +143,8 @@ namespace Application.UserControls
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        public DevExpress.XtraEditors.TextEdit textEdit1;
         public DevExpress.XtraEditors.HyperlinkLabelControl hyperlinkLabelControl1;
         private System.Windows.Forms.Label label1;
+        public DevExpress.XtraEditors.CalcEdit textEdit1;
     }
 }

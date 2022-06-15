@@ -339,3 +339,4 @@ C:\Users\trung\Documents\GitHub\Pet-Store-Manager\Application\obj\Debug\Applicat
 C:\Users\trung\Documents\GitHub\Pet-Store-Manager\Application\obj\Debug\Application.exe
 C:\Users\trung\Documents\GitHub\Pet-Store-Manager\Application\obj\Debug\Application.pdb
 C:\Users\trung\Documents\GitHub\Pet-Store-Manager\Application\bin\Debug\QRCoder.dll
+C:\Users\trung\Documents\GitHub\Pet-Store-Manager\Application\obj\Debug\Application.Forms.frmNewCustomer.resources

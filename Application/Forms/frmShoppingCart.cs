@@ -72,7 +72,7 @@ namespace Application.Forms
         // TRANSACTION CHECKOUT
         private void btnCheckout_Click(object sender, EventArgs e)
         {
-            if (this.txEmployee == null || this.txCustomer == null)
+            if (this.txEmployee == null || this.txCustomer == null || this.cbcCustomer.Text == "" || this.cbcEmployee.Text == "" || this.cbcEmployee.SelectedIndex == -1 || this.cbcCustomer.SelectedIndex == -1)
             {
                 XtraMessageBox.Show("Vui lòng cung cấp đầy đủ thông tin!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -80,12 +80,34 @@ namespace Application.Forms
 
             //Task Uncomplete LAST LAST LAST LAST LAST
             bllSales bll = new bllSales();
-            
+            // đưa danh sách thú cưng đã chọn vào Sale
 
-            QRCodeData data = qr.CreateQrCode(this.cusContactName.Text + "\n" + this.empFullName.Text, QRCodeGenerator.ECCLevel.Q);
-            QRCode code = new QRCode(data);
-            picQrCode.Image = code.GetGraphic(5);
-            XtraMessageBox.Show("Tạo hóa đơn, thanh toán thành công!", "Complete Transaction", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.txSale = new Sale()
+            {
+                CustomerID = this.txCustomer.ID,
+                EmployeeID = this.txEmployee.ID,
+                SaleDate = DateTime.Now,
+                SalesPets = this.txListSalePet,
+                SalesProducts = this.txListSaleProduct,
+                SaleTax = (float)this.tax,
+                VoucherCode = this.txVoucher.Code
+            };
+
+            (bool result, String message) rs = bll.CreateBill(txSale);
+            if (rs.result == false)
+            {
+                string messageOut = "Không thể tạo đơn hàng - " + rs.message;
+                XtraMessageBox.Show(messageOut, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                QRCodeData data = qr.CreateQrCode(this.cusContactName.Text + "\n" + this.empFullName.Text, QRCodeGenerator.ECCLevel.Q);
+                QRCode code = new QRCode(data);
+                picQrCode.Image = code.GetGraphic(5);
+                if (XtraMessageBox.Show("Tạo đơn hàng thành công!", "Complete Transaction", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
+                    this.ResetCart();
+            }
+
         }
 
         public void UpdateCart()
@@ -117,9 +139,14 @@ namespace Application.Forms
                 this.flowCart.Controls.Add(uc);
             }
 
+            this.UpdateBill();
+        }
+
+        public void UpdateBill()
+        {
             int totalPet = txListSalePet.Count;
             int totalProdut = 0;
-            foreach(SalesProduct item in txListSaleProduct)
+            foreach (SalesProduct item in txListSaleProduct)
             {
                 totalProdut += item.Quantity;
             }
@@ -148,7 +175,7 @@ namespace Application.Forms
                 discount = 0;
                 this.billDiscount.Text = "No Discount";
             }
-            
+
             this.tax = ((totalMoneyPet + totalMoneyProduct) * 2) / 100;
             this.billTax.Text = tax.ToString(sFormat);
 
@@ -156,6 +183,32 @@ namespace Application.Forms
             this.billGrandTotal.Text = totalGrand.ToString(sFormat);
         }
 
+        public void ResetCart()
+        {
+            this.txCustomer = new Customer();
+            this.txEmployee = new Employee();
+            this.txListSalePet = new List<SalesPet>();
+            this.txListSaleProduct = new List<SalesProduct>();
+            this.txSale = new Sale();
+            this.txVoucher = new Voucher();
+            this.flowCart.Controls.Clear();
+            this.cbcCustomer.SelectedIndex = -1;
+            this.cbcEmployee.SelectedIndex = -1;
+            this.cbcVoucher.SelectedIndex = -1;
+
+            frmMain frmParent = (frmMain)this.MdiParent;
+            frmParent.badge1.Properties.Text = "0";
+            frmParent.badge1.Visible = false;
+            this.voucherTitle.Text = "*Không áp dụng khuyến mãi";
+            this.billDiscount.Text = "No Discount";
+            this.empFullName.Text = "Full Name: None";
+            this.empPhone.Text = "Phone: None";
+            this.cusContactName.Text = "Contact Name: None";
+            this.cusPhone.Text = "Phone: None";
+            this.cusAddress.Text = "Address: None";
+            this.picQrCode.Image = null;
+            this.UpdateBill();
+        }
         private void tabPane1_SelectedPageChanged(object sender, DevExpress.XtraBars.Navigation.SelectedPageChangedEventArgs e)
         {
             if (this.tabPane1.SelectedPageIndex == 0)
@@ -196,6 +249,10 @@ namespace Application.Forms
             {
                 this.cbcVoucher.Properties.Items.Add(item.Code);
             }
+
+            this.cbcCustomer.SelectedIndex = -1;
+            this.cbcEmployee.SelectedIndex = -1;
+            this.cbcVoucher.SelectedIndex = -1;
         }
 
         private void LoadPet()
@@ -342,6 +399,8 @@ namespace Application.Forms
                 this.txVoucher = voucher;
                 this.discount = ((totalMoneyPet + totalMoneyProduct) * this.txVoucher.Percent) / 100;
                 this.billDiscount.Text = this.discount.ToString(sFormat) + " (" + this.txVoucher.Percent.ToString() + "%" + ")";
+                this.totalGrand = (totalMoneyPet + totalMoneyProduct) - discount + tax;
+                this.billGrandTotal.Text = totalGrand.ToString(sFormat);
 
                 for (int i = 0; i < 50; i++)
                 {
@@ -445,6 +504,18 @@ namespace Application.Forms
             this.cusAddress.Text = "Address: None";
             this.cbcCustomer.ResetText();
             this.cbcCustomer.SelectedIndex = -1;
+        }
+
+        private void linkNewCustomer_Click(object sender, EventArgs e)
+        {
+            frmNewCustomer frm = new frmNewCustomer();
+            frm.frmParent = this;
+            frm.Show();
+        }
+
+        private void hyperlinkLabelControl2_Click(object sender, EventArgs e)
+        {
+            this.ResetCart();
         }
     }
 }
