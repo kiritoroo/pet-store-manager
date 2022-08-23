@@ -21,9 +21,9 @@
   </a>
 </p>
 
+
 ##
 ![Guinea Pig](https://github.com/kiritoroo/Pet-Store-Manager/blob/master/card.png)
-
 ## Contributing
 1. [Fork the repository](https://github.com/kiritoroo/PetStoreManager/fork)!
 2. Clone your fork: `git clone https://github.com/kiritoroo/PetStoreManager.git`
@@ -34,5 +34,5 @@
 
 ## Author
 - > GitHub [Kiritoro](https://github.com/kiritoroo)
-- > GitHub [HoXuanHieu](https://github.com/XuanHieuHo)
-- > GitHub [I082022](https://github.com/I082022)
+- > GitHub [Ho Xuan Hieu](https://github.com/XuanHieuHo)
+- > GitHub [Le Huy](https://github.com/I082022)
