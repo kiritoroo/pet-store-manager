@@ -30,5 +30,5 @@
 
 ## Author
 - > GitHub [Kiritoro](https://github.com/kiritoroo)
-- > GitHub [HoXuanHieu](https://github.com/XuanHieuHo)
-- > GitHub [LeHuy](https://github.com/I082022)
+- > GitHub [Ho Xuan Hieu](https://github.com/XuanHieuHo)
+- > GitHub [Le Huy](https://github.com/I082022)
