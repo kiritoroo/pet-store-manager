@@ -98,24 +98,26 @@ namespace DataAccess.Access
         {
             // Task Complete advance - Trung
             //Querry
-
-            List<dynamic> list = new List<dynamic>();
-            var querry = (from pc in db.ProductCategories
-                          join pro in db.Products on pc.ID equals pro.ProductCategoryID into result1
-                          from rs1 in result1.DefaultIfEmpty()                          
-                          join spro in db.SalesProducts on rs1.ID equals spro.ProductID into result2
-                          from rs2 in result2.DefaultIfEmpty()
-                          group rs2 by pc into gr
-                          select new
-                          {
-                              ID = gr.Key.ID,
-                              Product = gr.Key.Label,
-                              Icon = gr.Key.Icon,
-                              TotalSales = (int?)gr.Where(g => g != null).Select(g => g.Quantity).Sum() ?? 0,
-                              TotalRevenue = (int?)gr.Where(g => g != null).Select(g => g.UnitPrice * g.Quantity).Sum() ?? 0
-                          }).OrderByDescending(rs => rs.TotalSales);
-            list = querry.ToList<dynamic>();
-            return list;
+            using (var db = new PetStoreDBContext())
+            {
+                List<dynamic> list = new List<dynamic>();
+                var querry = (from pc in db.ProductCategories
+                              join pro in db.Products on pc.ID equals pro.ProductCategoryID into result1
+                              from rs1 in result1.DefaultIfEmpty()
+                              join spro in db.SalesProducts on rs1.ID equals spro.ProductID into result2
+                              from rs2 in result2.DefaultIfEmpty()
+                              group rs2 by pc into gr
+                              select new
+                              {
+                                  ID = gr.Key.ID,
+                                  Product = gr.Key.Label,
+                                  Icon = gr.Key.Icon,
+                                  TotalSales = (int?)gr.Where(g => g != null).Select(g => g.Quantity).Sum() ?? 0,
+                                  TotalRevenue = (int?)gr.Where(g => g != null).Select(g => g.UnitPrice * g.Quantity).Sum() ?? 0
+                              }).OrderByDescending(rs => rs.TotalSales);
+                list = querry.ToList<dynamic>();
+                return list;
+            }
         }
     }
 }

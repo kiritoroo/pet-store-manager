@@ -144,5 +144,18 @@ namespace DataAccess.Access
             total = this.GetOrderDetailEachEmployee(employee).Count();
             return total;
         }
+
+        public Employee FindEmployeeByFullName(string fullName)
+        {
+            Employee data = new Employee();
+            using (var db = new PetStoreDBContext())
+            {
+                var querry = from emp in db.Employees
+                             where emp.LastName + " " + emp.FirstName == fullName
+                             select emp;
+                data = querry.FirstOrDefault();
+            }
+            return data;
+        }
     }
 }

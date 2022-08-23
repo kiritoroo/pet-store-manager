@@ -229,5 +229,18 @@ namespace DataAccess.Access
 
             return total;
         }
+
+        public Customer FindCustomerByInfo(string info)
+        {
+            Customer data = new Customer();
+            using (var db = new PetStoreDBContext())
+            {
+                var querry = from cus in db.Customers
+                             where cus.ContactName + ", " + cus.Phone == info
+                             select cus;
+                data = querry.FirstOrDefault();
+            }
+            return data;
+        }
     }
 }

@@ -14,6 +14,8 @@ using Application.Services;
 using System.Globalization;
 using Business.Manager;
 using Application.Properties;
+using DevExpress.XtraSplashScreen;
+using System.Threading;
 
 namespace Application.UserControls
 {
@@ -44,6 +46,24 @@ namespace Application.UserControls
         }
 
         [Category("Custom Properties")]
+        private frmMain _formMain;
+
+        public frmMain FormMain
+        {
+            get { return _formMain; }
+            set { _formMain = value; }
+        }
+
+        [Category("Custom Properties")]
+        private frmShoppingCart _formMom;
+
+        public frmShoppingCart FormMom
+        {
+            get { return _formMom; }
+            set { _formMom = value; }
+        }
+
+        [Category("Custom Properties")]
         private SalesPet _salePet;
 
         public SalesPet SalesPet
@@ -67,6 +87,33 @@ namespace Application.UserControls
         private void DelegateEvent()
         {
 
+        }
+
+        private void hyperlinkLabelControl1_Click(object sender, EventArgs e)
+        {
+            SplashScreenManager.ShowForm(this, typeof(frmWaitForm), true, false);
+            SplashScreenManager.Default.SetWaitFormCaption("Cập nhật giỏ hàng");
+            SplashScreenManager.Default.SetWaitFormDescription("Xóa thành công");
+
+            this._formMom.txListSalePet.Remove(this._salePet);
+            this._formMom.UpdateCart();
+            int cartTotal = (this._formMom.txListSalePet.Count + this._formMom.txListSaleProduct.Count);
+            if (cartTotal > 0)
+            {
+                this._formMain.badge1.Properties.Text = cartTotal.ToString();
+                this._formMain.badge1.Visible = true;
+            }
+            else
+            {
+                this._formMain.badge1.Properties.Text = "0";
+                this._formMain.badge1.Visible = false;
+            }
+
+            for (int i = 0; i < 20; i++)
+            {
+                Thread.Sleep(10);
+            }
+            SplashScreenManager.CloseForm();
         }
         #endregion
     }

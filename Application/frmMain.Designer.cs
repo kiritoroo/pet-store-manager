@@ -71,9 +71,12 @@ namespace Application
             this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
             this.workspaceManager1 = new DevExpress.Utils.WorkspaceManager(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.adornerUIManager1 = new DevExpress.Utils.VisualEffects.AdornerUIManager(this.components);
+            this.badge1 = new DevExpress.Utils.VisualEffects.Badge();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.adornerUIManager1)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl1
@@ -112,7 +115,7 @@ namespace Application
             this.ribbonPage5});
             this.ribbonControl1.QuickToolbarItemLinks.Add(this.barHeaderItem1);
             this.ribbonControl1.QuickToolbarItemLinks.Add(this.skinRibbonGalleryBarItem1);
-            this.ribbonControl1.Size = new System.Drawing.Size(1486, 150);
+            this.ribbonControl1.Size = new System.Drawing.Size(1486, 142);
             // 
             // barButtonItem1
             // 
@@ -206,8 +209,8 @@ namespace Application
             // 
             this.btnSale.Caption = "Hóa đơn bán hàng";
             this.btnSale.Id = 16;
-            this.btnSale.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem13.ImageOptions.Image")));
-            this.btnSale.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem13.ImageOptions.LargeImage")));
+            this.btnSale.ImageOptions.Image = global::Application.Properties.Resources.report_16x16;
+            this.btnSale.ImageOptions.LargeImage = global::Application.Properties.Resources.report_32x32;
             this.btnSale.LargeWidth = 100;
             this.btnSale.Name = "btnSale";
             this.btnSale.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSale_ItemClick);
@@ -405,6 +408,15 @@ namespace Application
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // adornerUIManager1
+            // 
+            this.adornerUIManager1.Elements.Add(this.badge1);
+            this.adornerUIManager1.Owner = this;
+            // 
+            // badge1
+            // 
+            this.badge1.TargetElement = this.btnCart;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -418,6 +430,7 @@ namespace Application
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.adornerUIManager1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -464,5 +477,7 @@ namespace Application
         private DevExpress.XtraBars.BarButtonItem barButtonItem8;
         private System.Windows.Forms.Timer timer1;
         private DevExpress.XtraBars.BarButtonItem btnShopping;
+        private DevExpress.Utils.VisualEffects.AdornerUIManager adornerUIManager1;
+        public DevExpress.Utils.VisualEffects.Badge badge1;
     }
 }

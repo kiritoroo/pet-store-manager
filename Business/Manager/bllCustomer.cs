@@ -133,5 +133,10 @@ namespace Business.Manager
         {
             return this.dal.GetTotalMoneyProductEachCustomer(customer);
         }
+
+        public Customer FindCustomerByInfo(string info)
+        {
+            return this.dal.FindCustomerByInfo(info);
+        }
     }
 }

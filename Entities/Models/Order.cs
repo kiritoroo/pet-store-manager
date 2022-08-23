@@ -20,7 +20,7 @@ namespace Entities.Models
         public DateTime OrderDate { get; set; }
         public Nullable<DateTime> ReceiveDate { get; set; }
         public float ShippingCost { get; set; }
-        public bool Status { get; set; }
+        public string Status { get; set; }
         public virtual Supplier Supplier { get; set; }
         public virtual Employee Employee { get; set; }
         public virtual ICollection<OrderPet> OrderPets { get; set; }

@@ -98,14 +98,54 @@ namespace Business.Manager
             return this.dal.GetTotalProductSalesInMonth(_year, _month);
         }
 
-        public List<SalesPet> GetSalePeteEachSale(Sale sale)
+        public List<SalesPet> GetSalePetEachSale(Sale sale)
         {
-            return this.dal.GetSalePeteEachSale(sale);
+            return this.dal.GetSalePetEachSale(sale);
         }
 
         public List<SalesProduct> GetSaleProductEachSale(Sale sale)
         {
             return this.dal.GetSaleProductEachSale(sale);
+        }
+
+        public (string ContactName, string Phone, string Address) GetInfoCustomerEachSale(Sale sale)
+        {
+            return this.dal.GetInfoCustomerEachSale(sale);
+        }
+
+        public (string FullName, string Phone) GetInfoEmployeeEachSale(Sale sale)
+        {
+            return this.dal.GetInfoEmployeeEachSale(sale);
+        }
+
+        public int GetTotalPetEachSale(Sale sale)
+        {
+            return this.dal.GetTotalPetEachSale(sale);
+        }
+
+        public decimal GetTotalMoneyPetEachSale(Sale sale)
+        {
+            return this.dal.GetTotalMoneyPetEachSale(sale);
+        }
+
+        public int GetTotalProductEachSale(Sale sale)
+        {
+            return this.dal.GetTotalProductEachSale(sale);
+        }
+
+        public decimal GetTotalMoneyProductEachSale(Sale sale)
+        {
+            return this.dal.GetTotalMoneyProductEachSale(sale);
+        }
+
+        public Voucher GetInfoVoucherEachSale(Sale sale)
+        {
+            return this.dal.GetInfoVoucherEachSale(sale);
+        }
+
+        public (bool result, String message) CreateBill(Sale sale)
+        {
+            return this.dal.CreateBill(sale);
         }
     }
 }

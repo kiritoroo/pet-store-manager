@@ -13,6 +13,7 @@ using Business.Manager;
 using Entities.Models;
 using Application.Services;
 using Application.Properties;
+using DevExpress.XtraSplashScreen;
 
 namespace Application.UserControls
 {
@@ -73,6 +74,10 @@ namespace Application.UserControls
 
         private void hyperlinkLabelControl1_Click(object sender, EventArgs e)
         {
+            SplashScreenManager.ShowForm(this, typeof(frmWaitForm), true, false);
+            SplashScreenManager.Default.SetWaitFormCaption("Đang tải dữ liệu...");
+            SplashScreenManager.Default.SetWaitFormDescription("Chờ xíu");
+
             bllProductCategory bllProductCate = new bllProductCategory();
             bllProduct bllProduct = new bllProduct();
             List<Product> productList;
@@ -90,10 +95,14 @@ namespace Application.UserControls
             {
                 ucProduct uc = new ucProduct()
                 {
+                    FormMain = (frmMain)this._formParent.MdiParent,
+                    FormParent = this._formParent,
                     Product = item
                 };
                 this._formParent.flowItem.Controls.Add(uc);
             }
+
+            SplashScreenManager.CloseForm();
         }
         #endregion
     }

@@ -1,5 +1,6 @@
 <p align="center">
   <h2 align="center">🐹 Pet Store Manager - 3 Tier Architecture & Entity Framework </h2>
+</p>
 <p align="center">
   <a href="https://github.com/kiritoroo/AI_Final_Project/issues">
     <img src="https://img.shields.io/github/issues/kiritoroo/PetStoreManager"> 
@@ -20,6 +21,9 @@
   </a>
 </p>
 
+
+##
+![Guinea Pig](https://github.com/kiritoroo/Pet-Store-Manager/blob/master/card.png)
 ## Contributing
 1. [Fork the repository](https://github.com/kiritoroo/PetStoreManager/fork)!
 2. Clone your fork: `git clone https://github.com/kiritoroo/PetStoreManager.git`
